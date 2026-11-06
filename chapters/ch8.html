@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل الثامن: الحث الكهرومغناطيسي | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للتدفق المغناطيسي وقانون فارادي وقانون لنز والحث الذاتي ودارة RL والمولد الكهربائي - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل الثامن: الحث الكهرومغناطيسي | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للتدفق المغناطيسي وقانون فارادي وقانون لنز والحث الذاتي ودارة RL والمولد الكهربائي - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch8" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل الثامن: الحث الكهرومغناطيسي-->
+<!--desc:شرح تفاعلي للتدفق المغناطيسي وقانون فارادي وقانون لنز والحث الذاتي ودارة RL والمولد الكهربائي - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الثالثة: الكهرومغناطيسية · الفصل الثامن</div>
+  <h1>الحث الكهرومغناطيسي</h1>
+  <p>إذا التيار بيعمل مجال مغناطيسي… هل المجال المغناطيسي بيعمل تيار؟ فارادي جرّب بمجال ثابت وفشل! الاكتشاف الحقيقي: <b>التغيّر</b> هو المفتاح. أي تغيّر بالتدفق المغناطيسي عبر ملف بيولّد فيه قوة دافعة. وعلى هالفكرة قامت محطات توليد الكهرباء كلها.</p>
+  <ul class="goals">
+    <li>تفسير ظاهرة الحث الكهرومغناطيسي، وحالات تولد القوة الدافعة الحثية.</li>
+    <li>تطبيق قانوني فارادي ولنز، وفهم الحث الذاتي ودارة المحث والمقاومة.</li>
+    <li>تفسير مبدأ عمل المولد الكهربائي.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>8-1 تجربة فارادي والتيار الحثي</h2>
+<div class="box idea"><div class="lbl">💡 شو صار مع فارادي؟</div>
+ملفان على حلقة حديد: الأول مع بطارية ومفتاح، والثاني مع جلفانوميتر. توقّع إن التيار الكبير الثابت بالملف الأول بيولّد تيار بالثاني… <b>ما صار شي!</b> لكن المؤشر انحرف <b>لحظة إغلاق</b> المفتاح، وانحرف <b>بالاتجاه المعاكس لحظة فتحه</b>. الاستنتاج: التيار يتولد عندما <b>يتغير</b> المجال المغناطيسي داخل الملف.
+</div>
+<div class="box def"><div class="lbl">📘 تعريفات</div>
+<b>الحث الكهرومغناطيسي:</b> توليد قوة دافعة كهربائية (وتيار) في موصل أو ملف نتيجة تغير التدفق المغناطيسي الذي يخترقه.<br>
+<b>القوة الدافعة الحثية والتيار الحثي:</b> القوة الدافعة المتولدة في الملف بسبب الحث، والتيار المار بسببها.
+</div>
+</section>
+
+<section id="s2">
+<h2>8-2 التدفق المغناطيسي</h2>
+<div class="box law"><div class="lbl">قانون (8-1)</div>
+$$\Phi_B=\vec B\cdot\vec A=BA\cos\theta$$
+<div class="sym"><span>$\vec A$: متجه المساحة (عمودي على السطح)</span><span>$\theta$: بين $\vec B$ و<b>العمودي</b> على مستوى الملف</span><span>الوحدة: الويبر $\text{Wb}=\text{T}\cdot\text{m}^2$</span></div>
+</div>
+<div class="box warn"><div class="lbl">⚠️ أكثر غلطة شائعة!</div>
+$\theta$ هي الزاوية بين المجال و<b>العمودي على الملف</b>، مش بين المجال ومستوى الملف. إذا المجال <b>عمودي</b> على مستوى الملف ← $\theta=0$ ← التدفق أعظمي $BA$. إذا المجال <b>موازٍ</b> لمستوى الملف ← $\theta=90^\circ$ ← التدفق صفر.
+</div>
+<div class="box idea"><div class="lbl">💡 ثلاث طرق لتغيير التدفق</div>
+$\Phi=BA\cos\theta$ ← غيّر أي واحد منها: ① <b>$B$</b> (قرّب/أبعد مغناطيس، غيّر التيار) ② <b>$A$</b> (موصل ينزلق، حلقة تُشد) ③ <b>$\theta$</b> (دوّر الملف — المولد).
+</div>
+</section>
+
+<section id="s3">
+<h2>8-3 القوة الدافعة الحثية وقانون فارادي</h2>
+<h3>موصل يتحرك في مجال (القوة الدافعة الحركية)</h3>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>$\varepsilon=vBL$</span></div>
+<div class="eq">موصل طوله $L$ يتحرك بسرعة $v$ عمودياً على مجال $B$ (داخل الورقة).</div>
+<div class="steps">
+<div class="s">القوة المغناطيسية على الشحنات الموجبة $q\vec v\times\vec B$ تدفعها لأحد طرفي الموصل ← فصل شحنات ← ينشأ مجال كهربائي $E$ داخل الموصل</div>
+<div class="s">يستمر التجمع حتى الاتزان: $qE=qvB \Rightarrow E=vB$</div>
+<div class="s">فرق الجهد بين الطرفين $V=EL \Rightarrow \boxed{\varepsilon=vBL}$ … (8-3)</div>
+</div></div>
+<div class="sim" id="simRod">
+<div class="sh"><span class="tag">محاكاة</span><b>موصل ينزلق على سكة (B داخل الورقة ⊗)</b></div>
+<div class="sb">
+<canvas id="cvRod"></canvas>
+<div class="controls">
+  <div class="ctl"><label>السرعة $v$ (موجب = يمين) <output for="rv"></output></label><input type="range" id="rv" name="v" min="-5" max="5" step="0.5" value="3" data-u="m/s"></div>
+  <div class="ctl"><label>المجال $B$ <output for="rB"></output></label><input type="range" id="rB" name="B" min="0" max="1" step="0.05" value="0.3" data-u="T"></div>
+  <div class="ctl"><label>طول الموصل $L$ <output for="rL"></output></label><input type="range" id="rL" name="L" min="0.1" max="1" step="0.05" value="0.4" data-u="m"></div>
+  <div class="ctl"><label>المقاومة $R$ <output for="rR"></output></label><input type="range" id="rR" name="R" min="1" max="20" step="1" value="5" data-u="Ω"></div>
+</div>
+<div class="readout" id="roRod"></div>
+<p class="note">المنطقة المظللة = المساحة التي يخترقها التدفق. الإعدادات الافتراضية = مثال (1). لاحظ: القوة المغناطيسية على الموصل دائماً <b>تعاكس حركته</b> (لنز)، فلازم قوة خارجية تساويها لتبقى السرعة ثابتة.</p>
+</div></div>
+<h3>التعميم: قانون فارادي</h3>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>من الشغل إلى فارادي</span></div>
+<div class="steps">
+<div class="s">مع وجود دارة مغلقة يمر تيار $I$، فيتأثر الموصل بقوة $ILB$ تعاكس حركته، والقوة الخارجية تساويها: $F_{ext}=ILB$</div>
+<div class="s">شغلها خلال إزاحة $\Delta x$: $W=ILB\Delta x=IB\Delta A=I\Delta\Phi$ (بالمقدار)</div>
+<div class="s">يتحول لطاقة كهربائية $\varepsilon I\Delta t$ ← $\varepsilon=-\dfrac{\Delta\Phi}{\Delta t}$ ، ولـ $N$ لفة: $\boxed{\varepsilon=-N\dfrac{\Delta\Phi}{\Delta t}}$</div>
+</div></div>
+<div class="box law"><div class="lbl">قانون فارادي (8-4) و (8-5)</div>
+$$\varepsilon_{ave}=-N\frac{\Delta\Phi}{\Delta t}\qquad\qquad I=\frac{\varepsilon}{R}$$
+<p style="margin:0;font-size:.95rem">متوسط القوة الدافعة الحثية يتناسب طردياً مع المعدل الزمني للتغير في التدفق المغناطيسي الذي يخترق الدارة.</p>
+</div>
+<details class="check"><summary>سؤال: ابدأ بقانون فارادي وتوصّل إلى $\varepsilon=vBL$.</summary><div class="a">
+$\Delta\Phi=B\Delta A=B(L\Delta x)$ ← $|\varepsilon|=\dfrac{BL\Delta x}{\Delta t}=BLv$ ✔</div></details>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>موصل على سكة</span></div>
+<div class="eq">موصل ab طوله $40\,\text{cm}$ متصل على التوالي مع $5\,\Omega$ في مجال $0.3\,\text{T}$، يتحرك لليمين بسرعة $3\,\text{m/s}$. أوجد: القوة الدافعة الحثية، التيار، والقوة الخارجية اللازمة لسرعة ثابتة.</div>
+<div class="steps">
+<div class="s">$\varepsilon=vBL=3\times0.3\times0.4=0.36\ \text{V}$</div>
+<div class="s">$I=\dfrac{0.36}{5}=0.072\ \text{A}$ (عكس عقارب الساعة حسب الشكل)</div>
+<div class="s">$F_{ext}=ILB=0.072\times0.4\times0.3\approx8.64\times10^{-3}\ \text{N}$ باتجاه الحركة (+x)</div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>8-4 قانون لنز</h2>
+<div class="box def"><div class="lbl">📘 قانون لنز</div>
+يكون اتجاه التيار الحثي المتولد في دارة أو ملف بحيث <b>يقاوم المسبب له</b>، وهو التغير في التدفق المغناطيسي. (وهذا معنى الإشارة السالبة في قانون فارادي، وهو نتيجة لحفظ الطاقة.)
+</div>
+<div class="box idea"><div class="lbl">💡 ليش لازم "يقاوم"؟</div>
+لو التيار الحثي <b>ساعد</b> التغيير، كان المغناطيس رح ينسحب لحاله أسرع وأسرع ويولد طاقة من لا شيء — مخالف لحفظ الطاقة! عشان هيك الطبيعة دايماً "بتعاند" التغيير، وانت لازم تبذل شغل.
+</div>
+<div class="box tip"><div class="lbl">⭐ خطوات تحديد اتجاه التيار الحثي</div>
+① حدد اتجاه المجال المؤثر الذي يخترق الملف.<br>
+② هل التدفق <b>يزداد</b> أم <b>يقل</b>؟<br>
+③ <b>يزداد</b> ← المجال الحثي <b>عكس</b> المؤثر. <b>يقل</b> ← المجال الحثي <b>بنفس اتجاه</b> المؤثر.<br>
+④ حدد اتجاه التيار الذي يعطي هذا المجال الحثي باليد اليمنى.
+</div>
+<div class="sim" id="simLenz">
+<div class="sh"><span class="tag">محاكاة</span><b>مغناطيس وحلقة: جرّب قانون لنز</b></div>
+<div class="sb">
+<div style="margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap"><span class="seg" id="lzPole"><button data-p="N" class="on">القطب الشمالي نحو الحلقة</button><button data-p="S">القطب الجنوبي نحو الحلقة</button></span></div>
+<canvas id="cvLenz"></canvas>
+<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="lzIn">قرّب المغناطيس ◀</button><button class="btn" id="lzOut">أبعد المغناطيس ▶</button></div>
+<div class="readout" id="roLenz"></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>تقريب مغناطيس من ملف</span></div>
+<div class="eq">بيّن اتجاه التيار الحثي في الملف عند تقريب المغناطيس منه (الشكل 8-6).</div>
+<div class="steps">
+<div class="s">التقريب يزيد التدفق في الملف ← يتولد تيار يقاوم الزيادة (الملف "يحاول إبعاد المغناطيس")</div>
+<div class="s">فيصبح طرف الملف القريب قطباً <b>مشابهاً</b> لقطب المغناطيس القريب منه ليتنافر معه</div>
+<div class="s">ثم باليد اليمنى نحدد اتجاه التيار: في المقاومة من b إلى a (حسب الشكل)</div>
+</div></div>
+<details class="check"><summary>أناقش: ماذا يحدث إذا (1) أبعدنا القطب الشمالي عن الحلقة؟ (2) قرّبنا القطب الجنوبي؟</summary><div class="a">
+(1) التدفق يقل ← المجال الحثي بنفس اتجاه المؤثر ← وجه الحلقة القريب يصبح قطباً <b>جنوبياً</b> يجذب المغناطيس (يقاوم الابتعاد) ← التيار مع عقارب الساعة (منظوراً من جهة المغناطيس).<br>
+(2) يزداد التدفق (لكن باتجاه معاكس) ← وجه الحلقة القريب يصبح <b>جنوبياً</b> ليتنافر ← التيار مع عقارب الساعة (منظوراً من جهة المغناطيس).</div></details>
+<details class="check"><summary>سؤال: حلقة فلزية بجانب سلك يسري فيه تيار. ما اتجاه التيار الحثي عند: (1) تحريك السلك بعيداً (2) زيادة تيار السلك (3) تحريك الحلقة موازية للسلك بسرعة ثابتة؟</summary><div class="a">
+(1) التدفق يقل ← التيار الحثي يولّد مجالاً <b>بنفس</b> اتجاه مجال السلك داخل الحلقة.<br>
+(2) التدفق يزيد ← التيار الحثي يولّد مجالاً <b>عكس</b> مجال السلك داخل الحلقة.<br>
+(3) إذا تحركت موازية للسلك (البعد ثابت) ← التدفق لا يتغير ← <b>لا يتولد تيار</b>.<br>
+(حدد الاتجاه الفعلي — مع/عكس عقارب الساعة — باليد اليمنى حسب اتجاه تيار السلك في الشكل.)</div></details>
+</section>
+
+<section id="s5">
+<h2>8-5 الحث الذاتي</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+الملف نفسه لما يتغير تياره، بيتغير التدفق اللي <b>هو</b> عامله… فبيتولد فيه قوة دافعة حثية تقاوم تغيّر تياره! كأنه الملف عنده "قصور" كهربائي: ما بيحب التيار يتغير بسرعة. مثل ما المواسع بيخزن طاقة بالمجال الكهربائي، المحث بيخزن طاقة بالمجال المغناطيسي.
+</div>
+<div class="box law"><div class="lbl">المحاثة (معامل الحث الذاتي) (8-6) و (8-7)</div>
+$$L_{in}=\frac{N\Phi}{I}\qquad\qquad L_{in}=\frac{\mu N^2A}{l}=\mu n^2\,l\,A\ \ (\text{ملف حلزوني})$$
+<div class="sym"><span>الوحدة: الهنري $\text{H}=\text{Wb/A}=\Omega\cdot\text{s}=\text{J/A}^2$</span><span>$l$: طول الملف</span></div>
+</div>
+<div class="box law"><div class="lbl">القوة الدافعة الحثية الذاتية (8-8)</div>
+$$\varepsilon=-L_{in}\frac{\Delta I}{\Delta t}$$
+<p style="margin:0;font-size:.95rem"><b>الهنري:</b> محاثة محث تتولد فيه قوة دافعة حثية $1\,\text{V}$ عندما يتغير تياره بمعدل $1\,\text{A/s}$.</p>
+</div>
+<details class="check"><summary>أناقش: ماذا يحدث لمحاثة ملف حلزوني إذا (1) ضوعف عدد لفاته بنفس الطول (2) ضوعف طوله بنفس اللفات (3) ضوعف التيار؟ ولماذا المحاثة موجبة دائماً؟</summary><div class="a">
+$L\propto\dfrac{N^2}{l}$: (1) تتضاعف <b>4 مرات</b>. (2) تقل للنصف. (3) <b>لا تتغير</b> — المحاثة تعتمد على شكل الملف ومادة قلبه فقط، لا على التيار.<br>
+موجبة دائماً لأن التدفق الذي يولّده تيار الملف داخل نفسه يكون دائماً باتجاه المجال الناتج عن هذا التيار، فالنسبة $\dfrac{N\Phi}{I}$ موجبة مهما كان اتجاه التيار.</div></details>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>محاثة ملف</span></div>
+<div class="eq">ملف حلزوني 300 لفة، طوله $0.25\,\text{m}$، ومساحة مقطعه $4\,\text{cm}^2$. احسب: (1) محاثته. (2) القوة الدافعة الحثية عندما يتناقص تياره بمعدل $50\,\text{A/s}$.</div>
+<div class="steps">
+<div class="s">$n=\dfrac{300}{0.25}=1200\ \text{لفة/m}$</div>
+<div class="s">(1) $L=\mu_0n^2lA=4\pi\times10^{-7}\times1200^2\times0.25\times4\times10^{-4}\approx1.81\times10^{-4}\ \text{H}$</div>
+<div class="s">(2) $\varepsilon=-L\dfrac{\Delta I}{\Delta t}=-1.81\times10^{-4}\times(-50)\approx9.05\times10^{-3}\ \text{V}$</div>
+</div></div>
+<details class="check"><summary>سؤال: قوة دافعة حثية $0.05\,\text{V}$ عندما يتزايد التيار بمعدل $0.06\,\text{A/s}$. (1) المحاثة؟ (2) إذا كان الملف 300 لفة، ما التدفق عبر كل لفة عندما يكون التيار $0.8\,\text{A}$؟</summary><div class="a">
+(1) $L=\dfrac{0.05}{0.06}\approx0.83\ \text{H}$ ، (2) $\Phi=\dfrac{LI}{N}=\dfrac{0.833\times0.8}{300}\approx2.2\times10^{-3}\ \text{Wb}$</div></details>
+<details class="check"><summary>سؤال: ملف حلزوني طوله $20\,\text{cm}$ ونصف قطره $7\,\text{cm}$ و 200 لفة يحمل $0.01\,\text{A}$. احسب التدفق، المحاثة، والقوة الدافعة إذا تلاشى التيار خلال ثانيتين.</summary><div class="a">
+$B=\dfrac{\mu_0NI}{l}=\dfrac{4\pi\times10^{-7}\times200\times0.01}{0.2}\approx1.26\times10^{-5}\,\text{T}$ ، $A=\pi(0.07)^2\approx0.0154\,\text{m}^2$<br>
+$\Phi=BA\approx1.93\times10^{-7}\ \text{Wb}$ ، $L=\dfrac{N\Phi}{I}\approx3.87\times10^{-3}\ \text{H}$ ، $\varepsilon=L\dfrac{\Delta I}{\Delta t}=3.87\times10^{-3}\times\dfrac{0.01}{2}\approx1.9\times10^{-5}\ \text{V}$</div></details>
+</section>
+
+<section id="s6">
+<h2>8-6 دارة المحث والمقاومة (RL)</h2>
+<p>عند إغلاق الدارة، المحث يولّد قوة دافعة <b>عكسية</b> تقاوم نمو التيار، فالتيار لا يقفز لقيمته النهائية فوراً بل ينمو تدريجياً. بتطبيق كيرتشوف الثاني:</p>
+<div class="box law"><div class="lbl">معدل نمو التيار (8-9)</div>
+$$\varepsilon-L\frac{\Delta I}{\Delta t}-I\textstyle\sum R=0 \ \Longrightarrow\ \dfrac{\Delta I}{\Delta t}=\dfrac{\varepsilon-I\sum R}{L}$$
+</div>
+<div class="tblwrap"><table class="tbl">
+<tr><th>اللحظة</th><th>التيار $I$</th><th>معدل النمو $\Delta I/\Delta t$</th><th>القوة الدافعة الحثية العكسية</th></tr>
+<tr><td>لحظة الإغلاق</td><td>$0$</td><td>أكبر ما يمكن $=\varepsilon/L$</td><td>أكبر ما يمكن $=\varepsilon$</td></tr>
+<tr><td>بعد فترة طويلة</td><td>أعظمي $=\varepsilon/\sum R$</td><td>$0$</td><td>$0$</td></tr>
+</table></div>
+<div class="sim" id="simRL">
+<div class="sh"><span class="tag">محاكاة</span><b>نمو التيار في دارة RL</b></div>
+<div class="sb">
+<canvas id="cvRL"></canvas>
+<div class="controls">
+  <div class="ctl"><label>$\varepsilon$ <output for="lE"></output></label><input type="range" id="lE" name="E" min="2" max="60" step="1" value="60" data-u="V"></div>
+  <div class="ctl"><label>المحاثة $L$ <output for="lL"></output></label><input type="range" id="lL" name="L" min="0.02" max="0.5" step="0.01" value="0.1" data-u="H"></div>
+  <div class="ctl"><label>$\sum R$ <output for="lR"></output></label><input type="range" id="lR" name="R" min="2" max="40" step="1" value="20" data-u="Ω"></div>
+</div>
+<div class="readout" id="roRL"></div>
+<p class="note">ميل المماس عند أي نقطة = $\Delta I/\Delta t$. زيادة $L$ تبطئ النمو لكن <b>لا تغيّر القيمة النهائية</b>. الإعدادات الافتراضية = س6 من أسئلة الفصل.</p>
+</div></div>
+<p>وعند <b>فتح</b> الدارة يتولد في المحث تيار بنفس اتجاه التيار الأصلي يقاوم تلاشيه، فيتلاشى تدريجياً.</p>
+<h3>الطاقة المختزنة في المحث</h3>
+<p>بضرب معادلة الدارة في $I$: $I\varepsilon=IL\dfrac{\Delta I}{\Delta t}+I^2\sum R$ ← (قدرة البطارية) = (القدرة المختزنة في المحث) + (المستنفدة في المقاومات).</p>
+<div class="box law"><div class="lbl">قانون (8-10)</div>
+$$E=\tfrac12L_{in}I^2\qquad\qquad E=\frac{B^2}{2\mu}(Al)\ \ (\text{للملف الحلزوني})$$
+</div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>طاقة المحث</span></div>
+<div class="eq">ملف محاثته $53\,\text{mH}$ ومقاومته $0.35\,\Omega$ وُصل ببطارية $12\,\text{V}$. احسب الطاقة المختزنة عندما يصل التيار لقيمته العظمى.</div>
+<div class="steps"><div class="s">$I_{max}=\dfrac{12}{0.35}\approx34.3\ \text{A}$</div><div class="s">$E=\tfrac12(53\times10^{-3})(34.3)^2\approx31.2\ \text{J}$</div></div></div>
+<details class="check"><summary>سؤال: ملف حلزوني طوله $50\,\text{cm}$ ونصف قطر مقطعه $4\,\text{cm}$، بداخله مادة نفاذيتها مثلا نفاذية الفراغ، و $n=12\,\text{لفة/cm}$. احسب المحاثة والطاقة عند تيار $3\,\text{A}$.</summary><div class="a">
+$n=1200\,\text{/m}$ ، $\mu=2\mu_0$ ، $A=\pi(0.04)^2\approx5.03\times10^{-3}\,\text{m}^2$<br>
+$L=\mu n^2lA=2(4\pi\times10^{-7})(1200)^2(0.5)(5.03\times10^{-3})\approx9.1\times10^{-3}\ \text{H}$ ، $E=\tfrac12LI^2\approx0.041\ \text{J}$</div></details>
+</section>
+
+<section id="s7">
+<h2>8-7 المولد الكهربائي</h2>
+<div class="box def"><div class="lbl">📘 المولد</div>
+يحوّل <b>الطاقة الميكانيكية</b> إلى <b>كهربائية</b> بوجود مجال مغناطيسي. أجزاؤه: ملف مستطيل متعدد اللفات يدور بين قطبي مغناطيس، حلقتان فلزيتان متصلتان بطرفي الملف تدوران معه، وفرشاتان ثابتتان (جرافيت) توصلان الملف بالدارة الخارجية.
+</div>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>القوة الدافعة اللحظية</span></div>
+<div class="steps">
+<div class="s">أثناء الدوران: $\Phi=BA\cos\theta$ و $\theta=\omega t$ تتغير باستمرار</div>
+<div class="s">$\varepsilon=-N\dfrac{d\Phi}{dt}=-NBA\dfrac{d(\cos\omega t)}{dt}$</div>
+<div class="s">$\boxed{\varepsilon=NBA\omega\sin\theta}$ … (8-15) ← اقتران جيبي، والقيمة العظمى $\varepsilon_{max}=NBA\omega$</div>
+</div></div>
+<div class="sim" id="simGen">
+<div class="sh"><span class="tag">محاكاة</span><b>المولد الكهربائي: من الدوران إلى منحنى جيبي</b></div>
+<div class="sb">
+<canvas id="cvGen"></canvas>
+<div class="controls">
+  <div class="ctl"><label>عدد اللفات $N$ <output for="gN"></output></label><input type="range" id="gN" name="N" min="10" max="200" step="10" value="100" data-u=""></div>
+  <div class="ctl"><label>المجال $B$ <output for="gB"></output></label><input type="range" id="gB" name="B" min="0.05" max="0.5" step="0.05" value="0.2" data-u="T"></div>
+  <div class="ctl"><label>السرعة الزاوية $\omega$ <output for="gw"></output></label><input type="range" id="gw" name="w" min="2" max="20" step="1" value="6" data-u="rad/s"></div>
+</div>
+<div class="readout" id="roGen"></div>
+<p class="note">مساحة الملف $0.2\,\text{m}^2$. لاحظ: القوة الدافعة <b>أعظمية</b> عندما يكون مستوى الملف <b>موازياً</b> للمجال (التدفق صفر لكنه يتغير بأسرع معدل)، و<b>صفر</b> عندما يكون عمودياً عليه (التدفق أعظمي). ضاعف $\omega$ ← يتضاعف الاتساع ويقل الزمن الدوري للنصف.</p>
+</div></div>
+<div class="tblwrap"><table class="tbl">
+<tr><th>وضع الملف</th><th>$\theta$ (بين B والعمودي)</th><th>التدفق</th><th>$\varepsilon$</th></tr>
+<tr><td>مستواه عمودي على المجال</td><td>$0^\circ$</td><td>أعظمي $BA$</td><td>$0$</td></tr>
+<tr><td>مستواه موازٍ للمجال</td><td>$90^\circ$</td><td>$0$</td><td>أعظمية $NBA\omega$</td></tr>
+<tr><td>نصف القيمة العظمى</td><td>$30^\circ$ (أي مستواه يصنع $60^\circ$ مع المجال)</td><td>$BA\cos30^\circ$</td><td>$\tfrac12\varepsilon_{max}$</td></tr>
+</table></div>
+<p>التيار الناتج <b>متردد (متناوب)</b>: يتغير مقداره واتجاهه كل نصف دورة. ولتقويمه (توحيد اتجاهه) نستبدل الحلقتين بنصفي حلقة معزولين يسميان <b>العاكس</b>. وللحصول على تيار شبه ثابت نستخدم عدة ملفات بينها زوايا صغيرة ثابتة.</p>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>تغيير N و ω</span></div>
+<div class="eq">كيف يتغير منحنى $\varepsilon$–الزمن عندما: (1) يتضاعف $N$؟ (2) تتضاعف $\omega$؟ (3) تتضاعف $\omega$ ويقل $N$ للنصف؟</div>
+<div class="steps">
+<div class="s">(1) $\varepsilon=2NBA\omega\sin\omega t$ ← <b>يتضاعف الاتساع</b> والزمن الدوري ثابت</div>
+<div class="s">(2) $\varepsilon=NBA(2\omega)\sin2\omega t$ ← <b>يتضاعف الاتساع ويقل الزمن الدوري للنصف</b></div>
+<div class="s">(3) $\varepsilon=\tfrac N2BA(2\omega)\sin2\omega t=\varepsilon_{max}\sin2\omega t$ ← الاتساع <b>ثابت</b> والزمن الدوري للنصف</div>
+</div></div>
+<details class="check"><summary>سؤال: مولد ملفه مستطيل $50\times40\,\text{cm}$، 100 لفة، في مجال $0.2\,\text{T}$، وقوته الدافعة العظمى $200\,\text{V}$. احسب (1) السرعة الزاوية (2) القوة الدافعة عندما يصنع مستوى الملف $60^\circ$ مع المجال.</summary><div class="a">
+(1) $\omega=\dfrac{\varepsilon_{max}}{NBA}=\dfrac{200}{100\times0.2\times0.2}=50\ \text{rad/s}$<br>
+(2) المستوى يصنع $60^\circ$ مع المجال ← العمودي يصنع $\theta=30^\circ$ ← $\varepsilon=200\sin30^\circ=100\ \text{V}$</div></details>
+</section>
+
+<section id="s8">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>التدفق</small>$\Phi=BA\cos\theta$</div>
+<div class="fcard"><small>فارادي</small>$\varepsilon=-N\dfrac{\Delta\Phi}{\Delta t}$</div>
+<div class="fcard"><small>موصل متحرك</small>$\varepsilon=vBL$</div>
+<div class="fcard"><small>المحاثة</small>$L=\dfrac{N\Phi}{I}=\dfrac{\mu N^2A}{l}$</div>
+<div class="fcard"><small>الحث الذاتي</small>$\varepsilon=-L\dfrac{\Delta I}{\Delta t}$ ، $E=\tfrac12LI^2$</div>
+<div class="fcard"><small>المولد</small>$\varepsilon=NBA\omega\sin\theta$</div>
+</div>
+</section>
+
+<section id="s9">
+<h2>اختبر نفسك: أسئلة الفصل والوحدة</h2>
+<div id="quiz8"></div>
+</section>
+
+<section id="s10">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2: وضّح: الحث الكهرومغناطيسي، قاعدة لنز، الهنري. &nbsp;|&nbsp; س3: علّل: لا يصل التيار قيمته النهائية لحظة إغلاق دارة محث ومقاومة.</summary><div class="a">
+(تعريفات في الأقسام أعلاه.)<br><b>س3:</b> لأن نمو التيار يغيّر التدفق في المحث فتتولد فيه قوة دافعة حثية ذاتية عكسية تقاوم نمو التيار (لنز)، فينمو التيار تدريجياً.</div></details>
+<details class="check"><summary>س4: حلقة نصفها داخل مجال $\otimes$ (من اليسار). حدد اتجاه التيار الحثي: (1) لحظة سحبها لليمين بسرعة ثابتة (2) لحظة ازدياد المجال.</summary><div class="a"><div class="circ" data-f="q4"></div>
+(1) الجزء داخل المجال يقل ← التدفق (للداخل) يقل ← المجال الحثي للداخل أيضاً ← التيار <b>مع عقارب الساعة</b>.<br>
+(2) التدفق للداخل يزيد ← المجال الحثي للخارج ← التيار <b>عكس عقارب الساعة</b>.</div></details>
+<div class="example"><div class="eh"><span>س5</span><span>ملف مولد</span></div>
+<div class="eq">ملف مستطيل $40\times20\,\text{cm}$، 180 لفة، يدور بمعدل $50\,\text{rev/s}$ في مجال $0.05\,\text{T}$، بدأ من وضع مستواه عمودي على المجال. أوجد: السرعة الزاوية، القوة الدافعة العظمى، ومتوسط القوة الدافعة خلال ربع دورة من البداية.</div>
+<div class="steps">
+<div class="s">$\omega=2\pi\times50=100\pi\approx314\ \text{rad/s}$</div>
+<div class="s">$\varepsilon_{max}=NBA\omega=180\times0.05\times0.08\times314\approx226\ \text{V}$</div>
+<div class="s">ربع دورة: التدفق من $BA$ (أعظمي) إلى صفر خلال $\dfrac T4=\dfrac{1}{200}\,\text{s}$</div>
+<div class="s"><span class="ans-final">$\varepsilon_{ave}=N\dfrac{BA}{\Delta t}=\dfrac{180\times0.05\times0.08}{0.005}=144\ \text{V}$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>دارة RL</span></div>
+<div class="eq">ملف $0.1\,\text{H}$ وُصل ببطارية $60\,\text{V}$، ومقاومة الدارة $20\,\Omega$. أوجد: القوة الدافعة الحثية لحظة الإغلاق، معدل نمو التيار لحظتها، القيمة العظمى للتيار، ومعدل النمو عندما يصبح التيار ثلث قيمته العظمى.</div>
+<div class="steps">
+<div class="s">لحظة الإغلاق $I=0$ ← $\varepsilon_{ind}=60\ \text{V}$ ، $\dfrac{\Delta I}{\Delta t}=\dfrac{60}{0.1}=600\ \text{A/s}$</div>
+<div class="s">$I_{max}=\dfrac{60}{20}=3\ \text{A}$</div>
+<div class="s">عند $I=1\,\text{A}$: $\dfrac{\Delta I}{\Delta t}=\dfrac{60-1\times20}{0.1}=400\ \text{A/s}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>إخراج الملف وعكس المجال</span></div>
+<div class="eq">مجال $0.2\,\text{T}$ عمودي على ملف 500 لفة، مساحة اللفة $100\,\text{cm}^2$. احسب القوة الدافعة: (1) عند إخراج الملف من المجال خلال $0.1\,\text{s}$ (2) عند عكس اتجاه المجال خلال $0.2\,\text{s}$.</div>
+<div class="steps">
+<div class="s">$\Phi=BA=0.2\times0.01=2\times10^{-3}\ \text{Wb}$</div>
+<div class="s">(1) $\varepsilon=500\times\dfrac{2\times10^{-3}}{0.1}=10\ \text{V}$</div>
+<div class="s">(2) عكس المجال ← $\Delta\Phi=2BA=4\times10^{-3}$ ← $\varepsilon=500\times\dfrac{4\times10^{-3}}{0.2}=10\ \text{V}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س8</span><span>ملف بقلب حديد</span></div>
+<div class="eq">ملف 600 لفة، مقطعه $4\times10^{-4}\,\text{m}^2$، قلبه حديد $\mu=22\pi\times10^{-4}\,\text{T}\cdot\text{m/A}$، ومحاثته $0.5\,\text{H}$ ويمر به $0.5\,\text{A}$. أوجد طوله، ومتوسط القوة الدافعة إذا انعدم التيار خلال $0.25\,\text{s}$.</div>
+<div class="steps">
+<div class="s">$l=\dfrac{\mu N^2A}{L}=\dfrac{22\pi\times10^{-4}\times600^2\times4\times10^{-4}}{0.5}\approx2\ \text{m}$</div>
+<div class="s">$\varepsilon=L\dfrac{\Delta I}{\Delta t}=0.5\times\dfrac{0.5}{0.25}=1\ \text{V}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س9</span><span>موصل يسقط بسرعة ثابتة</span></div>
+<div class="eq">موصل كتلته $0.15\,\text{kg}$ وطوله $1\,\text{m}$ ينزلق للأسفل بسرعة ثابتة $2\,\text{m/s}$ على سكة رأسية متصلة بمقاومة $0.75\,\Omega$ في مجال منتظم نحو الخارج. ما شدة المجال، ومقدار واتجاه التيار الحثي؟<div class="circ" data-f="q9"></div></div>
+<div class="steps">
+<div class="s">سرعة ثابتة ← القوة المغناطيسية للأعلى = الوزن: $ILB=mg$ ، و $I=\dfrac{vBL}{R}$</div>
+<div class="s">$\dfrac{vB^2L^2}{R}=mg \Rightarrow B^2=\dfrac{mgR}{vL^2}=\dfrac{0.15\times10\times0.75}{2\times1}=0.5625$ ← $B=0.75\ \text{T}$</div>
+<div class="s">$I=\dfrac{2\times0.75\times1}{0.75}=2\ \text{A}$</div>
+<div class="s"><span class="ans-final">الاتجاه: المساحة تزداد فالتدفق للخارج يزداد ← تيار مع عقارب الساعة ← في الموصل من a إلى b (نحو اليسار)</span></div>
+</div></div>
+
+<h3>مختارات من أسئلة الوحدة</h3>
+<details class="check"><summary>س6: بروتون تسارع من السكون خلال $1000\,\text{V}$ ثم دخل مجالاً $0.04\,\text{T}$ عمودياً. أوجد نصف القطر، الزمن الدوري، التردد، والتردد الزاوي.</summary><div class="a">
+$v=\sqrt{\dfrac{2qV}{m}}=\sqrt{\dfrac{2\times1.6\times10^{-19}\times1000}{1.67\times10^{-27}}}\approx4.38\times10^5\,\text{m/s}$<br>
+$r=\dfrac{mv}{qB}\approx0.114\ \text{m}$ ، $T=\dfrac{2\pi m}{qB}\approx1.64\times10^{-6}\ \text{s}$ ، $f\approx6.1\times10^5\ \text{Hz}$ ، $\omega=\dfrac{qB}{m}\approx3.83\times10^6\ \text{rad/s}$</div></details>
+<details class="check"><summary>س9: ملف دائري قطره $12\,\text{cm}$، 200 لفة، موصول بـ $33\,\Omega$، في مجال $0.35\,\text{T}$ نحو الناظر. انعكس المجال وأصبح $0.25\,\text{T}$ خلال $0.5\,\text{s}$. ما التيار الحثي؟</summary><div class="a">
+$A=\pi(0.06)^2\approx0.0113\,\text{m}^2$ ، $\Delta B=0.35-(-0.25)=0.6\,\text{T}$<br>
+$\varepsilon=200\times\dfrac{0.6\times0.0113}{0.5}\approx2.71\ \text{V}$ ، $I=\dfrac{2.71}{33}\approx0.082\ \text{A}$</div></details>
+<details class="check"><summary>س12: ملف محاثته $0.25\,\text{H}$. ما محاثته إذا (أ) ضُغط ليقل طوله للثلث بنفس اللفات (ب) أُنقص عدد لفاته للربع بنفس الطول؟</summary><div class="a">$L\propto\dfrac{N^2}{l}$: (أ) $3\times0.25=0.75\ \text{H}$ ، (ب) $\dfrac{0.25}{16}\approx0.0156\ \text{H}$</div></details>
+<details class="check"><summary>س14: ملف حلزوني طوله $10\,\text{cm}$، 800 لفة، مقطعه $20\,\text{cm}^2$، يحمل $3\,\text{A}$ تلاشى خلال $0.4\,\text{s}$. احسب المحاثة ومتوسط القوة الدافعة.</summary><div class="a">
+$L=\dfrac{\mu_0N^2A}{l}=\dfrac{4\pi\times10^{-7}\times800^2\times20\times10^{-4}}{0.1}\approx1.61\times10^{-2}\ \text{H}$ ، $\varepsilon=L\dfrac{3}{0.4}\approx0.12\ \text{V}$</div></details>
+<details class="check"><summary>س16: ملف 100 لفة، أكبر تدفق فيه $0.01\,\text{Wb}$، دار من وضع المجال عمودي على مستواه إلى وضع موازٍ له، فكان متوسط القوة الدافعة $200\,\text{V}$. ما القوة الدافعة العظمى؟</summary><div class="a">
+ربع دورة: $\Delta t=\dfrac{N\Delta\Phi}{\varepsilon_{ave}}=\dfrac{100\times0.01}{200}=5\times10^{-3}\,\text{s}$ ← $T=0.02\,\text{s}$ ← $\omega=100\pi$<br>
+$\varepsilon_{max}=N\Phi_{max}\omega=100\times0.01\times100\pi\approx314\ \text{V}$</div></details>
+<details class="check"><summary>س18: مولد 50 لفة، مساحة اللفة $0.04\,\text{m}^2$، زمن الدورة $0.1\,\text{s}$، وقوته الدافعة العظمى $30\,\text{V}$. احسب المجال، والقوة الدافعة بعد $0.0125\,\text{s}$ من وضع كان مستواه عمودياً على المجال.</summary><div class="a">
+$\omega=\dfrac{2\pi}{0.1}=20\pi$ ← $B=\dfrac{30}{50\times0.04\times20\pi}\approx0.24\ \text{T}$<br>
+$\theta=\omega t=20\pi\times0.0125=\dfrac\pi4$ ← $\varepsilon=30\sin45^\circ\approx21.2\ \text{V}$</div></details>
+<details class="check"><summary>س2 و س3 (الوحدة): مبدأ عمل المولد، ومقارنة وظيفة المجالين في السيكلترون ومنتقي السرعات.</summary><div class="a">
+<b>المولد:</b> الحث الكهرومغناطيسي — دوران الملف يغير التدفق عبره فتتولد قوة دافعة حثية.<br>
+<b>المجال الكهربائي:</b> في السيكلترون يُسرّع الجسيم (يزيد سرعته) في الفجوة، وفي منتقي السرعات يوازن القوة المغناطيسية.<br>
+<b>المجال المغناطيسي:</b> في السيكلترون يجعل المسار دائرياً (يوجّه الجسيم)، وفي منتقي السرعات يوازن القوة الكهربائية.<br>
+<b>لا يُستخدم قانون أمبير لمركز الملف الدائري</b> لعدم وجود مسار مغلق متماثل يكون عليه المجال ثابتاً ومعلوم الاتجاه.</div></details>
+</section>
+
+<script id="figs">window.FIGS={"q4": [["f", 0, 0, 2, 2.4, "x"], ["c", 2, 1.2, 0.8, 0, 180], ["c", 2, 1.2, 0.8, 180, 360], ["a", 3.1, 1.2, 3.9, 1.2, "v"], ["t", 0.5, 2.7, "B ⊗"]], "q9": [["f", 0, 0.4, 2.6, 3.4, "o"], ["w", 0, 0, 0, 3.4], ["w", 2.6, 0, 2.6, 3.4], ["r", 0, 0, 2.6, 0, "R = 0.75Ω"], ["w", -0.3, 2.2, 2.9, 2.2], ["d", 2.6, 2.2, "a", 0.3, -0.3], ["d", 0, 2.2, "b", -0.3, -0.3], ["a", 1.3, 2.4, 1.3, 3.1, "v = 2 m/s"], ["t", 1.3, 1.2, "B ⊙"]]};</script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- الموصل المنزلق --- */
+(function(){
+  const cv=document.getElementById('cvRod'), sim=document.getElementById('simRod'), ro=document.getElementById('roRod'); let V={}, x=0.4, last=0, ph=0;
+  function frame(ts){ const dt=Math.min(.05,(ts-last)/1000||0); last=ts; x+=V.v*dt*0.08; if(x>0.92) x=0.15; if(x<0.12) x=0.9; ph+=dt; draw(); requestAnimationFrame(frame); }
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,230); ctx.clearRect(0,0,w,h);
+    const x0=50,x1=w-20, yT=40, yB=40+60+V.L*110, rx=x0+(x1-x0)*x;
+    ctx.fillStyle=cssv('--muted'); ctx.globalAlpha=.35; ctx.font='11px sans-serif'; for(let i=x0+10;i<x1;i+=28) for(let j=14;j<h;j+=26) ctx.fillText('×',i,j); ctx.globalAlpha=1;
+    ctx.fillStyle=cssv('--accent'); ctx.globalAlpha=.12; ctx.fillRect(x0,yT,rx-x0,yB-yT); ctx.globalAlpha=1;
+    ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(x1,yT); ctx.lineTo(x0,yT); ctx.lineTo(x0,yB); ctx.lineTo(x1,yB); ctx.stroke();
+    // مقاومة
+    ctx.fillStyle=cssv('--surface'); ctx.fillRect(x0-12,(yT+yB)/2-22,24,44); ctx.strokeRect(x0-12,(yT+yB)/2-22,24,44); ctx.fillStyle=cssv('--ink'); ctx.font='bold 12px sans-serif'; ctx.fillText('R',x0-4,(yT+yB)/2+4);
+    ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=7; ctx.beginPath(); ctx.moveTo(rx,yT-8); ctx.lineTo(rx,yB+8); ctx.stroke();
+    ctx.fillStyle=cssv('--ink'); ctx.font='12px sans-serif'; ctx.fillText('a',rx+8,yT-2); ctx.fillText('b',rx+8,yB+12);
+    if(V.v) arrow(ctx,rx,(yT+yB)/2,rx+Math.sign(V.v)*50,(yT+yB)/2,cssv('--good'),3,10);
+    const eps=Math.abs(V.v)*V.B*V.L, I=eps/V.R;
+    // اتجاه التيار: حركة لليمين، B داخل ← q v×B: (+x)×(−z)=+y (للأعلى على الشاشة) ← التيار في الموصل للأعلى ← عكس عقارب الساعة
+    if(I>1e-6){ const up = V.v>0; const c=cssv('--bad'); arrow(ctx,rx-16,up?yB-20:yT+20,rx-16,up?yT+20:yB-20,c,2.5,9);
+      ctx.fillStyle=c; ctx.font='bold 12px sans-serif'; ctx.fillText(up?'I (عكس عقارب الساعة)':'I (مع عقارب الساعة)',x0+20,yB+26); }
+    if(!draw.ro || draw.key!==JSON.stringify(V)){ draw.key=JSON.stringify(V);
+      ro.innerHTML=`<span class="r">$\\varepsilon=vBL$ = <b>${fmt(eps,3)} V</b></span><span class="r">$I=\\varepsilon/R$ = <b>${fmt(I,3)} A</b></span><span class="r">$F_{ext}=ILB$ = <b>${fmt(I*V.L*V.B)} N</b></span><span class="r">القدرة = <b>${fmt(eps*I)} W</b></span>`; renderMath(ro); draw.ro=1; }
+  }
+  bindRanges(sim,v=>{V=v;}); requestAnimationFrame(frame);
+})();
+
+/* --- لنز --- */
+(function(){
+  const cv=document.getElementById('cvLenz'), ro=document.getElementById('roLenz'); let pole='N', mx=0.85, vel=0, last=0;
+  const seg=document.getElementById('lzPole'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');pole=b.dataset.p;msg();});
+  let lastMsg='';
+  function msg(){ let s;
+    if(Math.abs(vel)<1e-3){ s='<span class="r">المغناطيس ساكن ← التدفق ثابت ← <b>لا يوجد تيار حثي</b></span>'; }
+    else { const approach=vel<0; const face = approach? pole : (pole==='N'?'S':'N');
+      s=`<span class="r">${approach?'التقريب ← التدفق <b>يزداد</b>':'الإبعاد ← التدفق <b>يقل</b>'}</span><span class="r">وجه الحلقة المقابل للمغناطيس يصبح قطباً <b>${face==='N'?'شمالياً':'جنوبياً'}</b> ← ${approach?'تنافر يقاوم الاقتراب':'تجاذب يقاوم الابتعاد'}</span><span class="r">التيار (منظوراً من جهة المغناطيس): <b>${face==='N'?'عكس':'مع'} عقارب الساعة</b></span>`; }
+    if(s!==lastMsg){ ro.innerHTML=s; lastMsg=s; } }
+  function frame(ts){ const dt=Math.min(.05,(ts-last)/1000||0); last=ts; mx+=vel*dt; if(mx<0.42){mx=0.42;vel=0;} if(mx>0.85){mx=0.85;vel=0;} draw(); msg(); requestAnimationFrame(frame); }
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,200); ctx.clearRect(0,0,w,h); const cy=h/2;
+    // الحلقة
+    const rx=w*0.25; ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=6; ctx.beginPath(); ctx.ellipse(rx,cy,16,60,0,0,7); ctx.stroke();
+    // جلفانوميتر
+    const gx=w*0.1, gy=cy+70; ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2; ctx.beginPath(); ctx.arc(gx,gy,20,Math.PI,0); ctx.stroke();
+    const flux=1/((mx-0.25)**2); const dI = -vel*2.2*(pole==='N'?1:-1)*flux/40; const ang=Math.max(-1.3,Math.min(1.3,dI));
+    ctx.strokeStyle=cssv('--bad'); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(gx,gy); ctx.lineTo(gx+Math.sin(ang)*18,gy-Math.cos(ang)*18); ctx.stroke();
+    ctx.fillStyle=cssv('--muted'); ctx.font='11px sans-serif'; ctx.fillText('G',gx-4,gy+14);
+    // المغناطيس
+    const x=w*mx, mw=130; const near=pole, far=pole==='N'?'S':'N';
+    ctx.fillStyle=near==='N'?'#c2413b':'#1f5fbf'; ctx.fillRect(x-mw/2,cy-18,mw/2,36); ctx.fillStyle=far==='N'?'#c2413b':'#1f5fbf'; ctx.fillRect(x,cy-18,mw/2,36);
+    ctx.fillStyle='#fff'; ctx.font='bold 16px sans-serif'; ctx.fillText(near,x-mw/2+10,cy+6); ctx.fillText(far,x+mw/2-22,cy+6);
+    if(Math.abs(vel)>1e-3){ const approach=vel<0; const face=approach?pole:(pole==='N'?'S':'N'); ctx.fillStyle=face==='N'?'#c2413b':'#1f5fbf'; ctx.font='bold 15px sans-serif'; ctx.fillText(face,rx+22,cy-50); ctx.font='11px sans-serif'; ctx.fillStyle=cssv('--muted'); ctx.fillText('قطب حثي',rx+20,cy-34); }
+  }
+  document.getElementById('lzIn').onclick=()=>{ vel=-0.25; };
+  document.getElementById('lzOut').onclick=()=>{ vel=0.25; };
+  requestAnimationFrame(frame);
+})();
+
+/* --- RL --- */
+(function(){
+  const cv=document.getElementById('cvRL'), sim=document.getElementById('simRL'), ro=document.getElementById('roRL'); let V={};
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,220); ctx.clearRect(0,0,w,h);
+    const L=46,R=w-16,T=16,B=h-30, tmax=0.05, Imax=V.E/V.R, Ishow=Math.max(3,Imax)*1.1;
+    const X=t=>L+(R-L)*t/tmax, Y=i=>B-(B-T)*i/Ishow;
+    ctx.strokeStyle=cssv('--line'); ctx.beginPath(); ctx.moveTo(L,B); ctx.lineTo(R,B); ctx.moveTo(L,T); ctx.lineTo(L,B); ctx.stroke();
+    ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(L,Y(Imax)); ctx.lineTo(R,Y(Imax)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; ctx.fillText('I (A)',4,T+6); ctx.fillText('t (s)',R-30,B+22); ctx.fillText('I_max = ε/R',R-90,Y(Imax)-6);
+    for(let k=0;k<=5;k++) ctx.fillText((tmax*k/5).toFixed(2),X(tmax*k/5)-10,B+14);
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=3; ctx.beginPath();
+    for(let k=0;k<=300;k++){ const t=tmax*k/300, i=Imax*(1-Math.exp(-V.R*t/V.L)); k?ctx.lineTo(X(t),Y(i)):ctx.moveTo(X(t),Y(i)); } ctx.stroke();
+    // المماس عند البداية
+    const s0=V.E/V.L; ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=1.5; ctx.setLineDash([5,4]); ctx.beginPath(); ctx.moveTo(X(0),Y(0)); const tt=Math.min(tmax,Imax/s0*1.2); ctx.lineTo(X(tt),Y(s0*tt)); ctx.stroke(); ctx.setLineDash([]);
+    ro.innerHTML=`<span class="r">$I_{max}=\\varepsilon/\\sum R$ = <b>${fmt(Imax)} A</b></span><span class="r">معدل النمو لحظة الإغلاق $\\varepsilon/L$ = <b>${fmt(s0)} A/s</b></span><span class="r">الطاقة العظمى $\\tfrac12LI^2$ = <b>${fmt(0.5*V.L*Imax*Imax)} J</b></span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- المولد --- */
+(function(){
+  const cv=document.getElementById('cvGen'), sim=document.getElementById('simGen'), ro=document.getElementById('roGen'); let V={}, th=0, last=0, hist=[];
+  function frame(ts){ const dt=Math.min(.05,(ts-last)/1000||0); last=ts; th+=V.w*dt*0.25; draw(); requestAnimationFrame(frame); }
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,240); ctx.clearRect(0,0,w,h);
+    const A=0.2, em=V.N*V.B*A*V.w, e=em*Math.sin(th);
+    // المنظر الجانبي للملف بين قطبين
+    const cx=110, cy=h/2; ctx.fillStyle='#c2413b'; ctx.fillRect(10,cy-50,24,100); ctx.fillStyle='#1f5fbf'; ctx.fillRect(186,cy-50,24,100);
+    ctx.fillStyle='#fff'; ctx.font='bold 14px sans-serif'; ctx.fillText('N',16,cy+5); ctx.fillText('S',192,cy+5);
+    ctx.strokeStyle=cssv('--muted'); ctx.globalAlpha=.4; for(let k=-2;k<=2;k++){ arrow(ctx,40,cy+k*20,180,cy+k*20,cssv('--muted'),1,6);} ctx.globalAlpha=1;
+    // الملف (خط يمثل مقطعه) — θ بين B والعمودي على الملف
+    const lx=Math.sin(th)*55, ly=Math.cos(th)*55; // اتجاه مستوى الملف
+    ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=6;
+    ctx.beginPath(); ctx.moveTo(cx-Math.sin(th)*55,cy-Math.cos(th)*55); ctx.lineTo(cx+Math.sin(th)*55,cy+Math.cos(th)*55); ctx.stroke();
+    // العمودي على الملف
+    arrow(ctx,cx,cy,cx+Math.cos(th)*40,cy-Math.sin(th)*40,cssv('--good'),2,8);
+    ctx.fillStyle=cssv('--good'); ctx.font='11px sans-serif'; ctx.fillText('A',cx+Math.cos(th)*46,cy-Math.sin(th)*46);
+    // المنحنى
+    const gx0=240, gx1=w-12, gy=cy; if(gx1-gx0<60) return;
+    ctx.strokeStyle=cssv('--line'); ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(gx0,gy); ctx.lineTo(gx1,gy); ctx.moveTo(gx0,20); ctx.lineTo(gx0,h-20); ctx.stroke();
+    const sc=(h/2-24)/80;
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=2.5; ctx.beginPath();
+    const span=4*Math.PI; for(let k=0;k<=300;k++){ const t=th-span+span*k/300; const y=gy-Math.min(h/2-8,Math.max(-(h/2-8),em*Math.sin(t)*sc)); k?ctx.lineTo(gx0+(gx1-gx0)*k/300,y):ctx.moveTo(gx0,y);} ctx.stroke();
+    ctx.fillStyle=cssv('--warm'); ctx.beginPath(); ctx.arc(gx1,gy-Math.min(h/2-8,Math.max(-(h/2-8),e*sc)),5,0,7); ctx.fill();
+    ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; ctx.fillText('ε (t)',gx0+6,24);
+    if(!draw.k || draw.k!==JSON.stringify(V)){ draw.k=JSON.stringify(V);
+      ro.innerHTML=`<span class="r">$\\varepsilon_{max}=NBA\\omega$ = <b>${fmt(em)} V</b></span><span class="r">الزمن الدوري $2\\pi/\\omega$ = <b>${fmt(2*Math.PI/V.w)} s</b></span>`; renderMath(ro); }
+  }
+  bindRanges(sim,v=>{V=v;}); requestAnimationFrame(frame);
+})();
+
+Quiz('#quiz8',[
+ {q:'أي الآتية <b>لا</b> تعد وحدة لقياس معامل الحث الذاتي؟', o:['$\\Omega\\cdot\\text{s}$','$\\text{A/J}$','$\\text{J/A}^2$','$\\text{T}\\cdot\\text{m}^2/\\text{A}$'], a:1, e:'$\\text{H}=\\Omega\\cdot\\text{s}=\\text{J/A}^2=\\text{Wb/A}=\\text{T}\\cdot\\text{m}^2/\\text{A}$. أما A/J فهي مقلوب تقريباً وغير صحيحة.'},
+ {q:'أي الآتية يعد تطبيقاً على الحث؟', o:['الجلفانوميتر','السيكلترون','منتقي السرعات','المولد الكهربائي'], a:3, e:'المولد يعمل على تغير التدفق عبر ملف دوار.'},
+ {q:'ملف 50 لفة، التدفق خلاله $5\\,\\text{mWb}$ عندما يمر به $2\\,\\text{A}$. محاثته:', o:['125 mH','125 H','20 mH','20 H'], a:0, e:'$L=\\dfrac{N\\Phi}{I}=\\dfrac{50\\times5\\times10^{-3}}{2}=0.125\\,\\text{H}$.'},
+ {q:'القدرة الداخلة عبر المحث في دارة RL بعد فترة كافية من الإغلاق:', o:['صفر','أكبر ما يمكن','نصف قيمتها العظمى','ربع قيمتها العظمى'], a:0, e:'التيار ثابت ← $\\Delta I/\\Delta t=0$ ← $P=LI\\dfrac{\\Delta I}{\\Delta t}=0$.'},
+ {q:'عند زيادة معامل الحث الذاتي في دارة RL:', o:['القيمة النهائية للتيار تقل','القيمة النهائية تزداد','معدل نمو التيار يقل','معدل نمو التيار يزداد'], a:2, e:'$I_{max}=\\varepsilon/R$ لا يعتمد على L، لكن $\\Delta I/\\Delta t=(\\varepsilon-IR)/L$ يقل.'},
+ {q:'عند زيادة سرعة دوران المولد، القوة الدافعة العظمى والزمن الدوري على الترتيب:', o:['تزداد، يقل','تقل، يقل','تقل، يزيد','تزداد، يزداد'], a:0, e:'$\\varepsilon_{max}=NBA\\omega$ و $T=2\\pi/\\omega$.'},
+ {q:'(الوحدة) جسيم مشحون يتحرك عمودياً على مجال منتظم. كل ما يلي صحيح <b>ما عدا</b>:', o:['يتأثر بقوة مغناطيسية','يتغير مقدار سرعته','يتغير زخمه الخطي','يتحرك بمسار دائري'], a:1, e:'القوة عمودية على السرعة فلا تغير مقدارها، فقط اتجاهها.'},
+ {q:'(الوحدة) أيون موجب في مجالين متعامدين: كهربائي $5\\times10^4\\,\\text{V/m}$ ومغناطيسي $0.8\\,\\text{T}$، وتسارعه صفر. سرعته:', o:['صفر','$1.6\\times10^4$','$4\\times10^4$','$6.3\\times10^4$'], a:3, e:'$v=E/B=6.25\\times10^4\\,\\text{m/s}$.'},
+ {q:'(الوحدة) حلقة مرنة نصف قطرها $15\\,\\text{cm}$ عمودية على مجال $0.25\\,\\text{T}$، شُدّت حتى تلاشت مساحتها خلال $0.3\\,\\text{s}$. متوسط القوة الدافعة (V):', o:['0.12','0.018','1.8','0.059'], a:3, e:'$\\varepsilon=\\dfrac{BA}{\\Delta t}=\\dfrac{0.25\\times\\pi(0.15)^2}{0.3}\\approx0.059\\,\\text{V}$.'},
+ {q:'(الوحدة) لتتولد قوة دافعة في سلك مستقيم طوله عمودي على مجال منتظم، يجب تحريكه:', o:['موازياً لطوله وللمجال','موازياً لطوله وعمودياً على المجال','عمودياً على طوله وعلى المجال','عمودياً على السلك وموازياً للمجال'], a:2, e:'يجب أن "يقطع" خطوط المجال: $\\varepsilon=vBL$ مع v عمودية على كل من B و L.'},
+ {q:'(الوحدة) أي مما يلي <b>لا</b> تعتمد عليه محاثة الملف الحلزوني؟', o:['طوله','عدد اللفات','شدة التيار','مساحة مقطعه'], a:2, e:'$L=\\mu N^2A/l$.'},
+ {q:'(الوحدة) الكمية التي تكون عظمى لحظة إغلاق دارة الحث الذاتي:', o:['القوة الدافعة الحثية الذاتية','التيار','الطاقة المختزنة','التدفق المغناطيسي'], a:0, e:'لحظة الإغلاق معدل تغير التيار أعظمي ← القوة الدافعة العكسية = ε. أما التيار والطاقة والتدفق فصفر.'},
+ {q:'(الوحدة) ملف حلزوني يمر فيه تيار قُسم إلى جزأين بنسبة طولية 1:2. نسبة المجال $B_1:B_2$ على محوريهما:', o:['1:2','2:1','1:1','1:4'], a:2, e:'$B=\\mu_0nI$ و $n$ (اللفات لوحدة الطول) نفسه في الجزأين.'},
+ {q:'(الوحدة) وحدة التدفق المغناطيسي:', o:['$\\text{Wb/m}^2$','$\\text{T}\\cdot\\text{m}^2$','$\\text{T}\\cdot\\text{m}$','$\\text{T/m}$'], a:1, e:'$\\Phi=BA$ ← $\\text{T}\\cdot\\text{m}^2=\\text{Wb}$.'}
+],'ch8');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

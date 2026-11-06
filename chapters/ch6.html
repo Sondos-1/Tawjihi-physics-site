@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل السادس: المجال المغناطيسي | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للمجال المغناطيسي حول سلك مستقيم وملف دائري وملف حلزوني وقانوني بيو-سافار وأمبير - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل السادس: المجال المغناطيسي | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للمجال المغناطيسي حول سلك مستقيم وملف دائري وملف حلزوني وقانوني بيو-سافار وأمبير - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch6" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل السادس: المجال المغناطيسي-->
+<!--desc:شرح تفاعلي للمجال المغناطيسي حول سلك مستقيم وملف دائري وملف حلزوني وقانوني بيو-سافار وأمبير - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الثالثة: الكهرومغناطيسية · الفصل السادس</div>
+  <h1>المجال المغناطيسي</h1>
+  <p>سنة 1820 لاحظ أورستد إنه إبرة البوصلة بتنحرف لما يمر تيار بسلك جنبها. هاللحظة ربطت الكهرباء بالمغناطيسية للأبد: <b>التيار الكهربائي يولّد مجالاً مغناطيسياً</b>. بهالفصل بنحسب هالمجال لثلاث أشكال: سلك مستقيم، ملف دائري، ملف حلزوني.</p>
+  <ul class="goals">
+    <li>توضيح المقصود بالمجال المغناطيسي وخصائص خطوطه.</li>
+    <li>وصف وحساب المجال الناشئ عن تيار في: سلك مستقيم طويل، ملف دائري، ملف حلزوني.</li>
+    <li>تطبيق قانون أمبير، وتفسير بعض التطبيقات.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>6-1 المجال المغناطيسي وخطوطه</h2>
+<div class="box def"><div class="lbl">📘 تعريفات</div>
+<b>المجال المغناطيسي:</b> المنطقة المحيطة بالمغناطيس (أو بالتيار) التي تظهر فيها آثار قوته المغناطيسية. وهو مجال قوى، اتجاهه في أي نقطة باتجاه القوة المؤثرة في قطب شمالي مفرد (افتراضي) يوضع فيها.<br>
+<b>خط المجال المغناطيسي:</b> المسار الذي يتبعه قطب شمالي مفرد افتراضي حرّ الحركة إذا وُضع في المجال.<br>
+<b>وحدة شدة المجال:</b> التسلا $(\text{T})$.
+</div>
+<div class="tblwrap"><table class="tbl">
+<tr><th>خصائص خطوط المجال المغناطيسي</th><th>السبب</th></tr>
+<tr><td><b>مقفلة</b>: تخرج من الشمالي إلى الجنوبي خارج المغناطيس، وتكمل من الجنوبي إلى الشمالي داخله</td><td>لعدم وجود قطب مغناطيسي مفرد</td></tr>
+<tr><td><b>لا تتقاطع</b></td><td>لأن المجال في أي نقطة له اتجاه واحد فقط (لو تقاطعت لكان للنقطة اتجاهان)</td></tr>
+<tr><td>تتقارب حيث المجال قوي وتتباعد حيث يضعف</td><td>كثافة الخطوط تمثل شدة المجال</td></tr>
+</table></div>
+</section>
+
+<section id="s2">
+<h2>6-2 مصادر المجال: تجربة أورستد وقانون بيو–سافار</h2>
+<div class="box idea"><div class="lbl">💡 تجربة أورستد</div>
+بوصلة تحت سلك موازٍ لإبرتها: عند مرور تيار تنحرف الإبرة، وإذا عكست التيار تنحرف بالاتجاه المعاكس. النتيجة: <b>التيار الكهربائي مصدر للمجال المغناطيسي</b> ← ولادة علم الكهرومغناطيسية.
+</div>
+<p>وجد بيو وسافار أن المجال $\Delta B$ الناشئ عن جزء صغير $\Delta L$ من موصل يحمل تياراً $I$، عند نقطة تبعد $r$:</p>
+<ul>
+<li>يتناسب طردياً مع $I$ ومع $\Delta L$ ومع $\sin\theta$ ($\theta$ بين $\Delta L$ و $r$).</li>
+<li>يتناسب عكسياً مع $r^2$.</li>
+<li>يعتمد على نوع الوسط، واتجاهه عمودي على كل من $\Delta L$ و $r$.</li>
+</ul>
+<div class="box law"><div class="lbl">قانون بيو–سافار (6-1)</div>
+$$B=\frac{\mu_0}{4\pi}\sum\frac{I\,\Delta L\,\sin\theta}{r^2}$$
+<div class="sym"><span>$\mu_0=4\pi\times10^{-7}\ \text{T}\cdot\text{m/A}$: النفاذية المغناطيسية للفراغ</span></div>
+</div>
+</section>
+
+<section id="s3">
+<h2>6-3 المجال حول سلك مستقيم طويل</h2>
+<div class="box idea"><div class="lbl">💡 شكل المجال</div>
+خطوط المجال <b>دوائر متحدة المركز</b> مركزها السلك، ومستواها عمودي عليه. وكلما ابتعدت عن السلك تتباعد الدوائر (المجال يضعف).
+</div>
+<div class="box tip"><div class="lbl">✋ قاعدة اليد اليمنى (للسلك)</div>
+امسك السلك بيدك اليمنى بحيث يشير <b>الإبهام لاتجاه التيار</b>، فتلتف <b>الأصابع باتجاه خطوط المجال</b>.<br>
+رموز: $\odot$ = خارج من الورقة (نحو الناظر)، $\otimes$ = داخل في الورقة (بعيداً عن الناظر).<br>
+تيار $\odot$ ← المجال حوله <b>عكس</b> عقارب الساعة. تيار $\otimes$ ← المجال <b>مع</b> عقارب الساعة.
+</div>
+<div class="box law"><div class="lbl">قانون (6-2)</div>
+$$B=\frac{\mu_0I}{2\pi r}$$
+<div class="sym"><span>$r$: البعد العمودي عن السلك</span><span>$\dfrac{\mu_0}{2\pi}=2\times10^{-7}$ (اختصار مفيد!)</span></div>
+</div>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>سلك مستقيم</span></div>
+<div class="eq">سلك يسري فيه $25\,\text{A}$ للأعلى. أوجد المجال عند النقطة a التي تبعد عنه $10\,\text{cm}$ (على يمينه).<div class="circ" data-f="ex1"></div></div>
+<div class="steps"><div class="s">$B=\dfrac{4\pi\times10^{-7}\times25}{2\pi\times0.1}=2\times10^{-7}\times\dfrac{25}{0.1}=5\times10^{-5}\ \text{T}$</div><div class="s">الاتجاه (يد يمنى: الإبهام للأعلى، النقطة يمين السلك): <b>داخل الورقة</b> $\otimes$</div></div></div>
+
+<div class="sim" id="simWires">
+<div class="sh"><span class="tag">محاكاة</span><b>سلكان متوازيان: تراكب المجالات</b></div>
+<div class="sb">
+<canvas id="cvWires"></canvas>
+<div class="controls">
+  <div class="ctl"><label>$I_1$ (اليسار) — موجب = $\odot$ <output for="wI1"></output></label><input type="range" id="wI1" name="I1" min="-10" max="10" step="1" value="5" data-u="A"></div>
+  <div class="ctl"><label>$I_2$ (اليمين) — موجب = $\odot$ <output for="wI2"></output></label><input type="range" id="wI2" name="I2" min="-10" max="10" step="1" value="-2" data-u="A"></div>
+  <div class="ctl"><label>موقع النقطة P من السلك الأيسر <output for="wx"></output></label><input type="range" id="wx" name="x" min="-6" max="16" step="0.5" value="5" data-u="cm"></div>
+</div>
+<div class="readout" id="roWires"></div>
+<p class="note">المسافة بين السلكين $10\,\text{cm}$. السهم عند P = المجال المحصل (أعلى/أسفل الصفحة). المنحنى أسفل الرسم = $B_y$ على طول الخط الواصل. الإعدادات الافتراضية = سؤال الكتاب ($5\,\text{A}\odot$ و $2\,\text{A}\otimes$ عند المنتصف).</p>
+</div></div>
+<details class="check"><summary>سؤال الكتاب: سلكان متوازيان عموديان على الصفحة البعد بينهما $10\,\text{cm}$، $I_2=5\,\text{A}$ $(\odot)$ و $I_1=2\,\text{A}$ $(\otimes)$. احسب المجال عند منتصف المسافة.</summary><div class="a"><div class="circ" data-f="two"></div>
+عند المنتصف $r=5\,\text{cm}$ لكليهما. تيار $\odot$ (عكس عقارب الساعة) يعطي على يمينه مجالاً <b>للأعلى</b>، وتيار $\otimes$ (مع عقارب الساعة) يعطي على يساره مجالاً <b>للأعلى</b> أيضاً ← يُجمعان:<br>
+$B=2\times10^{-7}\times\dfrac{5+2}{0.05}=2.8\times10^{-5}\ \text{T}$ للأعلى.<br>
+<b>قاعدة سريعة:</b> بين سلكين تياراهما <u>متعاكسان</u> ← المجالان يُجمعان. تياراهما <u>بنفس الاتجاه</u> ← يُطرحان.</div></details>
+</section>
+
+<section id="s4">
+<h2>6-4 المجال في مركز ملف دائري</h2>
+<div class="box idea"><div class="lbl">💡 شكل المجال</div>
+لما نثني السلك لحلقة، كل أجزاء الحلقة بتعطي مجال <b>بنفس الاتجاه</b> عند المركز، فيتجمّع المجال هناك. الخطوط قرب المركز تكاد تكون مستقيمة (مجال منتظم).
+</div>
+<div class="box tip"><div class="lbl">✋ اليد اليمنى للملف الدائري</div>
+اجعل <b>الإبهام باتجاه التيار</b> في الملف، فتشير <b>الأصابع</b> (المنحنية نحو المركز) إلى اتجاه المجال في المركز. <br>اختصار: تيار <b>مع</b> عقارب الساعة ← المجال في المركز <b>داخل</b> الورقة $\otimes$. تيار <b>عكس</b> عقارب الساعة ← <b>خارج</b> الورقة $\odot$.
+</div>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>من بيو–سافار</span></div>
+<div class="steps">
+<div class="s">في المركز كل الأجزاء على نفس البعد $R$ والزاوية $\theta=90^\circ$ ← $B=\dfrac{\mu_0}{4\pi}\cdot\dfrac{I\sum\Delta L}{R^2}$</div>
+<div class="s">طول السلك الكلي $\sum\Delta L=N\times2\pi R$</div>
+<div class="s">$B=\dfrac{\mu_0}{4\pi}\cdot\dfrac{IN\,2\pi R}{R^2}\ \Rightarrow\ \boxed{B=\dfrac{\mu_0IN}{2R}}$</div>
+</div></div>
+<div class="box law"><div class="lbl">قانون (6-3)</div>
+$$B=\frac{\mu_0IN}{2R}$$
+<p style="margin:0;font-size:.9rem">ولجزء من حلقة (قوس زاويته $\theta$): $B=\dfrac{\theta}{2\pi}\cdot\dfrac{\mu_0I}{2R}$ ، والأجزاء المستقيمة التي يمر امتدادها بالنقطة لا تعطي مجالاً.</p>
+</div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>ملف دائري</span></div>
+<div class="eq">ملف دائري 250 لفة، نصف قطره $3.14\,\text{cm}$، في مستوى الصفحة، يسري فيه $2\,\text{A}$ مع عقارب الساعة. احسب المجال في مركزه.</div>
+<div class="steps"><div class="s">$B=\dfrac{4\pi\times10^{-7}\times2\times250}{2\times3.14\times10^{-2}}=1\times10^{-2}\ \text{T}$</div><div class="s">الاتجاه: مع عقارب الساعة ← <b>داخل الورقة</b></div></div></div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>ملفان متحدا المركز</span></div>
+<div class="eq">ملفان متحدا المركز، 100 لفة لكل منهما، $R_1=7\,\text{cm}$ و $R_2=2\,\text{cm}$، وتيار الأول $5\,\text{A}$ مع عقارب الساعة. ما مقدار واتجاه تيار الثاني ليكون المجال في المركز: (A) $9\times10^{-3}\,\text{T}$ للداخل، (B) $2\times10^{-3}\,\text{T}$ للداخل، (C) صفراً؟</div>
+<div class="steps">
+<div class="s">$B_1=\dfrac{4\pi\times10^{-7}\times5\times100}{2\times0.07}\approx4.5\times10^{-3}\ \text{T}$ للداخل. و $B_2=\dfrac{4\pi\times10^{-7}\times100}{2\times0.02}I_2\approx3.14\times10^{-3}I_2$</div>
+<div class="s">(A) المطلوب أكبر من $B_1$ ← $B_2$ بنفس اتجاهه: $B_2=4.5\times10^{-3}$ ← $I_2\approx1.43\,\text{A}$ مع عقارب الساعة</div>
+<div class="s">(B) المطلوب أقل من $B_1$ ← $B_2$ عكسه: $B_2=2.5\times10^{-3}$ ← $I_2\approx0.8\,\text{A}$ عكس عقارب الساعة</div>
+<div class="s">(C) $B_2=B_1$ وعكسه ← $I_2\approx1.43\,\text{A}$ عكس عقارب الساعة</div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>6-5 قانون أمبير</h2>
+<div class="box def"><div class="lbl">📘 قانون أمبير (6-4)</div>
+لأي مسار مغلق، مجموع حاصل الضرب النقطي لشدة المجال مع طول الجزء من المسار يساوي $\mu_0$ مضروباً في المجموع الجبري للتيارات التي تخترق المسار:
+$$\textstyle\sum B\cdot\Delta L=\mu_0\sum I$$
+</div>
+<div class="box idea"><div class="lbl">💡 متى نستخدمه؟</div>
+للموصلات ذات <b>التماثل الهندسي</b> (سلك مستقيم، كيبل، ملف حلزوني) حيث نختار مساراً يكون $B$ عليه ثابتاً وموازياً للمسار، فيصير $\sum B\Delta L=B\times(\text{طول المسار})$.
+</div>
+<div class="example"><div class="eh"><span>تطبيق</span><span>السلك المستقيم من قانون أمبير</span></div>
+<div class="steps"><div class="s">مسار دائري نصف قطره $r$ حول السلك: $B$ ثابت ومماسي ← $\theta=0$</div><div class="s">$B\times2\pi r=\mu_0I \Rightarrow B=\dfrac{\mu_0I}{2\pi r}$ ✔ (نفس قانون 6-2)</div></div></div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>كيبل من خمسة أسلاك</span></div>
+<div class="eq">خمسة أسلاك طويلة معزولة في كيبل رفيع تيّاراتها: $20, -6, 12, -9, 18\ \text{A}$. ما المجال على بعد $10\,\text{cm}$ من مركز الكيبل؟</div>
+<div class="steps">
+<div class="s">المجموع الجبري: $\sum I=20-6+12-9+18=35\ \text{A}$</div>
+<div class="s">$B(2\pi\times0.1)=4\pi\times10^{-7}\times35$</div>
+<div class="s"><span class="ans-final">$B=7\times10^{-5}\ \text{T}$</span></div>
+</div></div>
+</section>
+
+<section id="s6">
+<h2>6-6 المجال داخل ملف حلزوني</h2>
+<div class="box idea"><div class="lbl">💡 شكل المجال</div>
+داخل الملف: خطوط <b>متوازية</b> على امتداد المحور ← مجال <b>منتظم</b> تقريباً وقوي. خارجه: ضعيف جداً (يقترب من الصفر للملف الطويل)، وعند الأطراف تنتشر الخطوط. ونمطه يشبه تماماً <b>المغناطيس المستقيم</b>!
+</div>
+<div class="box tip"><div class="lbl">✋ اليد اليمنى للملف الحلزوني</div>
+لُفّ أصابع يدك اليمنى مع اتجاه التيار في اللفات، فيشير <b>الإبهام</b> إلى اتجاه المجال داخل الملف (أي إلى القطب الشمالي للملف).
+</div>
+<div class="box law"><div class="lbl">قانون (6-5) — من قانون أمبير بمسار مستطيل</div>
+$$B=\frac{\mu_0IN}{L}=\mu_0nI\qquad n=\frac NL$$
+<div class="sym"><span>$n$: عدد اللفات لوحدة الطول</span></div>
+</div>
+<div class="sim" id="simCoil">
+<div class="sh"><span class="tag">محاكاة</span><b>قارن: ملف دائري مقابل ملف حلزوني</b></div>
+<div class="sb">
+<div style="margin-bottom:10px"><span class="seg" id="coilType"><button data-t="loop" class="on">ملف دائري</button><button data-t="sol">ملف حلزوني</button></span></div>
+<canvas id="cvCoil"></canvas>
+<div class="controls">
+  <div class="ctl"><label>التيار $I$ <output for="cI"></output></label><input type="range" id="cI" name="I" min="-5" max="5" step="0.5" value="2" data-u="A"></div>
+  <div class="ctl"><label>عدد اللفات $N$ <output for="cN"></output></label><input type="range" id="cN" name="N" min="1" max="20" step="1" value="8"></div>
+  <div class="ctl"><label>نصف القطر $R$ / الطول $L$ <output for="cR"></output></label><input type="range" id="cR" name="R" min="1" max="30" step="1" value="10" data-u="cm"></div>
+</div>
+<div class="readout" id="roCoil"></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>ملف حلزوني</span></div>
+<div class="eq">ملف حلزوني 2000 لفة طوله $60\,\text{cm}$ يحمل $3\,\text{A}$. احسب المجال داخله على امتداد محوره.</div>
+<div class="steps"><div class="s">$B=\dfrac{4\pi\times10^{-7}\times3\times2000}{0.6}=4\pi\times10^{-3}\approx1.26\times10^{-2}\ \text{T}$</div></div></div>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>سلك يُلف حلزونياً</span></div>
+<div class="eq">لُفّ سلك نحاس طوله $440\,\text{cm}$ على شكل ملف حلزوني قطره $14\,\text{cm}$ وطوله $55\,\text{cm}$. احسب المجال على محوره عندما يمر $1.4\,\text{A}$.</div>
+<div class="steps">
+<div class="s">طول السلك = عدد اللفات × محيط اللفة: $440=N\times2\times3.14\times7 \Rightarrow N\approx10$ لفات</div>
+<div class="s">$B=\dfrac{4\pi\times10^{-7}\times1.4\times10}{0.55}\approx3.2\times10^{-5}\ \text{T}$</div>
+</div></div>
+</section>
+
+<section id="s7">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>سلك مستقيم</small>$B=\dfrac{\mu_0I}{2\pi r}$</div>
+<div class="fcard"><small>مركز ملف دائري</small>$B=\dfrac{\mu_0IN}{2R}$</div>
+<div class="fcard"><small>داخل ملف حلزوني</small>$B=\dfrac{\mu_0IN}{L}=\mu_0nI$</div>
+<div class="fcard"><small>قانون أمبير</small>$\sum B\Delta L=\mu_0\sum I$</div>
+<div class="fcard"><small>الثابت</small>$\mu_0=4\pi\times10^{-7}\ \text{T}\cdot\text{m/A}$</div>
+<div class="fcard"><small>تذكّر</small>المجال كمية متجهة: اجمع المجالات <b>اتجاهياً</b></div>
+</div>
+</section>
+
+<section id="s8">
+<h2>اختبر نفسك: أسئلة الفصل (س1)</h2>
+<div id="quiz6"></div>
+</section>
+
+<section id="s9">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2 (أ): عرّف: المجال المغناطيسي، كثافة خطوط المجال، قانون أمبير.</summary><div class="a">
+<b>المجال المغناطيسي:</b> المنطقة المحيطة بالمغناطيس أو التيار التي تظهر فيها آثار القوة المغناطيسية.<br>
+<b>كثافة خطوط المجال (التدفق لوحدة المساحة):</b> عدد خطوط المجال التي تخترق وحدة المساحات عمودياً، وتعبر عن شدة المجال.<br>
+<b>قانون أمبير:</b> $\sum B\Delta L=\mu_0\sum I$ لأي مسار مغلق.</div></details>
+<details class="check"><summary>س2 (ب): علّل (1) الخطوط مقفلة (2) لا تتقاطع (3) تتقارب قرب السلك وتتباعد بالابتعاد (4) المجال خارج الملف الحلزوني الطويل يقترب من الصفر.</summary><div class="a">
+(1) لعدم وجود قطب مغناطيسي مفرد. (2) لأن للمجال في كل نقطة اتجاهاً واحداً. (3) لأن $B\propto\dfrac1r$ فيكون قوياً قرب السلك. (4) لأن مجالات اللفات خارج الملف تتعاكس فتلغي بعضها تقريباً، بينما تتجمع وتتعزز داخله.</div></details>
+
+<div class="example"><div class="eh"><span>س3</span><span>ثلاثة أسلاك</span></div>
+<div class="eq">ثلاثة أسلاك تيار كل منها $6\,\text{A}$: سلكان في القاعدة البعد بينهما $12\,\text{cm}$ (الأيسر $\odot$ والأيمن $\otimes$)، والثالث $\odot$ في الرأس على بعد $10\,\text{cm}$ من كل منهما. احسب المجال عند c منتصف القاعدة.<div class="circ" data-f="q3"></div></div>
+<div class="steps">
+<div class="s">بعد الرأس عن c: $\sqrt{10^2-6^2}=8\,\text{cm}$</div>
+<div class="s">السلك الأيسر $\odot$ ($r=6\,\text{cm}$): $2\times10^{-7}\times\dfrac{6}{0.06}=2\times10^{-5}$ للأعلى (+y). الأيمن $\otimes$: $2\times10^{-5}$ للأعلى أيضاً ← المجموع $4\times10^{-5}$ (+y)</div>
+<div class="s">الرأس $\odot$ ($r=8\,\text{cm}$)، و c تحته: $2\times10^{-7}\times\dfrac{6}{0.08}=1.5\times10^{-5}$ باتجاه +x (عكس عقارب الساعة)</div>
+<div class="s"><span class="ans-final">$B=\sqrt{4^2+1.5^2}\times10^{-5}\approx4.27\times10^{-5}\ \text{T}$ بزاوية $\tan^{-1}\dfrac{4}{1.5}\approx69^\circ$ مع +x</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س4</span><span>سلك فيه عروة</span></div>
+<div class="eq">سلك مستقيم لا نهائي جُعل جزء منه عروة دائرية نصف قطرها $5\,\text{cm}$ مركزها c (السلك المستقيم مماس للعروة من الأسفل)، ويحمل $10\,\text{A}$ نحو اليمين. أوجد المجال في c.<div class="circ" data-f="q4"></div></div>
+<div class="steps">
+<div class="s">السلك المستقيم (c فوقه بـ $5\,\text{cm}$، التيار لليمين): $B_1=2\times10^{-7}\times\dfrac{10}{0.05}=4\times10^{-5}\ \text{T}$ خارج الورقة</div>
+<div class="s">العروة (التيار يدور فيها عكس عقارب الساعة حسب الشكل): $B_2=\dfrac{4\pi\times10^{-7}\times10}{2\times0.05}\approx1.26\times10^{-4}\ \text{T}$ خارج الورقة</div>
+<div class="s"><span class="ans-final">$B=B_1+B_2\approx1.66\times10^{-4}\ \text{T}$ خارج الورقة</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س5</span><span>قوسان</span></div>
+<div class="eq">دارة على شكل قطاع: قوس خارجي نصف قطره $2\pi\,\text{cm}$ وقوس داخلي $\pi\,\text{cm}$، زاويتهما $60^\circ$، يحملان $2\,\text{A}$، والنقطة a مركزهما. احسب المجال الكلي في a.</div>
+<div class="steps">
+<div class="s">الأجزاء المستقيمة امتدادها يمر بـ a ← لا مجال منها</div>
+<div class="s">كل قوس = $\tfrac{60}{360}=\tfrac16$ حلقة: الداخلي $\tfrac16\cdot\dfrac{4\pi\times10^{-7}\times2}{2\times0.01\pi}=\tfrac16(4\times10^{-5})\approx6.67\times10^{-6}\ \text{T}$</div>
+<div class="s">الخارجي: $\tfrac16\cdot\dfrac{4\pi\times10^{-7}\times2}{2\times0.02\pi}\approx3.33\times10^{-6}\ \text{T}$</div>
+<div class="s"><span class="ans-final">التيار يسري في القوسين باتجاهين دورانيين متعاكسين ← $B=6.67-3.33\approx3.33\times10^{-6}\ \text{T}$ باتجاه مجال القوس الداخلي (حدده باليد اليمنى من الشكل)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>ملف في مجال خارجي</span></div>
+<div class="eq">ملف حلزوني 7 لفات وطوله $3\,\text{cm}$ يمر فيه $2\,\text{A}$ مع عقارب الساعة عند النظر إليه من اليمين، مغمور في مجال $3\times10^{-4}\,\text{T}$ نحو اليمين. احسب المجال المحصل داخله.</div>
+<div class="steps">
+<div class="s">$B_{coil}=\dfrac{4\pi\times10^{-7}\times2\times7}{0.03}\approx5.86\times10^{-4}\ \text{T}$</div>
+<div class="s">الاتجاه: مع عقارب الساعة عند النظر من اليمين ← المجال يبتعد عن الناظر ← <b>نحو اليسار</b></div>
+<div class="s"><span class="ans-final">$B=5.86\times10^{-4}-3\times10^{-4}\approx2.86\times10^{-4}\ \text{T}$ نحو اليسار</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>من سلك إلى ملف</span></div>
+<div class="eq">سلك طوله $50\pi\,\text{m}$ شُكّل ملفاً دائرياً نصف قطره $R$ وعدد لفاته $N$، مرّ به $5\,\text{A}$ فتولد في مركزه $2\pi\times10^{-3}\,\text{T}$. احسب $R$ و $N$.</div>
+<div class="steps">
+<div class="s">طول السلك: $N(2\pi R)=50\pi \Rightarrow NR=25$</div>
+<div class="s">المجال: $\dfrac{\mu_0IN}{2R}=2\pi\times10^{-3} \Rightarrow \dfrac NR=\dfrac{2(2\pi\times10^{-3})}{4\pi\times10^{-7}\times5}=2000$</div>
+<div class="s">بالضرب: $N^2=25\times2000=5\times10^4 \Rightarrow N\approx224$ لفة ، $R=\dfrac{25}{224}\approx0.11\ \text{m}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س8</span><span>سلكان وحلقة</span></div>
+<div class="eq">السلك الأول على محور y يحمل $2\,\text{A}$ نحو +y، والثاني على محور x يحمل $4\,\text{A}$ نحو −x. حلقة نصف قطرها $\pi\,\text{cm}$ مركزها $(4\,\text{cm}, 8\,\text{cm})$. أوجد تيار الحلقة ليصبح المجال في مركزها $10^{-5}\,\text{T}$ نحو الناظر.<div class="circ" data-f="q8"></div></div>
+<div class="steps">
+<div class="s">الأول ($r=4\,\text{cm}$): $2\times10^{-7}\times\dfrac{2}{0.04}=1\times10^{-5}$ <b>داخل</b> الورقة</div>
+<div class="s">الثاني ($r=8\,\text{cm}$): $2\times10^{-7}\times\dfrac{4}{0.08}=1\times10^{-5}$ <b>داخل</b> الورقة ← مجموع السلكين $2\times10^{-5}$ للداخل</div>
+<div class="s">المطلوب $10^{-5}$ للخارج ← الحلقة يجب أن تعطي $3\times10^{-5}$ للخارج</div>
+<div class="s">$\dfrac{4\pi\times10^{-7}I}{2\times\pi\times10^{-2}}=3\times10^{-5} \Rightarrow I=1.5\ \text{A}$ <span class="ans-final">عكس عقارب الساعة</span></div>
+</div></div>
+</section>
+
+<script id="figs">window.FIGS={"two": [["dash", 0, 0, 4, 0], ["o", 0, 0, "I₂ = 5 A", 0, 0.5], ["x", 4, 0, "I₁ = 2 A", 0, 0.5], ["d", 2, 0, "P", 0, -0.35], ["t", 1, -0.32, "5 cm"], ["t", 3, -0.32, "5 cm"]], "ex1": [["w", 0, 2.2, 0, -0.2], ["i", 0.3, 2.0, 0.3, 1.3, "I = 25 A"], ["dash", 0, 1, 2, 1, "10 cm"], ["d", 2, 1, "a", 0.3, 0]], "q3": [["dash", 0, 2.4, 3.6, 2.4], ["dash", 0, 2.4, 1.8, 0, "10 cm", -1], ["dash", 3.6, 2.4, 1.8, 0, "10 cm", -1], ["o", 0, 2.4, "6 A"], ["x", 3.6, 2.4, "6 A"], ["o", 1.8, 0, "6 A", 0, -0.5], ["d", 1.8, 2.4, "c", 0, 0.38], ["t", 0.9, 2.75, "6 cm"], ["t", 2.7, 2.75, "6 cm"]], "q4": [["w", 0, 2, 5, 2], ["c", 2.5, 1.4, 0.6, 0, 180], ["c", 2.5, 1.4, 0.6, 180, 360], ["i", 0.4, 2.38, 1.5, 2.38, "I = 10 A", -1], ["i", 3.5, 2.38, 4.6, 2.38, ""], ["i", 2.8, 0.6, 2.2, 0.6, ""], ["d", 2.5, 1.4, "c", 0, 0.3], ["dash", 2.5, 1.4, 3.1, 1.4]], "q8": [["w", 0, 5.4, 0, -0.4], ["w", -0.4, 5, 5, 5], ["i", -0.35, 3.6, -0.35, 2.4, "2 A", -1], ["i", 3.8, 5.35, 2.6, 5.35, "4 A", -1], ["c", 2, 1, 0.6, 0, 180], ["c", 2, 1, 0.6, 180, 360], ["d", 2, 1], ["dash", 0, 1, 1.4, 1, "4 cm"], ["dash", 2, 1.6, 2, 5, "8 cm"], ["t", 5.3, 5, "x"], ["t", 0, -0.65, "y"]]};</script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- سلكان --- */
+(function(){
+  const cv=document.getElementById('cvWires'), sim=document.getElementById('simWires'), ro=document.getElementById('roWires'); let V={};
+  const By=(I,x0,x)=>{ const d=(x-x0)/100; if(Math.abs(d)<1e-4) return 0; return 2e-7*I/d; }; // سلك ⊙ موجب: يمينه للأعلى
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,300); ctx.clearRect(0,0,w,h);
+    const xmin=-6,xmax=16, X=x=>30+(w-60)*(x-xmin)/(xmax-xmin), yl=110;
+    ctx.strokeStyle=cssv('--line'); ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(10,yl); ctx.lineTo(w-10,yl); ctx.stroke(); ctx.setLineDash([]);
+    // دوائر المجال
+    [[0,V.I1],[10,V.I2]].forEach(([x0,I])=>{ if(!I) return; ctx.strokeStyle=cssv('--accent'); ctx.globalAlpha=.25; for(let r=18;r<90;r+=16){ctx.beginPath();ctx.arc(X(x0),yl,r*(0.5+Math.abs(I)/20),0,7);ctx.stroke();} ctx.globalAlpha=1; });
+    const wire=(x0,I,lbl)=>{ const cx=X(x0); ctx.fillStyle=cssv('--surface'); ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2; ctx.beginPath(); ctx.arc(cx,yl,13,0,7); ctx.fill(); ctx.stroke();
+      if(I>0){ctx.fillStyle=cssv('--ink');ctx.beginPath();ctx.arc(cx,yl,4,0,7);ctx.fill();} else if(I<0){ctx.beginPath();ctx.moveTo(cx-7,yl-7);ctx.lineTo(cx+7,yl+7);ctx.moveTo(cx+7,yl-7);ctx.lineTo(cx-7,yl+7);ctx.stroke();}
+      ctx.fillStyle=cssv('--ink'); ctx.font='12px sans-serif'; ctx.fillText(lbl+' = '+Math.abs(I)+' A',cx-24,yl+32); };
+    wire(0,V.I1,'I₁'); wire(10,V.I2,'I₂');
+    const B=By(V.I1,0,V.x)+By(V.I2,10,V.x);
+    const px=X(V.x); ctx.fillStyle=cssv('--warm'); ctx.beginPath(); ctx.arc(px,yl,5,0,7); ctx.fill(); ctx.fillText('P',px+6,yl-6);
+    const L=Math.max(-80,Math.min(80,B*1e5*16)); if(Math.abs(L)>2) arrow(ctx,px,yl,px,yl-L,cssv('--warm'),3.5,11);
+    // منحنى By
+    const gy=250, gs=40/ (6e-5);
+    ctx.strokeStyle=cssv('--line'); ctx.beginPath(); ctx.moveTo(10,gy); ctx.lineTo(w-10,gy); ctx.stroke();
+    ctx.fillStyle=cssv('--muted'); ctx.fillText('B_y',12,gy-30);
+    ctx.strokeStyle=cssv('--good'); ctx.lineWidth=2; ctx.beginPath(); let pen=false;
+    for(let k=0;k<=400;k++){ const x=xmin+(xmax-xmin)*k/400; if(Math.abs(x)<0.3||Math.abs(x-10)<0.3){pen=false;continue;} const b=By(V.I1,0,x)+By(V.I2,10,x); const y=gy-Math.max(-45,Math.min(45,b*gs)); pen?ctx.lineTo(X(x),y):ctx.moveTo(X(x),y); pen=true; } ctx.stroke();
+    ro.innerHTML=`<span class="r">$B_1$ = <b>${fmt(By(V.I1,0,V.x))} T</b></span><span class="r">$B_2$ = <b>${fmt(By(V.I2,10,V.x))} T</b></span><span class="r">المحصلة = <b>${fmt(Math.abs(B))} T</b> ${Math.abs(B)<1e-12?'':B>0?'(للأعلى ↑)':'(للأسفل ↓)'}</span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- ملف دائري / حلزوني --- */
+(function(){
+  const cv=document.getElementById('cvCoil'), sim=document.getElementById('simCoil'), ro=document.getElementById('roCoil'); let V={}, t='loop';
+  const seg=document.getElementById('coilType'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');t=b.dataset.t;draw();});
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,230); ctx.clearRect(0,0,w,h); const cx=w/2, cy=h/2; const mu=4*Math.PI*1e-7;
+    let B;
+    if(t==='loop'){
+      const R=V.R/100; B=mu*V.I*V.N/(2*R); const rp=30+V.R*2.6;
+      ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=2+V.N/3; ctx.beginPath(); ctx.arc(cx,cy,Math.min(rp,h/2-12),0,7); ctx.stroke();
+      // اتجاه التيار
+      if(V.I){ const r=Math.min(rp,h/2-12), cw=V.I>0; const a0=-Math.PI/2; arrow(ctx,cx-(cw?14:-14),cy-r,cx+(cw?14:-14),cy-r,cssv('--warm'),3,11); }
+      // رمز المجال في المركز
+      ctx.strokeStyle=cssv('--accent'); ctx.fillStyle=cssv('--accent'); ctx.lineWidth=2.5; ctx.beginPath(); ctx.arc(cx,cy,14,0,7); ctx.stroke();
+      if(V.I>0){ ctx.beginPath(); ctx.moveTo(cx-8,cy-8); ctx.lineTo(cx+8,cy+8); ctx.moveTo(cx+8,cy-8); ctx.lineTo(cx-8,cy+8); ctx.stroke(); }
+      else if(V.I<0){ ctx.beginPath(); ctx.arc(cx,cy,4,0,7); ctx.fill(); }
+      ctx.font='12px sans-serif'; ctx.fillStyle=cssv('--muted'); ctx.fillText(V.I>0?'التيار مع عقارب الساعة ← B للداخل ⊗':V.I<0?'التيار عكس عقارب الساعة ← B للخارج ⊙':'لا تيار',12,h-10);
+    } else {
+      const L=V.R/100; B=mu*V.I*V.N/L; const len=Math.min(w-80,80+V.R*14), x0=cx-len/2, rr=48;
+      ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=2.5;
+      for(let k=0;k<V.N;k++){ const x=x0+len*(k+0.5)/V.N; ctx.beginPath(); ctx.ellipse(x,cy,6,rr,0,0,7); ctx.stroke(); }
+      if(V.I){ const dir=Math.sign(V.I); for(let k=-1;k<=1;k++){ arrow(ctx,cx-dir*len*0.35,cy+k*20,cx+dir*len*0.35,cy+k*20,cssv('--accent'),2.5,10);}
+        ctx.fillStyle=cssv('--ink'); ctx.font='bold 14px sans-serif'; ctx.fillText(dir>0?'N':'S',x0+len+10,cy+5); ctx.fillText(dir>0?'S':'N',x0-22,cy+5); }
+      ctx.font='12px sans-serif'; ctx.fillStyle=cssv('--muted'); ctx.fillText('الأسهم الزرقاء: المجال المنتظم داخل الملف',12,h-10);
+    }
+    ro.innerHTML = t==='loop'
+      ? `<span class="r">$B=\\dfrac{\\mu_0IN}{2R}$ = <b>${fmt(Math.abs(B))} T</b></span><span class="r">نصف القطر <b>${V.R} cm</b></span>`
+      : `<span class="r">$B=\\dfrac{\\mu_0IN}{L}$ = <b>${fmt(Math.abs(B))} T</b></span><span class="r">$n=N/L$ = <b>${fmt(V.N/(V.R/100))} لفة/m</b></span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz6',[
+ {q:'سلك مستقيم يسري فيه تيار للأعلى (في مستوى الصفحة). أي وصف صحيح لاتجاه مجاله؟', o:['يسار السلك $\\odot$ ويمينه $\\otimes$','على الجانبين $\\odot$','يسار السلك $\\otimes$ ويمينه $\\odot$','على الجانبين $\\otimes$'], a:0, e:'الإبهام للأعلى والأصابع تلتف: تخرج من الورقة يسار السلك وتدخل يمينه. (الشكل (أ) في الكتاب)'},
+ {q:'المجال على محور ملف حلزوني $B$. إذا أُنقص عدد لفاته إلى الربع دون تغيير طوله، يصبح:', o:['$4B$','$2B$','$0.5B$','$0.25B$'], a:3, e:'$B=\\mu_0IN/L\\propto N$.'},
+ {q:'سلكان لا نهائيان كل منهما $2\\,\\text{A}$ نحو الناظر، البعد بينهما $4\\,\\text{cm}$. النقطة a على امتداد الخط بعد السلك الثاني بـ $4\\,\\text{cm}$. المجال عندها (T):', o:['$1\\times10^{-5}$','$1.5\\times10^{-5}$','$2\\times10^{-5}$','$5\\times10^{-5}$'], a:1, e:'التياران بنفس الاتجاه والنقطة خارجهما ← المجالان بنفس الاتجاه: $2\\times10^{-7}(\\tfrac{2}{0.04}+\\tfrac{2}{0.08})=1.5\\times10^{-5}$.'},
+ {q:'أي العوامل يسبب نقصان المجال داخل ملف حلزوني (مع ثبوت الباقي)؟', o:['زيادة طول الملف','زيادة عدد اللفات','إنقاص طول الملف','زيادة التيار'], a:0, e:'$B=\\mu_0IN/L$ ← يقل بزيادة $L$.'},
+ {q:'سلك طوله $L$ شُكّل حلقة بلفة واحدة فكان المجال في مركزها $B$. لُفّ نفس السلك لفتين بنفس التيار. المجال الجديد:', o:['$2B$','$B$','$4B$','$0.5B$'], a:2, e:'لفتان ← نصف القطر ينصف و $N$ يتضاعف: $B\\propto\\dfrac NR$ ← $\\dfrac{2}{1/2}=4$.'},
+ {q:'وحدة ثابت النفاذية المغناطيسية $\\mu$ تكافئ:', o:['A·T/m','T·m·s/C','T·m·A','T·C·s/m'], a:1, e:'$\\mu_0$ بوحدة $\\text{T}\\cdot\\text{m/A}$ و $\\text{A}=\\text{C/s}$ ← $\\text{T}\\cdot\\text{m}\\cdot\\text{s/C}$.'},
+ {q:'حلقة نصف قطرها $\\pi\\,\\text{cm}$ تيارها $3\\,\\text{A}$ (مع عقارب الساعة)، وسلك لانهائي أفقي فوق مركزها بـ $10\\,\\text{cm}$. تيار السلك لينعدم المجال في مركز الحلقة:', o:['15 A نحو الناظر','30 A نحو الناظر','30 A نحو (−x)','15 A نحو (−x)'], a:2, e:'$B_{loop}=\\dfrac{4\\pi\\times10^{-7}\\times3}{2\\pi\\times10^{-2}}=6\\times10^{-5}$ للداخل. $I=\\dfrac{B\\,2\\pi r}{\\mu_0}=30\\,\\text{A}$ ويجب أن يعطي مجالاً للخارج تحته ← التيار نحو −x. (السلك في مستوى الصفحة فلا يمكن أن يكون نحو الناظر)'}
+],'ch6');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

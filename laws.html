@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ورقة القوانين | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="كل قوانين فيزياء التوجيهي (الصف 12، فلسطين) مرتبة حسب الوحدة والفصل، جاهزة للطباعة.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+<script defer src="assets/katex/katex.min.js"></script>
+<script defer src="assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+<style>
+main.laws{max-width:1150px;margin:auto;padding:20px 16px 70px}
+.lhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lhead .btn{padding:8px 18px}
+.lunit h2{background:var(--accent);color:#fff;border:0;padding:8px 16px;border-radius:12px;font-size:1.25rem;margin:28px 0 12px}
+.lcols{columns:2 420px;column-gap:18px}
+.lch{break-inside:avoid;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 14px 6px;margin:0 0 14px;box-shadow:var(--shadow)}
+.lch h3{margin:2px 0 6px;font-size:1.05rem;border-bottom:3px solid var(--yellow);display:inline-block}
+.lch h3 a{color:var(--ink);text-decoration:none}
+.lw{border-top:1px dashed var(--line);padding:4px 0}
+.lw:first-of-type{border-top:0}
+.ls{font-size:.78rem;color:var(--muted);font-weight:700}
+.lm .katex-display{margin:.15em 0;padding:.1em 0;font-size:.95em}
+@media print{
+  body{background:#fff;font-size:11px}.topbar,.lhead .btn,footer{display:none}
+  main.laws{padding:0;max-width:none}.lcols{columns:2;column-gap:10px}
+  .lch{box-shadow:none;padding:4px 8px;margin-bottom:6px}.lunit h2{font-size:13px;padding:3px 10px;margin:8px 0 6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .lm .katex-display{font-size:.85em}.lunit{break-before:auto}
+  @page{size:A4;margin:10mm}
+}
+</style>
+</head>
+<body data-root="">
+<header class="topbar"></header>
+<main class="laws">
+  <div class="lhead"><div><div class="kicker" style="color:var(--accent);font-weight:700">للمراجعة السريعة</div><h1 style="margin:.1em 0">ورقة القوانين</h1></div>
+  <button class="btn" onclick="print()">🖨️ اطبع / احفظ PDF</button></div>
+  <p style="color:var(--muted)">كل القوانين الأساسية في المنهاج، مأخوذة من شرح الفصول. اضغط على اسم الفصل للرجوع لشرح القانون.</p>
+<section class="lunit"><h2>الوحدة الأولى: الميكانيكا</h2><div class="lcols">
+<div class="lch"><h3><a href="chapters/ch1.html">الزخم الخطي والدفع</a></h3>
+<div class="lw"><span class="ls">الزخم الخطي</span><div class="lm">$$P = m\,v$$</div></div>
+<div class="lw"><span class="ls">الدفع</span><div class="lm">$$I = F\,\Delta t \qquad\qquad I=\textstyle\sum F\,\Delta t$$</div></div>
+<div class="lw"><span class="ls">حفظ الزخم</span><div class="lm">$$\textstyle\sum P_i = \sum P_f$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch2.html">التصادمات</a></h3>
+<div class="lw"><span class="ls">التصادم المرن</span><div class="lm">$$m_1v_{1i}+m_2v_{2i}=m_1v_{1f}+m_2v_{2f}\qquad(2\text{-}1)$$</div></div>
+<div class="lw"><span class="ls">التصادم المرن</span><div class="lm">$$\tfrac12m_1v_{1i}^2+\tfrac12m_2v_{2i}^2=\tfrac12m_1v_{1f}^2+\tfrac12m_2v_{2f}^2\qquad(2\text{-}2)$$</div></div>
+<div class="lw"><span class="ls">التصادم المرن</span><div class="lm">$$v_{1i}-v_{2i} = -(v_{1f}-v_{2f}) \quad\Longleftrightarrow\quad v_{1i}+v_{1f}=v_{2i}+v_{2f}$$</div></div>
+<div class="lw"><span class="ls">التصادم المرن</span><div class="lm">$$v_{1f}=\frac{m_1-m_2}{m_1+m_2}v_{1i}+\frac{2m_2}{m_1+m_2}v_{2i}\qquad v_{2f}=\frac{2m_1}{m_1+m_2}v_{1i}+\frac{m_2-m_1}{m_1+m_2}v_{2i}$$</div></div>
+<div class="lw"><span class="ls">التصادم غير المرن</span><div class="lm">$$\textstyle\sum P_i=\sum P_f \qquad\qquad \Delta K = \sum K_f - \sum K_i < 0$$</div></div>
+<div class="lw"><span class="ls">التصادم عديم المرونة</span><div class="lm">$$m_1v_{1i}+m_2v_{2i}=(m_1+m_2)\,v_f$$</div></div>
+<div class="lw"><span class="ls">التصادم في بعدين</span><div class="lm">$$x:\ m_1v_{1ix}+m_2v_{2ix}=m_1v_{1f}\cos\theta+m_2v_{2f}\cos\beta$$</div></div>
+<div class="lw"><span class="ls">التصادم في بعدين</span><div class="lm">$$y:\ m_1v_{1iy}+m_2v_{2iy}=m_1v_{1f}\sin\theta+m_2v_{2f}\sin\beta$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch3.html">الحركة الدورانية</a></h3>
+<div class="lw"><span class="ls">مقدمة: القوة المركزية</span><div class="lm">$$F_c = m\frac{v^2}{r} = m\,r\,\omega^2 \qquad (v=r\omega)$$</div></div>
+<div class="lw"><span class="ls">العزم</span><div class="lm">$$\vec\tau = \vec r\times\vec F \qquad\qquad \tau = rF\sin\theta$$</div></div>
+<div class="lw"><span class="ls">القصور الدوراني</span><div class="lm">$$I = mr^2 \ \ (\text{جسم نقطي})\qquad\qquad I=\textstyle\sum m_ir_i^2 = m_1r_1^2+m_2r_2^2+\dots$$</div></div>
+<div class="lw"><span class="ls">القانون الثاني لنيوتن في الحركة الدورانية</span><div class="lm">$$\tau_{net}=I\,\alpha$$</div></div>
+<div class="lw"><span class="ls">الطاقة الحركية الدورانية</span><div class="lm">$$K=\tfrac12mv^2=\tfrac12m(r\omega)^2=\tfrac12(mr^2)\omega^2 \ \Longrightarrow\ \boxed{K=\tfrac12I\omega^2}$$</div></div>
+<div class="lw"><span class="ls">الزخم الزاوي وحفظه</span><div class="lm">$$\vec L=\vec r\times\vec p \qquad L=mvr=mr^2\omega \ \Longrightarrow\ \boxed{L=I\omega}$$</div></div>
+<div class="lw"><span class="ls">الزخم الزاوي وحفظه</span><div class="lm">$$\tau_{net}=\frac{\Delta L}{\Delta t}$$</div></div>
+<div class="lw"><span class="ls">الزخم الزاوي وحفظه</span><div class="lm">$$I_1\omega_1=I_2\omega_2$$</div></div>
+</div>
+</div></section>
+<section class="lunit"><h2>الوحدة الثانية: الكهرباء المتحركة</h2><div class="lcols">
+<div class="lch"><h3><a href="chapters/ch4.html">التيار الكهربائي والمقاومة</a></h3>
+<div class="lw"><span class="ls">التيار الكهربائي</span><div class="lm">$$I=\frac{\Delta Q}{\Delta t}$$</div></div>
+<div class="lw"><span class="ls">المقاومة الكهربائية وقانون أوم</span><div class="lm">$$R=\rho\frac{L}{A}$$</div></div>
+<div class="lw"><span class="ls">المقاومة الكهربائية وقانون أوم</span><div class="lm">$$V=IR$$</div></div>
+<div class="lw"><span class="ls">المقاومة الكهربائية وقانون أوم</span><div class="lm">$$J=\frac IA \qquad\qquad J=n_ev_dq_e$$</div></div>
+<div class="lw"><span class="ls">الأثر الحراري للتيار والقدرة الكهربائية</span><div class="lm">$$P=\frac{QV}{t}=IV=I^2R=\frac{V^2}{R}$$</div></div>
+<div class="lw"><span class="ls">الأثر الحراري للتيار والقدرة الكهربائية</span><div class="lm">$$E_{th}=Pt=IVt$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch5.html">دارات التيار المستمر</a></h3>
+<div class="lw"><span class="ls">القوة الدافعة الكهربائية</span><div class="lm">$$\varepsilon=\frac{\Delta W}{\Delta Q}\quad(\text{J/C}=\text{V})\qquad\qquad P=\varepsilon I$$</div></div>
+<div class="lw"><span class="ls">معادلة الدارة البسيطة</span><div class="lm">$$\varepsilon I=I^2r+I^2R \ \Longrightarrow\ I=\frac{\varepsilon}{R+r}$$</div></div>
+<div class="lw"><span class="ls">معادلة الدارة البسيطة</span><div class="lm">$$I=\frac{\sum\varepsilon}{\sum R}=\frac{\sum\varepsilon_{\text{مع التيار}}-\sum\varepsilon_{\text{عكس التيار}}}{\sum R_{\text{خارجية}}+\sum r_{\text{داخلية}}}$$</div></div>
+<div class="lw"><span class="ls">فرق الجهد بين نقطتين</span><div class="lm">$$V_a+\textstyle\sum\Delta V_{ab}=V_b$$</div></div>
+<div class="lw"><span class="ls">فرق الجهد بين نقطتين</span><div class="lm">$$IV_{ab}+I\textstyle\sum\varepsilon_{\text{مع التيار}} \;=\; \sum I^2R_{ab}+I\sum\varepsilon_{\text{عكس التيار}}$$</div></div>
+<div class="lw"><span class="ls">فرق الجهد بين قطبي البطارية</span><div class="lm">$$\text{تفريغ (التيار مع سهم }\varepsilon):\ V=\varepsilon-Ir\qquad\qquad \text{شحن (التيار عكس سهم }\varepsilon):\ V=\varepsilon+Ir$$</div></div>
+<div class="lw"><span class="ls">قانونا كيرتشوف</span><div class="lm">$$\textstyle\sum I_{\text{داخلة}}=\sum I_{\text{خارجة}}$$</div></div>
+<div class="lw"><span class="ls">قانونا كيرتشوف</span><div class="lm">$$\textstyle\sum\Delta V_{\text{حلقة}}=0$$</div></div>
+</div>
+</div></section>
+<section class="lunit"><h2>الوحدة الثالثة: الكهرومغناطيسية</h2><div class="lcols">
+<div class="lch"><h3><a href="chapters/ch6.html">المجال المغناطيسي</a></h3>
+<div class="lw"><span class="ls">مصادر المجال: تجربة أورستد وقانون بيو–سافار</span><div class="lm">$$B=\frac{\mu_0}{4\pi}\sum\frac{I\,\Delta L\,\sin\theta}{r^2}$$</div></div>
+<div class="lw"><span class="ls">المجال حول سلك مستقيم طويل</span><div class="lm">$$B=\frac{\mu_0I}{2\pi r}$$</div></div>
+<div class="lw"><span class="ls">المجال في مركز ملف دائري</span><div class="lm">$$B=\frac{\mu_0IN}{2R}$$</div></div>
+<div class="lw"><span class="ls">قانون أمبير</span><div class="lm">$$\textstyle\sum B\cdot\Delta L=\mu_0\sum I$$</div></div>
+<div class="lw"><span class="ls">المجال داخل ملف حلزوني</span><div class="lm">$$B=\frac{\mu_0IN}{L}=\mu_0nI\qquad n=\frac NL$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch7.html">القوة المغناطيسية</a></h3>
+<div class="lw"><span class="ls">القوة على شحنة متحركة</span><div class="lm">$$\vec F=q\,\vec v\times\vec B\qquad\qquad F=qvB\sin\theta$$</div></div>
+<div class="lw"><span class="ls">القوة بين سلكين متوازيين</span><div class="lm">$$F=\frac{\mu_0I_1I_2L}{2\pi r}\qquad\qquad \frac FL=\frac{\mu_0I_1I_2}{2\pi r}$$</div></div>
+<div class="lw"><span class="ls">قوة لورنتز ومنتقي السرعات</span><div class="lm">$$\vec F_{net}=q\vec E+q\vec v\times\vec B$$</div></div>
+<div class="lw"><span class="ls">قوة لورنتز ومنتقي السرعات</span><div class="lm">$$qE=qvB \Rightarrow \boxed{v=\frac EB}$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch8.html">الحث الكهرومغناطيسي</a></h3>
+<div class="lw"><span class="ls">التدفق المغناطيسي</span><div class="lm">$$\Phi_B=\vec B\cdot\vec A=BA\cos\theta$$</div></div>
+<div class="lw"><span class="ls">القوة الدافعة الحثية وقانون فارادي</span><div class="lm">$$\varepsilon_{ave}=-N\frac{\Delta\Phi}{\Delta t}\qquad\qquad I=\frac{\varepsilon}{R}$$</div></div>
+<div class="lw"><span class="ls">الحث الذاتي</span><div class="lm">$$L_{in}=\frac{N\Phi}{I}\qquad\qquad L_{in}=\frac{\mu N^2A}{l}=\mu n^2\,l\,A\ \ (\text{ملف حلزوني})$$</div></div>
+<div class="lw"><span class="ls">الحث الذاتي</span><div class="lm">$$\varepsilon=-L_{in}\frac{\Delta I}{\Delta t}$$</div></div>
+<div class="lw"><span class="ls">دارة المحث والمقاومة (RL)</span><div class="lm">$$\varepsilon-L\frac{\Delta I}{\Delta t}-I\textstyle\sum R=0 \ \Longrightarrow\ \dfrac{\Delta I}{\Delta t}=\dfrac{\varepsilon-I\sum R}{L}$$</div></div>
+<div class="lw"><span class="ls">دارة المحث والمقاومة (RL)</span><div class="lm">$$E=\tfrac12L_{in}I^2\qquad\qquad E=\frac{B^2}{2\mu}(Al)\ \ (\text{للملف الحلزوني})$$</div></div>
+</div>
+</div></section>
+<section class="lunit"><h2>الوحدة الرابعة: الفيزياء الحديثة</h2><div class="lcols">
+<div class="lch"><h3><a href="chapters/ch9.html">نظرية الكم</a></h3>
+<div class="lw"><span class="ls">إشعاع الجسم الأسود</span><div class="lm">$$\lambda_{max}T=2.898\times10^{-3}\ \text{m}\cdot\text{K}$$</div></div>
+<div class="lw"><span class="ls">إشعاع الجسم الأسود</span><div class="lm">$$I=\sigma eT^4\qquad\qquad I=\frac{P}{A}\ \left(\frac{\text{معدل الطاقة}}{\text{المساحة}}\right)$$</div></div>
+<div class="lw"><span class="ls">إشعاع الجسم الأسود</span><div class="lm">$$I_\lambda=\text{constant}\times\frac{T}{\lambda^4}$$</div></div>
+<div class="lw"><span class="ls">إشعاع الجسم الأسود</span><div class="lm">$$E=nhf\qquad\qquad\Delta E=hf$$</div></div>
+<div class="lw"><span class="ls">تكمية الضوء (الفوتون)</span><div class="lm">$$E=hf=\frac{hc}{\lambda}$$</div></div>
+<div class="lw"><span class="ls">الظاهرة الكهروضوئية</span><div class="lm">$$hf=\phi+K_{max}\qquad\qquad \phi=hf_0\qquad\qquad K_{max}=\tfrac12mv_{max}^2=eV_0$$</div></div>
+<div class="lw"><span class="ls">النماذج الذرية ونموذج بور</span><div class="lm">$$r_n=n^2r_1\quad (r_1=0.529\times10^{-10}\,\text{m})\qquad\qquad E_n=\frac{E_1}{n^2}\quad(E_1=-13.6\,\text{eV})$$</div></div>
+<div class="lw"><span class="ls">النماذج الذرية ونموذج بور</span><div class="lm">$$\frac1\lambda=R\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)\qquad R=1.097\times10^7\ \text{m}^{-1}$$</div></div>
+<div class="lw"><span class="ls">الطبيعة الموجية للأجسام (دي برولي)</span><div class="lm">$$\lambda=\frac hp=\frac{h}{mv}$$</div></div>
+<div class="lw"><span class="ls">مبدأ اللايقين (هايزنبرغ)</span><div class="lm">$$\Delta p\,\Delta x\ \geq\ \frac{h}{2\pi}$$</div></div>
+</div>
+<div class="lch"><h3><a href="chapters/ch10.html">بنية النواة والإشعاع النووي</a></h3>
+<div class="lw"><span class="ls">مكونات النواة</span><div class="lm">$$1\,\text{u}=\tfrac1{12}\ \text{كتلة ذرة }{}^{12}_{6}\text{C}=1.66\times10^{-27}\ \text{kg}\qquad\qquad E=mc^2$$</div></div>
+<div class="lw"><span class="ls">خواص النواة: الحجم والكثافة</span><div class="lm">$$r=a_0A^{1/3}\qquad a_0=1.2\times10^{-15}\ \text{m}=1.2\ \text{فيرمي}$$</div></div>
+<div class="lw"><span class="ls">القوة النووية وطاقة الربط</span><div class="lm">$$\Delta m=(Zm_p+Nm_n)-M_{nucleus}$$</div></div>
+<div class="lw"><span class="ls">القوة النووية وطاقة الربط</span><div class="lm">$$E_{bin}=\Delta m\,c^2=\Delta m(\text{u})\times931.5\ \text{MeV}\qquad\qquad E_n=\frac{E_{bin}}{A}$$</div></div>
+</div>
+</div></section>
+</main>
+<footer class="f">فيزياء التوجيهي التفاعلية — ورقة القوانين</footer>
+</body>
+</html>

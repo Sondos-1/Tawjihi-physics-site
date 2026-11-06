@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل السابع: القوة المغناطيسية | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للقوة المغناطيسية على شحنة متحركة وعلى موصل والقوة بين سلكين والسيكلترون ومنتقي السرعات - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل السابع: القوة المغناطيسية | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للقوة المغناطيسية على شحنة متحركة وعلى موصل والقوة بين سلكين والسيكلترون ومنتقي السرعات - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch7" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل السابع: القوة المغناطيسية-->
+<!--desc:شرح تفاعلي للقوة المغناطيسية على شحنة متحركة وعلى موصل والقوة بين سلكين والسيكلترون ومنتقي السرعات - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الثالثة: الكهرومغناطيسية · الفصل السابع</div>
+  <h1>القوة المغناطيسية</h1>
+  <p>بالفصل الماضي: التيار بيعمل مجال. هلأ العكس: المجال المغناطيسي <b>بيأثر بقوة</b> على الشحنات المتحركة والتيارات. هالقوة هي سر المحركات الكهربائية، والسيكلترون، والشفق القطبي، وحتى شاشات التلفزيون القديمة.</p>
+  <ul class="goals">
+    <li>التعرف إلى القوة المغناطيسية على شحنة متحركة وعلى موصل يحمل تياراً.</li>
+    <li>حل مسائل على حركة جسيم مشحون في مجال مغناطيسي منتظم.</li>
+    <li>حساب القوة المتبادلة بين سلكين، وتفسير مبدأ عمل السيكلترون ومنتقي السرعات.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>7-1 القوة على شحنة متحركة</h2>
+<div class="box idea"><div class="lbl">💡 الفرق عن المجال الكهربائي</div>
+المجال الكهربائي بيأثر على أي شحنة (ساكنة أو متحركة) وبقوة <b>موازية</b> للمجال. أما المغناطيسي: <b>لا يؤثر على الشحنة الساكنة</b>، ويؤثر على المتحركة بقوة <b>عمودية</b> على كل من السرعة والمجال.
+</div>
+<div class="box law"><div class="lbl">قانون (7-1)</div>
+$$\vec F=q\,\vec v\times\vec B\qquad\qquad F=qvB\sin\theta$$
+<div class="sym"><span>$\theta$: الزاوية بين $\vec v$ و $\vec B$</span><span>$F$ عمودية دائماً على المستوى الذي يحوي $\vec v$ و $\vec B$</span></div>
+</div>
+<div class="box tip"><div class="lbl">✋ قاعدة كف اليد اليمنى المفتوحة</div>
+ابسط يدك اليمنى: <b>الإبهام</b> باتجاه السرعة $\vec v$، و<b>الأصابع</b> باتجاه المجال $\vec B$، فتكون القوة <b>خارجة من باطن الكف</b> (عمودية عليه). هذا للشحنة الموجبة. <b>للسالبة</b> استخدم اليد اليسرى (أو اعكس النتيجة).
+</div>
+<div class="box def"><div class="lbl">📘 التسلا</div>
+شدة المجال المغناطيسي الذي يؤثر بقوة $1\,\text{N}$ في شحنة $1\,\text{C}$ تتحرك بسرعة $1\,\text{m/s}$ عمودياً على المجال. $\text{T}=\dfrac{\text{N}\cdot\text{s}}{\text{C}\cdot\text{m}}=\dfrac{\text{N}}{\text{A}\cdot\text{m}}$
+</div>
+<details class="check"><summary>هل يؤثر المجال المغناطيسي في بروتون ساكن؟ نيوترون متحرك؟ وجسيم مشحون دخل المجال ولم يتأثر بقوة… كيف؟</summary><div class="a">
+البروتون الساكن: لا ($v=0$). النيوترون المتحرك: لا ($q=0$). الجسيم المشحون الذي لم يتأثر: تحرك <b>موازياً</b> لخطوط المجال (أو عكسها) فكانت $\theta=0$ أو $180^\circ$ و $\sin\theta=0$.</div></details>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>أربع زوايا</span></div>
+<div class="eq">جسيم شحنته $8.4\,\mu\text{C}$ يتحرك بسرعة $100\,\text{m/s}$ في مجال $0.3\,\text{T}$ نحو +x. احسب القوة عندما تصنع سرعته مع المجال: (a) $30^\circ$ (b) $90^\circ$ (c) $180^\circ$ (d) $150^\circ$.</div>
+<div class="steps">
+<div class="s">$qvB=8.4\times10^{-6}\times100\times0.3=2.52\times10^{-4}\ \text{N}$</div>
+<div class="s">(a) $\times\sin30^\circ=1.26\times10^{-4}\,\text{N}$ بعيداً عن الناظر. (b) $2.52\times10^{-4}\,\text{N}$ بعيداً عن الناظر.</div>
+<div class="s">(c) $\sin180^\circ=0 \Rightarrow F=0$. (d) $\times\sin150^\circ=1.26\times10^{-4}\,\text{N}$ <b>نحو</b> الناظر.</div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>إلكترون قرب سلك</span></div>
+<div class="eq">سلك طويل يسري فيه $10\,\text{A}$. إلكترون يتحرك بسرعة $10^6\,\text{m/s}$ موازياً للسلك نحو +x على بعد $1\,\text{cm}$ منه. احسب القوة عليه.</div>
+<div class="steps"><div class="s">$B=\dfrac{4\pi\times10^{-7}\times10}{2\pi\times0.01}=2\times10^{-4}\ \text{T}$ (عمودي على السرعة)</div><div class="s">$F=qvB=1.6\times10^{-19}\times10^6\times2\times10^{-4}=3.2\times10^{-17}\ \text{N}$ نحو +y</div></div></div>
+</section>
+
+<section id="s2">
+<h2>7-2 حركة جسيم مشحون في مجال منتظم</h2>
+<div class="box idea"><div class="lbl">💡 ليش دائرة؟</div>
+القوة دايماً عمودية على السرعة ← بتغيّر <b>اتجاه</b> السرعة بس، مش مقدارها ← هذا بالضبط تعريف القوة المركزية ← حركة دائرية منتظمة.
+</div>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>نصف القطر والزمن الدوري</span></div>
+<div class="steps">
+<div class="s">القوة المغناطيسية هي القوة المركزية: $qvB=\dfrac{mv^2}{r} \Rightarrow \boxed{r=\dfrac{mv}{qB}}$ … (7-2)</div>
+<div class="s">الزمن الدوري: $T=\dfrac{2\pi r}{v}=\dfrac{2\pi m}{qB}$ … (7-3) — <b>لا يعتمد على السرعة!</b></div>
+<div class="s">$f=\dfrac1T=\dfrac{qB}{2\pi m}$ … (7-4) ، $\omega=\dfrac{qB}{m}$ … (7-5)</div>
+</div></div>
+<div class="box warn"><div class="lbl">⚠️ نقاط يحبها الامتحان</div>
+• القوة المغناطيسية <b>لا تبذل شغلاً</b> (عمودية على الإزاحة) ← الطاقة الحركية ومقدار السرعة <b>ثابتان</b>.<br>
+• الزخم الخطي <b>يتغير</b> (لأن اتجاه السرعة يتغير) لكن مقداره ثابت.<br>
+• مضاعفة السرعة ← يتضاعف نصف القطر، لكن <b>الزمن الدوري والتردد لا يتغيران</b>.
+</div>
+<div class="sim" id="simQB">
+<div class="sh"><span class="tag">محاكاة</span><b>جسيم مشحون في مجال مغناطيسي (B داخل الورقة ⊗)</b></div>
+<div class="sb">
+<div style="margin-bottom:10px"><span class="seg" id="qbMode"><button data-m="B" class="on">مجال مغناطيسي فقط</button><button data-m="EB">منتقي السرعات (E + B)</button></span></div>
+<canvas id="cvQB"></canvas>
+<div class="controls">
+  <div class="ctl"><label>الشحنة <output for="qq"></output></label><input type="range" id="qq" name="q" min="-2" max="2" step="1" value="1" data-u="e"></div>
+  <div class="ctl"><label>الكتلة <output for="qm"></output></label><input type="range" id="qm" name="m" min="1" max="4" step="1" value="1" data-u="u"></div>
+  <div class="ctl"><label>السرعة <output for="qv"></output></label><input type="range" id="qv" name="v" min="1" max="10" step="0.5" value="5" data-u="×10⁵ m/s"></div>
+  <div class="ctl"><label>المجال $B$ <output for="qB"></output></label><input type="range" id="qB" name="B" min="0.1" max="1" step="0.05" value="0.5" data-u="T"></div>
+  <div class="ctl"><label>المجال الكهربائي $E$ (لمنتقي السرعات) <output for="qE"></output></label><input type="range" id="qE" name="E" min="0" max="5" step="0.25" value="2.5" data-u="×10⁵ V/m"></div>
+</div>
+<div style="margin-top:10px"><button class="btn" id="qbGo">أطلق الجسيم ▶</button></div>
+<div class="readout" id="roQB"></div>
+<p class="note">جرّب: ضاعف السرعة ← نصف القطر يتضاعف لكن الزمن الدوري ثابت. اعكس الشحنة ← ينعكس اتجاه الدوران. وبمنتقي السرعات: الجسيم يمر مستقيماً فقط إذا $v=E/B$.</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>جسيم في مسار دائري</span></div>
+<div class="eq">جسيم شحنته $3.2\times10^{-19}\,\text{C}$ وكتلته $4\times10^{-28}\,\text{kg}$ يدور بسرعة $10^7\,\text{m/s}$ عمودياً على مجال $0.1\,\text{T}$. احسب: القوة، نصف القطر، التردد، الزمن الدوري.</div>
+<div class="steps">
+<div class="s">$F=qvB=3.2\times10^{-19}\times10^7\times0.1=3.2\times10^{-13}\ \text{N}$</div>
+<div class="s">$r=\dfrac{mv}{qB}=\dfrac{4\times10^{-28}\times10^7}{3.2\times10^{-19}\times0.1}=0.125\ \text{m}$</div>
+<div class="s">$f=\dfrac{qB}{2\pi m}=\dfrac{3.2\times10^{-19}\times0.1}{2\times3.14\times4\times10^{-28}}\approx1.27\times10^7\ \text{Hz}$ ، $T=\dfrac1f\approx7.87\times10^{-8}\ \text{s}$</div>
+</div></div>
+</section>
+
+<section id="s3">
+<h2>7-3 السيكلترون</h2>
+<div class="box def"><div class="lbl">📘 الاستخدام والتركيب</div>
+<b>يُستخدم</b> لتسريع الجسيمات المشحونة لتوجيهها كقذائف نحو نوى الذرات (النشاط الإشعاعي الصناعي) ولإنتاج النظائر المشعة للتشخيص والعلاج.<br>
+<b>يتكون</b> من نصفي قرص نحاسي أجوف على شكل حرف D، مفرغين من الهواء، بينهما فجوة، موضوعين في مجال مغناطيسي منتظم عمودي عليهما، ومتصلين بمصدر جهد متردد عالي التردد، ومصدر الأيونات في مركز الفجوة.
+</div>
+<div class="box idea"><div class="lbl">⚙️ آلية العمل</div>
+① يتسارع الجسيم في الفجوة بفعل المجال الكهربائي ويدخل أحد نصفي القرص.<br>
+② داخل الـ D لا يوجد مجال كهربائي، فالمجال المغناطيسي يحركه نصف دائرة.<br>
+③ تردد المصدر = تردد دوران الجسيم $\left(f=\dfrac{qB}{2\pi m}\right)$، فتنعكس القطبية لحظة وصوله للفجوة فيتسارع مرة أخرى. ولأن الزمن الدوري لا يعتمد على السرعة، يبقى التزامن مهما زادت سرعته!<br>
+④ يزداد نصف القطر تدريجياً حتى يساوي نصف قطر الجهاز $r$ فيخرج بسرعة: $\boxed{v=\dfrac{qBr}{m}}$
+</div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>سيكلترون</span></div>
+<div class="eq">سيكلترون نصف قطره $3\,\text{m}$ يسرّع جسيماً شحنته $1.6\times10^{-19}\,\text{C}$ في مجال $0.628\,\text{T}$، وتردد المصدر $4\times10^3\,\text{Hz}$. أوجد: (A) كتلة الجسيم. (B) سرعته عند المغادرة.</div>
+<div class="steps">
+<div class="s">(A) $f=\dfrac{qB}{2\pi m} \Rightarrow m=\dfrac{1.6\times10^{-19}\times0.628}{2\times3.14\times4\times10^3}=4\times10^{-24}\ \text{kg}$</div>
+<div class="s">(B) $v=\dfrac{qBr}{m}=\dfrac{1.6\times10^{-19}\times0.628\times3}{4\times10^{-24}}\approx7.5\times10^4\ \text{m/s}$</div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>7-4 القوة على موصل يحمل تياراً</h2>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>من الشحنة الواحدة إلى السلك</span></div>
+<div class="steps">
+<div class="s">عدد الشحنات في السلك $=n_eAL$ ، والقوة على كل منها $qv_d B\sin\theta$</div>
+<div class="s">$F=(n_eAL)(qv_dB\sin\theta)=(n_eAqv_d)LB\sin\theta$</div>
+<div class="s">لكن $n_eAqv_d=I$ ← $\boxed{F=ILB\sin\theta}$ ، $\vec F=I\vec L\times\vec B$ … (7-6)</div>
+</div></div>
+<div class="box tip"><div class="lbl">✋ نفس قاعدة الكف</div>
+الإبهام باتجاه <b>التيار</b>، الأصابع باتجاه <b>المجال</b>، القوة خارجة من باطن الكف. و $\theta$ بين السلك (اتجاه التيار) والمجال. انتبه: $L$ هو طول الجزء الموجود <b>داخل</b> المجال فقط.
+</div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>رفع سلك بالمغناطيسية</span></div>
+<div class="eq">سلك نحاس كثافته الطولية $46.6\,\text{g/m}$، أفقي، يسري فيه $5\,\text{A}$ نحو −x. ما أقل مجال (مقداراً واتجاهاً) يلزم لرفعه رأسياً؟</div>
+<div class="steps">
+<div class="s">أقل مجال ← عمودي على السلك $(\sin90^\circ=1)$، والقوة المغناطيسية للأعلى = الوزن</div>
+<div class="s">لكل متر: $mg=ILB \Rightarrow 46.6\times10^{-3}\times10=5\times1\times B$</div>
+<div class="s"><span class="ans-final">$B\approx0.093\ \text{T}$ ، واتجاهه (بقاعدة الكف) <b>نحو الناظر</b></span></div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>7-5 القوة بين سلكين متوازيين</h2>
+<div class="box law"><div class="lbl">قانون (7-7)</div>
+$$F=\frac{\mu_0I_1I_2L}{2\pi r}\qquad\qquad \frac FL=\frac{\mu_0I_1I_2}{2\pi r}$$
+<p style="margin:0;font-size:.95rem">القوتان متساويتان مقداراً ومتعاكستان (نيوتن الثالث) حتى لو اختلف التياران.</p>
+</div>
+<div class="box idea"><div class="lbl">🧲 قاعدة ذهبية</div>
+تياران <b>بنفس الاتجاه ← تجاذب</b>. تياران <b>متعاكسان ← تنافر</b>. (عكس الشحنات الكهربائية تماماً!)
+</div>
+<div class="sim" id="simPar">
+<div class="sh"><span class="tag">محاكاة</span><b>سلكان متوازيان: تجاذب أم تنافر؟</b></div>
+<div class="sb">
+<canvas id="cvPar"></canvas>
+<div class="controls">
+  <div class="ctl"><label>$I_1$ <output for="pI1"></output></label><input type="range" id="pI1" name="I1" min="-10" max="10" step="1" value="5" data-u="A"></div>
+  <div class="ctl"><label>$I_2$ <output for="pI2"></output></label><input type="range" id="pI2" name="I2" min="-10" max="10" step="1" value="5" data-u="A"></div>
+  <div class="ctl"><label>البعد $r$ <output for="pr"></output></label><input type="range" id="pr" name="r" min="1" max="20" step="1" value="5" data-u="cm"></div>
+</div>
+<div class="readout" id="roPar"></div>
+</div></div>
+<details class="check"><summary>سؤال: عرّف الأمبير من العلاقة السابقة.</summary><div class="a">الأمبير: التيار الذي إذا سرى في كل من سلكين طويلين متوازيين المسافة بينهما $1\,\text{m}$ في الفراغ، تولدت بينهما قوة مقدارها $2\times10^{-7}\,\text{N}$ لكل متر من طولهما.</div></details>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>ثلاثة أسلاك</span></div>
+<div class="eq">ثلاثة أسلاك طويلة: السلك b ($3\,\text{A}$، $\otimes$) في الزاوية القائمة، والسلك a ($4\,\text{A}$، $\odot$) فوقه بـ $6\,\text{cm}$، والسلك c ($4\,\text{A}$، $\odot$) على يمينه بـ $8\,\text{cm}$. احسب القوة على وحدة الطول من السلك b.<div class="circ" data-f="ex6"></div></div>
+<div class="steps">
+<div class="s">تيار b معاكس لتياري a و c ← <b>تنافر</b> مع كل منهما</div>
+<div class="s">$F_{ab}=\dfrac{2\times10^{-7}\times4\times3}{0.06}=4\times10^{-5}\ \text{N/m}$ بعيداً عن a ← نحو (−y)</div>
+<div class="s">$F_{cb}=\dfrac{2\times10^{-7}\times4\times3}{0.08}=3\times10^{-5}\ \text{N/m}$ بعيداً عن c ← نحو (−x)</div>
+<div class="s"><span class="ans-final">القوتان متعامدتان: $F=\sqrt{4^2+3^2}\times10^{-5}=5\times10^{-5}\ \text{N/m}$ ، بزاوية $\theta=\tan^{-1}\tfrac43\approx53^\circ$ مع (−x) نحو (−y)</span></div>
+</div></div>
+</section>
+
+<section id="s6">
+<h2>7-6 قوة لورنتز ومنتقي السرعات</h2>
+<div class="box law"><div class="lbl">قوة لورنتز (7-8)</div>
+$$\vec F_{net}=q\vec E+q\vec v\times\vec B$$
+</div>
+<div class="box idea"><div class="lbl">⚙️ منتقي السرعات</div>
+الجسيمات تخرج من المصدر بسرعات مختلفة، تمر من شريحة، ثم تدخل منطقة فيها مجال كهربائي ومغناطيسي <b>متعامدان</b>، بحيث القوة الكهربائية بعكس المغناطيسية. فقط الجسيمات اللي سرعتها تجعل القوتين متساويتين بتمشي <b>مستقيمة</b> وتطلع من الشق، والباقي بينحرف:
+$$qE=qvB \Rightarrow \boxed{v=\frac EB}$$
+(لاحظ: لا تعتمد على الشحنة ولا الكتلة)
+</div>
+<div class="example"><div class="eh"><span>مثال (7)</span><span>جسيم يتحرك مستقيماً</span></div>
+<div class="eq">جسيم شحنته $+2\,\text{C}$ في مجال كهربائي $0.1\,\text{N/C}$ نحو −x ومجال مغناطيسي $4\times10^{-4}\,\text{T}$ نحو الناظر. ما سرعته ليبقى متحركاً بخط مستقيم للأعلى؟</div>
+<div class="steps"><div class="s">$F_{net}=0 \Rightarrow v=\dfrac EB=\dfrac{0.1}{4\times10^{-4}}=250\ \text{m/s}$</div></div></div>
+<details class="check"><summary>ما شدة المجال الكهربائي اللازمة لاختيار جسيمات سرعتها $1.5\times10^6\,\text{m/s}$ إذا كان $B=2.2\times10^{-4}\,\text{T}$؟</summary><div class="a">$E=vB=1.5\times10^6\times2.2\times10^{-4}=330\ \text{V/m}$</div></details>
+</section>
+
+<section id="s7">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>على شحنة</small>$F=qvB\sin\theta$</div>
+<div class="fcard"><small>على سلك</small>$F=ILB\sin\theta$</div>
+<div class="fcard"><small>المسار الدائري</small>$r=\dfrac{mv}{qB}$</div>
+<div class="fcard"><small>التردد</small>$f=\dfrac{qB}{2\pi m}$ ، $T=\dfrac{2\pi m}{qB}$</div>
+<div class="fcard"><small>بين سلكين</small>$\dfrac FL=\dfrac{\mu_0I_1I_2}{2\pi r}$</div>
+<div class="fcard"><small>منتقي السرعات / السيكلترون</small>$v=\dfrac EB$ ، $v_{max}=\dfrac{qBr}{m}$</div>
+</div>
+</section>
+
+<section id="s8">
+<h2>اختبر نفسك: أسئلة الفصل (س1)</h2>
+<div id="quiz7"></div>
+</section>
+
+<section id="s9">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2 (أ): ما المقصود بقولنا: شدة المجال المغناطيسي $0.5\,\text{T}$؟</summary><div class="a">أي أن شحنة مقدارها $1\,\text{C}$ تتحرك بسرعة $1\,\text{m/s}$ عمودياً على المجال تتأثر بقوة مغناطيسية $0.5\,\text{N}$ (أو: سلك طوله $1\,\text{m}$ يحمل $1\,\text{A}$ عمودياً على المجال يتأثر بـ $0.5\,\text{N}$).</div></details>
+<details class="check"><summary>س2 (ب): فسّر (1) تردد الجسيم يساوي تردد جهد المصدر في السيكلترون. (2) إلكترون يُقذف داخل ملف حلزوني موازياً لمحوره لا ينحرف.</summary><div class="a">(1) لكي تنعكس قطبية نصفي القرص في اللحظة التي يصل فيها الجسيم للفجوة، فيتسارع في كل مرة يعبرها.<br>(2) المجال داخل الملف موازٍ لمحوره، فسرعة الإلكترون موازية للمجال $(\theta=0)$ ← $F=qvB\sin0=0$.</div></details>
+<div class="example"><div class="eh"><span>س3</span><span>سلك في مجال منتظم</span></div>
+<div class="eq">سلك طويل يحمل $4\,\text{A}$ نحو −x، مغمور في مجال منتظم $5\times10^{-5}\,\text{T}$ نحو الناظر. النقطة a فوق السلك بـ $2\,\text{cm}$. احسب: (أ) القوة على $1\,\text{m}$ من السلك. (ب) المجال الكلي في a. (ج) القوة على إلكترون يمر بـ a بسرعة $2\times10^5\,\text{m/s}$ نحو +x.<div class="circ" data-f="q3"></div></div>
+<div class="steps">
+<div class="s">(أ) $F=ILB=4\times1\times5\times10^{-5}=2\times10^{-4}\ \text{N}$ ، الاتجاه $(-\hat x)\times\hat z=+\hat y$ ← <b>للأعلى</b></div>
+<div class="s">(ب) مجال السلك في a: $2\times10^{-7}\times\dfrac{4}{0.02}=4\times10^{-5}$ <b>داخل</b> الورقة ← $B=5\times10^{-5}-4\times10^{-5}=1\times10^{-5}\ \text{T}$ نحو الناظر</div>
+<div class="s">(ج) $F=qvB=1.6\times10^{-19}\times2\times10^5\times10^{-5}=3.2\times10^{-19}\ \text{N}$ ، للإلكترون (سالب): $-(\hat x\times\hat z)=+\hat y$ ← <b>للأعلى</b></div>
+</div></div>
+<div class="example"><div class="eh"><span>س4</span><span>سلكان ونقطة</span></div>
+<div class="eq">موصلان a و b متعامدان مع الورقة، البعد بينهما $10\,\text{cm}$، يحمل كل منهما $5\,\text{A}$ باتجاهين متعاكسين. النقطة c تبعد $8\,\text{cm}$ عن a و $6\,\text{cm}$ عن b. احسب: (أ) المجال الكلي في c. (ب) القوة لوحدة الطول بين الموصلين.<div class="circ" data-f="q4"></div></div>
+<div class="steps">
+<div class="s">$6^2+8^2=10^2$ ← الزاوية عند c قائمة، فالمجالان متعامدان (كل مجال عمودي على الخط الواصل لسلكه)</div>
+<div class="s">$B_a=2\times10^{-7}\times\dfrac{5}{0.08}=1.25\times10^{-5}$ ، $B_b=2\times10^{-7}\times\dfrac{5}{0.06}\approx1.67\times10^{-5}\ \text{T}$</div>
+<div class="s">(أ) $B=\sqrt{1.25^2+1.67^2}\times10^{-5}\approx2.08\times10^{-5}\ \text{T}$</div>
+<div class="s">(ب) $\dfrac FL=\dfrac{2\times10^{-7}\times5\times5}{0.1}=5\times10^{-5}\ \text{N/m}$ (تنافر)</div>
+</div></div>
+<div class="example"><div class="eh"><span>س5</span><span>سلك معلق مغناطيسياً</span></div>
+<div class="eq">سلك ab طويل، وفوقه سلك cd كتلته $6\,\text{g}$ وطوله $1.5\,\text{m}$ موازٍ له وقابل للانزلاق رأسياً، ويمر في الدارة $120\,\text{A}$ (التيار في السلكين متعاكس). على أي ارتفاع يتزن cd؟</div>
+<div class="steps">
+<div class="s">تياران متعاكسان ← تنافر ← قوة للأعلى على cd تساوي وزنه</div>
+<div class="s">$\dfrac{\mu_0I^2L}{2\pi d}=mg \Rightarrow \dfrac{2\times10^{-7}\times120^2\times1.5}{d}=0.006\times10$</div>
+<div class="s"><span class="ans-final">$d=\dfrac{4.32\times10^{-3}}{0.06}=0.072\ \text{m}=7.2\ \text{cm}$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>ملف بين لوحين</span></div>
+<div class="eq">ملف حلزوني طوله $2\pi\,\text{cm}$ و 25 لفة، بين لوحين جهداهما $+150\,\text{V}$ و $-150\,\text{V}$ والبعد بينهما $10\,\text{cm}$. شحنة $-1\,\mu\text{C}$ تمر بالنقطة a بسرعة $2\times10^6\,\text{m/s}$ نحو +y، وقوة لورنتز عليها $5\times10^{-3}\,\text{N}$. ما تيار الملف؟</div>
+<div class="steps">
+<div class="s">$E=\dfrac{300}{0.1}=3000\ \text{V/m}$ ← $F_E=qE=10^{-6}\times3000=3\times10^{-3}\ \text{N}$ (أفقية، على محور x)</div>
+<div class="s">مجال الملف على محوره (x) ← عمودي على السرعة ← $F_B=qvB$ باتجاه z، أي <b>عمودية</b> على $F_E$</div>
+<div class="s">$F^2=F_E^2+F_B^2 \Rightarrow F_B=\sqrt{25-9}\times10^{-3}=4\times10^{-3} \Rightarrow B=\dfrac{4\times10^{-3}}{10^{-6}\times2\times10^6}=2\times10^{-3}\ \text{T}$</div>
+<div class="s"><span class="ans-final">$I=\dfrac{BL}{\mu_0N}=\dfrac{2\times10^{-3}\times0.02\pi}{4\pi\times10^{-7}\times25}=4\ \text{A}$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>جسيمان بنفس جهد التسريع</span></div>
+<div class="eq">كتلة الثاني 4 أمثال الأول وشحنته مثلا شحنة الأول، سُرّعا بنفس الجهد. ما نسبة: (أ) $f_1/f_2$ (ب) $r_1/r_2$؟</div>
+<div class="steps">
+<div class="s">(أ) $f=\dfrac{qB}{2\pi m}\propto\dfrac qm$: $\dfrac{f_1}{f_2}=\dfrac{q/m}{2q/4m}=2$</div>
+<div class="s">نفس الجهد: $qV=\tfrac12mv^2 \Rightarrow v=\sqrt{\dfrac{2qV}{m}}$ ← $r=\dfrac{mv}{qB}=\dfrac1B\sqrt{\dfrac{2mV}{q}}\propto\sqrt{\dfrac mq}$</div>
+<div class="s">(ب) $\dfrac{r_1}{r_2}=\sqrt{\dfrac{m/q}{4m/2q}}=\sqrt{\tfrac12}\approx0.71$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س8</span><span>بروتون يمر مستقيماً</span></div>
+<div class="eq">بروتون يتحرك بسرعة $7\times10^4\,\text{m/s}$ نحو +x في مجال كهربائي $700\,\text{V/m}$ نحو +y. ما المجال المغناطيسي (مقداراً واتجاهاً) ليستمر نحو +x؟</div>
+<div class="steps">
+<div class="s">القوة الكهربائية نحو +y ← نحتاج قوة مغناطيسية نحو −y: $\hat x\times\vec B=-\hat y \Rightarrow \vec B$ باتجاه +z</div>
+<div class="s"><span class="ans-final">$B=\dfrac Ev=\dfrac{700}{7\times10^4}=0.01\ \text{T}$ نحو +z (نحو الناظر)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س9</span><span>جسيمان يصطدمان بحاجز</span></div>
+<div class="eq">جسيمان X و Y بنفس السرعة، $m_X=2m_Y$، $q_X=-2\,\mu\text{C}$ ، $q_Y=+1\,\mu\text{C}$، قُذفا من a للأعلى في مجال نحو الناظر، وارتطما بالحاجز (المار بـ a) بعد نصف دورة. نصف قطر X يساوي $10\,\text{cm}$. أوجد المسافة بين نقطتي الاصطدام.<div class="circ" data-f="q9"></div></div>
+<div class="steps">
+<div class="s">$r\propto\dfrac mq$: $\dfrac{r_X}{r_Y}=\dfrac{2m/2}{m/1}=1 \Rightarrow r_Y=10\,\text{cm}$</div>
+<div class="s">الشحنتان متعاكستان ← ينحرفان باتجاهين متعاكسين، وكل منهما يصطدم على بعد $2r$ من a</div>
+<div class="s"><span class="ans-final">المسافة $=2(10)+2(10)=40\ \text{cm}$</span></div>
+</div></div>
+</section>
+
+<script id="figs">window.FIGS={"ex6": [["dash", 0, 0, 0, 1.2, "6 cm", -1], ["dash", 0, 1.2, 1.6, 1.2, "8 cm", -1], ["o", 0, 0, "a : 4 A", 0, -0.5], ["x", 0, 1.2, "b : 3 A", -0.55, 0.45], ["o", 1.6, 1.2, "c : 4 A", 0.4, 0.5]], "q3": [["f", 0, 0, 6, 2.4, "o"], ["w", 0, 1.6, 6, 1.6], ["i", 4, 1.95, 2.6, 1.95, "I = 4 A", -1], ["d", 3, 0.6, "a", 0, -0.3], ["dash", 3, 0.6, 3, 1.6, "2 cm"], ["t", 5.3, 0.3, "B ⊙"]], "q4": [["dash", 0, 2.5, 5, 2.5, "10 cm", -1], ["dash", 0, 2.5, 3.2, 0.1, "8 cm"], ["dash", 5, 2.5, 3.2, 0.1, "6 cm", -1], ["x", 0, 2.5, "a : 5 A"], ["o", 5, 2.5, "b : 5 A"], ["d", 3.2, 0.1, "c", 0, -0.3]], "q9": [["f", -2.6, -0.2, 2.6, 2.2, "o"], ["w", -2.6, 2.2, 2.6, 2.2], ["c", 1, 2.2, 1, 180, 0, "acc"], ["c", -1, 2.2, 1, 0, 180, "acc"], ["a", 0, 2.2, 0, 1.5, "v"], ["t", 1.6, 0.9, "Y (+)"], ["t", -1.6, 0.9, "X (−)"], ["t", 2.1, 2.55, "الحاجز"]]};</script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- جسيم في مجال --- */
+(function(){
+  const cv=document.getElementById('cvQB'), sim=document.getElementById('simQB'), ro=document.getElementById('roQB');
+  let V={}, mode='B', P=null, trail=[], raf, run=false;
+  const seg=document.getElementById('qbMode'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mode=b.dataset.m;reset();});
+  const e=1.6e-19,u=1.67e-27;
+  function phys(){ const q=V.q*e, m=V.m*u, v=V.v*1e5, B=V.B; return {q,m,v,B,r:Math.abs(q)>0?m*v/(Math.abs(q)*B):Infinity,T:Math.abs(q)>0?2*Math.PI*m/(Math.abs(q)*B):Infinity,E:V.E*1e5}; }
+  function readout(){ const p=phys();
+    let s=`<span class="r">$r=\\dfrac{mv}{qB}$ = <b>${V.q?fmt(p.r*100,2)+' cm':'∞ (خط مستقيم)'}</b></span><span class="r">$T=\\dfrac{2\\pi m}{qB}$ = <b>${V.q?fmt(p.T)+' s':'—'}</b></span><span class="r">$F$ = <b>${fmt(Math.abs(p.q)*p.v*p.B)} N</b></span>`;
+    if(mode==='EB') s+=`<span class="r">$E/B$ = <b>${fmt(p.E/p.B)} m/s</b> ${Math.abs(p.E/p.B-p.v)<1?'✔ يمر مستقيماً':'✘ سينحرف'}</span>`;
+    ro.innerHTML=s; renderMath(ro); }
+  function reset(){ run=false; cancelAnimationFrame(raf); trail=[]; P=null; draw(); readout(); }
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,300); ctx.clearRect(0,0,w,h);
+    ctx.fillStyle=cssv('--muted'); ctx.globalAlpha=.45; ctx.font='12px sans-serif';
+    for(let x=24;x<w;x+=36) for(let y=20;y<h;y+=36){ ctx.fillText('×',x,y); } ctx.globalAlpha=1;
+    if(mode==='EB'){ ctx.fillStyle=cssv('--bad'); ctx.fillRect(0,0,w,6); ctx.fillStyle=cssv('--accent'); ctx.fillRect(0,h-6,w,6); ctx.fillStyle=cssv('--ink'); ctx.fillText('+ + +  (اللوح الموجب)',8,20); ctx.fillText('− − −',8,h-12); }
+    if(trail.length>1){ ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=2.5; ctx.beginPath(); trail.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])); ctx.stroke(); }
+    if(P){ ctx.fillStyle=V.q>0?cssv('--bad'):V.q<0?cssv('--accent'):cssv('--muted'); ctx.beginPath(); ctx.arc(P.x,P.y,7,0,7); ctx.fill(); ctx.fillStyle='#fff'; ctx.font='bold 11px sans-serif'; ctx.textAlign='center'; ctx.fillText(V.q>0?'+':V.q<0?'−':'0',P.x,P.y+4); ctx.textAlign='start';
+      arrow(ctx,P.x,P.y,P.x+P.vx*12,P.y+P.vy*12,cssv('--good'),2.5,9); }
+  }
+  function launch(){ reset(); const p=phys(); const w=cv.clientWidth, h=300;
+    const scale=6000, sp=2.5; // px لكل متر ، px لكل خطوة
+    const rpx=p.r*scale, om = V.q? sp/rpx : 0, sg=Math.sign(V.q);
+    P={x:mode==='EB'?20:w*0.55, y:mode==='EB'?h/2:h/2+40, vx:mode==='EB'?sp:0, vy:mode==='EB'?0:-sp};
+    run=true; trail=[[P.x,P.y]];
+    const aE = mode==='EB' ? om*sp*(p.E/(p.v*p.B)) : 0;
+    const loop=()=>{ if(!run) return;
+      for(let k=0;k<4;k++){
+        // B داخل الشاشة: الموجب ينحرف عكس عقارب الساعة. perp(v)=(vy,-vx)
+        let ax=sg*om*P.vy, ay=-sg*om*P.vx;
+        ay += sg*aE; // المجال الكهربائي من اللوح العلوي (+) إلى السفلي (−)
+        // تكامل بسيط مع الحفاظ على مقدار السرعة في وضع B فقط
+        P.vx+=ax; P.vy+=ay;
+        if(mode==='B'){ const n=Math.hypot(P.vx,P.vy); P.vx*=sp/n; P.vy*=sp/n; }
+        P.x+=P.vx; P.y+=P.vy; trail.push([P.x,P.y]); if(trail.length>4000) trail.shift();
+      }
+      draw();
+      const closed = mode==='B' && trail.length>40 && Math.hypot(P.x-trail[0][0],P.y-trail[0][1])<3;
+      if(P.x<-20||P.x>w+20||P.y<-20||P.y>h+20||trail.length>3500||closed) run=false; else raf=requestAnimationFrame(loop); };
+    loop(); }
+  document.getElementById('qbGo').onclick=launch;
+  bindRanges(sim,v=>{V=v;reset();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- سلكان متوازيان --- */
+(function(){
+  const cv=document.getElementById('cvPar'), sim=document.getElementById('simPar'), ro=document.getElementById('roPar'); let V={};
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,190); ctx.clearRect(0,0,w,h);
+    const gap=30+V.r*9, x1=w/2-gap/2, x2=w/2+gap/2;
+    const wire=(x,I)=>{ ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=6; ctx.beginPath(); ctx.moveTo(x,15); ctx.lineTo(x,h-15); ctx.stroke(); if(I) arrow(ctx,x+16,I>0?h/2+30:h/2-30,x+16,I>0?h/2-30:h/2+30,cssv('--ink'),2,9); };
+    wire(x1,V.I1); wire(x2,V.I2);
+    const F=2e-7*V.I1*V.I2/(V.r/100); const L=Math.min(70,Math.abs(F)*1e4*1.2+10);
+    if(V.I1&&V.I2){ const att=F>0; const c=att?cssv('--good'):cssv('--bad');
+      arrow(ctx,x1,h/2,x1+(att?L:-L),h/2,c,3.5,11); arrow(ctx,x2,h/2,x2+(att?-L:L),h/2,c,3.5,11);
+      ctx.fillStyle=c; ctx.font='bold 14px sans-serif'; ctx.textAlign='center'; ctx.fillText(att?'تجاذب':'تنافر',w/2,h-4); ctx.textAlign='start'; }
+    ro.innerHTML=`<span class="r">$\\dfrac FL$ = <b>${fmt(Math.abs(F))} N/m</b></span><span class="r">${!V.I1||!V.I2?'لا قوة':F>0?'التياران بنفس الاتجاه ← تجاذب':'التياران متعاكسان ← تنافر'}</span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz7',[
+ {q:'جسيمات لها نفس الكتلة والشحنة تدخل مجالاً مغناطيسياً عمودياً بسرعات مختلفة. العلاقة بين نصف القطر $r$ والسرعة $v$:', o:['خط أفقي (r ثابت)','منحنى متناقص (تناسب عكسي)','منحنى متزايد بتسارع','خط مستقيم يمر بالأصل'], a:3, e:'$r=\\dfrac{mv}{qB}\\propto v$ ← تناسب طردي (الشكل د).'},
+ {q:'سلك طوله $30\\,\\text{cm}$ منه $0.2\\,\\text{m}$ فقط داخل مجال $0.25\\,\\text{T}$ نحو الناظر، ويسري فيه $15\\,\\text{A}$ نحو الأسفل. القوة عليه:', o:['0.75 N باتجاه (−x)','0.75 N باتجاه (+x)','1.1 N باتجاه (−x)','1.1 N باتجاه (+x)'], a:0, e:'$F=ILB=15\\times0.2\\times0.25=0.75\\,\\text{N}$ (الطول داخل المجال فقط). الاتجاه: $(-\\hat y)\\times\\hat z=-\\hat x$.'},
+ {q:'جسيم يدخل مجالاً عمودياً بسرعة $v$ وتردده $f$. جسيم مماثل يدخل بسرعة $2v$. تردده:', o:['$f$','$2f$','$4f$','$0.5f$'], a:0, e:'$f=\\dfrac{qB}{2\\pi m}$ لا يعتمد على السرعة.'},
+ {q:'مجالان كهربائي ومغناطيسي منتظمان بنفس الاتجاه، قُذف بروتون باتجاههما. الصحيح:', o:['يتحرك عكس المجال الكهربائي','يتحرك باتجاه المجال الكهربائي (ويتسارع)','يتحرك في مسار دائري','تقل سرعته'], a:1, e:'السرعة موازية لـ B ← لا قوة مغناطيسية. والقوة الكهربائية باتجاه E ← يتسارع باتجاهه.'},
+ {q:'نوع الجسيمات التي نحصل عليها من منتقي السرعات:', o:['غير مشحونة لها نفس السرعة','مشحونة لها نفس السرعة','غير مشحونة مختلفة السرعة','مشحونة مختلفة السرعة'], a:1, e:'يمر فقط من سرعته $v=E/B$، والجسيمات مشحونة لتتأثر بالمجالين.'},
+ {q:'القوة بين سلكين متوازيين $100\\,\\text{N}$. عند مضاعفة البعد بينهما تصبح:', o:['400','200','50','25'], a:2, e:'$F\\propto\\dfrac1r$.'}
+],'ch7');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

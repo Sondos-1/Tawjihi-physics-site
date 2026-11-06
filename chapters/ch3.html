@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل الثالث: الحركة الدورانية | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للعزم والقصور الدوراني وقانون نيوتن الثاني الدوراني والطاقة الحركية الدورانية والزخم الزاوي وحفظه - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل الثالث: الحركة الدورانية | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للعزم والقصور الدوراني وقانون نيوتن الثاني الدوراني والطاقة الحركية الدورانية والزخم الزاوي وحفظه - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch3" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل الثالث: الحركة الدورانية-->
+<!--desc:شرح تفاعلي للعزم والقصور الدوراني وقانون نيوتن الثاني الدوراني والطاقة الحركية الدورانية والزخم الزاوي وحفظه - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الأولى: الميكانيكا · الفصل الثالث</div>
+  <h1>الحركة الدورانية</h1>
+  <p>كل شي درسناه بالحركة الخطية (قوة، كتلة، تسارع، زخم، طاقة) إله <b>توأم دوراني</b>. إذا فهمت هالتشابه، الفصل كله بيصير سهل. خلّي هالجدول قدامك طول الوقت:</p>
+  <div class="tblwrap"><table class="tbl">
+  <tr><th>الكمية</th><th>خطي</th><th>دوراني</th></tr>
+  <tr><td>الموضع / السرعة / التسارع</td><td>$x,\ v,\ a$</td><td>$\theta,\ \omega,\ \alpha$</td></tr>
+  <tr><td>سبب التحريك</td><td>القوة $F$</td><td>العزم $\tau$</td></tr>
+  <tr><td>ممانعة التحريك</td><td>الكتلة $m$</td><td>القصور الدوراني $I$</td></tr>
+  <tr><td>نيوتن الثاني</td><td>$F=ma$</td><td>$\tau=I\alpha$</td></tr>
+  <tr><td>الطاقة الحركية</td><td>$\tfrac12mv^2$</td><td>$\tfrac12I\omega^2$</td></tr>
+  <tr><td>الزخم</td><td>$P=mv$</td><td>$L=I\omega$</td></tr>
+  <tr><td>الربط بينهما</td><td colspan="2">$v=r\omega$ ، $a_t=r\alpha$ ، $s=r\theta$</td></tr>
+  </table></div>
+</header>
+
+<section id="s0">
+<h2>مقدمة: القوة المركزية</h2>
+<p>جسم بيتحرك بدائرة بسرعة ثابتة المقدار… هل هو متسارع؟ <b>نعم!</b> لأنه اتجاه السرعة بيتغير باستمرار. التسارع باتجاه المركز ومقداره $a_c=\dfrac{v^2}{r}$. والقوة اللي بتسببه (شد الخيط مثلاً) اسمها <b>القوة المركزية</b>:</p>
+<div class="box law"><div class="lbl">القوة المركزية</div>
+$$F_c = m\frac{v^2}{r} = m\,r\,\omega^2 \qquad (v=r\omega)$$
+</div>
+<details class="check"><summary>أفكر: اذكر أمثلة على قوى مركزية في الطبيعة.</summary><div class="a">قوة الجاذبية بين الأرض والقمر (أو الشمس والكواكب)، القوة الكهربائية بين النواة والإلكترون، قوة الاحتكاك على عجلات سيارة تنعطف، قوة الشد في خيط حجر يدور.</div></details>
+</section>
+
+<section id="s1">
+<h2>3-1 العزم</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+جرّب تفتح باب من جنب المفصلات… صعب! ومن عند المقبض… سهل. ولو دفعت الباب <b>باتجاه المفصلات</b> ما بيتحرك أصلاً. يعني قدرة القوة على التدوير بتعتمد على: <b>مقدارها، وبُعدها عن المحور، والزاوية</b>. هذا هو العزم.
+</div>
+<div class="box law"><div class="lbl">قانون العزم (3-1)</div>
+$$\vec\tau = \vec r\times\vec F \qquad\qquad \tau = rF\sin\theta$$
+<div class="sym"><span>$r$: بُعد نقطة تأثير القوة عن المحور</span><span>$\theta$: الزاوية بين $\vec r$ و $\vec F$</span><span>$r\sin\theta$: <b>ذراع القوة</b> (البعد العمودي)</span><span>الوحدة: $\text{N}\cdot\text{m}$</span></div>
+</div>
+<div class="sim" id="simDoor">
+<div class="sh"><span class="tag">محاكاة</span><b>افتح الباب: منظر علوي</b></div>
+<div class="sb">
+<canvas id="cvDoor"></canvas>
+<div class="controls">
+  <div class="ctl"><label>القوة $F$ <output for="dF"></output></label><input type="range" id="dF" name="F" min="0" max="50" step="1" value="20" data-u="N"></div>
+  <div class="ctl"><label>البعد عن المفصلة $r$ <output for="dr"></output></label><input type="range" id="dr" name="r" min="0" max="0.9" step="0.05" value="0.8" data-u="m"></div>
+  <div class="ctl"><label>الزاوية $\theta$ <output for="dth"></output></label><input type="range" id="dth" name="th" min="0" max="180" step="5" value="90" data-u="°"></div>
+</div>
+<div class="readout" id="roDoor"></div>
+<p class="note">الخط المتقطع البرتقالي هو <b>ذراع القوة</b> $r\sin\theta$. جرّب $\theta=0$ أو $180^\circ$ (القوة باتجاه المفصلة): العزم صفر!</p>
+</div></div>
+<details class="check"><summary>وحدة العزم $\text{N}\cdot\text{m}$ هي نفس وحدة الشغل ($\text{J}$)… كيف نفرّق بينهما؟</summary><div class="a">
+الشغل كمية <b>قياسية</b> = $Fd\cos\theta$ (القوة والإزاحة بنفس الاتجاه)، أما العزم كمية <b>متجهة</b> = $rF\sin\theta$ (القوة عمودية على الذراع). لذلك لا نكتب وحدة العزم جول أبداً، بل $\text{N}\cdot\text{m}$.</div></details>
+<div class="box tip"><div class="lbl">✋ اتجاه العزم: قاعدة اليد اليمنى</div>
+اجعل أصابع يدك اليمنى باتجاه $\vec r$، ثم لفّها نحو $\vec F$ بأصغر زاوية، فيشير الإبهام لاتجاه $\vec\tau$. أو: إدارة البرغي <b>مع</b> عقارب الساعة ← العزم <b>داخل</b> الورقة، و<b>عكس</b> عقارب الساعة ← <b>خارج</b> الورقة. انتبه: اتجاه العزم <b>ليس</b> اتجاه الدوران، بل عمودي عليه.
+</div>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>قوة مماسية وقوة مركزية</span></div>
+<div class="eq">جسم نقطي يدور حول محور يمر بالنقطة C، تؤثر عليه $F_1$ (مماسية) و $F_2$ (مركزية، نحو المحور). ما عزم كل منهما؟</div>
+<div class="steps">
+<div class="s">$F_1$ عمودية على $r$: $\tau_1 = rF_1\sin90^\circ = rF_1$ (خارج الورقة حسب اليد اليمنى)</div>
+<div class="s">$F_2$ على امتداد $r$ ونحو المحور: $\tau_2 = rF_2\sin180^\circ = 0$ <span class="ans-final">القوة المركزية لا تُحدث عزماً.</span></div>
+</div></div>
+</section>
+
+<section id="s2">
+<h2>3-2 القصور الدوراني</h2>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>القصور الدوراني:</b> مقاومة (ممانعة) الجسم لعزم القوة الذي يحاول إحداث تغيير في حالة حركته الدورانية. رمزه $I$، كمية <b>قياسية موجبة دائماً</b>، ووحدته $\text{kg}\cdot\text{m}^2$.
+</div>
+<div class="box law"><div class="lbl">القصور الدوراني (3-2) و (3-3)</div>
+$$I = mr^2 \ \ (\text{جسم نقطي})\qquad\qquad I=\textstyle\sum m_ir_i^2 = m_1r_1^2+m_2r_2^2+\dots$$
+</div>
+<div class="box idea"><div class="lbl">💡 الكتلة مقابل القصور الدوراني</div>
+الكتلة ثابتة مهما تحرك الجسم. أما القصور الدوراني فبيعتمد على <b>الكتلة + كيف موزّعة حول المحور</b>. نفس الجسم إله قصور مختلف لكل محور! وكل ما ابتعدت الكتلة عن المحور زاد القصور <b>بالتربيع</b>.
+</div>
+<h3>جدول (1): القصور الدوراني لبعض الأجسام (للاستفادة في المسائل)</h3>
+<div class="tblwrap"><table class="tbl">
+<tr><th>الجسم</th><th>محور الدوران</th><th>$I$</th></tr>
+<tr><td>سلك (ساق) رفيع طوله $L$</td><td>عمودي عليه عند المركز</td><td>$\tfrac1{12}ML^2$</td></tr>
+<tr><td>سلك (ساق) رفيع طوله $L$</td><td>عمودي عليه عند الطرف</td><td>$\tfrac13ML^2$</td></tr>
+<tr><td>طوق (حلقة) نصف قطره $R$</td><td>من المركز عمودياً على مستواه</td><td>$MR^2$</td></tr>
+<tr><td>طوق نصف قطره $R$</td><td>من المركز في مستواه (قطر)</td><td>$\tfrac12MR^2$</td></tr>
+<tr><td>قرص رقيق مصمت</td><td>من المركز عمودياً على مستواه</td><td>$\tfrac12MR^2$</td></tr>
+<tr><td>قرص رقيق مصمت</td><td>من المركز في مستواه (قطر)</td><td>$\tfrac14MR^2$</td></tr>
+<tr><td>أسطوانة مصمتة</td><td>محورها الطولي</td><td>$\tfrac12MR^2$</td></tr>
+<tr><td>كرة صلبة مصمتة</td><td>أي قطر فيها</td><td>$\tfrac25MR^2$</td></tr>
+<tr><td>قشرة كروية رقيقة</td><td>أي قطر فيها</td><td>$\tfrac23MR^2$</td></tr>
+</table></div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>القصور يتغير بتغير المحور</span></div>
+<div class="eq">جسمان نقطيان $5\,\text{kg}$ و $7\,\text{kg}$ على بعد $4\,\text{m}$ بينهما على ساق مهملة الكتلة. احسب القصور الدوراني: (1) حول محور في منتصف المسافة. (2) حول محور على بعد $0.5\,\text{m}$ يسار الجسم $5\,\text{kg}$.</div>
+<div class="steps">
+<div class="s">(1) كل جسم يبعد $2\,\text{m}$: $I=5(2)^2+7(2)^2=20+28=48\ \text{kg}\cdot\text{m}^2$</div>
+<div class="s">(2) الأول يبعد $0.5\,\text{m}$ والثاني $4.5\,\text{m}$: $I=5(0.5)^2+7(4.5)^2=1.25+141.75\approx143\ \text{kg}\cdot\text{m}^2$</div>
+<div class="s"><span class="ans-final">نفس النظام، قصوره تضاعف 3 مرات تقريباً لما غيّرنا المحور!</span></div>
+</div></div>
+</section>
+
+<section id="s3">
+<h2>3-3 القانون الثاني لنيوتن في الحركة الدورانية</h2>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>من $F=ma$ إلى $\tau=I\alpha$</span></div>
+<div class="eq">جسم كتلته $m$ يدور في دائرة نصف قطرها $r$ تحت تأثير قوة مماسية $F_t$.</div>
+<div class="steps">
+<div class="s">نيوتن الثاني على المماس: $F_t=ma_t$</div>
+<div class="s">العزم: $\tau=F_tr=(ma_t)r$ ، ونعوّض $a_t=r\alpha$: $\tau=(mr\alpha)r=(mr^2)\alpha$</div>
+<div class="s">$\boxed{\tau=I\alpha}$ ، ولجسم جاسئ: $\tau_{net}=(\sum mr^2)\alpha=I\alpha$</div>
+</div></div>
+<div class="box law"><div class="lbl">قانون نيوتن الثاني الدوراني (3-4)</div>
+$$\tau_{net}=I\,\alpha$$
+<p style="margin:0;font-size:.95rem">يتناسب التسارع الزاوي لجسم يدور حول محور طردياً مع محصلة العزوم المؤثرة فيه، وعكسياً مع قصوره الدوراني حول المحور نفسه.</p>
+</div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>عزم وتسارع زاوي</span></div>
+<div class="eq">جسيم نقطي كتلته $2\,\text{kg}$ في المستوى xy، موضعه $r=2\,\text{m}$ والقوة عليه $F=4\,\text{N}$ والزاوية بينهما $30^\circ$. احسب العزم حول محور عمودي على المستوى، والتسارع الزاوي.</div>
+<div class="steps">
+<div class="s">$\tau=rF\sin30^\circ=2\times4\times0.5=4\ \text{N}\cdot\text{m}$ (باتجاه +z، خارج الورقة)</div>
+<div class="s">$I=mr^2=2(2)^2=8\ \text{kg}\cdot\text{m}^2$</div>
+<div class="s">$\alpha=\dfrac{\tau}{I}=\dfrac48=0.5\ \text{rad/s}^2$</div>
+</div></div>
+<div class="example"><div class="eh"><span>سؤال من الكتاب</span><span>جسم معلق على بكرة</span></div>
+<div class="eq">يُعلّق جسم $m_1$ بخيط يلتف حول بكرة كتلتها $m_2$ ونصف قطرها $r$ تدور حول محور أفقي (بإهمال الاحتكاك). (1) ما العزم المؤثر على البكرة؟ (2) إذا كان $I=\tfrac12m_2r^2$ فما التسارع الزاوي؟</div>
+<div class="steps">
+<div class="s">(1) القوة التي تدير البكرة هي قوة الشد $T$ مماسية على حافتها: $\tau=Tr$</div>
+<div class="s">على الجسم المعلق: $m_1g-T=m_1a$ ، وعلى البكرة: $Tr=\tfrac12m_2r^2\alpha$ ومع $a=r\alpha$: $T=\tfrac12m_2a$</div>
+<div class="s">بالجمع: $m_1g=(m_1+\tfrac12m_2)a$</div>
+<div class="s"><span class="ans-final">$\alpha=\dfrac ar=\dfrac{m_1g}{(m_1+\tfrac12m_2)\,r}$ — (لو أهملنا تسارع الجسم وقلنا $T\approx m_1g$ نحصل على $\alpha=\dfrac{2m_1g}{m_2r}$، وهذا تقريب)</span></div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>3-4 الطاقة الحركية الدورانية</h2>
+<div class="box law"><div class="lbl">قانون (3-5)</div>
+$$K=\tfrac12mv^2=\tfrac12m(r\omega)^2=\tfrac12(mr^2)\omega^2 \ \Longrightarrow\ \boxed{K=\tfrac12I\omega^2}$$
+<p style="margin:0;font-size:.95rem">نفس الشكل: نصف (الممانعة) × مربع (السرعة).</p>
+</div>
+<div class="box tip"><div class="lbl">⭐ تحويل الوحدات — أكثر مكان بتنقص فيه علامات</div>
+$\omega=2\pi f$ حيث $f$ بالدورة/ثانية. إذا معطى <b>rev/min</b> اقسم على 60 أولاً. مثال: $1200\ \text{rev/min}=20\ \text{rev/s}\Rightarrow\omega=40\pi\ \text{rad/s}$. وعدد الدورات $=\dfrac{\theta}{2\pi}$.<br>
+ومعادلات الحركة الدورانية بتسارع ثابت (نظير الخطية): $\omega_2=\omega_1+\alpha t$ ، $\theta=\omega_1t+\tfrac12\alpha t^2$ ، $\omega_2^2=\omega_1^2+2\alpha\theta$
+</div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>دولاب</span></div>
+<div class="eq">احسب الطاقة الحركية الدورانية لدولاب قصوره $1.12\,\text{kg}\cdot\text{m}^2$ يدور بمعدل 6 دورات في الثانية.</div>
+<div class="steps"><div class="s">$\omega=2\pi f=2\pi(6)=12\pi\ \text{rad/s}$</div><div class="s">$K=\tfrac12(1.12)(12\pi)^2\approx795\ \text{J}$</div></div></div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>أسطوانة تحت تأثير قوتين</span></div>
+<div class="eq">أسطوانة قصورها $0.2\,\text{kg}\cdot\text{m}^2$ ونصف قطر قاعدتها $0.3\,\text{m}$ تبدأ من السكون تحت تأثير قوتين مماسيتين $F_1=5\,\text{N}$ و $F_2=7\,\text{N}$ عزماهما بنفس الاتجاه. ما طاقتها الحركية الدورانية بعد ثانيتين؟</div>
+<div class="steps">
+<div class="s">$\tau_{net}=0.3(5)+0.3(7)=3.6\ \text{N}\cdot\text{m}$</div>
+<div class="s">$\alpha=\dfrac{3.6}{0.2}=18\ \text{rad/s}^2$ ، $\omega=0+18(2)=36\ \text{rad/s}$</div>
+<div class="s">$K=\tfrac12(0.2)(36)^2=129.6\ \text{J}\approx0.13\ \text{kJ}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>حجر الرحى</span></div>
+<div class="eq">حجر رحى قصوره $1.6\times10^{-3}\,\text{kg}\cdot\text{m}^2$ بدأ من السكون، ووصل إلى 1200 دورة/دقيقة خلال $15\,\text{s}$ بعزم ثابت. احسب: (1) التسارع الزاوي. (2) العزم. (3) الزاوية التي دارها.</div>
+<div class="steps">
+<div class="s">$\omega_2=2\pi\times\dfrac{1200}{60}=40\pi\ \text{rad/s}$</div>
+<div class="s">(1) $\alpha=\dfrac{40\pi-0}{15}\approx8.38\ \text{rad/s}^2$</div>
+<div class="s">(2) $\tau=I\alpha=1.6\times10^{-3}\times8.38\approx0.0134\ \text{N}\cdot\text{m}$</div>
+<div class="s">(3) $\theta=0+\tfrac12(8.38)(15)^2\approx943\ \text{rad}$ (أي حوالي 150 دورة)</div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>3-5 الزخم الزاوي وحفظه</h2>
+<div class="box law"><div class="lbl">الزخم الزاوي (3-9) و (3-10)</div>
+$$\vec L=\vec r\times\vec p \qquad L=mvr=mr^2\omega \ \Longrightarrow\ \boxed{L=I\omega}$$
+<div class="sym"><span>كمية متجهة (اتجاهها بقاعدة اليد اليمنى)</span><span>الوحدة: $\text{kg}\cdot\text{m}^2/\text{s}$ أو $\text{J}\cdot\text{s}$</span></div>
+</div>
+<div class="box law"><div class="lbl">نيوتن الثاني بدلالة الزخم الزاوي (3-11)</div>
+$$\tau_{net}=\frac{\Delta L}{\Delta t}$$
+<p style="margin:0;font-size:.95rem">محصلة العزوم = المعدل الزمني للتغير في الزخم الزاوي.</p>
+</div>
+<div class="box def"><div class="lbl">📘 قانون حفظ الزخم الزاوي (3-12)</div>
+الزخم الزاوي لجسم أو مجموعة أجسام ثابت ما لم تؤثر عليها عزوم دوران خارجية:
+$$I_1\omega_1=I_2\omega_2$$
+<b>شروطه:</b> ① محصلة العزوم الخارجية = صفر. ② محور الدوران ثابت لا يتغير.
+</div>
+<div class="sim" id="simSkate">
+<div class="sh"><span class="tag">محاكاة</span><b>المتزلجة على الجليد: ضمّ الذراعين</b></div>
+<div class="sb">
+<canvas id="cvSkate"></canvas>
+<div class="controls">
+  <div class="ctl"><label>بُعد الكتلتين عن المحور (الذراعين) <output for="sr"></output></label><input type="range" id="sr" name="r" min="0.15" max="0.9" step="0.01" value="0.9" data-u="m"></div>
+</div>
+<div class="readout" id="roSkate"></div>
+<p class="note">جسم المتزلجة $I_0=1\,\text{kg}\cdot\text{m}^2$ + كتلتان $2\,\text{kg}$ بيديها. حرّك المنزلق ببطء: لما $I$ يقل، $\omega$ تزيد بحيث يضل $L=I\omega$ ثابت. لاحظ: <b>الطاقة الحركية بتزيد!</b> (مصدرها شغل عضلات المتزلجة وهي تسحب ذراعيها).</p>
+</div></div>
+<details class="check"><summary>لماذا يثني الغطاس جسمه ويضم ركبتيه لصدره عند القفز، ثم يفرده عند الاقتراب من الماء؟</summary><div class="a">
+بضم جسمه يقل قصوره الدوراني $I$، ولأن الزخم الزاوي محفوظ $(I\omega=\text{ثابت})$ تزداد سرعته الزاوية فيدور دورات أكثر. وعند الاقتراب من الماء يفرد جسمه فيزيد $I$ وتقل $\omega$ فيدخل الماء بشكل مستقيم. (مثله: المتزلجة، القطة الساقطة، النجوم النيوترونية).</div></details>
+<details class="check"><summary>ما أهمية قانون حفظ الزخم الزاوي في الكون؟</summary><div class="a">يفسّر ثبات دوران الأرض حول محورها وثبات اتجاه محورها، ودوران الكواكب حول الشمس، وتسارع دوران النجوم عند انكماشها (النجوم النيوترونية تدور مئات المرات بالثانية)، وتشكّل المجرات القرصية.</div></details>
+<div class="example"><div class="eh"><span>مثال (7)</span><span>لو انكمشت الأرض</span></div>
+<div class="eq">لو انكمشت الأرض (بنفس الكتلة) فأصبح قطرها نصف قيمته الحالية، ما سرعتها الزاوية؟ ($I=\tfrac25mr^2$)</div>
+<div class="steps">
+<div class="s">لا عزم خارجي → $I_1\omega_1=I_2\omega_2$</div>
+<div class="s">$\tfrac25mr_1^2\omega_1=\tfrac25m\left(\tfrac{r_1}{2}\right)^2\omega_2 \Rightarrow \omega_1=\tfrac14\omega_2$</div>
+<div class="s"><span class="ans-final">$\omega_2=4\omega_1$ = 4 دورات/يوم ← طول اليوم يصير 6 ساعات!</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (8)</span><span>سحب الخيط عبر ثقب</span></div>
+<div class="eq">جسم يدور على طاولة ملساء بسرعة $2.4\,\text{m/s}$ في دائرة نصف قطرها $0.8\,\text{m}$، وطرف الخيط يمر عبر ثقب في المركز. سُحب الخيط ببطء فقل نصف القطر إلى $0.48\,\text{m}$. كم تصبح السرعة؟</div>
+<div class="steps">
+<div class="s">قوة الشد تمر بالمحور → ذراعها صفر → عزمها صفر → $L$ محفوظ</div>
+<div class="s">$mv_1r_1=mv_2r_2 \Rightarrow v_2=v_1\dfrac{r_1}{r_2}=2.4\times\dfrac{0.8}{0.48}$</div>
+<div class="s"><span class="ans-final">$v_2=4\ \text{m/s}$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (9)</span><span>المتزلجة</span></div>
+<div class="eq">متزلجة تدور بذراعين مفتوحتين بمعدل 1.9 دورة/ثانية وقصورها $1.33\,\text{kg}\cdot\text{m}^2$. ضمت ذراعيها فصار قصورها $0.48\,\text{kg}\cdot\text{m}^2$. ما سرعتها الزاوية الجديدة؟</div>
+<div class="steps"><div class="s">$\omega_1=2\pi(1.9)\approx12\ \text{rad/s}$</div><div class="s">$1.33(12)=0.48\,\omega_2 \Rightarrow \omega_2\approx33\ \text{rad/s}$</div></div></div>
+<details class="check"><summary>منشار قرصي ينجز 100 دورة في ثلث دقيقة وقصوره $7\,\text{kg}\cdot\text{m}^2$. احسب سرعته الزاوية وزخمه الزاوي.</summary><div class="a">
+$f=\dfrac{100}{20}=5\ \text{rev/s} \Rightarrow \omega=10\pi\approx31.4\ \text{rad/s}$ ، $L=I\omega=7(31.4)\approx220\ \text{kg}\cdot\text{m}^2/\text{s}$</div></details>
+<details class="check"><summary>قمر صناعي كتلته $3\times10^3\,\text{kg}$ يدور بسرعة خطية $8\times10^3\,\text{m/s}$ في مدار نصف قطره $7\times10^6\,\text{m}$. احسب سرعته الزاوية وزخمه الزاوي.</summary><div class="a">
+$\omega=\dfrac vr=\dfrac{8\times10^3}{7\times10^6}\approx1.14\times10^{-3}\ \text{rad/s}$<br>$L=mvr=(3\times10^3)(8\times10^3)(7\times10^6)=1.68\times10^{14}\ \text{kg}\cdot\text{m}^2/\text{s}$</div></details>
+</section>
+
+<section id="s6">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>العزم</small>$\tau=rF\sin\theta$</div>
+<div class="fcard"><small>القصور الدوراني</small>$I=\sum mr^2$</div>
+<div class="fcard"><small>نيوتن الثاني الدوراني</small>$\tau=I\alpha=\dfrac{\Delta L}{\Delta t}$</div>
+<div class="fcard"><small>الطاقة الدورانية</small>$K=\tfrac12I\omega^2=\dfrac{L^2}{2I}$</div>
+<div class="fcard"><small>الزخم الزاوي</small>$L=I\omega=mvr$</div>
+<div class="fcard"><small>حفظ الزخم الزاوي</small>$I_1\omega_1=I_2\omega_2$</div>
+</div>
+</section>
+
+<section id="s7">
+<h2>اختبر نفسك: أسئلة الفصل (س1)</h2>
+<div id="quiz3"></div>
+</section>
+
+<section id="s8">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2: عرّف: العزم الدوراني، القصور الدوراني، الزخم الزاوي، حفظ الزخم الزاوي.</summary><div class="a">
+<b>العزم:</b> حاصل الضرب الاتجاهي لمتجه الموضع في القوة $(\vec r\times\vec F)$، ويمثل قدرة القوة على إحداث الدوران.<br>
+<b>القصور الدوراني:</b> ممانعة الجسم لأي تغيير في حالته الدورانية $(\sum mr^2)$.<br>
+<b>الزخم الزاوي:</b> حاصل ضرب القصور الدوراني في السرعة الزاوية $(I\omega)$.<br>
+<b>حفظ الزخم الزاوي:</b> يبقى الزخم الزاوي لجسم أو نظام ثابتاً ما لم يؤثر عليه عزم خارجي.</div></details>
+<details class="check"><summary>س3: قارن بين الزخم الخطي والزخم الزاوي.</summary><div class="a">
+<div class="tblwrap"><table class="tbl"><tr><th></th><th>الزخم الخطي</th><th>الزخم الزاوي</th></tr>
+<tr><td>التعريف</td><td>الكتلة × السرعة الخطية</td><td>القصور الدوراني × السرعة الزاوية</td></tr>
+<tr><td>النوع</td><td>متجه</td><td>متجه</td></tr><tr><td>العلاقة</td><td>$P=mv$</td><td>$L=I\omega$</td></tr>
+<tr><td>الوحدة</td><td>$\text{kg}\cdot\text{m/s}$</td><td>$\text{kg}\cdot\text{m}^2/\text{s}$</td></tr><tr><td>يعتمد على</td><td>الكتلة، السرعة</td><td>الكتلة وتوزيعها حول المحور، السرعة الزاوية</td></tr></table></div></div></details>
+<details class="check"><summary>س4: فسّر (أ) ازدياد السرعة الزاوية لراقص الجليد عند ضم يديه، (ب) تثبيت دولاب معدني كبير القطر والكتلة على جذع بعض الآلات.</summary><div class="a">
+(أ) ضم اليدين يقلل $I$، والزخم الزاوي محفوظ، فتزداد $\omega$.<br>(ب) لزيادة القصور الدوراني للآلة، فيقاوم أي تغيير مفاجئ في سرعتها الدورانية ويجعل دورانها منتظماً (ويخزّن طاقة حركية دورانية).</div></details>
+
+<div class="example"><div class="eh"><span>س5</span><span>إيقاف قرص</span></div>
+<div class="eq">قرص كتلته $50\,\text{kg}$ ونصف قطره $0.5\,\text{m}$ يدور بسرعة $300\,\text{rev/min}$ وتوقف خلال $10\,\text{s}$ ($I=\tfrac12mR^2$). جد: (أ) طاقته الحركية الابتدائية. (ب) العزم اللازم لإيقافه.</div>
+<div class="steps">
+<div class="s">$I=\tfrac12(50)(0.5)^2=6.25\ \text{kg}\cdot\text{m}^2$ ، $\omega=2\pi\times\dfrac{300}{60}=10\pi\ \text{rad/s}$</div>
+<div class="s">(أ) $K=\tfrac12(6.25)(10\pi)^2\approx3084\ \text{J}$</div>
+<div class="s">(ب) $\alpha=\dfrac{0-10\pi}{10}=-\pi\ \text{rad/s}^2$ ، $\tau=I\alpha=6.25(-\pi)\approx-19.6\ \text{N}\cdot\text{m}$ (عكس الدوران)</div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>تناقص الزخم الزاوي</span></div>
+<div class="eq">يتناقص الزخم الزاوي لإطار قصوره $0.12\,\text{kg}\cdot\text{m}^2$ من $3$ إلى $2\,\text{kg}\cdot\text{m}^2/\text{s}$ خلال $1.5\,\text{s}$. احسب: (أ) متوسط العزم. (ب) عدد الدورات.</div>
+<div class="steps">
+<div class="s">(أ) $\tau=\dfrac{\Delta L}{\Delta t}=\dfrac{2-3}{1.5}\approx-0.67\ \text{N}\cdot\text{m}$</div>
+<div class="s">$\omega_1=\dfrac{3}{0.12}=25\ \text{rad/s}$ ، $\omega_2=\dfrac{2}{0.12}\approx16.7\ \text{rad/s}$</div>
+<div class="s">(ب) التسارع ثابت: $\theta=\dfrac{\omega_1+\omega_2}{2}t=\dfrac{25+16.7}{2}(1.5)\approx31.25\ \text{rad}$ ← عدد الدورات $=\dfrac{31.25}{2\pi}\approx5$ دورات</div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>نقطة مادية تدور</span></div>
+<div class="eq">نقطة مادية كتلتها $100\,\text{g}$ تدور بسرعة زاوية ثابتة $\pi\ \text{rev/s}$، وقصورها $0.001\,\text{kg}\cdot\text{m}^2$. احسب: البعد عن المحور، السرعة الخطية، الزخم الخطي، الزخم الزاوي، الطاقة الحركية.</div>
+<div class="steps">
+<div class="s">$\omega=2\pi\times\pi=2\pi^2\approx19.74\ \text{rad/s}$</div>
+<div class="s">(أ) $I=mr^2 \Rightarrow r=\sqrt{\dfrac{0.001}{0.1}}=0.1\ \text{m}$ ، (ب) $v=r\omega\approx1.97\ \text{m/s}$</div>
+<div class="s">(ج) $p=mv\approx0.197\ \text{kg}\cdot\text{m/s}$ ، (د) $L=I\omega\approx0.0197\ \text{kg}\cdot\text{m}^2/\text{s}$</div>
+<div class="s">(هـ) $K=\tfrac12I\omega^2=\tfrac12(0.001)(19.74)^2\approx0.195\ \text{J}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س8</span><span>حساب القصور الدوراني</span></div>
+<div class="eq">(أ) قرص متجانس $1\,\text{kg}$ ونصف قطره $20\,\text{cm}$ حول محور عمودي من المركز. (ب) ساق كتلتها $M$ وطولها $L$ على كل طرف كتلة نقطية $m=M$، تدور حول محور عمودي من المركز.</div>
+<div class="steps">
+<div class="s">(أ) $I=\tfrac12(1)(0.2)^2=0.02\ \text{kg}\cdot\text{m}^2$</div>
+<div class="s">(ب) $I=\tfrac1{12}ML^2+2M\left(\tfrac L2\right)^2=\tfrac1{12}ML^2+\tfrac12ML^2=\tfrac7{12}ML^2$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س9</span><span>تلاصق إطارين</span></div>
+<div class="eq">إطار قصوره $0.1\,\text{kg}\cdot\text{m}^2$ يدور بـ $900\,\text{rev/min}$، وُصل بمحوره إطار ساكن قصوره $2I$. احسب: (أ) السرعة الزاوية للإطارين معاً. (ب) التغير في الطاقة الحركية.</div>
+<div class="steps">
+<div class="s">$\omega_1=2\pi\times15=30\pi\ \text{rad/s}$ ، $I\omega_1=(I+2I)\omega_2$</div>
+<div class="s">(أ) $\omega_2=\dfrac{\omega_1}{3}=10\pi\approx31.4\ \text{rad/s}$ (300 rev/min)</div>
+<div class="s">(ب) $\Delta K=\tfrac12(0.3)(10\pi)^2-\tfrac12(0.1)(30\pi)^2\approx148-444=-296\ \text{J}$ (فُقد ثلثا الطاقة)</div>
+</div></div>
+<div class="example"><div class="eh"><span>س10</span><span>قوة مماسية على قرص</span></div>
+<div class="eq">قرص نصف قطره $10\,\text{cm}$ وقصوره $0.02\,\text{kg}\cdot\text{m}^2$ أثرت على محيطه قوة مماسية $15\,\text{N}$. ما التسارع الزاوي والتسارع المماسي؟</div>
+<div class="steps"><div class="s">$\tau=15(0.1)=1.5\ \text{N}\cdot\text{m}$ ، $\alpha=\dfrac{1.5}{0.02}=75\ \text{rad/s}^2$</div><div class="s">$a_t=r\alpha=0.1(75)=7.5\ \text{m/s}^2$</div></div></div>
+</section>
+
+<section id="s9">
+<h2>مراجعة الوحدة الأولى: أسئلة الوحدة</h2>
+<p>أسئلة الوحدة بتجمع الفصول الثلاثة. حلها كأنها امتحان!</p>
+<div id="quizU1"></div>
+<h3>المسائل</h3>
+<details class="check"><summary>س2: كتلة $50\,\text{g}$ تسير بسرعة $5\,\text{m/s}$ اصطدمت بجدار وارتدت بطاقة حركية تعادل ربع طاقتها. احسب الدفع، ومتوسط القوة إذا كان زمن التصادم $0.02\,\text{s}$.</summary><div class="a">
+ربع الطاقة ← نصف السرعة: $v_f=-2.5\ \text{m/s}$<br>$I=\Delta P=0.05(-2.5-5)=-0.375\ \text{N}\cdot\text{s}$ ، $F=\dfrac{-0.375}{0.02}=-18.75\ \text{N}$ (بعيداً عن الجدار)</div></details>
+<details class="check"><summary>س3: جسم $5\,\text{kg}$ بسرعة $20\,\text{m/s}$ اصطدم به عمودياً جسم $10\,\text{kg}$ بسرعة $30\,\text{m/s}$ والتصقا. ما سرعتهما؟</summary><div class="a">
+$P_x=5(20)=100$ ، $P_y=10(30)=300$ ، $v_f=\dfrac{\sqrt{100^2+300^2}}{15}\approx21.1\ \text{m/s}$ بزاوية $\tan^{-1}3\approx71.6^\circ$ مع اتجاه الجسم الأول.</div></details>
+<details class="check"><summary>س4: منحنى (السرعة–الزمن) لجسم كتلته $2\,\text{kg}$: السرعة $5$ عند $t=0$، ثم $15\,\text{m/s}$ عند $10\,\text{s}$، ثم $20\,\text{m/s}$ عند $40\,\text{s}$. احسب الدفع خلال $40\,\text{s}$، وقوة الدفع خلال أول $10\,\text{s}$.</summary><div class="a">
+$I=m\Delta v=2(20-5)=30\ \text{N}\cdot\text{s}$ ، $F=\dfrac{2(15-5)}{10}=2\ \text{N}$</div></details>
+<details class="check"><summary>س5: رصاصة $8\,\text{g}$ انغرزت في جسم خشبي $9\,\text{kg}$ معلق فتحركا معاً بسرعة $0.4\,\text{m/s}$. ما السرعة الابتدائية للرصاصة؟</summary><div class="a">
+$0.008\,v=9.008(0.4) \Rightarrow v\approx450\ \text{m/s}$ (طول الخيط معلومة زائدة)</div></details>
+<details class="check"><summary>س6: جسم $2\,\text{kg}$ بسرعة $4\,\text{m/s}$ تصادم مرناً مع جسم ساكن فتحرك الثاني بسرعة $5\,\text{m/s}$ (+x). جد كتلة الثاني وسرعة الأول بعد التصادم.</summary><div class="a">
+السرعة النسبية: $v_{1i}-v_{2i}=v_{2f}-v_{1f} \Rightarrow 4-0=5-v_{1f} \Rightarrow v_{1f}=1\ \text{m/s}$ (بنفس الاتجاه).<br>
+الزخم: $2(4)=2(1)+m_2(5) \Rightarrow m_2=1.2\ \text{kg}$. (تحقق من الطاقة: $16=1+15$ ✔)</div></details>
+<details class="check"><summary>س7: الصياد محمد ($80\,\text{kg}$) غادر الزورق للأمام بسرعة $4\,\text{m/s}$. ما سرعة الزورق وأحمد (كتلتهما معاً $150\,\text{kg}$)؟</summary><div class="a">$0=80(4)+150v \Rightarrow v\approx-2.13\ \text{m/s}$ (للخلف)</div></details>
+<details class="check"><summary>س8: جزيء نيتروجين $4.7\times10^{-26}\,\text{kg}$ بسرعة $550\,\text{m/s}$ ارتد عن الجدار بنفس السرعة. (أ) الدفع على الجدار؟ (ب) متوسط القوة إذا حدث $1.5\times10^{23}$ تصادم/ثانية؟</summary><div class="a">
+(أ) $|\Delta P|=2mv=2(4.7\times10^{-26})(550)\approx5.17\times10^{-23}\ \text{N}\cdot\text{s}$<br>(ب) $F=5.17\times10^{-23}\times1.5\times10^{23}\approx7.8\ \text{N}$</div></details>
+<details class="check"><summary>س9: سيارة سباق $845\,\text{kg}$ تتسارع من السكون إلى $72\,\text{km/h}$ خلال $0.9\,\text{s}$. التغير في الزخم ومتوسط القوة؟</summary><div class="a">$72\,\text{km/h}=20\,\text{m/s}$ ، $\Delta P=845(20)=16900\ \text{kg}\cdot\text{m/s}$ ، $F=\dfrac{16900}{0.9}\approx1.88\times10^4\ \text{N}$</div></details>
+<details class="check"><summary>س10: أحمد ($42\,\text{kg}$) على لوح تزلج ($2\,\text{kg}$) يتحركان بـ $1.2\,\text{m/s}$. قفز أحمد فتوقف اللوح تماماً. ما سرعة قفزه واتجاهه؟</summary><div class="a">$44(1.2)=42v+0 \Rightarrow v\approx1.26\ \text{m/s}$ بنفس اتجاه الحركة الأصلي.</div></details>
+<details class="check"><summary>س11: متزلجان $90\,\text{kg}$ و $60\,\text{kg}$ تدافعا. (أ) النسبة بين سرعتيهما؟ (ب) أيهما أسرع؟ (ج) أيهما دفع بقوة أكبر؟</summary><div class="a">(أ) $90v_1=60v_2 \Rightarrow v_1:v_2=2:3$ ، (ب) الأخف ($60\,\text{kg}$)، (ج) القوتان متساويتان مقداراً (نيوتن الثالث).</div></details>
+<details class="check"><summary>س12: عجلة دراجة قطرها $60\,\text{cm}$، كتلة محيطها $1\,\text{kg}$، وفيها 4 أقطار كتلة كل منها $0.4\,\text{kg}$، تدور بـ $1\,\text{rev/s}$. احسب $I$ و $L$ و $K$.</summary><div class="a">
+$R=0.3\,\text{m}$: الطوق $1(0.3)^2=0.09$ ، كل قطر ساق طولها $0.6$ حول مركزها: $\tfrac1{12}(0.4)(0.6)^2=0.012$ ← $I=0.09+4(0.012)=0.138\ \text{kg}\cdot\text{m}^2$<br>
+$\omega=2\pi$ ← $L=0.138(2\pi)\approx0.87\ \text{kg}\cdot\text{m}^2/\text{s}$ ، $K=\tfrac12(0.138)(2\pi)^2\approx2.72\ \text{J}$</div></details>
+<details class="check"><summary>س13: رجل على منصة تدور بـ $1\,\text{rev/s}$ يضم يديه فيقل قصوره من $6$ إلى $2\,\text{kg}\cdot\text{m}^2$. جد السرعة الزاوية الجديدة والتغير في الطاقة الحركية.</summary><div class="a">
+$6(2\pi)=2\omega_2 \Rightarrow \omega_2=6\pi\ \text{rad/s}$ (3 rev/s)<br>$\Delta K=\tfrac12(2)(6\pi)^2-\tfrac12(6)(2\pi)^2=36\pi^2-12\pi^2=24\pi^2\approx237\ \text{J}$ (زيادة)</div></details>
+<details class="check"><summary>س14: مسطرة $1\,\text{m}$ وكتلتها $0.3\,\text{kg}$ تؤثر عليها قوة عمودية $5\,\text{N}$ عند أحد طرفيها. احسب التسارع الزاوي حول محور من المركز O، وحول محور من الطرف الآخر P.</summary><div class="a">
+حول O: $\tau=5(0.5)=2.5$ ، $I=\tfrac1{12}(0.3)(1)^2=0.025$ ← $\alpha=100\ \text{rad/s}^2$<br>
+حول P: $\tau=5(1)=5$ ، $I=\tfrac13(0.3)(1)^2=0.1$ ← $\alpha=50\ \text{rad/s}^2$</div></details>
+<details class="check"><summary>س15: قرصان $I_1,\omega_1$ و $I_2,\omega_2$ على نفس المحور التصقا. ما سرعتهما الزاوية المشتركة؟</summary><div class="a">$\omega=\dfrac{I_1\omega_1+I_2\omega_2}{I_1+I_2}$ (مع مراعاة الإشارة إذا كانا يدوران باتجاهين متعاكسين).</div></details>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- الباب --- */
+(function(){
+  const cv=document.getElementById('cvDoor'), sim=document.getElementById('simDoor'), ro=document.getElementById('roDoor'); let V={}, ang=0, om=0, last=0;
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,260); ctx.clearRect(0,0,w,h);
+    const hx=60, hy=h-36, Lpx=Math.min(w-140,330), sc=Lpx/0.9;
+    const tau=V.r*V.F*Math.sin(V.th*Math.PI/180);
+    ctx.save(); ctx.translate(hx,hy); ctx.rotate(-ang);
+    ctx.fillStyle=cssv('--surface'); ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2; ctx.fillRect(0,-7,Lpx,14); ctx.strokeRect(0,-7,Lpx,14);
+    const px=V.r*sc; const t=V.th*Math.PI/180; const fl=V.F*2.4;
+    // اتجاه القوة: الزاوية بين r (على طول الباب) و F
+    const fx=Math.cos(t)*fl, fy=-Math.sin(t)*fl;
+    // ذراع القوة
+    if(V.F>0){ ctx.setLineDash([5,4]); ctx.strokeStyle=cssv('--warm'); ctx.lineWidth=2;
+      const ux=Math.cos(t), uy=-Math.sin(t); const d=px*Math.sin(t); // البعد العمودي من المفصلة لخط القوة
+      const qx=px-ux*(px*ux), qy=-uy*(px*ux); ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(qx,qy); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(px-ux*400,-uy*400); ctx.lineTo(px+ux*400,uy*400); ctx.strokeStyle=cssv('--line'); ctx.stroke(); ctx.setLineDash([]);
+      arrow(ctx,px,0,px+fx,fy,cssv('--accent'),3,11); }
+    ctx.restore();
+    ctx.fillStyle=cssv('--ink'); ctx.beginPath(); ctx.arc(hx,hy,6,0,7); ctx.fill(); ctx.font='12px sans-serif'; ctx.fillText('المفصلة',hx-26,hy+26);
+  }
+  function readout(){ const t=V.th*Math.PI/180;
+    ro.innerHTML=`<span class="r">ذراع القوة $r\\sin\\theta$ = <b>${fmt(V.r*Math.sin(t))} m</b></span><span class="r">العزم $\\tau$ = <b>${fmt(V.r*V.F*Math.sin(t))} N·m</b></span>`;
+    renderMath(ro); }
+  function loop(ts){ const dt=Math.min(0.05,(ts-last)/1000||0); last=ts; const tau=V.r*V.F*Math.sin(V.th*Math.PI/180);
+    om+=tau/12*dt; om*=0.985; ang+=om*dt; if(ang>0.6){ang=0.6;om=0;} if(ang<0){ang=0;om=0;} draw(); requestAnimationFrame(loop); }
+  bindRanges(sim,v=>{V=v; ang=0; om=0; readout(); draw();}); requestAnimationFrame(loop);
+})();
+
+/* --- المتزلجة --- */
+(function(){
+  const cv=document.getElementById('cvSkate'), sim=document.getElementById('simSkate'), ro=document.getElementById('roSkate');
+  const I0=1, m=2, w0=2*Math.PI*0.6; const L=(I0+2*m*0.9*0.9)*w0; let V={r:0.9}, phi=0, last=0;
+  const Iof=()=>I0+2*m*V.r*V.r;
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,260); ctx.clearRect(0,0,w,h);
+    const cx=w/2, cy=h/2, sc=Math.min(110/0.9,(w/2-30)/0.9);
+    ctx.strokeStyle=cssv('--line'); ctx.setLineDash([4,4]); ctx.beginPath(); ctx.arc(cx,cy,V.r*sc,0,7); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=cssv('--idea'); ctx.beginPath(); ctx.arc(cx,cy,26,0,7); ctx.fill();
+    const ax=Math.cos(phi)*V.r*sc, ay=Math.sin(phi)*V.r*sc;
+    ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=5; ctx.beginPath(); ctx.moveTo(cx-ax,cy-ay); ctx.lineTo(cx+ax,cy+ay); ctx.stroke();
+    ctx.fillStyle=cssv('--warm'); [1,-1].forEach(s=>{ctx.beginPath(); ctx.arc(cx+s*ax,cy+s*ay,12,0,7); ctx.fill();});
+    ctx.fillStyle='#fff'; ctx.font='bold 11px sans-serif'; ctx.textAlign='center'; ctx.fillText('محور',cx,cy+4); ctx.textAlign='start';
+  }
+  function readout(){ const I=Iof(), om=L/I, K=0.5*I*om*om;
+    ro.innerHTML=`<span class="r">$I$ = <b>${fmt(I)} kg·m²</b></span><span class="r">$\\omega$ = <b>${fmt(om)} rad/s</b> (${fmt(om/2/Math.PI)} rev/s)</span><span class="r">$L=I\\omega$ = <b>${fmt(I*om)}</b> ثابت ✔</span><span class="r">$K$ = <b>${fmt(K,1)} J</b></span>`;
+    renderMath(ro); }
+  function loop(ts){ const dt=Math.min(0.05,(ts-last)/1000||0); last=ts; phi+=L/Iof()*dt; draw(); requestAnimationFrame(loop); }
+  bindRanges(sim,v=>{V=v; readout();}); requestAnimationFrame(loop);
+})();
+
+Quiz('#quiz3',[
+ {q:'كرتان مصمتتان لهما نفس الكتلة، $r_1=2r_2$. القصور الدوراني حول محور من مركز كل منهما، $I_1$ يساوي:', o:['$32I_2$','$8I_2$','$4I_2$','$\\tfrac14I_2$'], a:2, e:'$I=\\tfrac25mr^2 \\propto r^2$ ← $I_1=2^2I_2=4I_2$.'},
+ {q:'أربع كتل متماثلة $3\\,\\text{kg}$ على رؤوس مستطيل $40\\,\\text{cm}\\times30\\,\\text{cm}$. القصور حول محور عمودي من المركز ($\\text{kg}\\cdot\\text{m}^2$):', o:['0.75','7.5','75','300'], a:0, e:'بعد كل رأس عن المركز = نصف القطر $=\\tfrac12\\sqrt{0.4^2+0.3^2}=0.25\\,\\text{m}$ ← $I=4(3)(0.25)^2=0.75$.'},
+ {q:'ساق مهملة الكتلة طولها $1\\,\\text{m}$ على كل طرف منها $5\\,\\text{kg}$. القصور حول أحد طرفيها:', o:['10','7.5','5','2.5'], a:2, e:'الكتلة عند المحور $r=0$ لا تساهم: $I=5(1)^2+5(0)^2=5$.'},
+ {q:'الطاقة الحركية الدورانية لجسم يدور حول محور ثابت تتناسب:', o:['طردياً مع $\\omega$','عكسياً مع $\\omega^2$','طردياً مع $\\omega^2$','عكسياً مع $I$'], a:2, e:'$K=\\tfrac12I\\omega^2$.'},
+ {q:'جسم سرعته الزاوية $\\omega_1$ وطاقته $K_1$. إذا تضاعفت سرعته الزاوية فإن $K_2$:', o:['$4K_1$','$3K_1$','$2K_1$','$K_1$'], a:0, e:'$K\\propto\\omega^2$ ← $2^2=4$.'},
+ {q:'أسطوانة نصف قطرها $R$ وقرص نصف قطره $r$ مصمتان لهما نفس الكتلة ويدوران بنفس $\\omega$ حول نفس المحور (XX) ولهما نفس الطاقة الدورانية. النسبة $r/R$:', o:['$\\tfrac14$','$\\tfrac12$','$\\sqrt2$','1'], a:3, e:'نفس $K$ ونفس $\\omega$ ← نفس $I$. وكلاهما $\\tfrac12M(\\text{نق})^2$ ونفس الكتلة ← $r=R$.'},
+ {q:'مسطرة $1\\,\\text{m}$ كتلتها $0.3\\,\\text{kg}$. الفرق بين قصورها حول الطرف وحول المركز:', o:['0.125','0.1','0.075','0.025'], a:2, e:'$\\tfrac13ML^2-\\tfrac1{12}ML^2=\\tfrac14ML^2=\\tfrac14(0.3)(1)=0.075$.'},
+ {q:'أي الكميات محفوظة دائماً في أي عملية تلاصق لمنظومة أجسام تدور حول محور ثابت؟', o:['الطاقة الحركية الدورانية','الزخم الزاوي','السرعة الزاوية','العزم الدوراني'], a:1, e:'التلاصق مثل التصادم عديم المرونة: الزخم الزاوي محفوظ والطاقة تُفقد.'}
+],'ch3');
+
+Quiz('#quizU1',[
+ {q:'اصطدم جسم $m$ سرعته $v$ تصادماً عديم المرونة بجسم ساكن كتلته $3m$. الطاقة الضائعة:', o:['$\\tfrac12mv^2$','$\\tfrac14mv^2$','$\\tfrac18mv^2$','$\\tfrac38mv^2$'], a:3, e:'$v_f=\\tfrac v4$ ، $K_f=\\tfrac12(4m)\\tfrac{v^2}{16}=\\tfrac18mv^2$ ، الضائع $=\\tfrac12-\\tfrac18=\\tfrac38mv^2$.'},
+ {q:'كرة $m$ سرعتها $v$ اصطدمت بحائط وارتدت بثلث سرعتها. الطاقة الضائعة:', o:['$\\tfrac12mv^2$','$\\tfrac14mv^2$','$\\tfrac38mv^2$','$\\tfrac49mv^2$'], a:3, e:'$\\tfrac12mv^2(1-\\tfrac19)=\\tfrac12\\cdot\\tfrac89mv^2=\\tfrac49mv^2$.'},
+ {q:'سيارة $1200\\,\\text{kg}$ انخفضت سرعتها من $20$ إلى $8\\,\\text{m/s}$ بنفس الاتجاه خلال $36\\,\\text{s}$. مقدار متوسط القوة (N):', o:['4','40','400','800'], a:2, e:'$F=\\dfrac{1200(8-20)}{36}=-400$.'},
+ {q:'جسمان A, B كتلة B أربعة أمثال كتلة A وطاقتهما الحركية متساوية. فإن:', o:['$v_A=4v_B$','$v_A=v_B$','$v_A=\\tfrac12v_B$','$v_A=2v_B$'], a:3, e:'$\\tfrac12m v_A^2=\\tfrac12(4m)v_B^2 \\Rightarrow v_A=2v_B$.'},
+ {q:'عند مضاعفة الطاقة الحركية لجسم زخمه $16\\,\\text{kg}\\cdot\\text{m/s}$ أربع مرات (بثبوت الكتلة) يصبح زخمه:', o:['16','4','64','32'], a:3, e:'$P=\\sqrt{2mK}\\propto\\sqrt K$ ← $\\sqrt4=2$ ← $32$.'},
+ {q:'قوتان $F_1=3F_2$ تعطيان نفس الدفع. زمن تأثير $F_1$:', o:['يساوي زمن $F_2$','3 أضعاف زمن $F_2$','$\\tfrac13$ زمن $F_2$','9 أضعاف زمن $F_2$'], a:2, e:'$F_1t_1=F_2t_2 \\Rightarrow t_1=\\tfrac13t_2$.'},
+ {q:'قوة $20\\,\\text{N}$ على جسم $5\\,\\text{kg}$ لمدة $4\\,\\text{s}$. التغير في سرعته (m/s):', o:['3','6','16','26'], a:2, e:'$\\Delta v=\\dfrac{F\\Delta t}{m}=\\dfrac{80}{5}=16$.'},
+ {q:'منحنى الدفع (صادي) مع التغير في السرعة (سيني). الميل يمثل:', o:['الزخم','كتلة الجسم','التسارع','القوة'], a:1, e:'$I=m\\Delta v$ ← الميل $=m$.'},
+ {q:'جسم $3\\,\\text{kg}$ اصطدم بحائط بسرعة $15\\,\\text{m/s}$ وارتد بـ $10\\,\\text{m/s}$. التغير في زخمه:', o:['10','75','25','30'], a:1, e:'$3(10-(-15))=75$.'},
+ {q:'كتلتان متماثلتان تتحركان باتجاهين متعاكسين بالسرعة نفسها. زخم النظام:', o:['$mv$','$2mv$','0','$\\tfrac12mv$'], a:2, e:'$mv+m(-v)=0$.'},
+ {q:'متزلج $40\\,\\text{kg}$ بسرعة $2\\,\\text{m/s}$ اصطدم بزلاجة ساكنة $10\\,\\text{kg}$ وتحركا معاً. السرعة المشتركة:', o:['0.4','0.8','1.6','3.2'], a:2, e:'$80=50v \\Rightarrow v=1.6$.'},
+ {q:'متزلج ساكن $45\\,\\text{kg}$ أمسك كرة $5\\,\\text{kg}$ فانزلقا معاً بـ $0.5\\,\\text{m/s}$. سرعة الكرة قبل الإمساك:', o:['2.5','3','4','5'], a:3, e:'$5v=50(0.5)=25 \\Rightarrow v=5$.'},
+ {q:'فرق الزخم بين شخص $50\\,\\text{kg}$ يجري بـ $3\\,\\text{m/s}$ وشاحنة $3000\\,\\text{kg}$ بـ $1\\,\\text{m/s}$:', o:['1275','2550','2850','2950'], a:2, e:'$3000-150=2850$.'},
+ {q:'قوة $16\\,\\text{N}$ أعطت حجراً دفعاً $0.8\\,\\text{kg}\\cdot\\text{m/s}$ فتحرك (من السكون) بسرعة $0.8\\,\\text{m/s}$. كتلته:', o:['0.2','0.8','1','1.6'], a:2, e:'$I=m\\Delta v \\Rightarrow m=\\dfrac{0.8}{0.8}=1\\,\\text{kg}$.'},
+ {q:'كرة مصمتة نصف قطرها $10\\,\\text{cm}$ وكتلتها $1\\,\\text{kg}$ وزخمها الزاوي $5\\times10^{-2}$. سرعتها الزاوية:', o:['25','12.5','2','$2\\times10^{-2}$'], a:1, e:'$I=\\tfrac25(1)(0.1)^2=0.004$ ، $\\omega=\\dfrac{0.05}{0.004}=12.5$.'},
+ {q:'إطار قصوره $I$ يدور بـ $\\omega_1$ وُصل به إطار ساكن قصوره $3I$. العلاقة:', o:['$\\omega_1=\\omega_2$','$\\omega_1=2\\omega_2$','$\\omega_1=3\\omega_2$','$\\omega_1=4\\omega_2$'], a:3, e:'$I\\omega_1=4I\\omega_2$.'},
+ {q:'أربع كتل $5\\,\\text{kg}$ على رؤوس مربع ضلعه $0.5\\,\\text{m}$. القصور حول محور عمودي من المركز:', o:['0.125','1.25','2.5','5'], a:2, e:'$r^2=\\left(\\tfrac{0.5\\sqrt2}{2}\\right)^2=0.125$ ← $I=4(5)(0.125)=2.5$.'},
+ {q:'مسطرة $50\\,\\text{cm}$ وكتلتها $0.2\\,\\text{kg}$ تدور بـ $3\\,\\text{rad/s}$ حول محور عمودي عند الطرف. زخمها الزاوي:', o:['0.25','0.05','0.75','1'], a:1, e:'$I=\\tfrac13(0.2)(0.5)^2=\\tfrac{1}{60}$ ، $L=\\tfrac{3}{60}=0.05$.'},
+ {q:'جسمان لهما نفس القصور، زخم A الزاوي مثلا زخم B. فإن:', o:['$K_A=2K_B$','$K_A=4K_B$','$K_A=\\tfrac12K_B$','$K_A=\\tfrac14K_B$'], a:1, e:'$K=\\dfrac{L^2}{2I}$ ← $2^2=4$.'},
+ {q:'$I_B=2I_A$ و $K_B=8K_A$. فإن $L_B$ يساوي:', o:['$2L_A$','$4L_A$','$8L_A$','$16L_A$'], a:1, e:'$L=\\sqrt{2IK}$ ← $\\sqrt{2\\times8}=4$.'}
+],'u1');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

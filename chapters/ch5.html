@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل الخامس: دارات التيار المستمر | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للقوة الدافعة الكهربائية ومعادلة الدارة وفرق الجهد بين نقطتين وقنطرة ويتستون وقانوني كيرتشوف - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل الخامس: دارات التيار المستمر | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للقوة الدافعة الكهربائية ومعادلة الدارة وفرق الجهد بين نقطتين وقنطرة ويتستون وقانوني كيرتشوف - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch5" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل الخامس: دارات التيار المستمر-->
+<!--desc:شرح تفاعلي للقوة الدافعة الكهربائية ومعادلة الدارة وفرق الجهد بين نقطتين وقنطرة ويتستون وقانوني كيرتشوف - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الثانية: الكهرباء المتحركة · الفصل الخامس</div>
+  <h1>دارات التيار المستمر</h1>
+  <p>بهالفصل بنتعلم "نمشي" داخل الدارة: نحسب التيار، ونعرف جهد أي نقطة، ونحل دارات معقدة ما بتنبسط بالتوالي والتوازي. السر كله بقاعدتين: <b>الشحنة محفوظة</b> و<b>الطاقة محفوظة</b>.</p>
+  <ul class="goals">
+    <li>حل مسائل على دارات كهربائية بسيطة، وحساب فرق الجهد بين نقطتين.</li>
+    <li>توظيف قنطرة ويتستون في إيجاد مقاومة مجهولة.</li>
+    <li>استخدام قانوني كيرتشوف في حل مسائل الدارات.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>5-1 القوة الدافعة الكهربائية</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+البطارية مثل <b>مضخة</b> بترفع الشحنات من جهد منخفض لجهد عالي (داخلها)، عشان ترجع "تنزل" عبر الدارة الخارجية وتشغّل الأجهزة. "قوة الدفع" هاي هي شغل البطارية على كل كولوم.
+</div>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>القوة الدافعة الكهربائية $\varepsilon$:</b> الشغل الذي تبذله البطارية في نقل وحدة الشحنات الموجبة من القطب السالب إلى القطب الموجب داخلها. وهي أيضاً فرق الجهد بين قطبي البطارية عندما تكون الدارة <b>مفتوحة</b>.
+</div>
+<div class="box law"><div class="lbl">قانونا (5-1) و (5-2)</div>
+$$\varepsilon=\frac{\Delta W}{\Delta Q}\quad(\text{J/C}=\text{V})\qquad\qquad P=\varepsilon I$$
+<p style="margin:0;font-size:.95rem">$P=\varepsilon I$: القدرة التي تعطيها البطارية للدارة (القدرة الداخلة).</p>
+</div>
+</section>
+
+<section id="s2">
+<h2>5-2 معادلة الدارة البسيطة</h2>
+<p>حسب حفظ الطاقة: القدرة التي تعطيها البطارية = القدرة المستنفدة في المقاومة الداخلية $r$ والخارجية $R$:</p>
+<div class="box law"><div class="lbl">الدارة البسيطة</div>
+$$\varepsilon I=I^2r+I^2R \ \Longrightarrow\ I=\frac{\varepsilon}{R+r}$$
+</div>
+<p>ولدارة فيها عدة بطاريات ومقاومات على التوالي:</p>
+<div class="box law"><div class="lbl">معادلة الدارة (5-3)</div>
+$$I=\frac{\sum\varepsilon}{\sum R}=\frac{\sum\varepsilon_{\text{مع التيار}}-\sum\varepsilon_{\text{عكس التيار}}}{\sum R_{\text{خارجية}}+\sum r_{\text{داخلية}}}$$
+</div>
+<div class="box tip"><div class="lbl">⭐ كيف أحدد "مع التيار" و "عكس التيار"؟</div>
+سهم القوة الدافعة للبطارية داخلها يتجه من القطب السالب (الخط القصير) إلى الموجب (الخط الطويل). افترض اتجاهاً للتيار:<br>
+• إذا التيار يدخل البطارية من السالب ويخرج من الموجب ← <b>مع التيار</b> (البطارية تُفرَّغ وتعطي طاقة) ← $\varepsilon$ موجبة.<br>
+• إذا العكس ← <b>عكس التيار</b> (البطارية تُشحن وتختزن طاقة كيميائية $I\varepsilon$) ← $\varepsilon$ سالبة.<br>
+لو طلع التيار سالب، معناه اتجاهه الحقيقي عكس ما افترضت (والمقدار صحيح).
+</div>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>تيار كل مقاومة</span></div>
+<div class="eq">بطارية $12\,\text{V}$ (مقاومتها الداخلية مهملة) موصولة مع $3\,\Omega$ على التوالي، ثم ثلاث مقاومات على التوازي: $4\,\Omega$ و $48\,\Omega$ و $16\,\Omega$. احسب تيار كل مقاومة.<div class="circ" data-f="ex1"></div></div>
+<div class="steps">
+<div class="s">التوازي: $\dfrac1R=\dfrac14+\dfrac1{48}+\dfrac1{16}=\dfrac{12+1+3}{48}=\dfrac{16}{48} \Rightarrow R=3\,\Omega$</div>
+<div class="s">$\sum R=3+3=6\,\Omega$ ← $I=\dfrac{12}{6}=2\ \text{A}$ (وهو تيار الـ $3\,\Omega$)</div>
+<div class="s">جهد مجموعة التوازي $=IR=2\times3=6\,\text{V}$ (نفسه على كل مقاومة فيها)</div>
+<div class="s"><span class="ans-final">$I_4=\dfrac64=1.5\,\text{A}$ ، $I_{48}=\dfrac{6}{48}=\dfrac18\,\text{A}$ ، $I_{16}=\dfrac{6}{16}=\dfrac38\,\text{A}$ (مجموعها 2 A ✔)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>القدرة في مقاومة مجهولة</span></div>
+<div class="eq">دارة مغلقة فيها بطارية $12\,\text{V}$ (تُفرّغ) وبطارية $3\,\text{V}$ (تيارها عكس سهمها) ومقاومتان $10\,\Omega$ و $6\,\Omega$ ومقاومة $R$، والتيار $0.5\,\text{A}$. ما القدرة المستنفدة في $R$؟</div>
+<div class="steps">
+<div class="s">القدرة الداخلة = القدرة المستنفدة: $I(12)=I^2(10)+I^2(6)+I(3)+P_R$</div>
+<div class="s">$6=2.5+1.5+1.5+P_R$</div>
+<div class="s"><span class="ans-final">$P_R=0.5\ \text{W}$ (لاحظ: البطارية المعاكسة $3\,\text{V}$ تستهلك $I\varepsilon=1.5\,\text{W}$)</span></div>
+</div></div>
+</section>
+
+<section id="s3">
+<h2>5-3 فرق الجهد بين نقطتين</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة: امشِ بالدارة!</div>
+ابدأ من النقطة $a$ بجهدها $V_a$، وامشِ على أي مسار لحد $b$. كل ما تقطع عنصر، اجمع (أو اطرح) التغير بالجهد. لما توصل، بيكون معك $V_b$.
+</div>
+<div class="box law"><div class="lbl">قانون (5-4)</div>
+$$V_a+\textstyle\sum\Delta V_{ab}=V_b$$
+</div>
+<div class="tblwrap"><table class="tbl">
+<tr><th>العنصر</th><th>اتجاه العبور</th><th>التغير في الجهد</th></tr>
+<tr><td>مقاومة</td><td><b>مع</b> التيار (من + إلى −)</td><td>$-IR$</td></tr>
+<tr><td>مقاومة</td><td><b>عكس</b> التيار (من − إلى +)</td><td>$+IR$</td></tr>
+<tr><td>بطارية</td><td>من القطب السالب إلى الموجب</td><td>$+\varepsilon$</td></tr>
+<tr><td>بطارية</td><td>من القطب الموجب إلى السالب</td><td>$-\varepsilon$</td></tr>
+<tr><td>مقاومة لا يمر فيها تيار</td><td>أي اتجاه</td><td>$0$</td></tr>
+</table></div>
+<div class="box warn"><div class="lbl">⚠️ لا تنسى المقاومة الداخلية</div>
+إذا البطارية لها مقاومة داخلية $r$، اعتبرها مقاومة عادية جنب البطارية وطبّق عليها $\pm Ir$.
+</div>
+<p><b>القدرة بين نقطتين</b> (حفظ الطاقة لجزء من الدارة):</p>
+<div class="box law"><div class="lbl">الداخلة = المستنفدة</div>
+$$IV_{ab}+I\textstyle\sum\varepsilon_{\text{مع التيار}} \;=\; \sum I^2R_{ab}+I\sum\varepsilon_{\text{عكس التيار}}$$
+<p style="margin:0;font-size:.9rem">(نحسب $V_{ab}$ باتجاه التيار، أي التيار يسري من a إلى b)</p>
+</div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>التغيرات في الجهد حول حلقة</span></div>
+<div class="eq">حلقة واحدة: من a إلى b مقاومة $10\,\Omega$، من b إلى h بطارية $9\,\text{V}$ (نعبرها من + إلى −)، من h إلى d مقاومتان $5\,\Omega$ و $6\,\Omega$، من d إلى w بطارية $12\,\text{V}$ (نعبرها من − إلى +)، ومن w إلى a مقاومة $3\,\Omega$. جد التيار والتغيرات في الجهد ومجموعها.<div class="circ" data-f="ex3"></div></div>
+<div class="steps">
+<div class="s">$\sum R=10+5+6+3=24\,\Omega$ ، $I=\dfrac{12-9}{24}=0.125\ \text{A}$ (البطارية 12 V هي التي تحدد الاتجاه)</div>
+<div class="s">$\Delta V_{ab}=-0.125(10)=-1.25$ ، $\Delta V_{bh}=-9$ ، $\Delta V_{hd}=-0.125(11)=-1.375$</div>
+<div class="s">$\Delta V_{dw}=+12$ ، $\Delta V_{wa}=-0.125(3)=-0.375$</div>
+<div class="s"><span class="ans-final">المجموع $=-1.25-9-1.375+12-0.375=0$ ← هذا هو قانون كيرتشوف الثاني!</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>جزء من دارة</span></div>
+<div class="eq">فرع يسري فيه $3\,\text{A}$ من a إلى b، ويحتوي بالترتيب: مقاومة $2\,\Omega$، بطارية $5\,\text{V}$ (نعبرها من − إلى +) ومقاومتها الداخلية $0.5\,\Omega$، مقاومة $1\,\Omega$، بطارية $4\,\text{V}$ (نعبرها من + إلى −) ومقاومتها الداخلية $0.5\,\Omega$. احسب $V_{ab}$ والقدرة المستنفدة والداخلة.<div class="circ" data-f="ex4"></div></div>
+<div class="steps">
+<div class="s">$V_a-3(2)+5-3(0.5)-3(1)-3(0.5)-4=V_b \Rightarrow V_a-11=V_b$ ← $V_{ab}=11\ \text{V}$</div>
+<div class="s">المستنفدة $=\sum I^2R+I\varepsilon_{\text{عكس}}=9(2+0.5+1+0.5)+3(4)=36+12=48\ \text{W}$</div>
+<div class="s">الداخلة $=IV_{ab}+I\varepsilon_{\text{مع}}=3(11)+3(5)=48\ \text{W}$ ✔ متساويتان</div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>قوة دافعة مجهولة</span></div>
+<div class="eq">فرع يسري فيه $3\,\text{A}$ من a إلى b: مقاومة $10\,\Omega$، بطارية $30\,\text{V}$ (مع التيار)، مقاومة $4\,\Omega$، بطارية مجهولة $\varepsilon$ (عكس التيار)، مقاومة $6\,\Omega$. القدرة المستنفدة $210\,\text{W}$. احسب $\varepsilon$ و $V_{ab}$ والقدرة الداخلة.<div class="circ" data-f="ex5"></div></div>
+<div class="steps">
+<div class="s">$210=3^2(20)+3\varepsilon=180+3\varepsilon \Rightarrow \varepsilon=10\ \text{V}$</div>
+<div class="s">$V_a-3(20)+30-10=V_b \Rightarrow V_{ab}=40\ \text{V}$</div>
+<div class="s">الداخلة $=3(40)+3(30)=210\ \text{W}$ ✔</div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>أيهما أعلى جهداً؟</span></div>
+<div class="eq">حلقة f-c-d-e فيها بطارية $12\,\text{V}$ ومقاومتان $2\,\Omega$ و $4\,\Omega$. من c يخرج فرع فيه بطارية $4\,\text{V}$ إلى a، ومن d فرع فيه $10\,\Omega$ إلى b (a و b طرفان مفتوحان). احسب $V_{ab}$.<div class="circ" data-f="ex6"></div></div>
+<div class="steps">
+<div class="s">التيار يمر فقط في الحلقة المغلقة: $I=\dfrac{12}{2+4}=2\ \text{A}$ (لا تيار في فرعي a و b)</div>
+<div class="s">المسار a→c→d→b: $V_a+4-2(4)+0(10)=V_b$</div>
+<div class="s"><span class="ans-final">$V_a-V_b=4\ \text{V}$ ← $V_a>V_b$</span></div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>5-4 فرق الجهد بين قطبي البطارية</h2>
+<div class="box law"><div class="lbl">التفريغ والشحن</div>
+$$\text{تفريغ (التيار مع سهم }\varepsilon):\ V=\varepsilon-Ir\qquad\qquad \text{شحن (التيار عكس سهم }\varepsilon):\ V=\varepsilon+Ir$$
+<div class="sym"><span>$Ir$: <b>الهبوط في الجهد</b> داخل البطارية</span><span>دارة مفتوحة $(I=0)$: $V=\varepsilon$</span></div>
+</div>
+<div class="sim" id="simBat">
+<div class="sh"><span class="tag">محاكاة</span><b>البطارية الحقيقية: القوة الدافعة والمقاومة الداخلية</b></div>
+<div class="sb">
+<canvas id="cvBat"></canvas>
+<div class="controls">
+  <div class="ctl"><label>$\varepsilon$ <output for="bE"></output></label><input type="range" id="bE" name="E" min="1" max="24" step="0.5" value="12" data-u="V"></div>
+  <div class="ctl"><label>المقاومة الداخلية $r$ <output for="br"></output></label><input type="range" id="br" name="r" min="0" max="4" step="0.1" value="1" data-u="Ω"></div>
+  <div class="ctl"><label>المقاومة الخارجية $R$ <output for="bR"></output></label><input type="range" id="bR" name="R" min="0.2" max="12" step="0.1" value="3" data-u="Ω"></div>
+</div>
+<div class="readout" id="roBat"></div>
+<p class="note">الرسم البياني: القدرة المستنفدة في $R$ مقابل $R$. لاحظ إنها تكون <b>أعظم ما يمكن لما $R=r$</b>. وكلما صغرت $R$ زاد التيار وزاد الهبوط $Ir$ فقل جهد القطبين.</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (7)</span><span>بطارية تخزين</span></div>
+<div class="eq">بطارية $\varepsilon=25\,\text{V}$ و $r=0.2\,\Omega$. احسب فرق الجهد بين قطبيها: (أ) عندما تعطي $8\,\text{A}$. (ب) عندما تُشحن بـ $8\,\text{A}$.</div>
+<div class="steps"><div class="s">(أ) $V=25-8(0.2)=23.4\ \text{V}$</div><div class="s">(ب) $V=25+8(0.2)=26.6\ \text{V}$</div></div></div>
+</section>
+
+<section id="s5">
+<h2>5-5 قياس مقاومة مجهولة</h2>
+<h3>أ) باستخدام قانون أوم (أميتر + فولتميتر)</h3>
+<p>نقيس $V$ على طرفي المقاومة و $I$ المار فيها: $R=\dfrac VI$. النتيجة غير دقيقة تماماً لأن الفولتميتر يسحب جزءاً صغيراً من التيار، فالأميتر يقرأ أكثر من تيار $R$. يقل الخطأ باستخدام فولتميتر <b>مقاومته كبيرة جداً</b>.</p>
+<div class="example"><div class="eh"><span>مثال (8)</span><span>دارة أوم</span></div>
+<div class="eq">قراءة الأميتر $1.2\,\text{A}$ والفولتميتر $18\,\text{V}$. ما المقاومة؟ وهل القيمة المحسوبة أكبر أم أقل من الحقيقية؟</div>
+<div class="steps"><div class="s">$R=\dfrac{18}{1.2}=15\ \Omega$</div><div class="s"><span class="ans-final">أقل من الحقيقية: لأن الأميتر يقيس تيار $R$ + تيار الفولتميتر، فالمقام أكبر من الحقيقي.</span></div></div></div>
+
+<h3>ب) قنطرة ويتستون</h3>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+أربع مقاومات على شكل معيّن، وبين نقطتي المنتصف جلفانوميتر. نغيّر المقاومة المتغيرة حتى <b>تنعدم قراءة الجلفانوميتر</b> (القنطرة متزنة)، يعني نقطتا المنتصف على نفس الجهد. عندها النسب متساوية!
+</div>
+<div class="box law"><div class="lbl">شرط اتزان القنطرة</div>
+$$\frac{R_1}{R_2}=\frac{R_3}{R_x}\qquad\Longleftrightarrow\qquad R_1R_x=R_2R_3$$
+<p style="margin:0;font-size:.95rem">(حاصل ضرب المقاومتين المتقابلتين = حاصل ضرب المتقابلتين الأخريين)</p>
+</div>
+<div class="sim" id="simWh">
+<div class="sh"><span class="tag">لعبة</span><b>وازن القنطرة واكتشف المقاومة المجهولة!</b></div>
+<div class="sb">
+<canvas id="cvWh"></canvas>
+<div class="controls">
+  <div class="ctl"><label>المقاومة المتغيرة $R_3$ <output for="wR3"></output></label><input type="range" id="wR3" name="R3" min="1" max="100" step="1" value="50" data-u="Ω"></div>
+</div>
+<div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="whCheck">تحقق ✔</button><button class="btn ghost" id="whNew">مقاومة جديدة 🎲</button></div>
+<div class="readout" id="roWh"></div>
+<p class="note">$R_1=20\,\Omega$ و $R_2=40\,\Omega$ معلومتان، و $R_x$ مخفية. حرّك $R_3$ حتى يصير مؤشر الجلفانوميتر على الصفر، ثم احسب $R_x=\dfrac{R_2R_3}{R_1}$.</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (9)</span><span>قنطرة ويتستون</span></div>
+<div class="eq">قنطرة متزنة: $R_2=15\,\Omega$ ، $R_3=20\,\Omega$ ، $R_4=60\,\Omega$ (حيث $\dfrac{R_1}{R_2}=\dfrac{R_3}{R_4}$)، وبطارية $12\,\text{V}$ مقاومتها الداخلية $1.25\,\Omega$. جد $R_1$ والتيار المار في البطارية.</div>
+<div class="steps">
+<div class="s">$\dfrac{R_1}{15}=\dfrac{20}{60} \Rightarrow R_1=5\,\Omega$</div>
+<div class="s">متزنة ← لا تيار في الجلفانوميتر فنهمله: $R_1,R_3$ توالي $=25\,\Omega$ ، $R_2,R_4$ توالي $=75\,\Omega$</div>
+<div class="s">الفرعان توازي: $\dfrac{25\times75}{100}=18.75\,\Omega$ ، $\sum R=18.75+1.25=20\,\Omega$</div>
+<div class="s"><span class="ans-final">$I=\dfrac{12}{20}=0.6\ \text{A}$</span></div>
+</div></div>
+<details class="check"><summary>سؤال: قنطرة فيها: الفرع العلوي $R$ ثم $6\,\Omega$ (بينهما a)، والسفلي $4\,\Omega$ ثم $3\,\Omega$ (بينهما b)، مع بطارية $3\,\text{V}$ مقاومتها الداخلية $0.333\,\Omega$ ومقاومة $1\,\Omega$ وأميتر على التوالي. إذا $V_{ab}=0$، جد $R$ وقراءة الأميتر.</summary><div class="a"><div class="circ" data-f="whq"></div>
+اتزان: $\dfrac R6=\dfrac43 \Rightarrow R=8\,\Omega$<br>العلوي $14\,\Omega$ ، السفلي $7\,\Omega$ ← توازي $=\dfrac{14\times7}{21}\approx4.67\,\Omega$ ، $\sum R=4.67+1+0.333=6\,\Omega$ ← $I=\dfrac36=0.5\ \text{A}$</div></details>
+</section>
+
+<section id="s6">
+<h2>5-6 قانونا كيرتشوف</h2>
+<div class="box law"><div class="lbl">القانون الأول (قانون التفرع) (5-6) — حفظ الشحنة</div>
+$$\textstyle\sum I_{\text{داخلة}}=\sum I_{\text{خارجة}}$$
+<p style="margin:0;font-size:.95rem">مجموع التيارات الداخلة إلى أي نقطة تفرع يساوي مجموع التيارات الخارجة منها.</p>
+</div>
+<div class="box law"><div class="lbl">القانون الثاني (قانون الحلقة) (5-7) — حفظ الطاقة</div>
+$$\textstyle\sum\Delta V_{\text{حلقة}}=0$$
+<p style="margin:0;font-size:.95rem">مجموع تغيرات الجهد عبر أي حلقة مقفلة يساوي صفراً. (نتيجة مباشرة لـ $V_a+\sum\Delta V_{aa}=V_a$)</p>
+</div>
+<div class="box tip"><div class="lbl">⭐ خطوات الحل</div>
+① افترض اتجاهات للتيارات في <b>أقل عدد</b> ممكن من الفروع، وحدّد قطبية أطراف المقاومات حسبها.<br>
+② طبّق القانون الأول عند نقطة تفرع.<br>
+③ طبّق القانون الثاني على عدد كافٍ من الحلقات (عدد المعادلات = عدد المجاهيل).<br>
+④ حل المعادلات. التيار السالب = اتجاهه عكس ما فرضت.
+</div>
+<div class="sim" id="simKir">
+<div class="sh"><span class="tag">محاكاة</span><b>دارة بحلقتين: شوف التيارات تتغير</b></div>
+<div class="sb">
+<canvas id="cvKir"></canvas>
+<div class="controls">
+  <div class="ctl"><label>$\varepsilon_1$ (يسار) <output for="k1"></output></label><input type="range" id="k1" name="e1" min="0" max="40" step="1" value="20" data-u="V"></div>
+  <div class="ctl"><label>$\varepsilon_2$ (يمين) <output for="k2"></output></label><input type="range" id="k2" name="e2" min="0" max="40" step="1" value="10" data-u="V"></div>
+  <div class="ctl"><label>$R_1$ <output for="kr1"></output></label><input type="range" id="kr1" name="R1" min="1" max="30" step="1" value="10" data-u="Ω"></div>
+  <div class="ctl"><label>$R_2$ (الوسطى) <output for="kr2"></output></label><input type="range" id="kr2" name="R2" min="1" max="30" step="1" value="20" data-u="Ω"></div>
+  <div class="ctl"><label>$R_3$ <output for="kr3"></output></label><input type="range" id="kr3" name="R3" min="1" max="30" step="1" value="10" data-u="Ω"></div>
+</div>
+<div class="readout" id="roKir"></div>
+<p class="note">عند العقدة العلوية: $I_1+I_3=I_2$ دائماً (القانون الأول). جرّب تخلي $\varepsilon_2$ كبيرة: بتشوف تيار البطارية اليسرى ينعكس — يعني <b>بتنشحن</b>!</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (10)</span><span>دارة بحلقتين (الشكل في الكتاب)</span></div>
+<div class="eq">بعد افتراض التيارات $I$ و $I_1$ و $I_2$ (حيث $I_1+I_2=I$ عند نقطة التفرع k)، أعطى تطبيق القانون الثاني على الحلقتين:<br>الحلقة 1: $-30I-10I_2+20=0$ ، الحلقة 2: $-40+30I+30I_1=0$. جد التيارات، ثم $V_{ag}$.</div>
+<div class="steps">
+<div class="s">المعادلات: $30I+10I_2=20$ … (2) ، $30I+30I_1=40$ … (3)</div>
+<div class="s">نعوّض $I_1=I-I_2$ في (3): $60I-30I_2=40$ … (4)</div>
+<div class="s">نضرب (2) في 3 ونجمع مع (4): $150I=100 \Rightarrow I=\tfrac23\ \text{A}$</div>
+<div class="s">من (3): $I_1=\dfrac{40-20}{30}=\tfrac23\ \text{A}$ ، ومن (1): $I_2=0$ (بطارية 20 V لا يمر فيها تيار!)</div>
+<div class="s">المسار a→b→h→g: $V_a-I_1(20+10)-20=V_g \Rightarrow V_a-20-20=V_g$ <span class="ans-final">$V_{ag}=40\ \text{V}$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (11)</span><span>إثبات حفظ الطاقة</span></div>
+<div class="eq">دارة: بطارية $11\,\text{V}$ و $33\,\text{V}$، ومقاومات $2\,\Omega$ (تيارها $I_1$) و $4\,\Omega$ (تيارها $I_2$) و $6\,\Omega$ (تيارها $I$). المعادلات: $I=I_1+I_2$ ، الحلقة الأولى: $-2I_1-11+4I_2=0$ ، الثانية: $-4I_2-6I+33=0$.</div>
+<div class="steps">
+<div class="s">$4I_2-2I_1=11$ … (2) ، $4I_2+6I=33$ ← بالتعويض: $10I_2+6I_1=33$ … (4)</div>
+<div class="s">(2)×3 + (4): $22I_2=66 \Rightarrow I_2=3\,\text{A}$ ، $I_1=0.5\,\text{A}$ ، $I=3.5\,\text{A}$</div>
+<div class="s">الداخلة: $I\times33=3.5\times33=115.5\ \text{W}$</div>
+<div class="s">المستنفدة: $I_1(11)+I_1^2(2)+I_2^2(4)+I^2(6)=5.5+0.5+36+73.5=115.5\ \text{W}$ <span class="ans-final">متساويتان ✔ (البطارية 11 V تُشحن)</span></div>
+</div></div>
+</section>
+
+<section id="s7">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>القوة الدافعة</small>$\varepsilon=\dfrac{\Delta W}{\Delta Q}$ ، $P=\varepsilon I$</div>
+<div class="fcard"><small>معادلة الدارة</small>$I=\dfrac{\sum\varepsilon}{\sum R}$</div>
+<div class="fcard"><small>فرق الجهد بين نقطتين</small>$V_a+\sum\Delta V_{ab}=V_b$</div>
+<div class="fcard"><small>قطبا البطارية</small>$V=\varepsilon\mp Ir$</div>
+<div class="fcard"><small>قنطرة ويتستون</small>$R_1R_x=R_2R_3$</div>
+<div class="fcard"><small>كيرتشوف</small>$\sum I_{in}=\sum I_{out}$ ، $\sum\Delta V=0$</div>
+</div>
+</section>
+
+<section id="s8">
+<h2>اختبر نفسك: أسئلة الفصل والوحدة</h2>
+<div id="quiz5"></div>
+</section>
+
+<section id="s9">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<div class="example"><div class="eh"><span>س2</span><span>جهد نقطة</span></div>
+<div class="eq">في الدارة: بطارية $24\,\text{V}$ (مقاومتها الداخلية مهملة) قطبها الموجب عند a، والقطب السالب متصل بالأرض (جهده صفر). جد: (أ) فرق الجهد $V_{ab}$. (ب) جهد النقطة b.<div class="circ" data-f="q2"></div></div>
+<div class="steps">
+<div class="s">$6\,\Omega$ و $12\,\Omega$ توازي: $\dfrac{6\times12}{18}=4\,\Omega$ ، ومع $4\,\Omega$ توالي: $8\,\Omega$</div>
+<div class="s">هذا الفرع ($8\,\Omega$) توازي مع المقاومة $8\,\Omega$ اليمنى: $4\,\Omega$ ، ثم مع $2\,\Omega$ توالي: $R_{eq}=6\,\Omega$</div>
+<div class="s">$I=\dfrac{24}{6}=4\,\text{A}$ ، ويتجزأ بالتساوي بين الفرعين المتساويين: $2\,\text{A}$ في كل منهما</div>
+<div class="s">(أ) من a إلى b عبر $2\,\Omega$ ثم $4\,\Omega$ مع التيار: $V_{ab}=4(2)+2(4)=16\ \text{V}$</div>
+<div class="s"><span class="ans-final">(ب) $V_a=24\,\text{V}$ ← $V_b=24-16=8\ \text{V}$ (تحقق: $2\,\text{A}\times4\,\Omega=8\,\text{V}$ بين b والأرض ✔)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س3</span><span>دارة بحلقتين</span></div>
+<div class="eq">بطارية $9\,\text{V}$ يساراً وبطارية $\varepsilon$ يميناً، في الأعلى $3\,\Omega$ (تيارها $I_1$) و $4.5\,\Omega$ (تيارها $I_2$) يلتقيان عند نقطة يخرج منها فرع وسط فيه $2\,\Omega$ وأميتر يقرأ $3\,\text{A}$. جد $I_1, I_2, \varepsilon$.<div class="circ" data-f="q3"></div></div>
+<div class="steps">
+<div class="s">الحلقة اليسرى: $9-3I_1-2(3)=0 \Rightarrow I_1=1\ \text{A}$</div>
+<div class="s">كيرتشوف الأول: $I_1+I_2=3 \Rightarrow I_2=2\ \text{A}$</div>
+<div class="s">الحلقة اليمنى: $\varepsilon-4.5(2)-2(3)=0 \Rightarrow \varepsilon=15\ \text{V}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س4</span><span>إيجاد $\varepsilon$ و $r$ و $R$</span></div>
+<div class="eq">قراءة الفولتميتر على قطبي البطارية والمفتاح مفتوح $3.08\,\text{V}$، وعند الغلق $2.97\,\text{V}$ وقراءة الأميتر $1.65\,\text{A}$.<div class="circ" data-f="q4"></div></div>
+<div class="steps">
+<div class="s">(أ) الدارة مفتوحة ← $\varepsilon=3.08\ \text{V}$</div>
+<div class="s">(ب) $2.97=3.08-1.65r \Rightarrow r=\dfrac{0.11}{1.65}\approx0.067\ \Omega$</div>
+<div class="s">(ج) $R=\dfrac{2.97}{1.65}=1.8\ \Omega$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س5</span><span>قنطرة</span></div>
+<div class="eq">قنطرة فيها $20$ و $10$ (الفرع العلوي) و $30$ و $R$ (السفلي) بالأوم. جد $R$ للاتزان. ثم إذا تبادلت $10$ و $20$ أماكنهما، ما المقاومة اللازم إضافتها مع $R$؟<div class="circ" data-f="q5"></div></div>
+<div class="steps">
+<div class="s">$\dfrac{20}{10}=\dfrac{30}{R} \Rightarrow R=15\,\Omega$</div>
+<div class="s">بعد التبديل: $\dfrac{10}{20}=\dfrac{30}{R'} \Rightarrow R'=60\,\Omega$</div>
+<div class="s"><span class="ans-final">نضيف $60-15=45\,\Omega$ على التوالي مع $R$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>مصابيح متماثلة ومفتاح</span></div>
+<div class="eq">مصابيح متماثلة مقاومة كل منها $R$: المصباح a موصول مباشرة على طرفي البطارية، وفرع ثانٍ فيه b (وعلى التوازي معه c مع المفتاح S) ثم d على التوالي. أجب عند إغلاق المفتاح: (أ) هل يتغير جهد a؟ (ب) هل يتغير جهد d؟ (ج) ماذا يحدث لإضاءة b؟ (بإهمال المقاومة الداخلية)<div class="circ" data-f="q6"></div></div>
+<div class="steps">
+<div class="s">(أ) <b>لا يتغير</b>: المصباح a موصول على طرفي البطارية مباشرة، فجهده دائماً $\varepsilon$.</div>
+<div class="s">قبل الإغلاق: الفرع (b + d) توالي $=2R$ ← كل منهما يأخذ $\tfrac12\varepsilon$</div>
+<div class="s">بعد الإغلاق: (b ∥ c) $=\tfrac R2$ ثم d ← الفرع $=\tfrac32R$ ، $I=\dfrac{2\varepsilon}{3R}$ ← $V_d=\tfrac23\varepsilon$ و $V_b=\tfrac13\varepsilon$</div>
+<div class="s"><span class="ans-final">(ب) جهد d <b>يزداد</b> من $\tfrac12\varepsilon$ إلى $\tfrac23\varepsilon$. (ج) جهد b يقل من $\tfrac12\varepsilon$ إلى $\tfrac13\varepsilon$ ← <b>تقل إضاءته</b> (تيار d يتقاسمه b و c).</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>دارة بثلاث بطاريات</span></div>
+<div class="eq">في الدارة: الحلقة اليسرى فيها $8\,\Omega$ وبطارية $24\,\text{V}$ (أعلى) و $4\,\Omega$ وبطارية $4\,\text{V}$ (أسفل)، والحلقة اليمنى فيها $8\,\Omega$ وبطارية $12\,\text{V}$ و $4\,\Omega$، والفرع المشترك $4\,\Omega$. جد: (أ) تيار كل بطارية. (ب) القدرة المستنفدة. (ج) القدرة الداخلة.<div class="circ" data-f="q7"></div></div>
+<div class="steps">
+<div class="s">نفرض: $I$ في فرع البطارية 12V، و $I_1$ في الفرع الأوسط، و $I_2$ في فرع البطاريتين 24V و 4V، مع $I=I_1+I_2$ … (1)</div>
+<div class="s">الحلقة اليمنى: $12-4I-4I_1-8I=0 \Rightarrow 12-12I-4I_1=0$ ← بالتعويض: $12-16I_1-12I_2=0$ … (2)</div>
+<div class="s">الحلقة اليسرى: $24+8I_2+4I_2-4-4I_1=0 \Rightarrow 20-4I_1+12I_2=0$ … (3)</div>
+<div class="s">بجمع (2) و (3): $32-20I_1=0 \Rightarrow I_1=1.6\,\text{A}$ ، ثم $I_2\approx-1.13\,\text{A}$ ، $I\approx0.47\,\text{A}$</div>
+<div class="s">(أ) البطارية 12V: $0.47\,\text{A}$. البطاريتان 24V و 4V: $1.13\,\text{A}$ (الإشارة السالبة تعني أن الاتجاه عكس المفروض، فالبطارية 4V <b>تُشحن</b>)</div>
+<div class="s">(ب) $P=(8+4)(1.13)^2+(8+4)(0.47)^2+4(1.6)^2+4(1.13)\approx15.3+2.65+10.24+4.52\approx32.7\ \text{W}$</div>
+<div class="s"><span class="ans-final">(ج) الداخلة $=12(0.47)+24(1.13)\approx32.7\ \text{W}$ ✔ (تساوي المستنفدة)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س8</span><span>قانون كيرتشوف الأول</span></div>
+<div class="eq">يمثل الشكل جزءاً من دارة. مستعيناً بالبيانات المثبتة عليه، احسب $I_1, I_2, I_3$.<div class="circ" data-f="q8"></div></div>
+<div class="steps">
+<div class="s">عند نقطة التفرع الأولى: الداخل $8\,\text{mA}$ = الخارج $2\,\text{mA}+I_1$ ← $I_1=6\,\text{mA}$</div>
+<div class="s">عند النقطة الثانية: $I_1+9=I_2$ ← $I_2=15\,\text{mA}$</div>
+<div class="s"><span class="ans-final">عند النقطة الثالثة: $I_2=10+I_3$ ← $I_3=5\,\text{mA}$</span></div>
+</div></div>
+<details class="check"><summary>أسئلة الوحدة س2: فسّر (أ) توصل الأجهزة في المنازل على التوازي. (ب) ينعدم التيار عند فتح الدارة.</summary><div class="a">
+(أ) ليأخذ كل جهاز نفس الجهد (جهد الشبكة) الذي صُمم عليه، وليعمل كل جهاز ويُطفأ مستقلاً عن غيره دون التأثير على البقية.<br>
+(ب) لأن فتح الدارة يجعل مقاومة الفجوة الهوائية كبيرة جداً (لانهائية تقريباً)، فينعدم المسار المغلق وتتوقف الشحنات عن الحركة المنتظمة $(I=\varepsilon/\infty=0)$.</div></details>
+</section>
+
+<script id="figs">window.FIGS={"ex1": [["b", 0, 3, 0, 0, "12V"], ["w", 0, 0, 0.6, 0], ["r", 0.6, 0, 2.6, 0, "3Ω"], ["w", 2.6, 0, 7, 0], ["r", 3.2, 0, 3.2, 3, "4Ω"], ["r", 5, 0, 5, 3, "48Ω"], ["r", 7, 0, 7, 3, "16Ω"], ["w", 0, 3, 7, 3], ["d", 3.2, 0], ["d", 5, 0], ["d", 3.2, 3], ["d", 5, 3]], "ex3": [["d", 0, 0, "a", -0.25, -0.25], ["r", 0, 0, 3.4, 0, "10Ω"], ["d", 3.4, 0, "b", 0.25, -0.25], ["b", 3.4, 2.6, 3.4, 0, "9V"], ["d", 3.4, 2.6, "h", 0.25, 0.25], ["r", 3.4, 2.6, 1.7, 2.6, "5Ω", -1], ["r", 1.7, 2.6, 0, 2.6, "6Ω", -1], ["d", 0, 2.6, "d", -0.25, 0.25], ["b", 0, 2.6, 0, 1.25, "12V", -1], ["d", 0, 1.25, "w", -0.3, 0], ["r", 0, 1.25, 0, 0, "3Ω", -1], ["i", 1.2, 0.4, 2.2, 0.4, "I", -1]], "ex4": [["d", 0, 0, "a", 0, -0.3], ["r", 0, 0, 1.4, 0, "2Ω"], ["b", 1.4, 0, 2.6, 0, "5V"], ["r", 2.6, 0, 3.8, 0, "0.5Ω"], ["r", 3.8, 0, 5, 0, "1Ω"], ["r", 5, 0, 6.2, 0, "0.5Ω"], ["b", 7.4, 0, 6.2, 0, "4V"], ["d", 7.4, 0, "b", 0, -0.3], ["i", 0.2, 0.45, 1.2, 0.45, "I = 3A", -1]], "ex5": [["d", 0, 0, "a", 0, -0.3], ["r", 0, 0, 1.4, 0, "10Ω"], ["b", 1.4, 0, 2.6, 0, "30V"], ["r", 2.6, 0, 3.8, 0, "4Ω"], ["b", 5, 0, 3.8, 0, "ε"], ["r", 5, 0, 6.4, 0, "6Ω"], ["d", 6.4, 0, "b", 0, -0.3], ["i", 0.2, 0.45, 1.2, 0.45, "I = 3A", -1]], "ex6": [["r", 0, 0, 2.2, 0, "2Ω"], ["d", 0, 0, "f", -0.3, -0.2], ["d", 2.2, 0, "c", 0, -0.32], ["r", 2.2, 0, 2.2, 2.2, "4Ω"], ["d", 2.2, 2.2, "d", 0, 0.32], ["w", 2.2, 2.2, 0, 2.2], ["d", 0, 2.2, "e", -0.3, 0.2], ["b", 0, 2.2, 0, 0, "12V", -1], ["b", 4.4, 0, 2.2, 0, "4V"], ["d", 4.4, 0, "a", 0.3, 0], ["r", 2.2, 2.2, 4.4, 2.2, "10Ω", -1], ["d", 4.4, 2.2, "b", 0.3, 0], ["i", 0.6, 0.45, 1.6, 0.45, "I", -1]], "whq": [["r", 0, 1.6, 2, 0, "R"], ["r", 2, 0, 4, 1.6, "6Ω"], ["r", 0, 1.6, 2, 3.2, "4Ω", -1], ["r", 2, 3.2, 4, 1.6, "3Ω", -1], ["dash", 2, 0, 2, 3.2], ["d", 2, 0, "a", 0, -0.32], ["d", 2, 3.2, "b", 0, 0.34], ["d", 0, 1.6], ["d", 4, 1.6], ["w", 0, 1.6, 0, 4.4], ["b", 1.4, 4.4, 0, 4.4, "3V , 0.333Ω", -1], ["r", 1.4, 4.4, 2.8, 4.4, "1Ω", -1], ["m", 2.8, 4.4, 4, 4.4, "A"], ["w", 4, 4.4, 4, 1.6]], "mcq2": [["d", 0, 0.6, "a", 0, -0.3], ["w", 0, 0.6, 1, 0.6], ["w", 1, 0.6, 1, 0], ["r", 1, 0, 2.4, 0, "3Ω"], ["m", 2.4, 0, 3.4, 0, "A"], ["w", 3.4, 0, 3.4, 0.6], ["w", 1, 0.6, 1, 1.2], ["r", 1, 1.2, 3.4, 1.2, "6Ω", -1], ["w", 3.4, 1.2, 3.4, 0.6], ["d", 1, 0.6], ["d", 3.4, 0.6], ["r", 3.4, 0.6, 4.8, 0.6, "4Ω"], ["w", 4.8, 0.6, 5.6, 0.6], ["d", 5.6, 0.6, "b", 0, -0.3], ["w", 0.4, 0.6, 0.4, 2], ["m", 0.4, 2, 5.2, 2, "V"], ["w", 5.2, 2, 5.2, 0.6], ["d", 0.4, 0.6], ["d", 5.2, 0.6]], "mcq3": [["r", 0, 0, 4, 0, "20Ω"], ["r", 0, 1, 1.3, 1, "5Ω"], ["b", 2.3, 1, 1.3, 1, ""], ["w", 2.3, 1, 2.6, 1], ["m", 2.6, 1, 3.6, 1, "A₁"], ["w", 3.6, 1, 4, 1], ["m", 0, 2, 1.3, 2, "A₂"], ["r", 1.3, 2, 4, 2, "30Ω", -1], ["w", 0, 0, 0, 2], ["w", 4, 0, 4, 2], ["d", 0, 1], ["d", 4, 1]], "mcq4": [["r", 0, 0, 1.5, 0, "2Ω"], ["w", 1.5, 0, 4, 0], ["m", 2, 0, 2, 2, "V"], ["r", 3, 0, 3, 2, "4Ω"], ["r", 4, 0, 4, 2, "4Ω"], ["w", 0, 0, 0, 2], ["b", 1, 2, 0, 2, ""], ["w", 1, 2, 3, 2], ["s", 3, 2, 4, 2, "S"], ["d", 2, 0], ["d", 3, 0], ["d", 2, 2], ["d", 3, 2]], "mcq5": [["s", 0, 0, 1, 0, "S"], ["r", 1, 0, 2.4, 0, "6Ω"], ["w", 2.4, 0, 2.4, 0.8], ["r", 0, 0.8, 2.4, 0.8, "6Ω", -1], ["w", 0, 0, 0, 3], ["w", 2.4, 0.8, 3.8, 0.8], ["r", 3, 0.8, 3, 3, "3Ω", -1], ["m", 3.8, 0.8, 3.8, 3, "V"], ["b", 2, 3, 1, 3, ""], ["w", 0, 3, 1, 3], ["w", 2, 3, 3.8, 3], ["d", 0, 0.8], ["d", 3, 0.8], ["d", 3, 3]], "mcq6": [["l", 0.5, 0, 2, 0, "a"], ["s", 0.5, 1, 1.2, 1, "S"], ["l", 1.2, 1, 2, 1, "b", -1], ["w", 0.5, 0, 0.5, 1], ["w", 2, 0, 2, 1], ["l", 2.8, 0, 4.3, 0, "c"], ["l", 2.8, 1, 4.3, 1, "d", -1], ["w", 2.8, 0, 2.8, 1], ["w", 4.3, 0, 4.3, 1], ["w", 2, 0.5, 2.8, 0.5], ["w", 0.5, 1, 0.5, 2], ["w", 0.5, 2, 2, 2], ["b", 2.8, 2, 2, 2, ""], ["w", 2.8, 2, 4.3, 2], ["w", 4.3, 1, 4.3, 2]], "q2": [["d", 0, 0, "a", -0.3, -0.2], ["r", 0, 0, 1.6, 0, "2Ω"], ["w", 1.6, 0, 4, 0], ["r", 1.6, 0, 1.6, 1.5, "4Ω"], ["d", 1.6, 1.5, "b", 0.3, -0.2], ["w", 0.8, 1.5, 3, 1.5], ["r", 0.8, 1.5, 0.8, 3, "6Ω", -1], ["r", 3, 1.5, 3, 3, "12Ω"], ["r", 4, 0, 4, 3, "8Ω"], ["w", 0, 3, 4, 3], ["b", 0, 3, 0, 0, "24V", -1], ["d", 1.6, 0], ["d", 4, 0], ["w", 2, 3, 2, 3.35], ["g", 2, 3.35], ["d", 0.8, 3], ["d", 3, 3]], "q3": [["r", 0, 0, 2, 0, "3.0Ω"], ["r", 2, 0, 4, 0, "4.5Ω"], ["r", 2, 0, 2, 1.2, "2.0Ω"], ["m", 2, 1.2, 2, 2.6, "A"], ["w", 0, 2.6, 4, 2.6], ["b", 0, 2.6, 0, 0, "9V", -1], ["b", 4, 2.6, 4, 0, "ε"], ["d", 2, 0], ["d", 2, 2.6], ["i", 0.45, 0.55, 1.45, 0.55, "I₁", -1], ["i", 3.8, 0.55, 3.0, 0.55, "I₂", -1]], "q4": [["w", 0, 0, 1.5, 0], ["m", 1.5, 0, 2.5, 0, "V"], ["w", 2.5, 0, 4, 0], ["r", 0, 0.9, 1.6, 0.9, "r"], ["b", 2.6, 0.9, 1.6, 0.9, "ε"], ["w", 2.6, 0.9, 4, 0.9], ["s", 0, 2, 1.2, 2, "S"], ["r", 1.2, 2, 2.8, 2, "R", -1], ["m", 2.8, 2, 4, 2, "A"], ["w", 0, 0, 0, 2], ["w", 4, 0, 4, 2], ["d", 0, 0.9], ["d", 4, 0.9]], "q5": [["r", 0, 1.6, 2, 0, "20"], ["r", 2, 0, 4, 1.6, "10"], ["r", 0, 1.6, 2, 3.2, "30", -1], ["r", 2, 3.2, 4, 1.6, "R", -1], ["m", 2, 0, 2, 3.2, "G"], ["d", 0, 1.6], ["d", 4, 1.6], ["w", 0, 1.6, 0, 4.2], ["s", 0, 4.2, 1.4, 4.2, "S"], ["b", 2.4, 4.2, 1.4, 4.2, "ε"], ["w", 2.4, 4.2, 4.7, 4.2], ["w", 4.7, 4.2, 4.7, 1.6], ["w", 4.7, 1.6, 4, 1.6], ["i", 4.7, 2.4, 4.7, 1.9, "I"]], "q6": [["l", 0, 0, 3.8, 0, "a"], ["w", 0, 0, 0, 2.6], ["w", 3.8, 0, 3.8, 2.6], ["w", 0, 1.25, 0.5, 1.25], ["l", 0.5, 0.75, 2, 0.75, "b"], ["w", 2, 0.75, 2.4, 0.75], ["l", 0.5, 1.75, 1.5, 1.75, "c", -1], ["s", 1.5, 1.75, 2.4, 1.75, "S"], ["w", 0.5, 0.75, 0.5, 1.75], ["w", 2.4, 0.75, 2.4, 1.75], ["l", 2.4, 1.25, 3.8, 1.25, "d"], ["w", 0, 2.6, 1.4, 2.6], ["b", 2.4, 2.6, 1.4, 2.6, ""], ["w", 2.4, 2.6, 3.8, 2.6], ["d", 0, 1.25], ["d", 3.8, 1.25]], "q7": [["r", 0, 0, 1.6, 0, "8Ω"], ["b", 1.6, 0, 2.8, 0, "24V"], ["w", 2.8, 0, 3.6, 0], ["r", 3.6, 0, 5.6, 0, "8Ω"], ["b", 5.6, 2, 5.6, 0, "12V"], ["r", 5.6, 2, 3.6, 2, "4Ω", -1], ["r", 3.6, 0, 3.6, 2, "4Ω"], ["w", 3.6, 2, 2.8, 2], ["b", 1.6, 2, 2.8, 2, "4V", -1], ["r", 1.6, 2, 0, 2, "4Ω", -1], ["w", 0, 0, 0, 2], ["d", 3.6, 0], ["d", 3.6, 2]], "q8": [["dash", -0.6, 1, 0, 1], ["r", 0, 1, 1.6, 1, ""], ["a", 1.1, 1.45, 0.3, 1.45, "2 mA", -1], ["w", 1.6, 1, 2.4, 1], ["d", 1.6, 1], ["d", 2.4, 1], ["t", 2, 1.3, "I₁"], ["dash", 1.6, -1, 1.6, -0.4], ["r", 1.6, -0.4, 1.6, 1, ""], ["a", 2.15, -0.7, 2.15, 0.1, "8 mA"], ["r", 2.4, 1, 2.4, 2.4, ""], ["dash", 2.4, 2.4, 2.4, 3], ["a", 2.95, 2.6, 2.95, 1.8, "9 mA"], ["r", 2.4, 1, 4.2, 1, "I₂"], ["d", 4.2, 1], ["r", 4.2, 1, 4.2, -0.4, ""], ["dash", 4.2, -0.4, 4.2, -1], ["a", 4.75, 0.1, 4.75, -0.7, "10 mA"], ["r", 4.2, 1, 5.4, 2.4, "I₃"], ["dash", 5.4, 2.4, 5.8, 2.9]]};</script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- البطارية الحقيقية --- */
+(function(){
+  const cv=document.getElementById('cvBat'), sim=document.getElementById('simBat'), ro=document.getElementById('roBat'); let V={};
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,220); ctx.clearRect(0,0,w,h);
+    const L=46,R=w-16,T=16,B=h-30, Rmax=12; const r=V.r, E=V.E;
+    const P=x=>E*E*x/((x+r)**2); const Pmax = r>0? E*E/(4*r) : P(Rmax);
+    const ymax = Math.max(P(V.R), Pmax, 1)*1.15;
+    const X=x=>L+(R-L)*x/Rmax, Y=p=>B-(B-T)*p/ymax;
+    ctx.strokeStyle=cssv('--line'); ctx.beginPath(); ctx.moveTo(L,B); ctx.lineTo(R,B); ctx.moveTo(L,T); ctx.lineTo(L,B); ctx.stroke();
+    ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; ctx.fillText('R (Ω)',R-36,B+22); ctx.fillText('P_R (W)',4,T+4);
+    for(let k=0;k<=12;k+=3) ctx.fillText(k,X(k)-4,B+14);
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=3; ctx.beginPath();
+    for(let k=1;k<=300;k++){ const x=Rmax*k/300; k===1?ctx.moveTo(X(x),Y(P(x))):ctx.lineTo(X(x),Y(P(x))); } ctx.stroke();
+    if(r>0&&r<=Rmax){ ctx.setLineDash([4,4]); ctx.strokeStyle=cssv('--good'); ctx.beginPath(); ctx.moveTo(X(r),T); ctx.lineTo(X(r),B); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle=cssv('--good'); ctx.fillText('R = r',X(r)+4,T+12); }
+    ctx.fillStyle=cssv('--warm'); ctx.beginPath(); ctx.arc(X(V.R),Y(P(V.R)),7,0,7); ctx.fill();
+    const I=E/(V.R+r), Vt=E-I*r;
+    ro.innerHTML=`<span class="r">$I=\\dfrac{\\varepsilon}{R+r}$ = <b>${fmt(I)} A</b></span><span class="r">جهد القطبين $\\varepsilon-Ir$ = <b>${fmt(Vt)} V</b></span><span class="r">الهبوط $Ir$ = <b>${fmt(I*r)} V</b></span><span class="r">$P_R$ = <b>${fmt(I*I*V.R)} W</b></span><span class="r">الكفاءة = <b>${fmt(100*V.R/(V.R+r),0)}%</b></span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- قنطرة ويتستون --- */
+(function(){
+  const cv=document.getElementById('cvWh'), sim=document.getElementById('simWh'), ro=document.getElementById('roWh');
+  const R1=20,R2=40; let Rx=0, V={}, msg='';
+  const newRx=()=>{ Rx=[10,20,30,40,50,60,70,80,90][Math.floor(Math.random()*8)]; msg=''; };
+  newRx();
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,250); ctx.clearRect(0,0,w,h);
+    const cx=w/2, cy=h/2-6, dx=Math.min(150,w/2-40), dy=85;
+    const top=[cx,cy-dy], bot=[cx,cy+dy], lef=[cx-dx,cy], rig=[cx+dx,cy];
+    // جهد الطرفين: البطارية 12V بين اليسار (+) واليمين (−)
+    const E=12; const Vc=E*R2/(R1+R2), Ve=E*Rx/(V.R3+Rx); const dV=Vc-Ve; // جهد العقدتين العلوية والسفلية نسبة لليمين
+    ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2.5;
+    const seg=(a,b,lbl)=>{ ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...b); ctx.stroke(); const mx=(a[0]+b[0])/2,my=(a[1]+b[1])/2; ctx.fillStyle=cssv('--surface'); ctx.fillRect(mx-28,my-11,56,22); ctx.strokeRect(mx-28,my-11,56,22); ctx.fillStyle=cssv('--ink'); ctx.font='bold 12px sans-serif'; ctx.textAlign='center'; ctx.fillText(lbl,mx,my+4); ctx.textAlign='start'; };
+    seg(lef,top,'R₁=20'); seg(top,rig,'R₂=40'); seg(lef,bot,'R₃='+V.R3); seg(bot,rig,'Rₓ=?');
+    ctx.beginPath(); ctx.moveTo(...top); ctx.lineTo(...bot); ctx.stroke();
+    // جلفانوميتر
+    ctx.fillStyle=cssv('--surface'); ctx.beginPath(); ctx.arc(cx,cy,30,0,7); ctx.fill(); ctx.stroke();
+    const ang=Math.max(-1.2,Math.min(1.2,dV*0.6));
+    ctx.strokeStyle=Math.abs(dV)<0.05?cssv('--good'):cssv('--bad'); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(cx,cy+16); ctx.lineTo(cx+Math.sin(ang)*26,cy+16-Math.cos(ang)*26); ctx.stroke();
+    ctx.fillStyle=cssv('--ink'); ctx.font='bold 13px sans-serif'; ctx.fillText('G',cx-5,cy+28);
+    ctx.font='12px sans-serif'; ctx.fillStyle=cssv('--muted'); ctx.fillText('+12V',lef[0]-36,lef[1]+4); ctx.fillText('0V',rig[0]+8,rig[1]+4);
+    ro.innerHTML=`<span class="r">فرق جهد الجلفانوميتر = <b>${fmt(dV,3)} V</b></span>${Math.abs(dV)<0.05?'<span class="r" style="background:var(--good-soft)">✔ القنطرة متزنة! الآن احسب Rₓ</span>':''}${msg}`;
+  }
+  document.getElementById('whCheck').onclick=()=>{ const ok=Math.abs(V.R3*R2/R1-Rx)<0.01 || (R1*Rx===R2*V.R3);
+    msg = (R1*Rx===R2*V.R3) ? `<span class="r" style="background:var(--good-soft)">🎉 صح! $R_x=\\dfrac{R_2R_3}{R_1}=\\dfrac{40\\times${V.R3}}{20}=$ <b>${Rx} Ω</b></span>` : '<span class="r" style="background:var(--bad-soft)">لسا مش متزنة — حرّك R₃ حتى يصير المؤشر على الصفر بالضبط</span>';
+    draw(); renderMath(ro); };
+  document.getElementById('whNew').onclick=()=>{ newRx(); draw(); };
+  bindRanges(sim,v=>{V=v; msg=''; draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- كيرتشوف --- */
+(function(){
+  const cv=document.getElementById('cvKir'), sim=document.getElementById('simKir'), ro=document.getElementById('roKir'); let V={};
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,240); ctx.clearRect(0,0,w,h);
+    const Va=(V.e1/V.R1+V.e2/V.R3)/(1/V.R1+1/V.R2+1/V.R3);
+    const I1=(V.e1-Va)/V.R1, I3=(V.e2-Va)/V.R3, I2=Va/V.R2; // I1 صاعد في اليسار، I3 صاعد في اليمين، I2 نازل في الوسط
+    const x0=40,x1=w/2,x2=w-40,y0=40,y1=h-40;
+    ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2.5; ctx.strokeRect(x0,y0,x2-x0,y1-y0); ctx.beginPath(); ctx.moveTo(x1,y0); ctx.lineTo(x1,y1); ctx.stroke();
+    const res=(x,y,vert,l)=>{ ctx.fillStyle=cssv('--surface-2'); if(vert){ctx.fillRect(x-10,y-22,20,44);ctx.strokeRect(x-10,y-22,20,44);} else {ctx.fillRect(x-22,y-10,44,20);ctx.strokeRect(x-22,y-10,44,20);} ctx.fillStyle=cssv('--ink'); ctx.font='12px sans-serif'; ctx.fillText(l,x+(vert?14:-14),y+(vert?4:-14)); };
+    const bat=(x,y,l)=>{ ctx.fillStyle=cssv('--surface-2'); ctx.fillRect(x-14,y-14,28,28); ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(x-12,y-6); ctx.lineTo(x+12,y-6); ctx.stroke(); ctx.lineWidth=5; ctx.beginPath(); ctx.moveTo(x-6,y+6); ctx.lineTo(x+6,y+6); ctx.stroke(); ctx.lineWidth=2.5; ctx.fillStyle=cssv('--ink'); ctx.font='12px sans-serif'; ctx.fillText(l,x+18,y+4); ctx.fillText('+',x-22,y-4); };
+    // البطارية: الخط الطويل (الموجب) للأعلى
+    bat(x0,(y0+y1)/2+30,'ε₁'); res(x0,(y0+y1)/2-30,true,'R₁'); bat(x2,(y0+y1)/2+30,'ε₂'); res(x2,(y0+y1)/2-30,true,'R₃'); res(x1,(y0+y1)/2,true,'R₂');
+    const flow=(x,y,I,lbl,up)=>{ const s=Math.min(30,8+Math.abs(I)*20); const dir=(up?-1:1)*Math.sign(I||1); if(Math.abs(I)<1e-6) return;
+      arrow(ctx,x+22,y-dir*s/2,x+22,y+dir*s/2,cssv('--warm'),3,10); ctx.fillStyle=cssv('--warm'); ctx.font='bold 12px sans-serif'; ctx.fillText(lbl,x+30,y+4); };
+    flow(x0,y0+18,I1,'I₁',true); flow(x2-48,y0+18,I3,'I₃',true); flow(x1,y1-20,I2,'I₂',false);
+    ctx.fillStyle=cssv('--ink'); ctx.beginPath(); ctx.arc(x1,y0,4,0,7); ctx.arc(x1,y1,4,0,7); ctx.fill();
+    ro.innerHTML=`<span class="r">$I_1$ = <b>${fmt(I1,3)} A</b> ${I1<-1e-9?'(ε₁ تُشحن)':''}</span><span class="r">$I_3$ = <b>${fmt(I3,3)} A</b> ${I3<-1e-9?'(ε₂ تُشحن)':''}</span><span class="r">$I_2$ = <b>${fmt(I2,3)} A</b></span><span class="r">$I_1+I_3$ = <b>${fmt(I1+I3,3)}</b> = $I_2$ ✔</span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz5',[
+ {q:'عند غلق دارة مصباح المنزل، فإن الزمن اللازم لإضاءته يُحدَّد:', o:['بعدد التصادمات بين الإلكترونات في الثانية','بالسرعة الانسياقية للإلكترونات','بسرعة انتشار المجال الكهربائي في الأسلاك','بالإضاءة اللحظية للمصباح'], a:2, e:'المجال ينتشر بسرعة قريبة من سرعة الضوء فتتحرك كل الإلكترونات معاً تقريباً.'},
+ {q:'جزء من دارة: $3\\,\\Omega$ وأميتر على التوالي، وكلاهما على التوازي مع $6\\,\\Omega$، ثم $4\\,\\Omega$، والفولتميتر على الجزء كله. إذا قرأ الأميتر $2\\,\\text{A}$ فما قراءة الفولتميتر؟<div class="circ" data-f="mcq2"></div>', o:['9 V','12 V','18 V','24 V'], a:2, e:'جهد التوازي $=2\\times3=6\\,\\text{V}$ ← تيار $6\\,\\Omega$ = 1 A ← الكلي 3 A ← جهد $4\\,\\Omega$ = 12 V ← المجموع $6+12=18\\,\\text{V}$.'},
+ {q:'بطارية مع $5\\,\\Omega$ وأميتر $A_1$ في فرع، وعلى طرفيه $20\\,\\Omega$ في فرع و $30\\,\\Omega$ مع أميتر $A_2$ في فرع ثالث. إذا قرأ $A_1$ $5\\,\\text{A}$ فما قراءة $A_2$؟<div class="circ" data-f="mcq3"></div>', o:['1.5 A','2 A','2.5 A','3 A'], a:1, e:'التيار الكلي 5 A يتجزأ بين 20 و 30 عكسياً: $I_{30}=5\\times\\dfrac{20}{50}=2\\,\\text{A}$.'},
+ {q:'بطارية (مقاومتها مهملة) مع $2\\,\\Omega$ على التوالي، ثم $4\\,\\Omega$ عليها فولتميتر، و$4\\,\\Omega$ أخرى على التوازي مع مفتاح S. قراءة الفولتميتر $16\\,\\text{V}$ والمفتاح مفتوح. كم تصبح عند الغلق؟<div class="circ" data-f="mcq4"></div>', o:['12 V','14 V','16 V','18 V'], a:0, e:'مفتوح: $I=4\\,\\text{A}$ ← $\\varepsilon=4(2+4)=24\\,\\text{V}$. مغلق: التوازي $2\\,\\Omega$ ← $I=24/4=6$ ← $V=6\\times2=12\\,\\text{V}$.'},
+ {q:'دارة: $6\\,\\Omega$ (و$6\\,\\Omega$ أخرى توصل على التوازي معها عند غلق S) ثم $3\\,\\Omega$ عليها فولتميتر يقرأ $30\\,\\text{V}$ والمفتاح مفتوح. قراءته عند الغلق:<div class="circ" data-f="mcq5"></div>', o:['30 V','35 V','40 V','45 V'], a:3, e:'مفتوح: $I=10$ ، $\\varepsilon=10\\times9=90$. مغلق: $\\sum R=3+3=6$ ← $I=15$ ← $V=45\\,\\text{V}$.'},
+ {q:'مصابيح متماثلة: (a) وعلى التوازي معه (b) عبر مفتاح S، والمجموعة على التوالي مع (c ∥ d). عند غلق S أي المصابيح تزداد إضاءتها؟<div class="circ" data-f="mcq6"></div>', o:['(c)','(c, a)','(c, d)','(d, c, a)'], a:2, e:'قبل: $R_{tot}=1.5R$ ، بعد: $R_{tot}=R$ فيزيد التيار الكلي. c و d يأخذ كل منهما نصفه فيزداد تيارهما، أما a فيتقاسم التيار مع b فيقل تياره.'},
+ {q:'(أسئلة الوحدة) سلك موصول بفرق جهد ثابت $V$. أُعيد تشكيله ليصبح طوله الضعف (بنفس الحجم). السرعة الانسياقية:', o:['تبقى ثابتة','تزداد للضعف','تقل للنصف','تقل للربع'], a:2, e:'$v_d=\\dfrac{J}{n_eq_e}=\\dfrac{E}{\\rho n_eq_e}$ و $E=V/L$ ← مضاعفة الطول تنصّف المجال ← تنصّف السرعة الانسياقية.'}
+],'ch5');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

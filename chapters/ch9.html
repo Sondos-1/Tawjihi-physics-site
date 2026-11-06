@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل التاسع: نظرية الكم | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي لإشعاع الجسم الأسود ونظرية بلانك والظاهرة الكهروضوئية ونموذج بور وطيف الهيدروجين ودي برولي ومبدأ اللايقين - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل التاسع: نظرية الكم | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي لإشعاع الجسم الأسود ونظرية بلانك والظاهرة الكهروضوئية ونموذج بور وطيف الهيدروجين ودي برولي ومبدأ اللايقين - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch9" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل التاسع: نظرية الكم-->
+<!--desc:شرح تفاعلي لإشعاع الجسم الأسود ونظرية بلانك والظاهرة الكهروضوئية ونموذج بور وطيف الهيدروجين ودي برولي ومبدأ اللايقين - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الرابعة: الفيزياء الحديثة · الفصل التاسع</div>
+  <h1>نظرية الكم</h1>
+  <p>مع بداية القرن العشرين، الفيزياء الكلاسيكية (نيوتن وماكسويل) وقفت عاجزة أمام ظواهر صغيرة بس عنيدة: لون الحديد المتوهج، الإلكترونات اللي بتطلع من الفلز بالضوء، وخطوط الطيف. الحل كان فكرة ثورية: <b>الطاقة مش متصلة… بتيجي على شكل "كمات"</b>.</p>
+  <ul class="goals">
+    <li>التعرف إلى نظرية الكم وتفسير إشعاع الجسم الأسود والظاهرة الكهروضوئية.</li>
+    <li>دراسة تطور النماذج الذرية، وتفسير طيف الهيدروجين بنموذج بور.</li>
+    <li>فهم الطبيعة الموجية للجسيمات ومبدأ اللايقين، وحل المسائل.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>9-1 إشعاع الجسم الأسود</h2>
+<div class="box idea"><div class="lbl">💡 من حياتنا</div>
+سخّن إبرة على اللهب: أول شي بتحمرّ (حوالي $700^\circ\text{C}$)، بعدين برتقالي، أصفر، ولحد ما تصير بيضاء (حوالي $1200^\circ\text{C}$) مثل فتيلة المصباح. يعني <b>لون التوهج بيدل على درجة الحرارة</b>.
+</div>
+<div class="box def"><div class="lbl">📘 الجسم الأسود المثالي</div>
+جسم افتراضي (اقترحه كيرتشوف) <b>يمتص جميع الأشعة الساقطة عليه</b> عندما يكون بارداً، ويُشع عندما يسخن طيفاً متصلاً يعتمد <b>فقط على درجة حرارته</b> لا على مادته. يُمثّل بصندوق مجوف له ثقب صغير (الشعاع الداخل ينعكس داخله حتى يُمتص كلياً).
+</div>
+<h3>ملاحظات منحنى إشعاع الجسم الأسود</h3>
+<ol>
+<li>شدة الإشعاع تؤول إلى الصفر عند الأطوال الموجية القصيرة جداً والطويلة جداً.</li>
+<li>بارتفاع الحرارة تنزاح القمة نحو الأطوال الموجية <b>الأقصر</b> (قانون فين).</li>
+<li>بارتفاع الحرارة تزداد الشدة الكلية بشكل كبير (قانون ستيفان–بولتزمان).</li>
+</ol>
+<div class="box law"><div class="lbl">قانون فين للإزاحة (9-1)</div>
+$$\lambda_{max}T=2.898\times10^{-3}\ \text{m}\cdot\text{K}$$
+<p style="margin:0;font-size:.95rem">يتناسب الطول الموجي لشدة الإشعاع القصوى عكسياً مع درجة الحرارة المطلقة.</p>
+</div>
+<div class="box law"><div class="lbl">قانون ستيفان–بولتزمان (9-2) و (9-3)</div>
+$$I=\sigma eT^4\qquad\qquad I=\frac{P}{A}\ \left(\frac{\text{معدل الطاقة}}{\text{المساحة}}\right)$$
+<div class="sym"><span>$\sigma=5.67\times10^{-8}\ \text{W/m}^2\text{K}^4$</span><span>$e$: إشعاعية السطح ($0\to1$)، للجسم الأسود المثالي $e=1$</span><span>$I$ بوحدة $\text{W/m}^2$</span></div>
+</div>
+<div class="sim" id="simBB">
+<div class="sh"><span class="tag">محاكاة</span><b>منحنى إشعاع الجسم الأسود وكارثة الأشعة فوق البنفسجية</b></div>
+<div class="sb">
+<canvas id="cvBB"></canvas>
+<div class="controls">
+  <div class="ctl"><label>درجة الحرارة $T$ <output for="bbT"></output></label><input type="range" id="bbT" name="T" min="1000" max="8000" step="100" value="5800" data-u="K"></div>
+  <div class="ctl"><label style="justify-content:flex-start;gap:8px"><input type="checkbox" id="bbRJ"> أظهر توقع رايلي وجينز (الكلاسيكي)</label></div>
+</div>
+<div class="readout" id="roBB"></div>
+<p class="note">المنطقة الملونة = الطيف المرئي. $5800\,\text{K}$ تقريباً حرارة سطح الشمس: قمتها بالمرئي! خفّض الحرارة ← القمة تنزاح للأحمر وتحت الأحمر وتنخفض الشدة بشدة.</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>جسم أسود عند 27°C</span></div>
+<div class="eq">جسم أسود مثالي درجة حرارة سطحه $27^\circ\text{C}$. ما: (1) طول موجة الإشعاع القصوى؟ (2) شدة الإشعاع؟ (3) معدل الطاقة المنبعثة من $2\,\text{m}^2$؟</div>
+<div class="steps">
+<div class="s">حوّل لكلفن: $T=27+273=300\,\text{K}$ (⚠️ لا تنسَ!)</div>
+<div class="s">(1) $\lambda_{max}=\dfrac{2.898\times10^{-3}}{300}=9.66\times10^{-6}\ \text{m}$ (تحت الحمراء — لهذا لا نرى أجسامنا تتوهج)</div>
+<div class="s">(2) $I=5.67\times10^{-8}\times1\times300^4\approx459.3\ \text{W/m}^2$</div>
+<div class="s">(3) $P=IA=459.3\times2\approx918.5\ \text{W}$</div>
+</div></div>
+<details class="check"><summary>أي إشعاعات الشمس تسبب حرقاً أكثر للجلد: تحت الحمراء، المرئي، أم فوق البنفسجية؟ ولماذا؟</summary><div class="a">فوق البنفسجية، لأن ترددها أعلى فطاقة الفوتون الواحد $(hf)$ أكبر، فتستطيع كسر الروابط في جزيئات خلايا الجلد.</div></details>
+
+<h3>فشل الفيزياء الكلاسيكية: كارثة الأشعة فوق البنفسجية</h3>
+<p>افترض رايلي وجينز (بناءً على نظرية ماكسويل) أن الجسم الأسود مكوّن من متذبذبات مشحونة <b>يمكن لطاقتها أن تأخذ أي قيمة</b> (طاقة متصلة)، فحصلا على:</p>
+<div class="box law"><div class="lbl">قانون رايلي وجينز</div>
+$$I_\lambda=\text{constant}\times\frac{T}{\lambda^4}$$
+</div>
+<p>هذا يتفق مع التجربة عند الأطوال الموجية <b>الطويلة</b>، لكن عندما $\lambda\to0$ تتنبأ بشدة $\to\infty$، بينما التجربة تقول $\to0$. هذا التناقض سُمّي <b>كارثة الأشعة فوق البنفسجية</b>.</p>
+<details class="check"><summary>ما وحدة الثابت في قانون رايلي وجينز؟</summary><div class="a">$I_\lambda$ (شدة لكل وحدة طول موجي) بوحدة $\dfrac{\text{W/m}^2}{\text{m}}=\text{W/m}^3$ ← الثابت $=\dfrac{I_\lambda\lambda^4}{T}$ بوحدة $\dfrac{\text{W}\cdot\text{m}}{\text{K}}$.</div></details>
+
+<h3>الحل: فرضية بلانك (1900)</h3>
+<div class="box law"><div class="lbl">تكمية الطاقة (9-4) و (9-5)</div>
+$$E=nhf\qquad\qquad\Delta E=hf$$
+<div class="sym"><span>$h=6.626\times10^{-34}\ \text{J}\cdot\text{s}$ ثابت بلانك</span><span>$n=1,2,3,\dots$ العدد الكمي</span><span>$1\,\text{eV}=1.6\times10^{-19}\,\text{J}$</span></div>
+</div>
+<div class="box idea"><div class="lbl">💡 الدرج والسطح المائل</div>
+جسم على <b>سطح مائل</b>: طاقة وضعه تأخذ <b>أي قيمة</b> (كلاسيكي). جسم على <b>درج</b>: طاقته تأخذ قيماً <b>محددة متقطعة</b> فقط (كمي). بلانك قال: متذبذبات الجسم الأسود مثل الدرج، وتبعث أو تمتص الطاقة فقط عند الانتقال من درجة لأخرى. والترددات العالية تحتاج "درجات" كبيرة جداً ($hf$) فقليل من الذرات تمتلك طاقة كافية لها ← الشدة تقل عند الأطوال القصيرة. وانحلّت الكارثة!
+</div>
+</section>
+
+<section id="s2">
+<h2>9-2 تكمية الضوء (الفوتون)</h2>
+<p>بلانك كمّم طاقة <b>المتذبذبات</b> فقط. أما أينشتاين (1905) فذهب أبعد: <b>الضوء نفسه</b> مكوّن من كمات منفصلة اسمها <b>الفوتونات</b>.</p>
+<div class="box law"><div class="lbl">طاقة الفوتون (9-6)</div>
+$$E=hf=\frac{hc}{\lambda}$$
+<div class="sym"><span>$c=3\times10^8\ \text{m/s}$</span><span>اختصار مفيد: $E(\text{eV})\approx\dfrac{1240}{\lambda(\text{nm})}$</span></div>
+</div>
+<div class="example"><div class="eh"><span>مثال (2)</span><span>فوتون أحمر</span></div>
+<div class="eq">احسب طاقة فوتون الضوء الأحمر الذي طوله الموجي $635\,\text{nm}$ بالجول والإلكترون فولت.</div>
+<div class="steps"><div class="s">$E=\dfrac{6.626\times10^{-34}\times3\times10^8}{635\times10^{-9}}\approx3.13\times10^{-19}\ \text{J}$</div><div class="s">$E=\dfrac{3.13\times10^{-19}}{1.6\times10^{-19}}\approx1.96\ \text{eV}$</div></div></div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>تردد فوتون</span></div>
+<div class="eq">في طيف الشمس فوتون طاقته $2.7\,\text{eV}$. ما تردده؟</div>
+<div class="steps"><div class="s">$f=\dfrac Eh=\dfrac{2.7\times1.6\times10^{-19}}{6.626\times10^{-34}}\approx6.5\times10^{14}\ \text{Hz}$</div></div></div>
+<details class="check"><summary>أفكر: هل عدد الفوتونات في $1\,\text{J}$ من الضوء الأحمر أكبر أم أصغر من عددها في $1\,\text{J}$ من الأزرق؟</summary><div class="a">أكبر. فوتون الأحمر طاقته أقل (تردده أقل)، فنحتاج عدداً أكبر منه لتكوين نفس الطاقة الكلية: $N=\dfrac{E}{hf}$.</div></details>
+</section>
+
+<section id="s3">
+<h2>9-3 الظاهرة الكهروضوئية</h2>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>الظاهرة الكهروضوئية:</b> انبعاث الإلكترونات من أسطح الفلزات عند تعرضها لموجات كهرومغناطيسية بتردد مناسب. وتسمى الإلكترونات المتحررة <b>الإلكترونات الضوئية</b>. (اكتشفها هيرتز أثناء تجاربه.)
+</div>
+<h3>الخلية الكهروضوئية</h3>
+<p>أنبوب مفرّغ فيه <b>مهبط</b> (باعث، متصل بالقطب السالب) و<b>مصعد</b> (جامع، متصل بالموجب). عند سقوط ضوء مناسب تتحرر إلكترونات وتصل للمصعد فيمر <b>تيار كهروضوئي</b>.</p>
+<ul>
+<li><b>تيار الإشباع:</b> أقصى تيار عندما تصل كل الإلكترونات المتحررة للمصعد؛ يزداد بزيادة <b>شدة</b> الضوء.</li>
+<li><b>جهد الإيقاف (القطع) $V_0$:</b> أقل جهد عكسي يلزم لإيقاف أسرع الإلكترونات عن الوصول للمصعد. <b>لا يعتمد على شدة الضوء</b>.</li>
+</ul>
+<div class="tblwrap"><table class="tbl">
+<tr><th>السؤال</th><th>توقع النظرية الموجية (الكلاسيكية) ✘</th><th>نظرية الفوتون (أينشتاين) ✔</th></tr>
+<tr><td>زيادة شدة الضوء</td><td>تزيد الطاقة الحركية القصوى</td><td>تزيد <b>عدد</b> الإلكترونات (التيار) فقط</td></tr>
+<tr><td>دور التردد</td><td>لا يؤثر على الطاقة الحركية</td><td>تحت تردد العتبة $f_0$ لا انبعاث إطلاقاً مهما كانت الشدة، وفوقه تزيد $K_{max}$ بزيادة التردد</td></tr>
+<tr><td>ضوء ضعيف جداً</td><td>يحتاج الإلكترون وقتاً طويلاً لجمع الطاقة</td><td>انبعاث فوري (أقل من $10^{-9}\,\text{s}$) لأن كل فوتون يحرر إلكتروناً واحداً</td></tr>
+</table></div>
+<div class="box law"><div class="lbl">معادلة أينشتاين الكهروضوئية (9-7) و (9-8)</div>
+$$hf=\phi+K_{max}\qquad\qquad \phi=hf_0\qquad\qquad K_{max}=\tfrac12mv_{max}^2=eV_0$$
+<p style="margin:0;font-size:.95rem">طاقة الفوتون = اقتران الشغل + الطاقة الحركية القصوى. <b>اقتران الشغل</b> $\phi$: أقل طاقة لازمة لتحرير إلكترون من سطح الفلز.</p>
+</div>
+<div class="box tip"><div class="lbl">⭐ ليش "القصوى"؟</div>
+الفوتونات تخترق بضع طبقات ذرية. الإلكترونات المتحررة من الطبقات الداخلية تفقد جزءاً من طاقتها بالتصادمات قبل أن تخرج، أما المتحررة من <b>السطح</b> فتخرج بالطاقة القصوى.
+</div>
+<div class="sim" id="simPE">
+<div class="sh"><span class="tag">محاكاة</span><b>مختبر الظاهرة الكهروضوئية</b></div>
+<div class="sb">
+<div style="margin-bottom:10px"><span class="seg" id="peMetal"><button data-p="2.3" class="on">ليثيوم 2.3 eV</button><button data-p="2.28">صوديوم 2.28 eV</button><button data-p="4.3">خارصين 4.3 eV</button><button data-p="4.7">فضة 4.7 eV</button></span></div>
+<canvas id="cvPE"></canvas>
+<div class="controls">
+  <div class="ctl"><label>الطول الموجي للضوء <output for="peL"></output></label><input type="range" id="peL" name="L" min="150" max="750" step="5" value="400" data-u="nm"></div>
+  <div class="ctl"><label>شدة الضوء <output for="peI"></output></label><input type="range" id="peI" name="I" min="0" max="100" step="5" value="50" data-u="%"></div>
+  <div class="ctl"><label>جهد المصعد (سالب = عكسي) <output for="peV"></output></label><input type="range" id="peV" name="V" min="-5" max="5" step="0.1" value="1" data-u="V"></div>
+</div>
+<div class="readout" id="roPE"></div>
+<p class="note">جرّب: الضوء الأحمر على الفضة بأقصى شدة ← <b>ولا إلكترون!</b> ثم الأشعة فوق البنفسجية بشدة ضعيفة ← انبعاث فوري. واجعل الجهد سالباً حتى يتوقف التيار تماماً: هذا هو $V_0$.</p>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (4)</span><span>تردد العتبة للصوديوم</span></div>
+<div class="eq">سقط ضوء تردده $1\times10^{15}\,\text{Hz}$ على سطح صوديوم فانطلقت إلكترونات طاقتها الحركية القصوى $1.78\,\text{eV}$. احسب تردد العتبة.</div>
+<div class="steps">
+<div class="s">$hf=6.626\times10^{-34}\times10^{15}=6.626\times10^{-19}\,\text{J}$ ، $K_{max}=1.78\times1.6\times10^{-19}=2.848\times10^{-19}\,\text{J}$</div>
+<div class="s">$\phi=hf-K_{max}=3.778\times10^{-19}\ \text{J}$</div>
+<div class="s">$f_0=\dfrac\phi h=\dfrac{3.778\times10^{-19}}{6.626\times10^{-34}}\approx5.7\times10^{14}\ \text{Hz}$</div>
+</div></div>
+<details class="check"><summary>أي الفلزين يُظهر الظاهرة عند سقوط ضوء تردده $7\times10^{14}\,\text{Hz}$: الليثيوم ($\phi=2.3\,\text{eV}$) أم الفضة ($\phi=4.7\,\text{eV}$)؟</summary><div class="a">$E=hf=\dfrac{6.626\times10^{-34}\times7\times10^{14}}{1.6\times10^{-19}}\approx2.9\ \text{eV}$ ← أكبر من اقتران شغل الليثيوم وأقل من الفضة ← <b>الليثيوم فقط</b>.</div></details>
+<details class="check"><summary>ماذا يحدث إذا سقط ضوء تردده يساوي تردد العتبة؟ وفي منحنى ($K_{max}$–التردد) لفلزين: ماذا يمثل المقطع السيني والصادي؟ ولماذا الخطان متوازيان؟</summary><div class="a">
+عند $f=f_0$: يتحرر الإلكترون بطاقة حركية صفر (بالكاد).<br>المقطع السيني = تردد العتبة $f_0$. المقطع الصادي (بامتداد الخط) = $-\phi$. والخطوط متوازية لأن ميل كل منها = ثابت بلانك $h$ (نفسه لكل الفلزات).</div></details>
+<div class="box life"><div class="lbl">🌍 تطبيقات</div>
+أجهزة الإنذار، البوابات الإلكترونية، مقياس الضوء في الكاميرا (يتحكم في فتحة العدسة)، الخلايا الشمسية. وحتى البناء الضوئي: الكلوروفيل يحتاج 9 فوتونات لتحويل جزيء $\text{CO}_2$ واحد إلى كربوهيدرات.
+</div>
+</section>
+
+<section id="s4">
+<h2>9-4 النماذج الذرية ونموذج بور</h2>
+<div class="tblwrap"><table class="tbl">
+<tr><th>النموذج</th><th>الوصف</th><th>لماذا فشل؟</th></tr>
+<tr><td>تومسون (1898)</td><td>كرة مصمتة موجبة تتوزع فيها الإلكترونات عشوائياً (كعكة الزبيب)</td><td>لم يفسر تشتت جسيمات ألفا في تجربة رذرفورد</td></tr>
+<tr><td>رذرفورد (1911)</td><td>معظم الذرة فراغ، والكتلة والشحنة الموجبة في نواة صغيرة، والإلكترونات تدور حولها</td><td>الإلكترون المتسارع يشع طاقة فيسقط في النواة؛ وكان يتنبأ بطيف متصل بدل الخطي</td></tr>
+<tr><td>بور (1913)</td><td>مدارات محددة الطاقة (مكمّاة) — ينجح مع الهيدروجين</td><td>لم يفسر سبب تكمية المدارات (فسّرها دي برولي لاحقاً)</td></tr>
+</table></div>
+<details class="check"><summary>نتائج تجربة رذرفورد (صفيحة ذهب + جسيمات ألفا) وما يدل عليه كل منها.</summary><div class="a">
+• معظم جسيمات ألفا لم تنحرف ← معظم الذرة فراغ.<br>• بعضها انحرف ← تنافر مع جسم ثقيل موجب الشحنة.<br>• قليل جداً ارتد للخلف ← اصطدام مباشر بنواة صغيرة جداً موجبة.</div></details>
+<h3>فرضيات بور</h3>
+<ol>
+<li>الإلكترون يدور في مدارات دائرية بفعل قوة الجذب الكهربائية: $\dfrac{mv^2}{r}=\dfrac{kq^2}{r^2}$ … (9-9)</li>
+<li>الإلكترونات في مستويات طاقة محددة، و<b>لا تشع</b> ما دامت في نفس المستوى.</li>
+<li>تُشع طاقة عند الانتقال لمستوى أقل: $\Delta E=E_i-E_f=hf$ … (9-10)</li>
+<li>الزخم الزاوي مكمّى: $L=mvr_n=\dfrac{nh}{2\pi}$ … (9-11)</li>
+</ol>
+<div class="box law"><div class="lbl">نتائج نموذج بور للهيدروجين (9-12) و (9-13)</div>
+$$r_n=n^2r_1\quad (r_1=0.529\times10^{-10}\,\text{m})\qquad\qquad E_n=\frac{E_1}{n^2}\quad(E_1=-13.6\,\text{eV})$$
+<p style="margin:0;font-size:.9rem">والطاقة الكلية سالبة (الإلكترون مرتبط). وأيضاً: $K=|E_n|$ ، $U=2E_n$.</p>
+</div>
+<div class="box law"><div class="lbl">الأطوال الموجية للطيف (9-14)</div>
+$$\frac1\lambda=R\left(\frac{1}{n_f^2}-\frac{1}{n_i^2}\right)\qquad R=1.097\times10^7\ \text{m}^{-1}$$
+<p style="margin:0;font-size:.9rem">$R$ ثابت ريدبيرج، و $\dfrac1\lambda$ يسمى <b>الرقم الموجي</b> ووحدته $\text{m}^{-1}$. ($n_f$ المستوى الأدنى الذي ينتهي إليه الإلكترون)</p>
+</div>
+<div class="tblwrap"><table class="tbl">
+<tr><th>السلسلة</th><th>المستوى النهائي</th><th>المنطقة</th></tr>
+<tr><td>ليمان</td><td>$n_f=1$</td><td>فوق البنفسجية</td></tr>
+<tr><td>بالمر</td><td>$n_f=2$</td><td>المرئي (4 خطوط: $H_\alpha$ أحمر، $H_\beta$ أخضر، $H_\gamma$ أزرق، $H_\delta$ بنفسجي)</td></tr>
+<tr><td>باشن</td><td>$n_f=3$</td><td>تحت الحمراء</td></tr>
+</table></div>
+<div class="sim" id="simBohr">
+<div class="sh"><span class="tag">محاكاة</span><b>ذرة الهيدروجين: اختر انتقالاً وشاهد الفوتون</b></div>
+<div class="sb">
+<canvas id="cvBohr"></canvas>
+<div class="controls">
+  <div class="ctl"><label>المستوى الابتدائي $n_i$ <output for="hni"></output></label><input type="range" id="hni" name="ni" min="2" max="7" step="1" value="4"></div>
+  <div class="ctl"><label>المستوى النهائي $n_f$ <output for="hnf"></output></label><input type="range" id="hnf" name="nf" min="1" max="6" step="1" value="2"></div>
+</div>
+<div class="readout" id="roBohr"></div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>انتقال من n=4 إلى n=2</span></div>
+<div class="eq">انتقل إلكترون ذرة الهيدروجين من المستوى الرابع إلى الثاني. ما تردد الفوتون؟ وأي خط في الطيف يطابقه؟</div>
+<div class="steps">
+<div class="s">$E_4=\dfrac{-13.6}{16}=-0.85\,\text{eV}$ ، $E_2=\dfrac{-13.6}{4}=-3.40\,\text{eV}$</div>
+<div class="s">$\Delta E=-0.85-(-3.40)=2.55\ \text{eV}=4.08\times10^{-19}\ \text{J}$</div>
+<div class="s">$f=\dfrac{\Delta E}{h}\approx6.15\times10^{14}\ \text{Hz}$ <span class="ans-final">سلسلة بالمر، الخط الثاني $H_\beta$ (أخضر-مزرق، $\approx486\,\text{nm}$)</span></div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>9-5 الطبيعة الموجية للأجسام (دي برولي)</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة</div>
+الضوء له طبيعة مزدوجة (موجة في الحيود، جسيم في الكهروضوئية). دي برولي (1923) سأل: ليش ما يكون العكس صحيح؟ <b>الجسيمات المادية</b> (كالإلكترونات) إلها طبيعة موجية كمان!
+</div>
+<div class="box law"><div class="lbl">طول موجة دي برولي (9-18)</div>
+$$\lambda=\frac hp=\frac{h}{mv}$$
+<p style="margin:0;font-size:.9rem">ولجسيم تسارع من السكون عبر فرق جهد $V$: $\tfrac12mv^2=qV \Rightarrow p=\sqrt{2mqV} \Rightarrow \lambda=\dfrac{h}{\sqrt{2mqV}}$</p>
+</div>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>كرة</span></div>
+<div class="eq">احسب طول موجة دي برولي لكرة كتلتها $0.2\,\text{kg}$ تتحرك بسرعة $15\,\text{m/s}$.</div>
+<div class="steps"><div class="s">$\lambda=\dfrac{6.63\times10^{-34}}{0.2\times15}\approx2.2\times10^{-34}\ \text{m}$ <span class="ans-final">صغير جداً لا يمكن ملاحظته ← لا نرى الطبيعة الموجية للأجسام الكبيرة</span></div></div></div>
+<div class="example"><div class="eh"><span>مثال (7)</span><span>إلكترون مُسرّع</span></div>
+<div class="eq">احسب الطول الموجي لإلكترون تسارع عبر فرق جهد $100\,\text{V}$.</div>
+<div class="steps"><div class="s">$\tfrac12(9.1\times10^{-31})v^2=1.6\times10^{-19}\times100 \Rightarrow v\approx5.9\times10^6\ \text{m/s}$</div><div class="s">$\lambda=\dfrac{6.63\times10^{-34}}{9.1\times10^{-31}\times5.9\times10^6}\approx1.23\times10^{-10}\ \text{m}$ (بحجم الذرة تقريباً!)</div></div></div>
+<details class="check"><summary>إلكترون وبروتون تسارعا من السكون عبر نفس فرق الجهد. أيهما طوله الموجي أكبر؟</summary><div class="a">$\lambda=\dfrac{h}{\sqrt{2mqV}}$ ، نفس الشحنة (مقداراً) ونفس الجهد ← $\lambda\propto\dfrac{1}{\sqrt m}$ ← <b>الإلكترون</b> (كتلته أصغر بكثير).</div></details>
+<div class="box life"><div class="lbl">🔬 الإثبات والتطبيق</div>
+أثبت دافيسون وجيرمر الفرضية بحيود حزمة إلكترونات على بلورة نيكل، وتومسون بمرورها عبر رقائق ذهب. <b>المجهر الإلكتروني</b> يستخدم الإلكترونات لأن طولها الموجي أصغر بكثير من الضوء، فيعطي تفاصيل أدق.
+</div>
+<h3>موجات الإلكترون في الذرة</h3>
+<p>الإلكترون في مداره يشكّل <b>موجة موقوفة</b>. وليكون مستقراً يجب أن يكون محيط المدار عدداً صحيحاً من أطوال موجته:</p>
+<div class="box law"><div class="lbl">شرط الموجة الموقوفة (9-19)</div>
+$$n\lambda_n=2\pi r_n$$
+</div>
+<details class="check"><summary>أثبت رياضياً أنه لا تعارض بين هذا الشرط وفرض بور الرابع.</summary><div class="a">نعوّض $\lambda=\dfrac{h}{mv}$ في $n\lambda=2\pi r$: $\dfrac{nh}{mv}=2\pi r \Rightarrow mvr=\dfrac{nh}{2\pi}$ ✔ وهو فرض بور نفسه — دي برولي فسّر <b>لماذا</b> الزخم الزاوي مكمّى.</div></details>
+</section>
+
+<section id="s6">
+<h2>9-6 مبدأ اللايقين (هايزنبرغ)</h2>
+<div class="box def"><div class="lbl">📘 نص المبدأ</div>
+من المستحيل قياس موقع الجسيم وزخمه في اللحظة نفسها بدقة عالية؛ فكلما زادت دقة قياس الزخم قلت دقة تحديد الموقع، والعكس. وهذا <b>ليس</b> بسبب ضعف الأدوات، بل ناتج عن الطبيعة المزدوجة للجسيمات.
+</div>
+<div class="box law"><div class="lbl">قانون (9-20)</div>
+$$\Delta p\,\Delta x\ \geq\ \frac{h}{2\pi}$$
+</div>
+<div class="example"><div class="eh"><span>مثال (8)</span><span>لايقين موقع إلكترون</span></div>
+<div class="eq">سرعة إلكترون $5\times10^3\,\text{m/s}$ واللايقين فيها $0.003\%$. احسب أقل لايقين في موضعه.</div>
+<div class="steps">
+<div class="s">$p=mv=9.11\times10^{-31}\times5\times10^3\approx4.56\times10^{-27}\ \text{kg}\cdot\text{m/s}$</div>
+<div class="s">$\Delta p=p\times0.00003\approx1.37\times10^{-31}\ \text{kg}\cdot\text{m/s}$</div>
+<div class="s">$\Delta x=\dfrac{h}{2\pi\Delta p}=\dfrac{6.626\times10^{-34}}{2\pi\times1.37\times10^{-31}}\approx7.7\times10^{-4}\ \text{m}=0.77\ \text{mm}$</div>
+</div></div>
+</section>
+
+<section id="s7">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>فين</small>$\lambda_{max}T=2.898\times10^{-3}$</div>
+<div class="fcard"><small>ستيفان–بولتزمان</small>$I=\sigma eT^4$</div>
+<div class="fcard"><small>الفوتون</small>$E=hf=\dfrac{hc}{\lambda}$</div>
+<div class="fcard"><small>أينشتاين</small>$hf=\phi+K_{max}$ ، $K_{max}=eV_0$</div>
+<div class="fcard"><small>بور</small>$r_n=n^2r_1$ ، $E_n=\dfrac{-13.6}{n^2}\,\text{eV}$</div>
+<div class="fcard"><small>الطيف</small>$\dfrac1\lambda=R\left(\dfrac1{n_f^2}-\dfrac1{n_i^2}\right)$</div>
+<div class="fcard"><small>دي برولي</small>$\lambda=\dfrac h{mv}$ ، $n\lambda=2\pi r$</div>
+<div class="fcard"><small>هايزنبرغ</small>$\Delta p\Delta x\geq\dfrac h{2\pi}$</div>
+</div>
+</section>
+
+<section id="s8">
+<h2>اختبر نفسك: أسئلة الفصل (س1)</h2>
+<div id="quiz9"></div>
+</section>
+
+<section id="s9">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2: ما المقصود بـ: الجسم الأسود المثالي، مبدأ اللايقين، قانون فين للإزاحة؟</summary><div class="a">(التعريفات موجودة أعلاه في الأقسام 9-1 و 9-6.)</div></details>
+<div class="example"><div class="eh"><span>س3</span><span>منحنى جهد القطع–التردد</span></div>
+<div class="eq">منحنى $V_0$ مقابل $f$ خط مستقيم يقطع محور التردد عند $1.5\times10^{15}\,\text{Hz}$، ويمر بالنقطتين $(3\times10^{15}, 6\,\text{V})$ و $(4.5\times10^{15}, 12\,\text{V})$، وامتداده يقطع المحور الصادي عند $-6\,\text{V}$. أوجد: ثابت بلانك، اقتران الشغل، تردد العتبة، وأثر زيادة شدة الضوء.</div>
+<div class="steps">
+<div class="s">$eV_0=hf-\phi \Rightarrow V_0=\dfrac he f-\dfrac\phi e$ ← الميل $=\dfrac he$</div>
+<div class="s">(أ) الميل $=\dfrac{12-6}{(4.5-3)\times10^{15}}=4\times10^{-15}\ \text{V/Hz}$ ← $h=4\times10^{-15}\times1.6\times10^{-19}=6.4\times10^{-34}\ \text{J}\cdot\text{s}$</div>
+<div class="s">(ب) المقطع الصادي $=-\dfrac\phi e=-6 \Rightarrow \phi=6\ \text{eV}=9.6\times10^{-19}\ \text{J}$</div>
+<div class="s">(ج) $f_0=1.5\times10^{15}\ \text{Hz}$ (المقطع السيني)</div>
+<div class="s">(د) <span class="ans-final">لا يتغير شيء في الرسم — جهد القطع لا يعتمد على الشدة (يزداد تيار الإشباع فقط)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س4</span><span>خلية كهروضوئية</span></div>
+<div class="eq">ضوء طول موجته $3\times10^{-7}\,\text{m}$ سقط على مهبط خلية فانبعثت إلكترونات طاقتها الحركية (القصوى) $2\,\text{eV}$. احسب: اقتران الشغل، جهد القطع، تردد العتبة.</div>
+<div class="steps">
+<div class="s">$E=\dfrac{hc}{\lambda}=\dfrac{6.626\times10^{-34}\times3\times10^8}{3\times10^{-7}}=6.626\times10^{-19}\,\text{J}\approx4.14\ \text{eV}$</div>
+<div class="s">(أ) $\phi=4.14-2=2.14\ \text{eV}\approx3.43\times10^{-19}\ \text{J}$ ، (ب) $V_0=\dfrac{K_{max}}{e}=2\ \text{V}$</div>
+<div class="s">(ج) $f_0=\dfrac\phi h=\dfrac{3.43\times10^{-19}}{6.626\times10^{-34}}\approx5.2\times10^{14}\ \text{Hz}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س5</span><span>موجة موقوفة حول المدار</span></div>
+<div class="eq">الشكل يمثل الموجات الموقوفة لإلكترون ذرة الهيدروجين، وعدد أطوال الموجة حول المدار 4 (أي $n=4$). احسب: الزخم الخطي، نصف قطر المدار، طول الموجة، وطاقة الفوتون عند الانتقال لمستوى الاستقرار.</div>
+<div class="steps">
+<div class="s">(ب) $r_4=16\times0.529\times10^{-10}\approx8.46\times10^{-10}\ \text{m}$</div>
+<div class="s">(ج) $\lambda=\dfrac{2\pi r_4}{4}\approx1.33\times10^{-9}\ \text{m}$</div>
+<div class="s">(أ) $p=\dfrac h\lambda=\dfrac{6.626\times10^{-34}}{1.33\times10^{-9}}\approx4.98\times10^{-25}\ \text{kg}\cdot\text{m/s}$</div>
+<div class="s">(د) $\Delta E=13.6\left(1-\tfrac1{16}\right)=12.75\ \text{eV}$ <span class="ans-final">سلسلة ليمان (فوق البنفسجية)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>إلكترون في n=2</span></div>
+<div class="eq">إلكترون ذرة الهيدروجين في المستوى $n=2$. جد: (أ) طول الموجة المرافقة له. (ب) اللايقين في زخمه إذا كان اللايقين في موقعه يساوي طول موجة الفوتون المنبعث عند انتقاله لمستوى الاستقرار.</div>
+<div class="steps">
+<div class="s">(أ) $r_2=4r_1=2.116\times10^{-10}\,\text{m}$ ، $\lambda=\dfrac{2\pi r_2}{2}=\pi r_2\approx6.65\times10^{-10}\ \text{m}$</div>
+<div class="s">الفوتون $2\to1$: $\Delta E=13.6(1-\tfrac14)=10.2\,\text{eV}$ ← $\lambda_{ph}=\dfrac{hc}{\Delta E}\approx1.22\times10^{-7}\,\text{m}$</div>
+<div class="s">(ب) $\Delta p=\dfrac{h}{2\pi\Delta x}=\dfrac{6.626\times10^{-34}}{2\pi\times1.22\times10^{-7}}\approx8.7\times10^{-28}\ \text{kg}\cdot\text{m/s}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>فوتون من ذرة يشغّل خلية</span></div>
+<div class="eq">استُخدمت طاقة الفوتون الناتج عن عودة إلكترون الهيدروجين من المدار الثالث إلى الاستقرار لتشغيل خلية كهروضوئية، وجهد الإيقاف $1.2\,\text{V}$. احسب: (1) طول الموجة المصاحبة لأسرع الإلكترونات. (2) أكبر طول موجي يحرر الإلكترونات من سطح الخلية.</div>
+<div class="steps">
+<div class="s">$hf=13.6(1-\tfrac19)\approx12.09\ \text{eV}$ ، $K_{max}=1.2\,\text{eV}=1.92\times10^{-19}\,\text{J}$</div>
+<div class="s">(1) $p=\sqrt{2mK}=\sqrt{2\times9.11\times10^{-31}\times1.92\times10^{-19}}\approx5.9\times10^{-25}$ ← $\lambda=\dfrac hp\approx1.12\times10^{-9}\ \text{m}$</div>
+<div class="s">$\phi=12.09-1.2=10.89\ \text{eV}$</div>
+<div class="s">(2) $\lambda_{max}=\dfrac{hc}{\phi}=\dfrac{1.988\times10^{-25}}{10.89\times1.6\times10^{-19}}\approx1.14\times10^{-7}\ \text{m}$</div>
+</div></div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const h=6.626e-34, c=3e8, kB=1.381e-23;
+function wl2rgb(nm){ let r=0,g=0,b=0; if(nm>=380&&nm<440){r=-(nm-440)/60;b=1;} else if(nm<490){g=(nm-440)/50;b=1;} else if(nm<510){g=1;b=-(nm-510)/20;} else if(nm<580){r=(nm-510)/70;g=1;} else if(nm<645){r=1;g=-(nm-645)/65;} else if(nm<=750){r=1;}
+  let f= nm<380||nm>750?0: nm<420?0.3+0.7*(nm-380)/40 : nm>700?0.3+0.7*(750-nm)/50 : 1; return `rgb(${Math.round(255*r*f)},${Math.round(255*g*f)},${Math.round(255*b*f)})`; }
+
+/* --- الجسم الأسود --- */
+(function(){
+  const cv=document.getElementById('cvBB'), sim=document.getElementById('simBB'), ro=document.getElementById('roBB'), rj=document.getElementById('bbRJ'); let V={};
+  const planck=(l,T)=>2*h*c*c/Math.pow(l,5)/(Math.exp(h*c/(l*kB*T))-1);
+  function draw(){
+    const {ctx,w,h:H}=setupCanvas(cv,260); ctx.clearRect(0,0,w,H);
+    const L=40,R=w-14,T=14,B=H-30, lmin=100e-9,lmax=3000e-9;
+    const ref=planck(2.898e-3/8000,8000)*0.35; const ymax=Math.max(planck(2.898e-3/V.T,V.T)*1.15, ref*0.05);
+    const X=l=>L+(R-L)*(l-lmin)/(lmax-lmin), Y=v=>B-(B-T)*Math.min(v/ymax,1.05);
+    for(let nm=380;nm<=750;nm+=2){ ctx.fillStyle=wl2rgb(nm); ctx.globalAlpha=.35; ctx.fillRect(X(nm*1e-9),T,X((nm+2)*1e-9)-X(nm*1e-9)+0.5,B-T);} ctx.globalAlpha=1;
+    ctx.strokeStyle=cssv('--line'); ctx.beginPath(); ctx.moveTo(L,B); ctx.lineTo(R,B); ctx.moveTo(L,T); ctx.lineTo(L,B); ctx.stroke();
+    ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; for(let k=500;k<=3000;k+=500) ctx.fillText(k,X(k*1e-9)-12,B+14); ctx.fillText('λ (nm)',R-44,B+26); ctx.fillText('الشدة',4,T+10);
+    if(rj.checked){ ctx.strokeStyle=cssv('--bad'); ctx.lineWidth=2; ctx.setLineDash([6,4]); ctx.beginPath(); let st=false;
+      for(let k=0;k<=400;k++){ const l=lmin+(lmax-lmin)*k/400; const v=2*c*kB*V.T/Math.pow(l,4); const y=Y(v); if(y<T-2){st=false;continue;} st?ctx.lineTo(X(l),y):ctx.moveTo(X(l),y); st=true;} ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle=cssv('--bad'); ctx.fillText('رايلي–جينز ← ∞',X(1250e-9),T+14); }
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=3; ctx.beginPath();
+    for(let k=0;k<=400;k++){ const l=lmin+(lmax-lmin)*k/400; const y=Y(planck(l,V.T)); k?ctx.lineTo(X(l),y):ctx.moveTo(X(l),y);} ctx.stroke();
+    const lm=2.898e-3/V.T; ctx.setLineDash([4,4]); ctx.strokeStyle=cssv('--warm'); ctx.beginPath(); ctx.moveTo(X(lm),T); ctx.lineTo(X(lm),B); ctx.stroke(); ctx.setLineDash([]);
+    // لون التوهج
+    const col = V.T<1500?'#ff3b1a': V.T<2500?'#ff7a1a': V.T<3500?'#ffb347': V.T<5000?'#ffe0a3': V.T<6500?'#fff8ee':'#cfe0ff';
+    ctx.fillStyle=col; ctx.beginPath(); ctx.arc(R-26,T+26,18,0,7); ctx.fill(); ctx.strokeStyle=cssv('--line'); ctx.stroke();
+    ro.innerHTML=`<span class="r">$\\lambda_{max}$ = <b>${fmt(lm*1e9,0)} nm</b></span><span class="r">$I=\\sigma T^4$ = <b>${fmt(5.67e-8*V.T**4)} W/m²</b></span>`; renderMath(ro);
+  }
+  rj.onchange=draw; bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- الكهروضوئية --- */
+(function(){
+  const cv=document.getElementById('cvPE'), sim=document.getElementById('simPE'), ro=document.getElementById('roPE'); let V={}, phi=2.3, els=[], last=0, acc=0;
+  const seg=document.getElementById('peMetal'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');phi=+b.dataset.p;els=[];readout();});
+  const Eph=()=>1240/V.L, Kmax=()=>Math.max(0,Eph()-phi);
+  function current(){ if(Eph()<=phi) return 0; const sat=V.I/100; const K=Kmax(); if(V.V>=0) return sat; return K<=-V.V?0:sat*(1-(-V.V)/K); }
+  function readout(){ const E=Eph(), ok=E>phi;
+    ro.innerHTML=`<span class="r">طاقة الفوتون $hf$ = <b>${fmt(E)} eV</b></span><span class="r">$\\phi$ = <b>${phi} eV</b></span><span class="r">$K_{max}$ = <b>${ok?fmt(Kmax())+' eV':'لا انبعاث ✘'}</b></span><span class="r">جهد القطع $V_0$ = <b>${ok?fmt(Kmax())+' V':'—'}</b></span><span class="r">التيار (نسبي) = <b>${fmt(100*current(),0)}%</b></span>`; renderMath(ro); }
+  function frame(ts){ const dt=Math.min(.05,(ts-last)/1000||0); last=ts;
+    const {ctx,w,h:H}=setupCanvas(cv,220); ctx.clearRect(0,0,w,H);
+    const cx=60, ax=w-60, top=40, bot=H-40;
+    ctx.fillStyle='#8a8f99'; ctx.fillRect(cx-10,top,20,bot-top); ctx.fillStyle=cssv('--warm'); ctx.fillRect(ax-6,top+20,12,bot-top-40);
+    ctx.fillStyle=cssv('--ink'); ctx.font='12px sans-serif'; ctx.fillText('المهبط',cx-22,bot+16); ctx.fillText('المصعد',ax-20,bot+16);
+    // شعاع الضوء
+    const col=V.L<380?'#8a5cff':V.L>750?'#7a2a2a':wl2rgb(V.L); ctx.strokeStyle=col; ctx.globalAlpha=.25+.6*V.I/100; ctx.lineWidth=14;
+    ctx.beginPath(); ctx.moveTo(cx+200,4); ctx.lineTo(cx+12,(top+bot)/2); ctx.stroke(); ctx.globalAlpha=1;
+    if(V.L<380){ctx.fillStyle=cssv('--muted'); ctx.fillText('فوق بنفسجي',cx+150,14);}
+    // إطلاق الإلكترونات
+    if(Eph()>phi){ acc+=dt*V.I*0.25; while(acc>1){ acc-=1; const K=Kmax()*Math.random(); els.push({x:cx+12,y:top+10+Math.random()*(bot-top-20),v:Math.sqrt(K)*90+5}); } }
+    const field = V.V/(ax-cx)*900; // تسارع نسبي (موجب نحو المصعد)
+    els.forEach(e=>{ e.v+=field*dt*6; e.x+=e.v*dt; }); els=els.filter(e=>e.x>cx+8 && e.x<ax-6 && els.length<400);
+    ctx.fillStyle=cssv('--accent'); els.forEach(e=>{ctx.beginPath(); ctx.arc(e.x,e.y,3,0,7); ctx.fill();});
+    // أميتر
+    const I=current(); ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=2; ctx.beginPath(); ctx.arc(w/2,H-14,12,Math.PI,0); ctx.stroke(); const a=-Math.PI/2+ (I-0.5)*2.2; ctx.strokeStyle=cssv('--bad'); ctx.beginPath(); ctx.moveTo(w/2,H-14); ctx.lineTo(w/2+Math.cos(a+Math.PI/2*0)*0+Math.sin((I-0.5)*2.2)*11,H-14-Math.cos((I-0.5)*2.2)*11); ctx.stroke();
+    requestAnimationFrame(frame); }
+  bindRanges(sim,v=>{V=v;readout();}); requestAnimationFrame(frame);
+})();
+
+/* --- بور --- */
+(function(){
+  const cv=document.getElementById('cvBohr'), sim=document.getElementById('simBohr'), ro=document.getElementById('roBohr'); let V={};
+  const series={1:'ليمان (فوق البنفسجية)',2:'بالمر (مرئي)',3:'باشن (تحت الحمراء)',4:'براكت (تحت الحمراء)',5:'فوند (تحت الحمراء)',6:'تحت الحمراء البعيدة'};
+  function draw(){
+    const {ctx,w,h:H}=setupCanvas(cv,280); ctx.clearRect(0,0,w,H);
+    const L=70,R=Math.min(w-20,L+360),T=20,B=H-20, Y=E=>T+(B-T)*(E/-13.6);
+    for(let n=1;n<=7;n++){ const E=-13.6/n/n, y=Y(E); ctx.strokeStyle=cssv(n===V.ni||n===V.nf?'--ink':'--line'); ctx.lineWidth=n===V.ni||n===V.nf?2.5:1.5; ctx.beginPath(); ctx.moveTo(L,y); ctx.lineTo(R,y); ctx.stroke();
+      ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; if(n<=4||n===7) ctx.fillText('n='+n+'   '+E.toFixed(2)+' eV',R+6>w-90?L-66:R+6, y+4); }
+    ctx.fillText('n=∞  0 eV',L-66,T-4);
+    if(V.ni>V.nf){ const dE=13.6*(1/V.nf**2-1/V.ni**2), nm=1240/dE; const col=nm>=380&&nm<=750?wl2rgb(nm):nm<380?'#8a5cff':'#b04020';
+      const x=(L+R)/2; arrow(ctx,x,Y(-13.6/V.ni**2),x,Y(-13.6/V.nf**2),col,4,12);
+      // فوتون متموج
+      ctx.strokeStyle=col; ctx.lineWidth=2.5; ctx.beginPath(); const y0=(Y(-13.6/V.ni**2)+Y(-13.6/V.nf**2))/2; for(let k=0;k<=80;k++){ const xx=x+10+k*1.6; const yy=y0+Math.sin(k*(0.25+0.6*(400/nm)))*7; k?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy);} ctx.stroke();
+      ro.innerHTML=`<span class="r">$\\Delta E$ = <b>${fmt(dE,3)} eV</b></span><span class="r">$\\lambda$ = <b>${fmt(nm,1)} nm</b></span><span class="r">$f$ = <b>${fmt(dE*1.6e-19/h)} Hz</b></span><span class="r">السلسلة: <b>${series[V.nf]}</b></span><span class="r" style="background:${nm>=380&&nm<=750?col:'var(--surface-2)'};color:${nm>=380&&nm<=750?'#000':'inherit'}">${nm>=380&&nm<=750?'لون مرئي':nm<380?'غير مرئي (UV)':'غير مرئي (IR)'}</span>`;
+    } else ro.innerHTML='<span class="r">⚠️ للانبعاث يجب أن يكون $n_i > n_f$ (من مستوى أعلى لأدنى). وإذا كان العكس فهذا <b>امتصاص</b> فوتون.</span>';
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz9',[
+ {q:'جسم أسود مثالي درجة حرارته $T$. إذا تضاعفت درجة حرارته المطلقة فإن شدة إشعاعه:', o:['تبقى ثابتة','تتضاعف','تصبح 4 أضعاف','تصبح 16 ضعفاً'], a:3, e:'$I=\\sigma T^4$ ← $2^4=16$.'},
+ {q:'فشل نموذج رايلي وجينز في تفسير إشعاع الجسم الأسود في منطقة:', o:['الأطوال الموجية الطويلة','الأطوال الموجية القصيرة','الضوء المرئي','تحت الحمراء'], a:1, e:'كارثة الأشعة فوق البنفسجية: الشدة تؤول لما لا نهاية عند الأطوال القصيرة.'},
+ {q:'فوتون طوله $\\lambda$ يعطي تيار إشباع $20\\,\\mu\\text{A}$ وجهد قطع $2\\,\\text{V}$. إذا تضاعفت <b>شدة</b> الضوء:', o:['$2\\lambda$ ، 4 V ، 20 μA','$\\lambda$ ، 2 V ، 20 μA','$\\lambda$ ، 2 V ، 40 μA','$\\lambda/2$ ، 2 V ، 40 μA'], a:2, e:'الشدة تزيد عدد الفوتونات فقط: الطول الموجي وجهد القطع ثابتان، وتيار الإشباع يتضاعف.'},
+ {q:'مقدار الزخم الزاوي لإلكترون الهيدروجين في المدار الأول:', o:['$\\dfrac{h}{2\\pi}$','$\\dfrac{2h}{\\pi}$','$\\dfrac h\\pi$','$h$'], a:0, e:'$L=\\dfrac{nh}{2\\pi}$ مع $n=1$.'},
+ {q:'فشلت الفيزياء الكلاسيكية في تفسير الظاهرة الكهروضوئية لأنها تعدّ أن طاقة الموجة الضوئية تعتمد على:', o:['طولها الموجي','ترددها','اتساعها','زمنها الدوري'], a:2, e:'كلاسيكياً الطاقة تعتمد على الشدة (مربع الاتساع)، بينما التجربة تقول التردد هو الحاسم.'},
+ {q:'وفقاً لنظرية الكم، تزداد طاقة الموجة الضوئية (الفوتون) بزيادة:', o:['زمنها الدوري','طولها الموجي','اتساعها','ترددها'], a:3, e:'$E=hf$.'}
+],'ch9');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

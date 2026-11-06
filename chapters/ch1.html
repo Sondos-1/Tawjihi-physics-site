@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل الأول: الزخم الخطي والدفع | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للزخم والدفع ونظرية الدفع-الزخم وحفظ الزخم - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل الأول: الزخم الخطي والدفع | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للزخم والدفع ونظرية الدفع-الزخم وحفظ الزخم - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch1" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل الأول: الزخم الخطي والدفع-->
+<!--desc:شرح تفاعلي للزخم والدفع ونظرية الدفع-الزخم وحفظ الزخم - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الأولى: الميكانيكا · الفصل الأول</div>
+  <h1>الزخم (كمية التحرك) الخطي والدفع</h1>
+  <p>لاعب كرة القدم لما يركل الكرة بيغيّر زخمها خلال لحظة قصيرة جداً، فتنطلق بالسرعة والاتجاه اللي بدّه إياهم. بهذا الفصل رح نفهم شو هو الزخم، وكيف القوة بتغيّره، وليش مجموع الزخم بيضل ثابت بالتصادمات والانفجارات.</p>
+  <ul class="goals">
+    <li>اشتقاق نظرية الدفع–الزخم رياضياً.</li>
+    <li>تفسير مشاهدات يومية (الوسائد الهوائية، الحذاء الرياضي…) باستخدام نظرية الدفع–الزخم.</li>
+    <li>حل مسائل حسابية على الدفع والزخم وحفظه.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>1-1 الزخم الخطي</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+تخيّل كرة تنس وكرة بولينغ جايات عليك بنفس السرعة… أيّهما أصعب توقفها؟ البولينغ طبعاً لأن كتلتها أكبر. وكرة تنس جاية بسرعة 200 km/h أصعب من نفس الكرة بسرعة 10 km/h. يعني <b>صعوبة إيقاف الجسم تعتمد على كتلته وسرعته معاً</b> — وهذا اللي بنسمّيه <b>الزخم</b>.
+</div>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>الزخم:</b> كمية فيزيائية <u>متجهة</u> تساوي حاصل ضرب كتلة الجسم في سرعته، واتجاهها باتجاه السرعة.
+</div>
+<div class="box law"><div class="lbl">قانون (1-1)</div>
+$$P = m\,v$$
+<div class="sym"><span>$P$: الزخم $(\text{kg}\cdot\text{m/s})$</span><span>$m$: الكتلة $(\text{kg})$</span><span>$v$: السرعة $(\text{m/s})$</span></div>
+</div>
+<h3>أسئلة "أناقش" من الكتاب</h3>
+<details class="check"><summary>ما وحدة قياس الزخم؟ وما العوامل التي يعتمد عليها؟</summary><div class="a">
+وحدته $\text{kg}\cdot\text{m/s}$. ويعتمد على عاملين: <b>الكتلة</b> و<b>السرعة</b> (مقداراً واتجاهاً).</div></details>
+<details class="check"><summary>أثبت أن $\text{N}\cdot\text{s}$ وحدة لقياس الزخم. <span class="hint">(مكتوبة بالكتاب J.s)</span></summary><div class="a">
+$$\text{N}\cdot\text{s} = \left(\text{kg}\cdot\frac{\text{m}}{\text{s}^2}\right)\cdot\text{s} = \text{kg}\cdot\frac{\text{m}}{\text{s}}$$
+ملاحظة: بالكتاب مكتوبة $\text{J}\cdot\text{s}$، لكن بالتحليل: $\text{J}\cdot\text{s} = \text{kg}\cdot\text{m}^2/\text{s}$ وهي وحدة <b>الزخم الزاوي</b> (الفصل الثالث). الوحدة الصحيحة للزخم الخطي هي $\text{N}\cdot\text{s} = \text{kg}\cdot\text{m/s}$ — اسأل معلمك عن المقصود.</div></details>
+<details class="check"><summary>ما العلاقة بين زخم الجسم وطاقته الحركية؟</summary><div class="a">
+$$K = \tfrac12 m v^2 = \frac{(mv)^2}{2m} = \frac{P^2}{2m} \quad\Longrightarrow\quad P=\sqrt{2mK}$$
+يعني جسمين لهم نفس الزخم: <b>الأخف كتلةً طاقته الحركية أكبر</b>.</div></details>
+
+<div class="example"><div class="eh"><span>مثال (1)</span><span>احسب الزخم</span></div>
+<div class="eq">احسب الزخم لكل مما يأتي:<br>1) سيارة كتلتها $1000\,\text{kg}$ تسير بسرعة $20\,\text{m/s}$ باتجاه الشرق.<br>2) كرة كتلتها $2\,\text{kg}$ تتحرك نحو الجنوب بطاقة حركية $16\,\text{J}$.</div>
+<div class="steps">
+<div class="s">السيارة: نعوّض مباشرة: $P = mv = 1000\times 20 = 2\times10^4\ \text{kg}\cdot\text{m/s}$ <b>باتجاه الشرق</b>.</div>
+<div class="s">الكرة: ما عندنا سرعة، عندنا طاقة حركية. نستخدم العلاقة $P=\sqrt{2mK}$.</div>
+<div class="s">$P=\sqrt{2\times2\times16}=\sqrt{64}=8\ \text{kg}\cdot\text{m/s}$ <b>جنوباً</b>.</div>
+</div></div>
+
+<details class="check"><summary>مركبتان متساويتان في الكتلة، وسرعة إحداهما ضعفا سرعة الأخرى، أيهما تحتاج قوة أقل لإيقافها في نفس الفترة الزمنية؟ ولماذا؟</summary><div class="a">
+المركبة <b>الأبطأ</b>. لأن زخمها نصف زخم الأخرى، والقوة اللازمة لإيقافها $F=\dfrac{\Delta P}{\Delta t}$، فبنفس الزمن القوة تتناسب طردياً مع التغير في الزخم → تحتاج نصف القوة.</div></details>
+</section>
+
+<section id="s2">
+<h2>1-2 الدفع</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+لما تدفع سيارة معطّلة، اللي بيهم مش بس قديش قوتك… كمان <b>قديش وقت</b> بتضل تدفع. قوة صغيرة لوقت طويل ممكن تعمل نفس أثر قوة كبيرة لوقت قصير. هذا "الأثر" اسمه <b>الدفع</b>.
+</div>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>الدفع:</b> كمية فيزيائية متجهة تساوي حاصل ضرب متوسط القوة في زمن تأثيرها، واتجاهه باتجاه القوة.
+</div>
+<div class="box law"><div class="lbl">قانون (1-2) و (1-3)</div>
+$$I = F\,\Delta t \qquad\qquad I=\textstyle\sum F\,\Delta t$$
+<div class="sym"><span>$I$: الدفع $(\text{N}\cdot\text{s})$</span><span>$F$: متوسط القوة (أو المحصلة) $(\text{N})$</span><span>$\Delta t$: زمن التأثير $(\text{s})$</span></div>
+</div>
+<p>إذا أثّرت عدة قوى ثابتة على الجسم، نستخدم <b>محصلة القوى</b> $\sum F$.</p>
+<details class="check"><summary>بيّن أن وحدة الدفع هي نفسها وحدة الزخم.</summary><div class="a">
+$\text{N}\cdot\text{s} = \left(\text{kg}\cdot\text{m/s}^2\right)\cdot \text{s} = \text{kg}\cdot\text{m/s}$ ✔</div></details>
+
+<h3>الدفع من منحنى (القوة – الزمن)</h3>
+<div class="box tip"><div class="lbl">⭐ مهم جداً للامتحان</div>
+إذا كانت القوة <b>متغيرة</b>، فالدفع = <b>المساحة تحت منحنى (القوة – الزمن)</b>. المساحة فوق محور الزمن موجبة، وتحته سالبة.
+</div>
+<div class="box def"><div class="lbl">📘 متوسط قوة الدفع</div>
+القوة الثابتة التي لو أثرت في الجسم خلال نفس الفترة الزمنية التي تؤثر فيها القوة المتغيرة، لأكسبته نفس الدفع. (يعني مستطيل مساحته = مساحة المنحنى).
+</div>
+
+<div class="sim" id="simEgg">
+<div class="sh"><span class="tag">محاكاة</span><b>ليش البيضة بتنكسر على الإسمنت وما بتنكسر على الرمل؟</b></div>
+<div class="sb">
+<canvas id="cvEgg"></canvas>
+<div class="controls">
+  <div class="ctl"><label>ارتفاع السقوط <output for="eh"></output></label><input type="range" id="eh" name="h" min="0.2" max="3" step="0.1" value="1" data-u="m"></div>
+  <div class="ctl"><label>زمن التلامس (نوع السطح) <output for="et"></output></label><input type="range" id="et" name="t" min="0.002" max="0.1" step="0.001" value="0.004" data-u="s"></div>
+</div>
+<div class="readout" id="roEgg"></div>
+<p class="note">كتلة البيضة $0.06\,\text{kg}$، ونفترض إنها بتنكسر إذا زاد متوسط القوة عن تقريباً $20\,\text{N}$. لاحظ: <b>المساحة تحت المنحنى (الدفع) ثابتة</b> لأنه التغير بالزخم نفسه، بس لما يطول الزمن بتنزل القوة.</p>
+</div></div>
+
+<details class="check"><summary>لماذا يلجأ سائق السيارة إلى الضغط على الفرامل لفترات متتالية حتى تتوقف السيارة؟</summary><div class="a">
+لزيادة زمن التوقف $\Delta t$. التغير في الزخم ثابت (من سرعته لصفر)، فكلما زاد الزمن قلّ متوسط القوة المؤثرة على السيارة والركاب → توقف آمن وما بتنزلق العجلات.</div></details>
+</section>
+
+<section id="s3">
+<h2>1-3 نظرية الدفع – الزخم</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+الدفع اللي بتعطيه للجسم <b>ما بيروح عالفاضي</b> — بيتحوّل بالضبط لتغيّر في زخمه. هذا كل الموضوع: $\text{الدفع} = \text{التغير في الزخم}$.
+</div>
+<h3>الاشتقاق (خطوة خطوة)</h3>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>من قانون نيوتن الثاني</span></div>
+<div class="eq">نفرض قوة محصلة $F$ أثرت في جسم كتلته $m$ (ثابتة) خلال زمن $\Delta t$ فغيّرت سرعته بمقدار $\Delta v$.</div>
+<div class="steps">
+<div class="s">التغير في الزخم: $\Delta P = \Delta(mv) = m\,\Delta v$</div>
+<div class="s">نقسم الطرفين على $\Delta t$: $\dfrac{\Delta P}{\Delta t} = m\dfrac{\Delta v}{\Delta t}$</div>
+<div class="s">لكن $\dfrac{\Delta v}{\Delta t}=a$ (التسارع)، و $ma=F$ (نيوتن الثاني)، إذن: $\boxed{F = \dfrac{\Delta P}{\Delta t}}$ … وهذه <b>الصيغة العامة لقانون نيوتن الثاني</b> (1-4).</div>
+<div class="s">بالضرب التبادلي: $\boxed{\Delta P = F\,\Delta t}$ … وهذه <b>نظرية الدفع–الزخم</b> (1-5).</div>
+</div></div>
+<div class="box def"><div class="lbl">📘 تعريفان مهمان</div>
+<b>القوة المحصلة:</b> المعدل الزمني للتغير في الزخم.<br>
+<b>نظرية الدفع–الزخم:</b> الدفع الذي تحدثه القوة المحصلة في الجسم خلال فترة زمنية يساوي التغير في زخم الجسم خلال تلك الفترة.
+</div>
+<div class="box warn"><div class="lbl">⚠️ غلطة شائعة</div>
+$\Delta P = P_f - P_i$ و<b>الإشارة مهمة!</b> إذا الجسم ارتد (عكس اتجاهه) لازم تعطي السرعة الثانية إشارة سالبة. مثلاً كرة $4\,\text{m/s}$ ارتدت بـ $4\,\text{m/s}$: $\Delta v = -4-4=-8$ مش صفر!
+</div>
+<div class="box life"><div class="lbl">🌍 من حياتنا</div>
+<b>الوسائد الهوائية والحذاء الرياضي ومواسير البنادق:</b> كلها لعبة "الزمن". الوسادة الهوائية والحذاء بيطوّلوا زمن التلامس → القوة على الجسم بتقل. أما ماسورة البندقية الطويلة فبتطوّل زمن تأثير قوة الغازات على الرصاصة → دفع أكبر → سرعة انطلاق أكبر.
+</div>
+
+<div class="example"><div class="eh"><span>مثال (2)</span><span>متوسط قوة الكوابح</span></div>
+<div class="eq">سيارة كتلتها $1200\,\text{kg}$ تسير بسرعة $20\,\text{m/s}$ نحو محور السينات الموجب، ضغط السائق على الكوابح فانخفضت سرعتها إلى $8\,\text{m/s}$ في نفس الاتجاه خلال $6\,\text{s}$. احسب متوسط القوة التي أثرت في السيارة.</div>
+<div class="steps">
+<div class="s">نكتب نظرية الدفع–الزخم: $F\,\Delta t = \Delta P = m v_f - m v_i$</div>
+<div class="s">نعوّض: $F\times 6 = 1200\,(8-20) = -14400$</div>
+<div class="s">$F = -2400\ \text{N}$ . <span class="ans-final">الإشارة السالبة تعني إن القوة عكس اتجاه الحركة (نحو السينات السالب).</span></div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>1-4 حفظ الزخم</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+إذا ما في قوة <b>من برّا</b> بتأثر على مجموعة أجسام، فالزخم الكلي للمجموعة <b>ما بيتغيّر</b>. الأجسام بتقدر تتبادل الزخم فيما بينها (واحد بياخد من الثاني)، بس المجموع بيضل ثابت.
+</div>
+<div class="box def"><div class="lbl">📘 النظام المعزول</div>
+مجموعة أجسام محصلة القوى الخارجية المؤثرة فيها تساوي صفراً؛ والقوى الوحيدة فيها هي القوى المتبادلة بين أجسام النظام نفسه.
+</div>
+<p>من نظرية الدفع–الزخم: إذا $\sum F_{\text{خارجية}}=0$ فإن $\Delta P = 0$ أي $P_f = P_i$.</p>
+<div class="box law"><div class="lbl">قانون حفظ الزخم (1-6)</div>
+$$\textstyle\sum P_i = \sum P_f$$
+<p style="margin:0;font-size:.95rem">إذا كانت محصلة القوى الخارجية المؤثرة في مجموعة أجسام (نظام مغلق) تساوي صفراً، فإن مجموع زخم هذه الأجسام يبقى ثابتاً (محفوظاً).</p>
+</div>
+<div class="box life"><div class="lbl">🔬 نشاط (1-3): كرات نيوتن</div>
+لما تسحب كرة من طرف وتتركها، بتطلع <b>كرة وحدة</b> من الطرف الثاني لنفس الارتفاع تقريباً. يعني أخذت نفس السرعة → زخم النظام قبل التصادم = زخمه بعده. وإذا سحبت كرتين بيطلعوا كرتين.
+</div>
+
+<div class="sim" id="simRecoil">
+<div class="sh"><span class="tag">محاكاة</span><b>الارتداد: عربتان بينهما نابض مضغوط</b></div>
+<div class="sb">
+<canvas id="cvRec"></canvas>
+<div class="controls">
+  <div class="ctl"><label>كتلة العربة اليسرى $m_1$ <output for="rm1"></output></label><input type="range" id="rm1" name="m1" min="1" max="10" step="0.5" value="2" data-u="kg"></div>
+  <div class="ctl"><label>كتلة العربة اليمنى $m_2$ <output for="rm2"></output></label><input type="range" id="rm2" name="m2" min="1" max="10" step="0.5" value="6" data-u="kg"></div>
+  <div class="ctl"><label>سرعة العربة اليسرى بعد الإطلاق <output for="rv1"></output></label><input type="range" id="rv1" name="v1" min="0.5" max="4" step="0.1" value="3" data-u="m/s"></div>
+</div>
+<div style="margin-top:10px;display:flex;gap:8px"><button class="btn" id="recGo">أطلق النابض 🚀</button><button class="btn ghost" id="recReset">إعادة</button></div>
+<div class="readout" id="roRec"></div>
+<p class="note">قبل الإطلاق كل شي ساكن → الزخم الكلي صفر. بعد الإطلاق لازم يضل صفر، فالعربتين بيتحركوا بعكس بعض وبزخم متساوٍ مقداراً. لاحظ إنه <b>الأخف بتاخد طاقة حركية أكبر</b>.</p>
+</div></div>
+
+<div class="example"><div class="eh"><span>مثال (3)</span><span>القارب والصندوق</span></div>
+<div class="eq">يجلس طالب كتلته $35\,\text{kg}$ في قارب ساكن كتلته $65\,\text{kg}$ ويحمل صندوقاً كتلته $6\,\text{kg}$. إذا قذف الصندوق أفقياً بسرعة $10\,\text{m/s}$ (بإهمال مقاومة الماء)، جد سرعة القارب بعد القذف مباشرة.</div>
+<div class="steps">
+<div class="s">النظام (طالب + قارب + صندوق) معزول أفقياً → $\sum P_i = \sum P_f$</div>
+<div class="s">قبل القذف الكل ساكن: $\sum P_i = 0$. وبعد القذف: الصندوق $m_1=6$ ، (الطالب+القارب) $m_2=35+65=100\,\text{kg}$</div>
+<div class="s">$0 = 6\times10 + 100\,v_{2f}$</div>
+<div class="s">$v_{2f} = -0.60\ \text{m/s}$ <span class="ans-final">أي القارب يتحرك بعكس اتجاه الصندوق بسرعة $0.6\,\text{m/s}$</span></div>
+</div></div>
+
+<div class="example"><div class="eh"><span>سؤال من الكتاب</span><span>الانفجار</span></div>
+<div class="eq">انفجر جسم ساكن إلى جزأين، كتلة الأول مثلا كتلة الثاني. إذا كانت الطاقة الحركية الناتجة عن الانفجار $7500\,\text{J}$، ما الطاقة الحركية التي يكتسبها كل منهما؟</div>
+<div class="steps">
+<div class="s">حفظ الزخم: الجسم كان ساكن → بعد الانفجار $P_1 = P_2 = P$ (مقداراً) وبعكس الاتجاه.</div>
+<div class="s">نستخدم $K=\dfrac{P^2}{2m}$: بما إن $P$ نفسه للجزأين، فالطاقة تتناسب <b>عكسياً</b> مع الكتلة.</div>
+<div class="s">$m_1=2m_2 \Rightarrow K_1 = \tfrac12 K_2$ ، و $K_1+K_2 = 7500$ → $\tfrac32K_2=7500$</div>
+<div class="s"><span class="ans-final">$K_2 = 5000\,\text{J}$ (الجزء الأخف) و $K_1 = 2500\,\text{J}$ (الجزء الأثقل)</span></div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>الزخم</small>$P=mv$</div>
+<div class="fcard"><small>الزخم والطاقة</small>$K=\dfrac{P^2}{2m}$</div>
+<div class="fcard"><small>الدفع</small>$I=F\Delta t$ = المساحة تحت (F–t)</div>
+<div class="fcard"><small>نيوتن الثاني (عامة)</small>$F=\dfrac{\Delta P}{\Delta t}$</div>
+<div class="fcard"><small>الدفع–الزخم</small>$F\Delta t=\Delta P = m(v_f-v_i)$</div>
+<div class="fcard"><small>حفظ الزخم</small>$\sum P_i=\sum P_f$</div>
+</div>
+<div class="summary"><ul>
+<li>الزخم والدفع كميتان <b>متجهتان</b> ولهما نفس الوحدة: $\text{kg}\cdot\text{m/s} = \text{N}\cdot\text{s}$.</li>
+<li>ميل منحنى (الزخم–الزمن) = <b>القوة</b>. المساحة تحت منحنى (القوة–الزمن) = <b>الدفع</b>.</li>
+<li>لنفس التغير في الزخم: زيادة زمن التأثير ← تقليل القوة (الوسائد، الحذاء، الرمل).</li>
+<li>في النظام المعزول الزخم الكلي محفوظ، حتى بالانفجارات والارتداد.</li>
+</ul></div>
+</section>
+
+<section id="s6">
+<h2>اختبر نفسك: أسئلة الاختيار من متعدد (س1)</h2>
+<p>جاوب، وبعد كل سؤال رح يطلعلك الشرح. علامتك بتنحفظ على جهازك.</p>
+<div id="quiz1"></div>
+</section>
+
+<section id="s7">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<p>حاول تحل لحالك أول، وبعدين افتح الحل خطوة خطوة.</p>
+
+<details class="check"><summary>س2: وضّح المقصود بـ: الزخم، الدفع، النظام المعزول.</summary><div class="a">
+<b>الزخم:</b> حاصل ضرب الكتلة في السرعة (متجه باتجاه السرعة).<br><b>الدفع:</b> حاصل ضرب متوسط القوة في زمن تأثيرها (متجه باتجاه القوة).<br><b>النظام المعزول:</b> مجموعة أجسام محصلة القوى الخارجية عليها صفر.</div></details>
+
+<details class="check"><summary>س3: علّل (1) تنكسر بيضة تسقط على الإسمنت ولا تنكسر على الرمل.</summary><div class="a">
+التغير في الزخم نفسه في الحالتين، لكن الرمل يطيل زمن التوقف $\Delta t$، ومن $F=\Delta P/\Delta t$ تقل القوة المؤثرة على البيضة فلا تنكسر.</div></details>
+<details class="check"><summary>س3: علّل (2) تكون مواسير بنادق الصيد طويلة.</summary><div class="a">
+لتطول مدة تأثير قوة الغازات على الرصاصة داخل الماسورة، فيزداد الدفع $F\Delta t$ وبالتالي يزداد التغير في زخمها فتخرج بسرعة أكبر.</div></details>
+<details class="check"><summary>س3: علّل (3) سرعة ارتداد المدفع أقل بكثير من سرعة انطلاق القذيفة.</summary><div class="a">
+حسب حفظ الزخم: زخم المدفع = زخم القذيفة مقداراً $(Mv_M = mv_m)$. وبما إن كتلة المدفع أكبر بكثير، تكون سرعته أقل بكثير.</div></details>
+
+<div class="example"><div class="eh"><span>س4</span><span>قوة 15 N لمدة 7 s</span></div>
+<div class="eq">أثرت قوة $15\,\text{N}$ في جسم لمدة $7\,\text{s}$. احسب: (أ) الدفع. (ب) الزمن اللازم لقوة $1.5\,\text{N}$ لتعطي نفس الدفع.</div>
+<div class="steps"><div class="s">(أ) $I = F\Delta t = 15\times7 = 105\ \text{N}\cdot\text{s}$</div><div class="s">(ب) $\Delta t = \dfrac{I}{F} = \dfrac{105}{1.5} = 70\ \text{s}$</div></div></div>
+
+<div class="example"><div class="eh"><span>س5</span><span>ركلة كرة</span></div>
+<div class="eq">ضرب لاعب كرة ساكنة كتلتها $0.6\,\text{kg}$ فانطلقت بسرعة $15\,\text{m/s}$. احسب: (أ) التغير في زخم الكرة. (ب) متوسط القوة إذا دام التلامس $0.06\,\text{s}$.</div>
+<div class="steps"><div class="s">(أ) $\Delta P = m(v_f-v_i) = 0.6(15-0) = 9\ \text{kg}\cdot\text{m/s}$</div><div class="s">(ب) $F = \dfrac{\Delta P}{\Delta t} = \dfrac{9}{0.06} = 150\ \text{N}$</div></div></div>
+
+<div class="example"><div class="eh"><span>س6</span><span>متوسط القوة</span></div>
+<div class="eq">أثرت قوة لمدة $0.6\,\text{s}$ على جسم فازداد زخمه بمقدار $12\,\text{kg}\cdot\text{m/s}$. احسب متوسط القوة.</div>
+<div class="steps"><div class="s">$F = \dfrac{\Delta P}{\Delta t} = \dfrac{12}{0.6} = 20\ \text{N}$</div></div></div>
+
+<div class="example"><div class="eh"><span>س7</span><span>حزام الأمان</span></div>
+<div class="eq">سائق كتلته $80\,\text{kg}$ يقود بسرعة $25\,\text{m/s}$ ضغط على الكوابح فاندفع للأمام، وأوقفه حزام الأمان خلال $0.5\,\text{s}$. (1) ما متوسط قوة الحزام؟ (2) ما متوسط قوة المقود لو ارتطم به خلال $0.001\,\text{s}$ بدون حزام؟ (3) ماذا تستنتج؟</div>
+<div class="steps">
+<div class="s">التغير في زخم السائق في الحالتين: $\Delta P = 80(0-25) = -2000\ \text{kg}\cdot\text{m/s}$</div>
+<div class="s">(1) $F = \dfrac{-2000}{0.5} = -4000\ \text{N}$ (أي $4000\,\text{N}$ عكس الحركة)</div>
+<div class="s">(2) $F = \dfrac{-2000}{0.001} = -2\times10^6\ \text{N}$ !!</div>
+<div class="s"><span class="ans-final">(3) الحزام يزيد زمن التوقف 500 مرة فيقلل القوة 500 مرة → يحمي السائق.</span></div>
+</div></div>
+
+<div class="example"><div class="eh"><span>س8</span><span>السيارة والمتسابق</span></div>
+<div class="eq">سيارة كتلتها $600\,\text{kg}$ تسير بجانب متسابق بسرعة $9\,\text{km/h}$، وكتلة المتسابق $60\,\text{kg}$. ما زخم كل منهما؟ هل يمكن أن يكون للمتسابق زخم السيارة نفسه؟</div>
+<div class="steps">
+<div class="s">نحوّل السرعة: $9\,\text{km/h} = 9\times\dfrac{1000}{3600} = 2.5\ \text{m/s}$</div>
+<div class="s">$P_{\text{سيارة}} = 600\times2.5 = 1500\ \text{kg}\cdot\text{m/s}$ ، $P_{\text{متسابق}} = 60\times2.5 = 150\ \text{kg}\cdot\text{m/s}$</div>
+<div class="s">ليكون له نفس زخم السيارة: $v = \dfrac{1500}{60} = 25\ \text{m/s} = 90\ \text{km/h}$ <span class="ans-final">غير ممكن لإنسان يركض بهذه السرعة.</span></div>
+</div></div>
+
+<div class="example"><div class="eh"><span>س9</span><span>سيارة ترتد عن جدار</span></div>
+<div class="eq">سيارة كتلتها $1600\,\text{kg}$ تقترب من جدار بسرعة $4.5\,\text{m/s}$ وترتد عنه بالاتجاه المعاكس بسرعة $2.6\,\text{m/s}$ (حسب الشكل). احسب: (1) التغير في زخم السيارة. (2) الطاقة الحركية المفقودة.</div>
+<div class="steps">
+<div class="s">نعتبر اتجاه الاقتراب موجباً: $v_i=+4.5$ ، $v_f=-2.6\ \text{m/s}$</div>
+<div class="s">(1) $\Delta P = 1600(-2.6-4.5) = -11360\ \text{kg}\cdot\text{m/s}$ (باتجاه الارتداد، بعيداً عن الجدار)</div>
+<div class="s">(2) $\Delta K = \tfrac12(1600)(4.5^2 - 2.6^2) = 800(20.25-6.76)$</div>
+<div class="s"><span class="ans-final">$\Delta K \approx 10792\ \text{J}$ طاقة مفقودة</span></div>
+</div></div>
+
+<div class="example"><div class="eh"><span>س10</span><span>منحنى قوة متغيرة</span></div>
+<div class="eq">جسم كتلته $2\,\text{kg}$ يتحرك بسرعة $5\,\text{m/s}$ على سطح أملس، أثرت عليه قوة متغيرة: تبدأ من $+10\,\text{N}$ عند $t=0$ وتتناقص خطياً إلى $-10\,\text{N}$ عند $t=4\,\text{s}$ (تمر بالصفر عند $2\,\text{s}$)، ثم تبقى $-10\,\text{N}$. جد: (1) الدفع خلال $4\,\text{s}$ و $6\,\text{s}$. (2) أكبر سرعة. (3) زمن توقف الجسم. (4) متوسط القوة من البداية حتى السكون.
+<svg viewBox="0 0 320 170" style="display:block;margin:10px auto;max-width:340px;direction:ltr" aria-label="منحنى القوة والزمن">
+<line x1="30" y1="85" x2="310" y2="85" stroke="currentColor" opacity=".5"/><line x1="40" y1="10" x2="40" y2="160" stroke="currentColor" opacity=".5"/>
+<polygon points="40,35 100,85 40,85" fill="#1f5fbf" opacity=".25"/><polygon points="100,85 160,135 160,85" fill="#c2413b" opacity=".25"/><polygon points="160,85 160,135 220,135 220,85" fill="#c2413b" opacity=".15"/>
+<polyline points="40,35 160,135 300,135" fill="none" stroke="#1f5fbf" stroke-width="3"/>
+<text x="20" y="39" font-size="12" fill="currentColor">10</text><text x="14" y="139" font-size="12" fill="currentColor">-10</text>
+<text x="96" y="80" font-size="12" fill="currentColor">2</text><text x="156" y="80" font-size="12" fill="currentColor">4</text><text x="216" y="80" font-size="12" fill="currentColor">6</text><text x="290" y="80" font-size="12" fill="currentColor">t(s)</text><text x="44" y="18" font-size="12" fill="currentColor">F(N)</text>
+</svg></div>
+<div class="steps">
+<div class="s">(1) من 0 إلى 4: مثلث موجب مساحته $\tfrac12(2)(10)=+10$ ومثلث سالب $\tfrac12(2)(-10)=-10$ → $I_{0\to4}=0$</div>
+<div class="s">من 0 إلى 6: نضيف مستطيل $(-10)(2)=-20$ → $I_{0\to6}=-20\ \text{N}\cdot\text{s}$</div>
+<div class="s">(2) أكبر سرعة لما القوة تصير صفر وتبدأ تعكس، أي عند $t=2\,\text{s}$: $\Delta P=+10 \Rightarrow v = 5+\dfrac{10}{2} = 10\ \text{m/s}$</div>
+<div class="s">(3) الزخم الابتدائي $P_i = 2\times5=10$. عند $t=4$ رجع زخمه $10$ (الدفع صفر). يحتاج دفع $-10$ إضافي من القوة $-10\,\text{N}$ → $\Delta t = 1\,\text{s}$ → <b>يتوقف عند $t=5\,\text{s}$</b></div>
+<div class="s">(4) $\bar F = \dfrac{\Delta P}{\Delta t} = \dfrac{0-10}{5} = -2\ \text{N}$</div>
+</div></div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- محاكاة البيضة --- */
+(function(){
+  const cv=document.getElementById('cvEgg'), sim=document.getElementById('simEgg'), ro=document.getElementById('roEgg');
+  let V={};
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,240), m=0.06, v=Math.sqrt(2*10*V.h), dP=m*v, dt=V.t, Favg=dP/dt, peak=Math.PI*dP/(2*dt);
+    const L=46,R=w-14,T=16,B=h-34, tmax=0.1, Fmax=60;
+    ctx.clearRect(0,0,w,h); ctx.font='12px sans-serif'; ctx.fillStyle=cssv('--muted'); ctx.strokeStyle=cssv('--line'); ctx.lineWidth=1;
+    for(let i=0;i<=4;i++){const y=B-(B-T)*i/4; ctx.beginPath();ctx.moveTo(L,y);ctx.lineTo(R,y);ctx.stroke(); ctx.fillText((Fmax*i/4)+'',8,y+4);}
+    for(let i=0;i<=5;i++){const x=L+(R-L)*i/5; ctx.fillText((tmax*i/5).toFixed(2),x-10,B+16);}
+    ctx.fillText('F (N)',8,T-4); ctx.fillText('t (s)',R-30,B+30);
+    const X=t=>L+(R-L)*t/tmax, Y=F=>B-(B-T)*Math.min(F,Fmax*1.05)/Fmax;
+    // عتبة الكسر
+    ctx.setLineDash([6,5]); ctx.strokeStyle=cssv('--bad'); ctx.beginPath(); ctx.moveTo(L,Y(20)); ctx.lineTo(R,Y(20)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle=cssv('--bad'); ctx.fillText('حد الكسر ≈ 20 N',R-110,Y(20)-6);
+    // متوسط القوة مستطيل
+    ctx.fillStyle=cssv('--warm'); ctx.globalAlpha=.18; ctx.fillRect(X(0),Y(Favg),X(dt)-X(0),B-Y(Favg)); ctx.globalAlpha=1;
+    // المنحنى
+    ctx.beginPath(); ctx.moveTo(X(0),B);
+    for(let i=0;i<=80;i++){const t=dt*i/80; ctx.lineTo(X(t),Y(peak*Math.sin(Math.PI*t/dt)));}
+    ctx.lineTo(X(dt),B); ctx.closePath(); ctx.fillStyle=cssv('--accent'); ctx.globalAlpha=.25; ctx.fill(); ctx.globalAlpha=1;
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=2.5; ctx.stroke();
+    if(peak>Fmax){ctx.fillStyle=cssv('--accent'); ctx.fillText('↑ القمة '+fmt(peak,0)+' N (خارج الرسم)',X(dt)+6,T+12);}
+    const broke=Favg>20;
+    ro.innerHTML=`<span class="r">سرعة الاصطدام: <b>${fmt(v)} m/s</b></span><span class="r">التغير بالزخم (الدفع): <b>${fmt(dP,3)} N·s</b></span><span class="r">متوسط القوة: <b>${fmt(Favg,1)} N</b></span><span class="r" style="background:var(${broke?'--bad-soft':'--good-soft'})">${broke?'💥 البيضة انكسرت!':'🥚 البيضة سليمة'}</span>`;
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+/* --- محاكاة الارتداد --- */
+(function(){
+  const cv=document.getElementById('cvRec'), sim=document.getElementById('simRecoil'), ro=document.getElementById('roRec');
+  let V={}, x=0, run=false, raf;
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,170), cx=w/2, y=h-50;
+    ctx.clearRect(0,0,w,h);
+    ctx.strokeStyle=cssv('--line'); ctx.lineWidth=3; ctx.beginPath(); ctx.moveTo(10,y+30); ctx.lineTo(w-10,y+30); ctx.stroke();
+    const v2=V.m1*V.v1/V.m2, s=40; // px لكل m/s لكل ثانية
+    const w1=30+V.m1*6, w2=30+V.m2*6;
+    const x1=cx-6-w1 - V.v1*x*s, x2=cx+6 + v2*x*s;
+    // النابض
+    if(!run && x===0){ctx.strokeStyle=cssv('--warm');ctx.lineWidth=2;ctx.beginPath();for(let i=0;i<=8;i++)ctx.lineTo(cx-6+12*i/8,y+(i%2?-8:8));ctx.stroke();}
+    const cart=(x0,ww,c,lbl)=>{ctx.fillStyle=c;ctx.fillRect(x0,y-20,ww,40);ctx.fillStyle=cssv('--ink');ctx.beginPath();ctx.arc(x0+10,y+24,6,0,7);ctx.arc(x0+ww-10,y+24,6,0,7);ctx.fill();ctx.fillStyle='#fff';ctx.font='bold 13px sans-serif';ctx.textAlign='center';ctx.fillText(lbl,x0+ww/2,y+5);ctx.textAlign='start';};
+    cart(x1,w1,cssv('--accent'),V.m1+' kg'); cart(x2,w2,cssv('--warm'),V.m2+' kg');
+    if(x>0){arrow(ctx,x1+w1/2,y-34,x1+w1/2-V.v1*14,y-34,cssv('--accent')); arrow(ctx,x2+w2/2,y-34,x2+w2/2+v2*14,y-34,cssv('--warm'));}
+    const p1=-V.m1*V.v1, p2=V.m2*v2, K1=.5*V.m1*V.v1**2, K2=.5*V.m2*v2**2;
+    ro.innerHTML=`<span class="r">$v_2$ = <b>${fmt(v2)} m/s</b></span><span class="r">$P_1$ = <b>${fmt(p1)}</b></span><span class="r">$P_2$ = <b>+${fmt(p2)}</b></span><span class="r">المجموع = <b>${fmt(p1+p2)} kg·m/s</b></span><span class="r">$K_1$ = <b>${fmt(K1)} J</b></span><span class="r">$K_2$ = <b>${fmt(K2)} J</b></span>`;
+    renderMath(ro);
+    if(x1+w1<0 && x2>w) run=false;
+  }
+  function loop(){ if(!run) return; x+=1/60; draw(); raf=requestAnimationFrame(loop); }
+  document.getElementById('recGo').onclick=()=>{ if(run) return; x=0.001; run=true; loop(); };
+  document.getElementById('recReset').onclick=()=>{ run=false; cancelAnimationFrame(raf); x=0; draw(); };
+  bindRanges(sim,v=>{V=v; run=false; x=0; draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz1',[
+ {q:'أي الكميات الآتية تمثل (المعدل الزمني للتغير في الزخم)؟', o:['الدفع','الشغل','القوة','التسارع'], a:2, e:'$F=\\dfrac{\\Delta P}{\\Delta t}$ — الصيغة العامة لقانون نيوتن الثاني.'},
+ {q:'جسم كتلته $2\\,\\text{kg}$ يتحرك أفقياً بسرعة $4\\,\\text{m/s}$ اصطدم بحائط وارتد بنفس السرعة. مقدار الدفع على الحائط بوحدة $\\text{N}\\cdot\\text{s}$:', o:['8','16','0','32'], a:1, e:'$\\Delta P = 2(-4-4) = -16$ ، المقدار $16\\,\\text{N}\\cdot\\text{s}$. انتبه: السرعة غيّرت اتجاهها.'},
+ {q:'إذا مثّلنا الزخم (صادي) مع الزمن (سيني)، فإن ميل المنحنى يمثل:', o:['الزخم','مقلوب الدفع','الطاقة الحركية','القوة'], a:3, e:'الميل $=\\dfrac{\\Delta P}{\\Delta t} = F$.'},
+ {q:'جسم كتلته $0.5\\,\\text{kg}$ سقط من السكون من ارتفاع $180\\,\\text{cm}$. مقدار زخمه عند وصوله الأرض بوحدة $\\text{kg}\\cdot\\text{m/s}$:', o:['5','6','3','9'], a:2, e:'$v=\\sqrt{2gh}=\\sqrt{2(10)(1.8)}=6\\,\\text{m/s}$ ، $P=0.5\\times6=3$.'},
+ {q:'قمر صناعي كتلته $m$ يدور بسرعة ثابتة المقدار $v$. مقدار التغير في زخمه لدى اجتيازه نصف المدار:', o:['$0$','$1\\,mv$','$mv$ (نصف دورة)','$2mv$'], a:3, e:'بعد نصف دورة تنعكس السرعة: $\\Delta P = m(-v) - m(v) = -2mv$ ، المقدار $2mv$.'},
+ {q:'جسم كتلته $4\\,\\text{kg}$ يتحرك بسرعة $2\\,\\text{m/s}$ أثرت عليه قوة $8\\,\\text{N}$ بنفس اتجاه حركته لمدة $5\\,\\text{s}$. كم يصبح زخمه؟', o:['32','8','40','48'], a:3, e:'$P_f = P_i + F\\Delta t = 8 + 40 = 48\\,\\text{kg}\\cdot\\text{m/s}$.'},
+ {q:'كرة كتلتها $0.2\\,\\text{kg}$ تقترب من مضرب بسرعة $40\\,\\text{m/s}$ وترتد بسرعة $50\\,\\text{m/s}$، ودام التلامس $0.2\\,\\text{s}$. متوسط القوة بوحدة N:', o:['18','10','90','2'], a:2, e:'$\\Delta P = 0.2(50-(-40)) = 18$ ، $F = 18/0.2 = 90\\,\\text{N}$.'},
+ {q:'في منحنى (القوة – الزمن)، المساحة تحت المنحنى تمثل:', o:['التغير في السرعة','التسارع','الدفع','الزخم'], a:2, e:'المساحة $= F\\Delta t$ = الدفع (ويساوي التغير في الزخم وليس الزخم نفسه).'},
+ {q:'رجل كتلته $70\\,\\text{kg}$ على أرض جليدية دفع ولداً ساكناً كتلته $50\\,\\text{kg}$. التغير في زخم الرجل والولد معاً:', o:['0','100','140','240'], a:0, e:'القوى بينهما داخلية، والنظام معزول → الزخم الكلي محفوظ والتغير صفر.'},
+ {q:'إذا علمت مقدار الدفع المؤثر على جسم كتلته $m$، فأي مما يأتي تستطيع حسابه؟', o:['سرعته الابتدائية','تسارعه','سرعته النهائية','التغير في سرعته'], a:3, e:'$I = m\\Delta v \\Rightarrow \\Delta v = I/m$. لا نعرف الزمن فلا نعرف التسارع.'},
+ {q:'قذيفة كتلتها $2\\,\\text{kg}$ انطلقت أفقياً بسرعة $200\\,\\text{m/s}$ من مدفع ساكن كتلته $500\\,\\text{kg}$. سرعة ارتداد المدفع:', o:['1.25','0.75','0.8','2.5'], a:2, e:'$500v = 2\\times200 \\Rightarrow v = 0.8\\,\\text{m/s}$.'}
+],'ch1');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>

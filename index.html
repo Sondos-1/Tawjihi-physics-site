@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="كتاب الفيزياء للصف الثاني عشر (فلسطين) بنسخة تفاعلية: شرح مبسط، محاكاة، أمثلة محلولة خطوة بخطوة، واختبارات ذاتية.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="كتاب الفيزياء للصف الثاني عشر (فلسطين) بنسخة تفاعلية: شرح مبسط، محاكاة، أمثلة محلولة خطوة بخطوة، واختبارات ذاتية.">
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body data-root="">
+<header class="topbar"></header>
+
+<section class="hero">
+  <div>
+    <div class="kicker" style="color:var(--accent);font-weight:600">الصف الثاني عشر · فلسطين</div>
+    <h1>الفيزياء… بس بطريقة بتفهمها 💡</h1>
+    <p class="lead">كتاب الفيزياء للتوجيهي كاملاً، بنسخة تفاعلية: كل فكرة مشروحة ببساطة، كل قانون معه أمثلة محلولة <b>خطوة بخطوة</b>، محاكاة تلعب فيها بالأرقام وتشوف الفيزياء قدامك، وأسئلة الكتاب كلها مع الحلول.</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+      <a class="btn" style="text-decoration:none;padding:10px 22px" id="cta" href="chapters/ch1.html">ابدأ من الفصل الأول ←</a>
+      <a class="btn ghost" style="text-decoration:none;padding:10px 22px" href="#units">تصفّح الفصول</a>
+      <a class="btn ghost" style="text-decoration:none;padding:10px 22px" href="#bank">📝 أسئلة وزارية</a>
+      <a class="btn ghost" style="text-decoration:none;padding:10px 22px" href="laws.html">∑ ورقة القوانين</a>
+    </div>
+    <div class="howto">
+      <div>🧭 <b>اقرأ القسم</b> — الفكرة ببساطة أولاً، ثم التعريف والقانون.</div>
+      <div>🎛️ <b>جرّب المحاكاة</b> — حرّك المنزلقات وشوف شو بيتغير.</div>
+      <div>✍️ <b>حل الأمثلة</b> — اكشف الحل خطوة خطوة بعد ما تحاول.</div>
+      <div>✅ <b>اختبر نفسك</b> — علامتك وتقدّمك بينحفظوا على جهازك.</div>
+    </div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 400 320" direction="ltr" style="display:block;width:100%;direction:ltr">
+      <defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="var(--accent)" stop-opacity=".35"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient></defs>
+      <circle cx="200" cy="160" r="140" fill="url(#g)"/>
+      <g fill="none" stroke="var(--accent)" stroke-width="2.2" opacity=".85">
+        <ellipse cx="200" cy="160" rx="135" ry="48"><animateTransform attributeName="transform" type="rotate" from="0 200 160" to="360 200 160" dur="40s" repeatCount="indefinite"/></ellipse>
+        <ellipse cx="200" cy="160" rx="135" ry="48" transform="rotate(60 200 160)"><animateTransform attributeName="transform" type="rotate" from="60 200 160" to="420 200 160" dur="40s" repeatCount="indefinite"/></ellipse>
+        <ellipse cx="200" cy="160" rx="135" ry="48" transform="rotate(120 200 160)"><animateTransform attributeName="transform" type="rotate" from="120 200 160" to="480 200 160" dur="40s" repeatCount="indefinite"/></ellipse>
+      </g>
+      <circle cx="200" cy="160" r="16" fill="var(--warm)"/><circle cx="192" cy="154" r="7" fill="var(--yellow)"/><circle cx="207" cy="165" r="7" fill="var(--yellow)"/><circle cx="206" cy="152" r="6" fill="var(--muted)"/>
+      <circle r="7" fill="var(--accent)"><animateMotion dur="3s" repeatCount="indefinite" path="M65,160 a135,48 0 1,0 270,0 a135,48 0 1,0 -270,0"/></circle>
+      <path d="M20 290 q20 -24 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="var(--warm)" stroke-width="2.5" opacity=".7"/>
+      <text x="22" y="40" font-size="22" fill="var(--muted)" font-family="serif" font-style="italic">E = hf</text>
+      <text x="300" y="44" font-size="20" fill="var(--muted)" font-family="serif" font-style="italic">F = qv×B</text>
+      <text x="300" y="282" font-size="20" fill="var(--muted)" font-family="serif" font-style="italic">τ = Iα</text>
+    </svg>
+  </div>
+</section>
+
+<main class="units" id="units"></main>
+
+<section class="extra" id="bank">
+  <h2><span class="num">للمراجعة</span>قبل الامتحان</h2>
+  <div class="xgrid">
+    <a class="xcard laws" href="laws.html"><span class="xi">∑</span><h3>ورقة القوانين</h3><p>كل قوانين المنهاج مرتبة حسب الوحدة، مع الرموز والوحدات. جاهزة للطباعة على A4.</p><span class="go">افتح ←</span></a>
+    <div class="xcard bankcard"><span class="xi">📝</span><h3>بنك الأسئلة الوزارية</h3><p>أسئلة امتحانات الثانوية العامة (2017–2025) مصنفة حسب الفصل، مع الإجابات والشرح. اختيار من متعدد تفاعلي ومسائل بحلول.</p>
+      <div class="bl" id="banklinks"></div></div>
+  </div>
+</section>
+
+<footer class="f">
+  مبني على كتاب <b>الفيزياء للصف الثاني عشر</b> المقرر من وزارة التربية والتعليم الفلسطينية — نسخة تعليمية تفاعلية مجانية وغير رسمية.<br>
+  إذا لقيت خطأ أو عندك اقتراح، افتح Issue على GitHub. 💙
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const root=document.getElementById('units'); let next=null;
+  [1,2,3,4].forEach(u=>{
+    const chs=CHAPTERS.filter(c=>c.unit===u);
+    const sec=document.createElement('section'); sec.className='unit';
+    sec.innerHTML=`<h2><span class="num">الوحدة ${['','الأولى','الثانية','الثالثة','الرابعة'][u]}</span>${UNITS[u]}</h2><div class="cards"></div>`;
+    const cards=sec.querySelector('.cards');
+    chs.forEach(c=>{
+      const pct=store.get('pct:'+c.id,0), sc=store.get('score:'+c.id,null);
+      if(next===null && pct<100) next=c;
+      const a=document.createElement('a'); a.className='ccard'; a.href='chapters/'+c.id+'.html';
+      a.innerHTML=`<span class="ic">${icon(c.id)}</span><span class="k">${c.n}</span><h3>${c.t}</h3><p>${c.d}</p>
+        <div class="foot"><div class="bar"><i style="width:${pct}%"></i></div>
+        <div class="meta"><span>التقدّم: ${pct}%</span><span>${sc!==null?'أفضل علامة: '+sc+'%':'لم تختبر بعد'}</span></div></div>`;
+      cards.append(a);
+    });
+    root.append(sec);
+  });
+  const bl=document.getElementById('banklinks');
+  CHAPTERS.filter(c=>c.unit<=3).forEach(c=>{ const st=store.get('bank:'+c.id,{}), n=Object.keys(st).length;
+    const a=document.createElement('a'); a.href='bank/'+c.id+'.html'; a.innerHTML=`${icon(c.id,'ico sm')}<span>${c.t}</span>${n?`<small>${n} ✓</small>`:''}`; bl.append(a); });
+  const anyProgress=CHAPTERS.some(c=>store.get('pct:'+c.id,0)>0);
+  if(anyProgress && next){ const b=document.getElementById('cta'); b.href='chapters/'+next.id+'.html'; b.textContent='أكمل من حيث توقفت: '+next.t+' ←'; }
+});
+</script>
+</body>
+</html>

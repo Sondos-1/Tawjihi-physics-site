@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الفصل الرابع: التيار الكهربائي والمقاومة | فيزياء التوجيهي التفاعلية</title>
+<meta name="description" content="شرح تفاعلي للتيار الكهربائي والسرعة الانسياقية وكثافة التيار والمقاومية وقانون أوم والقدرة الكهربائية - فيزياء توجيهي">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#00477e">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:title" content="الفصل الرابع: التيار الكهربائي والمقاومة | فيزياء التوجيهي التفاعلية">
+<meta property="og:description" content="شرح تفاعلي للتيار الكهربائي والسرعة الانسياقية وكثافة التيار والمقاومية وقانون أوم والقدرة الكهربائية - فيزياء توجيهي">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<link rel="stylesheet" href="../assets/style.css">
+<script defer src="../assets/app.js"></script>
+</head>
+<body data-ch="ch4" data-root="../">
+<header class="topbar"></header>
+<div class="layout">
+<nav class="toc" aria-label="محتويات الفصل"></nav>
+<main class="chapter">
+<!--title:الفصل الرابع: التيار الكهربائي والمقاومة-->
+<!--desc:شرح تفاعلي للتيار الكهربائي والسرعة الانسياقية وكثافة التيار والمقاومية وقانون أوم والقدرة الكهربائية - فيزياء توجيهي-->
+<header class="chap-head">
+  <div class="kicker">الوحدة الثانية: الكهرباء المتحركة · الفصل الرابع</div>
+  <h1>التيار الكهربائي والمقاومة</h1>
+  <p>الماء بيجري بالأنابيب بسبب فرق الضغط (أو فرق الارتفاع)… والشحنات بتجري بالأسلاك بسبب <b>فرق الجهد</b>. هذا التشبيه رح يرافقنا طول الوحدة: البطارية = مضخة، التيار = كمية الماء المارة، المقاومة = ضيق الأنبوب.</p>
+  <ul class="goals">
+    <li>التعبير رياضياً عن شدة التيار وكثافته بدلالة السرعة الانسياقية.</li>
+    <li>التمييز بين المقاومة الخطية (الأومية) واللاخطية من منحنى (الجهد–التيار).</li>
+    <li>تطبيق صيغ قانون أوم، وحساب المقاومة المكافئة، والطاقة الحرارية الناتجة عن التيار.</li>
+  </ul>
+</header>
+
+<section id="s1">
+<h2>4-1 التيار الكهربائي</h2>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>شدة التيار الكهربائي:</b> معدل تدفق الشحنة الكهربائية بالنسبة للزمن (عبر مقطع الموصل).
+</div>
+<div class="box law"><div class="lbl">قانون (4-1)</div>
+$$I=\frac{\Delta Q}{\Delta t}$$
+<div class="sym"><span>$I$: بالأمبير $\text{A}=\text{C/s}$</span><span>كمية <b>قياسية</b> (لأن الشحنة والزمن قياسيتان)</span><span>تقاس بالأميتر</span></div>
+</div>
+<div class="box tip"><div class="lbl">⭐ التيار الاصطلاحي</div>
+اتجاهه = اتجاه حركة <b>الشحنات الموجبة</b>: من الجهد المرتفع للمنخفض، أي من القطب الموجب للبطارية إلى السالب عبر السلك الخارجي. أما الإلكترونات فتتحرك فعلياً <b>بعكسه</b>.<br>
+إذا تحركت شحنات موجبة وسالبة معاً (مثل المحاليل الكهرلية): الشحنة الكلية = مجموع مقادير الشحنات الموجبة والسالبة (دون تعويض الإشارة)، لأن حركتهما المتعاكسة تعطي تياراً بنفس الاتجاه.
+</div>
+<div class="example"><div class="eh"><span>مثال (1)</span><span>عدد الإلكترونات</span></div>
+<div class="eq">شدة التيار في جهاز راديو $0.22\,\text{A}$. ما عدد الإلكترونات التي تمر فيه خلال $4.5\,\text{s}$؟</div>
+<div class="steps">
+<div class="s">$\Delta Q=I\Delta t=0.22\times4.5=0.99\ \text{C}$</div>
+<div class="s">$N=\dfrac{\Delta Q}{q_e}=\dfrac{0.99}{1.6\times10^{-19}}\approx6.2\times10^{18}$ إلكترون</div>
+</div></div>
+
+<h3>السرعة الانسياقية</h3>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+الإلكترونات الحرة بالسلك أصلاً بتتحرك عشوائياً بسرعة هائلة (حوالي $10^6\,\text{m/s}$) بكل الاتجاهات — بس بدون إزاحة صافية. لما نوصل بطارية، بيتكوّن مجال كهربائي يدفعها <b>بعكس اتجاه المجال</b>، فبتصير تنساق ببطء شديد (أجزاء من المليمتر بالثانية!) وهي بتتصادم مع ذرات الفلز بحركة متعرجة.
+</div>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>السرعة الانسياقية:</b> متوسط سرعة الشحنات الحرة التي تشكّل التيار الكهربائي في موصل.
+</div>
+<div class="box life"><div class="lbl">🔥 ليش السلك بيسخن؟</div>
+بتصادم الإلكترونات مع ذرات الفلز، بتنقلها جزء من طاقتها الحركية → يزيد اتساع اهتزاز الذرات → ترتفع درجة حرارة الفلز.
+</div>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>العلاقة بين التيار والسرعة الانسياقية</span></div>
+<div class="eq">موصل مساحة مقطعه $A$، عدد الشحنات الحرة في وحدة الحجم $n_e$، شحنة كل منها $q_e$، تنساق بسرعة $v_d$.</div>
+<div class="steps">
+<div class="s">خلال $\Delta t$ تقطع الشحنات مسافة $\Delta x=v_d\Delta t$ ، فحجم الجزء الذي يعبر المقطع $=A\,\Delta x=Av_d\Delta t$</div>
+<div class="s">عدد الشحنات فيه $=n_eAv_d\Delta t$ ← $\Delta Q=n_eAv_d\Delta t\,q_e$</div>
+<div class="s">$I=\dfrac{\Delta Q}{\Delta t}\ \Rightarrow\ \boxed{I=n_eAv_dq_e}$ … (4-2)</div>
+</div></div>
+
+<div class="sim" id="simWire">
+<div class="sh"><span class="tag">محاكاة</span><b>مختبر السلك: المقاومة، التيار، والسرعة الانسياقية</b></div>
+<div class="sb">
+<div style="margin-bottom:10px"><span class="seg" id="wMat"><button data-i="0" class="on">نحاس</button><button data-i="1">ألمنيوم</button><button data-i="2">حديد</button><button data-i="3">نيكروم</button></span></div>
+<canvas id="cvWire"></canvas>
+<div class="controls">
+  <div class="ctl"><label>فرق الجهد $V$ <output for="wV"></output></label><input type="range" id="wV" name="V" min="0" max="12" step="0.5" value="3" data-u="V"></div>
+  <div class="ctl"><label>طول السلك $L$ <output for="wL"></output></label><input type="range" id="wL" name="L" min="1" max="20" step="1" value="5" data-u="m"></div>
+  <div class="ctl"><label>مساحة المقطع $A$ <output for="wA"></output></label><input type="range" id="wA" name="A" min="0.1" max="2" step="0.1" value="0.5" data-u="mm²"></div>
+</div>
+<div class="readout" id="roWire"></div>
+<p class="note">النقاط الزرقاء إلكترونات (حركتها هنا مكبّرة جداً للتوضيح). لاحظ: الإلكترونات بتنساق <b>بعكس</b> سهم التيار الاصطلاحي. قلّل المساحة ← تزيد المقاومة وتزيد السرعة الانسياقية لنفس التيار.</p>
+</div></div>
+
+<details class="check"><summary>كيف تفسّر الإضاءة الفورية للمصباح بينما السرعة الانسياقية صغيرة جداً؟</summary><div class="a">
+لأن السلك ممتلئ أصلاً بالإلكترونات الحرة، ولحظة إغلاق الدارة ينتشر <b>المجال الكهربائي</b> عبر السلك بسرعة قريبة من سرعة الضوء $(3\times10^8\,\text{m/s})$، فتبدأ جميع الإلكترونات (بما فيها التي داخل المصباح) بالانسياق في نفس اللحظة تقريباً. تماماً مثل خرطوم ممتلئ بالماء: أول ما تفتح الحنفية يطلع الماء من الطرف الثاني فوراً.</div></details>
+
+<div class="example"><div class="eh"><span>مثال (2)</span><span>السرعة الانسياقية في النحاس</span></div>
+<div class="eq">احسب السرعة الانسياقية في سلك نحاس نصف قطره $1\,\text{cm}$ يمر فيه تيار $200\,\text{A}$، علماً أن $n_e=8.5\times10^{28}\,\text{e/m}^3$.</div>
+<div class="steps">
+<div class="s">$A=\pi r^2=3.14\times(0.01)^2=3.14\times10^{-4}\ \text{m}^2$</div>
+<div class="s">$v_d=\dfrac{I}{n_eAq_e}=\dfrac{200}{(8.5\times10^{28})(3.14\times10^{-4})(1.6\times10^{-19})}$</div>
+<div class="s"><span class="ans-final">$v_d\approx4.6\times10^{-5}\ \text{m/s}$ (أقل من عُشر مليمتر بالثانية!)</span></div>
+</div></div>
+</section>
+
+<section id="s2">
+<h2>4-2 المقاومة الكهربائية وقانون أوم</h2>
+<div class="box law"><div class="lbl">المقاومة والمقاومية</div>
+$$R=\rho\frac{L}{A}$$
+<div class="sym"><span>$R$: المقاومة $(\Omega)$</span><span>$\rho$: المقاومية $(\Omega\cdot\text{m})$</span><span>$L$: الطول</span><span>$A$: مساحة المقطع</span></div>
+</div>
+<div class="box def"><div class="lbl">📘 تعريفات</div>
+<b>المقاومة:</b> مقياس لإعاقة الموصل لمرور التيار الكهربائي.<br>
+<b>المقاومية $\rho$:</b> مقاومة موصل منتظم المقطع طوله $1\,\text{m}$ ومساحة مقطعه $1\,\text{m}^2$. تعتمد على <b>نوع المادة ودرجة الحرارة فقط</b> (لا على الطول أو المساحة).<br>
+<b>الموصلية $\sigma$:</b> مقلوب المقاومية $\sigma=\dfrac1\rho$ ، ووحدتها $(\Omega\cdot\text{m})^{-1}$.
+</div>
+<div class="box law"><div class="lbl">قانون أوم (4-3)</div>
+$$V=IR$$
+<p style="margin:0;font-size:.95rem">التيار المار في موصل فلزي يتناسب طردياً مع فرق الجهد بين طرفيه عند ثبوت درجة حرارته. وحدة المقاومة $\text{V/A}=\Omega$ (أوم).</p>
+</div>
+
+<h3>كثافة التيار</h3>
+<div class="box def"><div class="lbl">📘 تعريف</div>
+<b>كثافة التيار $J$:</b> شدة التيار لكل وحدة مساحة من مقطع الموصل. كمية <b>متجهة</b> باتجاه المجال (حركة الشحنات الموجبة)، ووحدتها $\text{A/m}^2$.
+</div>
+<div class="box law"><div class="lbl">قانونا (4-4) و (4-5)</div>
+$$J=\frac IA \qquad\qquad J=n_ev_dq_e$$
+</div>
+<div class="box idea"><div class="lbl">💡 موصل غير منتظم المقطع</div>
+التيار <b>نفسه</b> في كل المقاطع (الشحنات ما بتختفي ولا بتتراكم). لكن بالمقطع الضيق: $J$ أكبر و $v_d$ أكبر — مثل الماء بيسرع بالجزء الضيق من النهر.
+</div>
+<div class="example"><div class="eh"><span>مثال (3)</span><span>سلكان موصولان</span></div>
+<div class="eq">وُصل سلك ألمنيوم قطره $2.5\,\text{mm}$ مع سلك نحاس قطره $1.8\,\text{mm}$، ويمر فيهما تيار $1.3\,\text{A}$. ما كثافة التيار في كل منهما؟</div>
+<div class="steps">
+<div class="s">انتبه: المعطى <b>قطر</b> ← نصف القطر نصفه. $A_{Al}=3.14(1.25\times10^{-3})^2\approx4.9\times10^{-6}\ \text{m}^2$</div>
+<div class="s">$J_{Al}=\dfrac{1.3}{4.9\times10^{-6}}\approx2.6\times10^5\ \text{A/m}^2$</div>
+<div class="s">$A_{Cu}=3.14(0.9\times10^{-3})^2\approx2.54\times10^{-6}\ \text{m}^2$ ← $J_{Cu}\approx5.1\times10^5\ \text{A/m}^2$</div>
+</div></div>
+
+<h3>صيغة أخرى لقانون أوم</h3>
+<div class="example"><div class="eh"><span>اشتقاق</span><span>$J=\sigma E$</span></div>
+<div class="steps">
+<div class="s">$V=IR=(JA)\left(\rho\dfrac LA\right)=\rho LJ$ … (1)</div>
+<div class="s">وفي المجال المنتظم داخل السلك: $V=EL$ … (2)</div>
+<div class="s">من (1) و (2): $EL=\rho LJ \Rightarrow E=\rho J \Rightarrow \boxed{J=\sigma E}$ … (4-6)</div>
+</div></div>
+<p>أي: كثافة التيار تتناسب طردياً مع شدة المجال الكهربائي داخل الموصل الفلزي.</p>
+
+<h3>المقاومة الأومية واللاأومية</h3>
+<div class="sim" id="simIV">
+<div class="sh"><span class="tag">محاكاة</span><b>منحنى (الجهد – التيار)</b></div>
+<div class="sb">
+<div style="margin-bottom:10px"><span class="seg" id="ivType"><button data-t="ohm" class="on">مقاومة أومية</button><button data-t="lamp">مصباح (لا أومية)</button><button data-t="diode">ثنائي (لا أومي)</button></span></div>
+<canvas id="cvIV"></canvas>
+<div class="controls"><div class="ctl"><label>فرق الجهد <output for="ivV"></output></label><input type="range" id="ivV" name="V" min="-6" max="12" step="0.25" value="6" data-u="V"></div></div>
+<div class="readout" id="roIV"></div>
+<p class="note">بالأومية: الخط مستقيم يمر بالأصل، والنسبة $V/I$ (المقاومة = مقلوب ميل منحنى I–V) ثابتة ولا تعتمد على مقدار الجهد أو قطبيته. باللاأومية النسبة تتغير.</p>
+</div></div>
+<div class="tblwrap"><table class="tbl">
+<tr><th></th><th>أومية (خطية)</th><th>لا أومية (لا خطية)</th></tr>
+<tr><td>المنحنى</td><td>خط مستقيم يمر بالأصل</td><td>منحنى غير مستقيم</td></tr>
+<tr><td>$V/I$</td><td>ثابتة لكل قيم $V$</td><td>تتغير بتغير $V$</td></tr>
+<tr><td>أمثلة</td><td>الموصلات الفلزية عند ثبوت الحرارة</td><td>المصباح، الثنائي، المقاومة الحرارية، المقاومة الضوئية (تستخدم كمجسات)</td></tr>
+</table></div>
+
+<div class="example"><div class="eh"><span>مثال (4)</span><span>موصل من الفضة</span></div>
+<div class="eq">موصل فضة مساحة مقطعه $0.785\,\text{mm}^2$ يحمل تياراً $1\,\text{A}$، و $n_e=5.86\times10^{28}\,\text{e/m}^3$. احسب: (أ) كثافة التيار. (ب) السرعة الانسياقية.</div>
+<div class="steps">
+<div class="s">$1\,\text{mm}^2=10^{-6}\,\text{m}^2$ ← (أ) $J=\dfrac{1}{0.785\times10^{-6}}\approx1.274\times10^6\ \text{A/m}^2$</div>
+<div class="s">(ب) $v_d=\dfrac{J}{n_eq_e}=\dfrac{1.274\times10^6}{(5.86\times10^{28})(1.6\times10^{-19})}\approx1.36\times10^{-4}\ \text{m/s}$</div>
+</div></div>
+<div class="example"><div class="eh"><span>مثال (5)</span><span>سلك نحاس طويل</span></div>
+<div class="eq">سلك نحاس طوله $100\,\text{m}$ ومساحة مقطعه $1\,\text{mm}^2$ يحمل تياراً $20\,\text{A}$، ومقاومية النحاس $1.72\times10^{-8}\,\Omega\cdot\text{m}$. احسب: (أ) شدة المجال الكهربائي. (ب) فرق الجهد. (ج) المقاومة.</div>
+<div class="steps">
+<div class="s">(أ) $E=\rho J=\rho\dfrac IA=1.72\times10^{-8}\times\dfrac{20}{10^{-6}}=0.344\ \text{V/m}$</div>
+<div class="s">(ب) $V=EL=0.344\times100=34.4\ \text{V}$</div>
+<div class="s">(ج) $R=\dfrac VI=\dfrac{34.4}{20}=1.72\ \Omega$ (تحقق: $\rho L/A=1.72\times10^{-8}\times100/10^{-6}=1.72$ ✔)</div>
+</div></div>
+<details class="check"><summary>موصل $n_e=7.5\times10^{28}\,\text{e/m}^3$ ومساحة مقطعه $4\times10^{-6}\,\text{m}^2$ ويمر فيه $2.5\,\text{A}$. ما السرعة الانسياقية؟</summary><div class="a">
+$v_d=\dfrac{2.5}{(7.5\times10^{28})(4\times10^{-6})(1.6\times10^{-19})}=\dfrac{2.5}{4.8\times10^4}\approx5.2\times10^{-5}\ \text{m/s}$</div></details>
+</section>
+
+<section id="s3">
+<h2>4-3 الأثر الحراري للتيار والقدرة الكهربائية</h2>
+<div class="box idea"><div class="lbl">💡 الفكرة ببساطة</div>
+الشحنة وهي ماشية بالمقاومة من جهد عالي لجهد منخفض بتخسر طاقة وضع. هالطاقة ما بتضيع… بتتحول لحرارة (السخان)، ضوء (المصباح)، طاقة كيميائية (شحن البطارية)… <b>والقدرة</b> هي معدل هالتحويل.
+</div>
+<div class="box law"><div class="lbl">القدرة الكهربائية (4-8)</div>
+$$P=\frac{QV}{t}=IV=I^2R=\frac{V^2}{R}$$
+<div class="sym"><span>الوحدة: $\text{J/s}=\text{W}$ (واط)</span></div>
+</div>
+<div class="box def"><div class="lbl">📘 قانون جول</div>
+$P=I^2R$: معدل كمية الحرارة المتولدة في مقاومة فلزية ثابتة يتناسب طردياً مع مربع شدة التيار المار فيها.
+</div>
+<div class="box law"><div class="lbl">الطاقة المستهلكة</div>
+$$E_{th}=Pt=IVt$$
+<p style="margin:0;font-size:.95rem">وبالكيلوواط ساعة: الطاقة $(\text{kWh})$ = القدرة $(\text{kW})$ × الزمن $(\text{h})$ — هذه هي وحدة فاتورة الكهرباء.</p>
+</div>
+<div class="box tip"><div class="lbl">⭐ أي صيغة أستخدم؟</div>
+• لو الجهد ثابت (أجهزة البيت كلها على نفس الجهد): استخدم $P=\dfrac{V^2}{R}$ ← <b>المقاومة الأصغر تستهلك قدرة أكبر</b>.<br>
+• لو التيار ثابت (مقاومات على التوالي): استخدم $P=I^2R$ ← <b>المقاومة الأكبر تستهلك قدرة أكبر</b>.<br>
+• جهاز مكتوب عليه $(220\,\text{V}, 100\,\text{W})$: مقاومته ثابتة $R=V^2/P$ ، فلو شغلته على جهد آخر احسب $R$ أولاً ثم القدرة الجديدة.
+</div>
+<div class="example"><div class="eh"><span>مثال (6)</span><span>الطاقة في مقاومة</span></div>
+<div class="eq">مقاومة $545\,\Omega$ بين نقطتين فرق الجهد بينهما $12\,\text{V}$. ما الطاقة المستنفدة خلال $65\,\text{s}$؟</div>
+<div class="steps"><div class="s">$P=\dfrac{V^2}{R}=\dfrac{144}{545}\approx0.26\ \text{W}$</div><div class="s">$E=Pt=0.26\times65\approx17\ \text{J}$</div></div></div>
+<div class="example"><div class="eh"><span>مثال (7)</span><span>مصباحان على نفس الجهد</span></div>
+<div class="eq">مصباح $5\,\text{W}$ استبدل بآخر $10\,\text{W}$ على نفس فرق الجهد الثابت. في أي الحالتين التيار أكبر؟ وأي المصباحين مقاومته أكبر؟</div>
+<div class="steps">
+<div class="s">$P=IV$ و $V$ ثابت: $\dfrac{I_2}{I_1}=\dfrac{10}{5} \Rightarrow I_2=2I_1$ (تيار المصباح الثاني أكبر)</div>
+<div class="s">$P=\dfrac{V^2}{R}$: $\dfrac{R_1}{R_2}=\dfrac{P_2}{P_1}=2 \Rightarrow R_1=2R_2$ <span class="ans-final">المصباح الأقل قدرة مقاومته أكبر</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>سؤال من الكتاب</span><span>مصباح (220V, 100W)</span></div>
+<div class="eq">احسب: (أ) التيار المار فيه. (ب) تكلفة تشغيله أسبوعاً بمعدل 10 ساعات يومياً (سعر الكيلوواط ساعة 5 قروش). (ج) قدرته إذا شُغّل على $110\,\text{V}$.</div>
+<div class="steps">
+<div class="s">(أ) $I=\dfrac PV=\dfrac{100}{220}\approx0.45\ \text{A}$</div>
+<div class="s">(ب) $E=0.1\,\text{kW}\times(10\times7)\,\text{h}=7\ \text{kWh}$ ← التكلفة $=7\times5=35$ قرشاً</div>
+<div class="s">(ج) $R=\dfrac{220^2}{100}=484\,\Omega$ ← $P=\dfrac{110^2}{484}=25\ \text{W}$ <span class="ans-final">نصف الجهد ← ربع القدرة</span></div>
+</div></div>
+</section>
+
+<section id="s4">
+<h2>4-4 طرق توصيل المقاومات</h2>
+<div class="tblwrap"><table class="tbl">
+<tr><th></th><th>التوالي</th><th>التوازي</th></tr>
+<tr><td>الشكل</td><td>مسار واحد، المقاومات وراء بعض</td><td>عدة مسارات بين نفس النقطتين</td></tr>
+<tr><td>التيار</td><td><b>نفسه</b> في كل المقاومات</td><td>يتجزأ: $I=I_1+I_2+\dots$ (الأصغر مقاومةً تيارها أكبر)</td></tr>
+<tr><td>الجهد</td><td>يتجزأ: $V=V_1+V_2+\dots$ (الأكبر مقاومةً جهدها أكبر)</td><td><b>نفسه</b> على كل المقاومات</td></tr>
+<tr><td>المكافئة</td><td>$R_{eq}=R_1+R_2+R_3$ (أكبر من أكبرها)</td><td>$\dfrac1{R_{eq}}=\dfrac1{R_1}+\dfrac1{R_2}+\dfrac1{R_3}$ (أصغر من أصغرها)</td></tr>
+<tr><td>الاستخدام</td><td>تقليل التيار، تجزئة الجهد</td><td>تجزئة التيار، أجهزة البيت</td></tr>
+</table></div>
+<div class="box tip"><div class="lbl">🧮 اختصارات مفيدة</div>
+مقاومتان على التوازي: $R_{eq}=\dfrac{R_1R_2}{R_1+R_2}$ (الضرب على الجمع). و $n$ مقاومات متساوية $R$ على التوازي: $R_{eq}=\dfrac Rn$.<br>
+القدرة الكلية في أي توصيلة = مجموع قدرات المقاومات.
+</div>
+<div class="box warn"><div class="lbl">⚠️ انتبه لسلك بدون مقاومة!</div>
+إذا وُصل سلك (مقاومته صفر) بين طرفي مقاومة، فهي <b>مقصورة (short)</b>: كل التيار يمر بالسلك ولا يمر فيها شيء ← احذفها من الحساب. ابحث دائماً عن النقاط اللي متصلة بسلك مباشر واعتبرها <b>نقطة واحدة</b>.
+</div>
+<div class="example"><div class="eh"><span>مثال (8)</span><span>مقاومة مكافئة</span></div>
+<div class="eq">في الشكل: من A مقاومة $10\,\Omega$، ثم $6\,\Omega$ و $3\,\Omega$ على التوازي، ثم $4\,\Omega$ إلى B. احسب $R_{AB}$.<div class="circ" data-f="ex8"></div></div>
+<div class="steps">
+<div class="s">$6\,\Omega$ و $3\,\Omega$ توازي: $\dfrac1R=\dfrac13+\dfrac16=\dfrac12 \Rightarrow R=2\,\Omega$</div>
+<div class="s">توالي: $R_{AB}=10+2+4=16\ \Omega$</div>
+</div></div>
+<div class="example"><div class="eh"><span>سؤال من الكتاب</span><span>مربع مقاومات</span></div>
+<div class="eq">مربع: الضلع الأيسر $1\,\Omega$، العلوي $2\,\Omega$، الأيمن $2\,\Omega$، السفلي $4\,\Omega$ بين B (أسفل يسار) و A (أسفل يمين)، وقطر $6\,\Omega$ من B إلى الزاوية العلوية اليمنى. احسب $R_{AB}$.<div class="circ" data-f="sq"></div></div>
+<div class="steps">
+<div class="s">من B إلى الزاوية العلوية اليمنى مساران: (الأيسر + العلوي) $=1+2=3\,\Omega$ ، والقطر $6\,\Omega$ ← توازي $=\dfrac{3\times6}{9}=2\,\Omega$</div>
+<div class="s">ثم الضلع الأيمن $2\,\Omega$ توالي ← $4\,\Omega$</div>
+<div class="s">مع الضلع السفلي $4\,\Omega$ توازي ← <span class="ans-final">$R_{AB}=2\ \Omega$</span></div>
+</div></div>
+</section>
+
+<section id="s5">
+<h2>ملخص الفصل</h2>
+<div class="fgrid">
+<div class="fcard"><small>التيار</small>$I=\dfrac{\Delta Q}{\Delta t}=n_eAv_dq_e$</div>
+<div class="fcard"><small>كثافة التيار</small>$J=\dfrac IA=n_ev_dq_e=\sigma E$</div>
+<div class="fcard"><small>المقاومة</small>$R=\rho\dfrac LA$ ، $\sigma=\dfrac1\rho$</div>
+<div class="fcard"><small>قانون أوم</small>$V=IR$ ، $E=\rho J$</div>
+<div class="fcard"><small>القدرة</small>$P=IV=I^2R=\dfrac{V^2}{R}$</div>
+<div class="fcard"><small>التوصيل</small>توالي: $\sum R$ ، توازي: $\left(\sum\frac1R\right)^{-1}$</div>
+</div>
+</section>
+
+<section id="s6">
+<h2>اختبر نفسك: أسئلة الفصل (س1)</h2>
+<div id="quiz4"></div>
+</section>
+
+<section id="s7">
+<h2>أسئلة الفصل المقالية (مع الحلول)</h2>
+<details class="check"><summary>س2: وضّح المقصود بـ: السرعة الانسياقية، كثافة التيار، الموصلية.</summary><div class="a">
+<b>السرعة الانسياقية:</b> متوسط سرعة الشحنات الحرة التي تشكّل التيار في الموصل.<br><b>كثافة التيار:</b> شدة التيار لكل وحدة مساحة من مقطع الموصل $(I/A)$.<br><b>الموصلية:</b> النسبة بين كثافة التيار وشدة المجال الكهربائي في الموصل $(J/E)$، وهي مقلوب المقاومية.</div></details>
+<details class="check"><summary>س3: علّل (أ) السرعة الانسياقية للإلكترونات صغيرة جداً. (ب) تضيء المصابيح فور غلق الدارة رغم بعدها عن المصدر.</summary><div class="a">
+(أ) لأن الإلكترونات تتصادم بشكل متكرر جداً مع ذرات الفلز فتفقد طاقتها وتتغير اتجاهاتها، فيكون متوسط إزاحتها الصافية باتجاه الموصل صغيراً، كما أن عددها في وحدة الحجم كبير جداً.<br>
+(ب) لأن المجال الكهربائي ينتشر في السلك بسرعة قريبة من سرعة الضوء، فتبدأ الإلكترونات الموجودة أصلاً في كل أجزاء الدارة بالانسياق معاً لحظياً.</div></details>
+<details class="check"><summary>س4: ثلاث مقاومات كل منها $12\,\Omega$. كيف توصلها لتعطي: $4\,\Omega$ ، $18\,\Omega$ ، $36\,\Omega$؟</summary><div class="a">
+$4\,\Omega$: الثلاث على التوازي $(12/3)$.<br>$18\,\Omega$: اثنتان على التوازي $(6\,\Omega)$ ثم الثالثة معهما على التوالي $(6+12)$.<br>$36\,\Omega$: الثلاث على التوالي.</div></details>
+
+<div class="example"><div class="eh"><span>س5</span><span>دارة فيها مقاومة مقصورة</span></div>
+<div class="eq">في الشكل: من A مقاومة $2\,\Omega$ إلى نقطة P. من P ثلاثة مسارات إلى النقطة N: $6\,\Omega$ (عمودية)، $12\,\Omega$ (قطرية)، $4\,\Omega$ (عبر الضلع العلوي). أسفل الـ $6\,\Omega$ سلك أفقي يصل مباشرة إلى N، ثم $10\,\Omega$ إلى الأسفل وسلك سفلي يعود إلى الخط الأيمن المتصل بـ N، ثم $3\,\Omega$ إلى B.<div class="circ" data-f="q5"></div></div>
+<div class="steps">
+<div class="s">طرفا الـ $10\,\Omega$ متصلان كلاهما بالنقطة N بأسلاك ← <b>مقصورة</b>، نحذفها.</div>
+<div class="s">بين P و N: $6\,\Omega$ و $12\,\Omega$ و $4\,\Omega$ توازي: $\dfrac1R=\dfrac16+\dfrac1{12}+\dfrac14=\dfrac{6}{12} \Rightarrow R=2\,\Omega$</div>
+<div class="s"><span class="ans-final">$R_{AB}=2+2+3=7\ \Omega$</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س6</span><span>دارة بمفتاحين</span></div>
+<div class="eq">من الشكل (بعد تتبع الأسلاك): بين A و B فرعان متوازيان:<br>• <b>الفرع العلوي:</b> [$3\,\Omega$ توازي مع ($4\,\Omega$ + $2\,\Omega$ عبر $S_2$)] ثم $3\,\Omega$.<br>• <b>الفرع السفلي:</b> [($4\,\Omega$ + $5\,\Omega$) يقصرها $S_1$ عند إغلاقه] ثم $3\,\Omega$.<br>احسب $R_{AB}$ في الحالات الأربع.<div class="circ" data-f="q6"></div></div>
+<div class="steps">
+<div class="s">(أ) كلاهما مفتوح: العلوي $3+3=6$ ، السفلي $9+3=12$ ← $\dfrac{6\times12}{18}=4\ \Omega$</div>
+<div class="s">(ب) $S_1$ مغلق فقط: السفلي $0+3=3$ ← $\dfrac{6\times3}{9}=2\ \Omega$</div>
+<div class="s">(ج) $S_2$ مغلق فقط: العلوي $(3\parallel6=2)+3=5$ ، السفلي $12$ ← $\dfrac{5\times12}{17}\approx3.5\ \Omega$</div>
+<div class="s">(د) كلاهما مغلق: $5\parallel3=\dfrac{15}{8}\approx1.9\ \Omega$</div>
+</div></div>
+<div class="example"><div class="eh"><span>س7</span><span>مقاومتان مجهولتان</span></div>
+<div class="eq">مقاومتان مكافئتهما على التوالي $25\,\Omega$ وعلى التوازي $4\,\Omega$. احسبهما.</div>
+<div class="steps"><div class="s">$R_1+R_2=25$ و $\dfrac{R_1R_2}{R_1+R_2}=4 \Rightarrow R_1R_2=100$</div><div class="s">عددان مجموعهما 25 وحاصل ضربهما 100: <span class="ans-final">$20\,\Omega$ و $5\,\Omega$</span></div></div></div>
+<div class="example"><div class="eh"><span>س8</span><span>سخان ماء</span></div>
+<div class="eq">سخان $3000\,\text{W}$ يعمل على $200\,\text{V}$. احسب: التيار، المقاومة، الطاقة المستهلكة بتشغيله ساعتين يومياً لمدة شهر (30 يوماً)، والتكلفة (10 قروش/kWh).</div>
+<div class="steps">
+<div class="s">$I=\dfrac{3000}{200}=15\ \text{A}$ ، $R=\dfrac{V}{I}=\dfrac{200}{15}\approx13.3\ \Omega$</div>
+<div class="s">$E=3\,\text{kW}\times(2\times30)\,\text{h}=180\ \text{kWh}$</div>
+<div class="s"><span class="ans-final">التكلفة $=180\times10=1800$ قرش (أي 18 شيكلاً)</span></div>
+</div></div>
+<div class="example"><div class="eh"><span>س9</span><span>سلك نحاس</span></div>
+<div class="eq">سلك نحاس $100\,\text{m}$، مقطعه $1\,\text{mm}^2$، تياره $20\,\text{A}$، $\rho=1.72\times10^{-8}\,\Omega\cdot\text{m}$ ، $n_e=8.4\times10^{28}\,\text{e/m}^3$. احسب: $J$ ، $v_d$ ، $E$.</div>
+<div class="steps">
+<div class="s">$J=\dfrac{20}{10^{-6}}=2\times10^7\ \text{A/m}^2$</div>
+<div class="s">$v_d=\dfrac{J}{n_eq_e}=\dfrac{2\times10^7}{(8.4\times10^{28})(1.6\times10^{-19})}\approx1.5\times10^{-3}\ \text{m/s}$</div>
+<div class="s">$E=\rho J=1.72\times10^{-8}\times2\times10^7=0.344\ \text{V/m}$</div>
+</div></div>
+</section>
+
+<script id="figs">window.FIGS={"ex8": [["d", 0, 1, "A", 0, -0.3], ["r", 0, 1, 2, 1, "10Ω"], ["w", 2, 1, 2, 0], ["r", 2, 0, 4, 0, "6Ω"], ["w", 4, 0, 4, 1], ["w", 2, 1, 2, 2], ["r", 2, 2, 4, 2, "3Ω"], ["w", 4, 2, 4, 1], ["d", 2, 1], ["d", 4, 1], ["r", 4, 1, 6, 1, "4Ω"], ["d", 6, 1, "B", 0, -0.3]], "sq": [["r", 0, 2.4, 0, 0, "1Ω"], ["r", 0, 0, 3.2, 0, "2Ω"], ["r", 3.2, 0, 3.2, 2.4, "2Ω"], ["r", 0, 2.4, 3.2, 2.4, "4Ω", -1], ["r", 0, 2.4, 3.2, 0, "6Ω"], ["d", 0, 2.4, "B", -0.3, 0.25], ["d", 3.2, 2.4, "A", 0.3, 0.25], ["d", 0, 0], ["d", 3.2, 0]], "q5": [["d", -1.4, 0, "A", 0, -0.3], ["r", -1.4, 0, 0.6, 0, "2Ω"], ["d", 0.6, 0, "P", 0, -0.32], ["w", 0.6, 0, 4, 0], ["r", 4, 0, 4, 1.6, "4Ω"], ["r", 0.6, 0, 4, 1.6, "12Ω"], ["r", 0.6, 0, 0.6, 1.6, "6Ω", -1], ["w", 0.6, 1.6, 4, 1.6], ["d", 0.6, 1.6], ["d", 4, 1.6, "N", 0.3, 0], ["r", 0.6, 1.6, 0.6, 3.2, "10Ω", -1], ["w", 0.6, 3.2, 4, 3.2], ["w", 4, 3.2, 4, 1.6], ["r", 4, 3.2, 6, 3.2, "3Ω"], ["d", 6, 3.2, "B", 0, -0.3]], "q6": [["d", -0.8, 1, "B", 0, -0.3], ["w", -0.8, 1, 0, 1], ["w", 0, 0, 0, 3], ["r", 0, 0, 1.4, 0, "4Ω"], ["s", 1.4, 0, 2.6, 0, "S₂", 1], ["r", 2.6, 0, 4, 0, "2Ω"], ["w", 4, 0, 4, 1], ["r", 0, 1, 4, 1, "3Ω"], ["d", 0, 1], ["d", 4, 1], ["r", 4, 1, 6.4, 1, "3Ω"], ["w", 6.4, 1, 6.4, 3], ["w", 0, 3, 0.8, 3], ["r", 0.8, 3, 0.8, 1.9, "4Ω", -1], ["w", 0.8, 1.9, 2.6, 1.9], ["r", 2.6, 1.9, 2.6, 3, "5Ω"], ["s", 0.8, 3, 2.6, 3, "S₁"], ["r", 2.6, 3, 6.4, 3, "3Ω", -1], ["d", 6.4, 3, "A", 0.35, 0], ["d", 6.4, 1]], "mcq3": [["w", -0.8, 1, 0, 1], ["w", 0, 1, 0, 0], ["r", 0, 0, 2.2, 0, "4Ω"], ["w", 2.2, 0, 2.2, 1], ["w", 0, 1, 0, 2], ["r", 0, 2, 2.2, 2, "4Ω", -1], ["w", 2.2, 2, 2.2, 1], ["d", 0, 1], ["d", 2.2, 1], ["r", 2.2, 1, 4.4, 1, "2Ω"], ["i", 0.5, -0.75, 1.6, -0.75, "I₁ = 1 A"], ["i", 3.1, 1.45, 3.8, 1.45, "I₂", -1]], "mcq6": [["d", 0, 1, "A", 0, -0.3], ["r", 0, 1, 1.6, 1, "3Ω"], ["r", 1.6, 1, 3.2, 1, "6Ω", -1], ["w", 3.2, 1, 4.8, 1], ["r", 4.8, 1, 6.4, 1, "2Ω"], ["d", 6.4, 1, "B", 0, -0.3], ["w", 1.6, 1, 1.6, 0], ["w", 1.6, 0, 3.2, 0], ["w", 3.2, 0, 3.2, 1], ["r", 3.2, 0, 4.8, 0, "12Ω"], ["w", 4.8, 0, 4.8, 1], ["d", 1.6, 1], ["d", 3.2, 1], ["d", 4.8, 1]]};</script>
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+/* --- مختبر السلك --- */
+(function(){
+  const MATS=[{n:'نحاس',rho:1.72e-8,ne:8.5e28,c:'#c8781d'},{n:'ألمنيوم',rho:2.82e-8,ne:6.0e28,c:'#9aa3b5'},{n:'حديد',rho:9.7e-8,ne:8.5e28,c:'#6b6f7a'},{n:'نيكروم',rho:1.1e-6,ne:9e28,c:'#8a6d5c'}];
+  let mi=0, V={}; const cv=document.getElementById('cvWire'), sim=document.getElementById('simWire'), ro=document.getElementById('roWire');
+  const seg=document.getElementById('wMat'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mi=+b.dataset.i;readout();});
+  const pts=Array.from({length:70},()=>({x:Math.random(),y:Math.random(),vx:(Math.random()-.5),vy:(Math.random()-.5)}));
+  let st={}, last=0;
+  function readout(){ const m=MATS[mi], A=V.A*1e-6, R=m.rho*V.L/A, I=R>0?V.V/R:0, J=I/A, vd=J/(m.ne*1.6e-19), P=V.V*I;
+    st={R,I,vd,m};
+    ro.innerHTML=`<span class="r">$R=\\rho L/A$ = <b>${fmt(R,3)} Ω</b></span><span class="r">$I=V/R$ = <b>${fmt(I,2)} A</b></span><span class="r">$J$ = <b>${fmt(J)} A/m²</b></span><span class="r">$v_d$ = <b>${fmt(vd)} m/s</b></span><span class="r">$P$ = <b>${fmt(P,1)} W</b></span>${P>200?'<span class="r" style="background:var(--bad-soft)">🔥 السلك سيسخن جداً!</span>':''}`;
+    renderMath(ro); }
+  function draw(ts){ const dt=Math.min(.05,(ts-last)/1000||0); last=ts;
+    const {ctx,w,h}=setupCanvas(cv,170); ctx.clearRect(0,0,w,h);
+    const thick=14+V.A*30, x0=50, x1=w-50, y=h/2+10;
+    ctx.fillStyle=st.m?st.m.c:'#c8781d'; ctx.globalAlpha=.35; ctx.fillRect(x0,y-thick/2,x1-x0,thick); ctx.globalAlpha=1;
+    ctx.strokeStyle=cssv('--ink'); ctx.lineWidth=1.5; ctx.strokeRect(x0,y-thick/2,x1-x0,thick);
+    ctx.font='bold 14px sans-serif'; ctx.fillStyle=cssv('--bad'); ctx.fillText('+',x0-26,y+5); ctx.fillStyle=cssv('--accent'); ctx.fillText('−',x1+16,y+5);
+    // سهم التيار الاصطلاحي
+    if(V.V>0){ arrow(ctx,w/2-60,y-thick/2-22,w/2+60,y-thick/2-22,cssv('--bad'),2.5); ctx.fillStyle=cssv('--bad'); ctx.font='12px sans-serif'; ctx.fillText('التيار الاصطلاحي',w/2-44,y-thick/2-30); }
+    const drift = -Math.min(1.2, (st.vd||0)*2500); // مكبرة
+    pts.forEach(p=>{ p.x+= (p.vx*0.25 + drift*0.3)*dt; p.y+=p.vy*0.6*dt;
+      if(Math.random()<0.04){p.vx=Math.random()-.5;p.vy=Math.random()-.5;}
+      if(p.y<0.05||p.y>0.95)p.vy*=-1; if(p.x<0)p.x+=1; if(p.x>1)p.x-=1;
+      ctx.fillStyle=cssv('--accent'); ctx.beginPath(); ctx.arc(x0+p.x*(x1-x0), y-thick/2+p.y*thick, 2.6,0,7); ctx.fill(); });
+    requestAnimationFrame(draw); }
+  bindRanges(sim,v=>{V=v;readout();}); requestAnimationFrame(draw);
+})();
+
+/* --- منحنى I-V --- */
+(function(){
+  const cv=document.getElementById('cvIV'), sim=document.getElementById('simIV'), ro=document.getElementById('roIV'); let t='ohm', V={};
+  const seg=document.getElementById('ivType'); seg.querySelectorAll('button').forEach(b=>b.onclick=()=>{seg.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');t=b.dataset.t;draw();});
+  const I=v=>{ if(t==='ohm') return v/6; if(t==='lamp') return Math.sign(v)*0.62*Math.pow(Math.abs(v),0.55); return v<=0?0:Math.min(3, 0.002*(Math.exp(v/0.6)-1)); };
+  function draw(){
+    const {ctx,w,h}=setupCanvas(cv,240); ctx.clearRect(0,0,w,h);
+    const L=40,R=w-16,T=14,B=h-28, vmin=-6,vmax=12, imin=-1.8,imax=2.6;
+    const X=v=>L+(R-L)*(v-vmin)/(vmax-vmin), Y=i=>B-(B-T)*(i-imin)/(imax-imin);
+    ctx.strokeStyle=cssv('--line'); ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(L,Y(0)); ctx.lineTo(R,Y(0)); ctx.moveTo(X(0),T); ctx.lineTo(X(0),B); ctx.stroke();
+    ctx.fillStyle=cssv('--muted'); ctx.font='12px sans-serif'; ctx.fillText('V (V)',R-34,Y(0)-6); ctx.fillText('I (A)',X(0)+6,T+10);
+    for(let v=-6;v<=12;v+=3){ if(v) ctx.fillText(v,X(v)-6,Y(0)+16); }
+    ctx.strokeStyle=cssv('--accent'); ctx.lineWidth=3; ctx.beginPath();
+    for(let k=0;k<=300;k++){ const v=vmin+(vmax-vmin)*k/300; const i=Math.max(imin,Math.min(imax,I(v))); k?ctx.lineTo(X(v),Y(i)):ctx.moveTo(X(v),Y(i)); } ctx.stroke();
+    const i0=I(V.V); ctx.fillStyle=cssv('--warm'); ctx.beginPath(); ctx.arc(X(V.V),Y(Math.max(imin,Math.min(imax,i0))),7,0,7); ctx.fill();
+    const r = Math.abs(i0)>1e-6 ? V.V/i0 : Infinity;
+    ro.innerHTML=`<span class="r">$V$ = <b>${fmt(V.V)} V</b></span><span class="r">$I$ = <b>${fmt(i0,3)} A</b></span><span class="r">$R=V/I$ = <b>${isFinite(r)?fmt(r,2)+' Ω':'∞ (لا يمر تيار)'}</b></span>`;
+    renderMath(ro);
+  }
+  bindRanges(sim,v=>{V=v;draw();}); addEventListener('resize',draw); document.addEventListener('themechange',draw);
+})();
+
+Quiz('#quiz4',[
+ {q:'تعتمد <b>مقاومية</b> السلك على:', o:['مقاومته','طوله','مساحة مقطعه العرضي','نوع مادته'], a:3, e:'المقاومية خاصية للمادة (ودرجة حرارتها)، أما المقاومة فتعتمد على الطول والمساحة أيضاً.'},
+ {q:'عدد الإلكترونات التي تعبر مقطع موصل يمر به $2\\,\\text{A}$ خلال ثانيتين:', o:['$2.5\\times10^{19}$','$25\\times10^{19}$','$6.25\\times10^{18}$','$1.25\\times10^{18}$'], a:0, e:'$Q=It=4\\,\\text{C}$ ← $N=\\dfrac{4}{1.6\\times10^{-19}}=2.5\\times10^{19}$.'},
+ {q:'جزء من دارة: فرع فيه مقاومتان $4\\,\\Omega$ على التوازي ثم $2\\,\\Omega$ على التوالي ويمر فيه $I_2$. إذا كان التيار في إحدى مقاومتي $4\\,\\Omega$ يساوي $1\\,\\text{A}$، فما $I_2$؟<div class="circ" data-f="mcq3"></div>', o:['1','2','3','4'], a:1, e:'المقاومتان المتساويتان على التوازي تتقاسمان التيار بالتساوي ← $1+1=2\\,\\text{A}$ وهو نفسه المار في $2\\,\\Omega$.'},
+ {q:'عند زيادة فرق الجهد بين طرفي سلك فلزي (أومي) عند ثبوت درجة الحرارة:', o:['يقل التيار','تزداد المقاومية','تبقى المقاومة ثابتة','تبقى شدة المجال ثابتة'], a:2, e:'المقاومة الأومية ثابتة؛ يزداد التيار والمجال $(E=V/L)$ مع زيادة الجهد.'},
+ {q:'مصباح مكتوب عليه $(220\\,\\text{V}, 100\\,\\text{W})$ وُصل بمصدر $175\\,\\text{V}$. قدرته (W):', o:['63','80','100','175'], a:0, e:'$R=\\dfrac{220^2}{100}=484\\,\\Omega$ ، $P=\\dfrac{175^2}{484}\\approx63\\,\\text{W}$.'},
+ {q:'من A: $3\\,\\Omega$ ثم $6\\,\\Omega$ ثم $2\\,\\Omega$ إلى B، وفوقها أسلاك تصل طرفي $6\\,\\Omega$ ببعض، و$12\\,\\Omega$ موصولة بين نقطتين متصلتين بسلك. $R_{AB}$:<div class="circ" data-f="mcq6"></div>', o:['5','6','2','3'], a:0, e:'الـ $6\\,\\Omega$ والـ $12\\,\\Omega$ مقصورتان بأسلاك ← $R=3+2=5\\,\\Omega$.'}
+],'ch4');
+});
+</script>
+
+<nav class="pager"></nav>
+</main>
+</div>
+<footer class="f">محتوى مبني على كتاب الفيزياء للصف الثاني عشر (فلسطين) — نسخة تفاعلية تعليمية مجانية</footer>
+</body>
+</html>
